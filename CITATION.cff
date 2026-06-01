@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+title: "Fide AI Research Ideas"
+message: "If you use this research commons, please cite it as below and link to the specific idea or commit when possible."
+type: dataset
+authors:
+  - name: "Fide AI"
+repository-code: "https://github.com/FideAI/research-ideas"
+url: "https://fideai.org/research/calls"
+date-released: "2026-06-01"
+license: "CC-BY-4.0 AND Apache-2.0"
+abstract: "A public research commons for faith-facing AI evaluation, Christian church-serving AI research, and broader faith, ethics, and safety research ideas."

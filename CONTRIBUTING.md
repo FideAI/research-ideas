@@ -268,3 +268,13 @@ Disagreement is expected; careless claims, private disclosures, and dismissive
 engagement are not.
 
 Read `CODE_OF_CONDUCT.md` before participating.
+
+## Contribution License
+
+By contributing, you agree that your contributions are licensed under this
+repository's dual-license structure:
+
+- written research material and documentation under CC BY 4.0;
+- code, scripts, workflows, and machine-readable configuration under Apache 2.0.
+
+Do not contribute material you do not have the right to license on those terms.

@@ -104,6 +104,18 @@ Then include both the changed Markdown files and the updated
 The feed currently includes the idea ID, title, status, track, primary need,
 summary, why-it-matters excerpt, ways to help, source path, and GitHub URL.
 
+## License
+
+This repo is intended for open research reuse.
+
+- Research ideas, documentation, issue templates, and other written materials
+  are licensed under [CC BY 4.0](LICENSE-DOCS.md).
+- Code, scripts, workflow files, and machine-readable configuration are
+  licensed under [Apache 2.0](LICENSE-CODE.md).
+
+See [`LICENSE.md`](LICENSE.md) for the full license summary. Reuse does not
+imply endorsement by Fide AI.
+
 ## Near-Term Priorities
 
 1. Make `FID-001` concrete enough to support repeatable model and harness
