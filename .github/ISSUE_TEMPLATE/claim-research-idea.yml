@@ -1,0 +1,27 @@
+name: Claim or help with an idea
+description: Signal that you want to actively help with an existing idea.
+title: "Claim: FID-"
+labels: ["status: ready-for-collaboration"]
+body:
+  - type: input
+    id: idea
+    attributes:
+      label: Idea ID
+      placeholder: FID-001
+    validations:
+      required: true
+  - type: textarea
+    id: contribution
+    attributes:
+      label: Proposed contribution
+      description: What do you want to draft, build, review, replicate, or analyze?
+    validations:
+      required: true
+  - type: input
+    id: timeline
+    attributes:
+      label: Estimated timeline
+  - type: textarea
+    id: support
+    attributes:
+      label: Support needed from Fide AI

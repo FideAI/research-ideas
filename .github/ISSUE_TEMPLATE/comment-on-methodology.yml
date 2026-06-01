@@ -1,0 +1,20 @@
+name: Comment on methodology
+description: Suggest controls, related work, risks, or methodological improvements.
+title: "Methodology comment: "
+labels: ["methodology"]
+body:
+  - type: input
+    id: idea
+    attributes:
+      label: Related idea ID
+      placeholder: FID-001
+  - type: textarea
+    id: comment
+    attributes:
+      label: Methodology comment
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Related sources or evidence

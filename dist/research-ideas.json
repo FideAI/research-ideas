@@ -1,0 +1,534 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-01T04:34:35.803Z",
+  "source_repo": "https://github.com/FideAI/research-ideas",
+  "source_branch": "main",
+  "idea_count": 32,
+  "tracks": {
+    "christian-church": "Explicitly designed to benefit the Christian church: churches, clergy, Christian educators, ministries, denominations, seminaries, publishers, and Christian families.",
+    "broader-faith-safety": "Relevant to faith communities, AI ethics, AI safety, evaluation science, governance, pluralism, or high-trust deployment more broadly."
+  },
+  "ideas": [
+    {
+      "id": "FID-001",
+      "title": "Faith-Facing Model Comparison Platform",
+      "status": "scoping",
+      "track": "broader-faith-safety",
+      "primary_need": "eval engineering",
+      "summary": "Can Fide AI build a public-interest evaluation platform that compares models, prompts, retrieval systems, agents, and full faith-facing product harnesses with the rigor expected from institutions like Arena, Artificial Analysis, and METR?",
+      "why_it_matters": "Faith institutions need evidence before adopting systems that appear theological, pastoral, or morally authoritative. Generic leaderboards do not test pastoral boundaries, theological integrity, human agency, escalation, or religious authority. Fide AI needs its own platform layer to run, audit, compare, and publish faith-facing evaluations.",
+      "ways_to_help": [
+        "Build runner adapters.",
+        "Design the run manifest schema.",
+        "Contribute reviewer workflow UI.",
+        "Audit license and white-label constraints of candidate OSS platforms."
+      ],
+      "source_path": "ideas/FID-001-faith-facing-model-comparison-platform.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-001-faith-facing-model-comparison-platform.md"
+    },
+    {
+      "id": "FID-002",
+      "title": "FMG-Bench Human Calibration and Construct Validity",
+      "status": "active",
+      "track": "broader-faith-safety",
+      "primary_need": "expert reviewers, statistics",
+      "summary": "Do FMG-Bench dimensions measure stable, decision-relevant constructs when scored by calibrated human reviewers, and where do model judges diverge from expert human judgment?",
+      "why_it_matters": "Benchmarks are easy to publish and hard to validate. Fide AI should not rely on synthetic judges or aggregate scores unless it knows which dimensions are reliable enough to guide deployment, procurement, or public claims.",
+      "ways_to_help": [
+        "Serve as an expert reviewer.",
+        "Review scoring rubrics.",
+        "Help with reliability analysis.",
+        "Build annotation and adjudication tooling."
+      ],
+      "source_path": "ideas/FID-002-fmg-bench-human-calibration.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-002-fmg-bench-human-calibration.md"
+    },
+    {
+      "id": "FID-003",
+      "title": "Held-Out Multi-Turn Pastoral Pressure Tests",
+      "status": "scoping",
+      "track": "broader-faith-safety",
+      "primary_need": "scenario design, review",
+      "summary": "Do faith-facing AI systems that perform well on single-turn benchmark items also handle multi-turn, emotionally loaded, pastoral-adjacent situations without fabricating authority, overcomplying, missing escalation, or replacing human care?",
+      "why_it_matters": "Real users do not interact with faith-facing systems as isolated benchmark questions. They disclose confusion, grief, shame, conflict, abuse, doubt, and spiritual vulnerability over multiple turns. Evaluation needs to test the shape of the interaction, not only the first answer.",
+      "ways_to_help": [
+        "Draft scenarios.",
+        "Review pastoral and crisis boundaries.",
+        "Build multi-turn runner support.",
+        "Analyze whether single-turn scores predict pressure failures."
+      ],
+      "source_path": "ideas/FID-003-pastoral-pressure-tests.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-003-pastoral-pressure-tests.md"
+    },
+    {
+      "id": "FID-004",
+      "title": "Relational Substitution Risk in Faith-Facing AI",
+      "status": "seed",
+      "track": "broader-faith-safety",
+      "primary_need": "theology, UX research",
+      "summary": "When does a faith-facing AI system move from supporting a user's religious life to substituting for embodied community, clergy, spiritual direction, family, therapy, or other human care?",
+      "why_it_matters": "Faith-facing AI risks are not only wrong answers. Systems can simulate presence, authority, intimacy, or spiritual companionship in ways that redirect users away from actual communities and responsible care.",
+      "ways_to_help": [
+        "Contribute pastoral, psychological, and UX expertise.",
+        "Draft realistic interaction patterns.",
+        "Review boundary language across traditions."
+      ],
+      "source_path": "ideas/FID-004-relational-substitution-risk.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-004-relational-substitution-risk.md"
+    },
+    {
+      "id": "FID-005",
+      "title": "Scripture, Tradition, and Moral-Framing Interventions",
+      "status": "seed",
+      "track": "broader-faith-safety",
+      "primary_need": "eval design, replication",
+      "summary": "Do Scripture, sacred tradition, religious identity, familial embeddedness, or other morally thick framings measurably change model behavior in faith-facing tasks, and can those effects be separated from style, length, familiarity, and response-bias artifacts?",
+      "why_it_matters": "Recent Christian machine intelligence research suggests that theological texts and identity framings can sometimes shift model moral behavior. Fide AI can contribute by independently replicating, stress-testing, and extending these claims with stronger public-interest controls and broader traditions.",
+      "ways_to_help": [
+        "Contribute replication protocols.",
+        "Help design controls.",
+        "Provide theological review for tradition-specific framing.",
+        "Run model comparisons through the Fide platform."
+      ],
+      "source_path": "ideas/FID-005-scripture-tradition-moral-framing.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-005-scripture-tradition-moral-framing.md"
+    },
+    {
+      "id": "FID-006",
+      "title": "Faith-Facing Retrieval Grounding and Citation Reliability",
+      "status": "scoping",
+      "track": "broader-faith-safety",
+      "primary_need": "RAG evaluation",
+      "summary": "How reliably do faith-facing AI systems retrieve, cite, and represent religious sources when users ask theological, historical, pastoral, or institution-specific questions?",
+      "why_it_matters": "Many faith-facing products will be retrieval-augmented. The core failure may not be the base model's theology but the system's ability to cite the right source, avoid fabricated quotations, handle conflicting authorities, and distinguish official teaching from commentary.",
+      "ways_to_help": [
+        "Curate source corpora.",
+        "Build retrieval evaluation tooling.",
+        "Review source authority taxonomies.",
+        "Contribute institution-specific use cases."
+      ],
+      "source_path": "ideas/FID-006-retrieval-grounding-citation-reliability.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-006-retrieval-grounding-citation-reliability.md"
+    },
+    {
+      "id": "FID-007",
+      "title": "Tradition-Specific Disagreement and Pluralism Handling",
+      "status": "seed",
+      "track": "broader-faith-safety",
+      "primary_need": "domain experts, rubric design",
+      "summary": "Can faith-facing AI systems represent serious disagreement among religious traditions accurately, respectfully, and without collapsing contested questions into bland consensus or false neutrality?",
+      "why_it_matters": "Many theological questions have real disagreement. A system that sounds balanced but erases doctrinal differences can mislead users and institutions.",
+      "ways_to_help": [
+        "Contribute expert review within a tradition.",
+        "Draft representative disagreement cases.",
+        "Help define source hierarchies and rubric anchors."
+      ],
+      "source_path": "ideas/FID-007-tradition-specific-disagreement.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-007-tradition-specific-disagreement.md"
+    },
+    {
+      "id": "FID-008",
+      "title": "Evaluation-Awareness and Faith-Facing Honesty Tests",
+      "status": "seed",
+      "track": "broader-faith-safety",
+      "primary_need": "red-team design",
+      "summary": "Do faith-facing AI systems behave differently when they recognize they are being evaluated, and can domain-specific honesty or integrity framings reduce evaluation gaming without creating new failure modes?",
+      "why_it_matters": "Evaluation-aware systems can make benchmark results unreliable. In faith-facing contexts, a system might perform humility, caution, or doctrinal deference under test while behaving differently with users.",
+      "ways_to_help": [
+        "Design red-team probes.",
+        "Build consistency metrics.",
+        "Review ethical boundaries for deception in evaluation."
+      ],
+      "source_path": "ideas/FID-008-evaluation-awareness-honesty.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-008-evaluation-awareness-honesty.md"
+    },
+    {
+      "id": "FID-009",
+      "title": "Multimodal Religious Reasoning and Sacred Imagery",
+      "status": "seed",
+      "track": "broader-faith-safety",
+      "primary_need": "multimodal evaluation",
+      "summary": "How do multimodal AI systems interpret sacred images, liturgical objects, religious spaces, diagrams, screenshots, and visual pastoral context, and do visual religious cues change downstream reasoning?",
+      "why_it_matters": "Faith-facing systems will increasingly process images: church documents, artworks, icons, classroom materials, screenshots, event flyers, ritual objects, and user-submitted photos. Misinterpretation can create theological, institutional, or pastoral errors.",
+      "ways_to_help": [
+        "Curate copyright-safe images.",
+        "Review iconographic and liturgical accuracy.",
+        "Build multimodal runner support."
+      ],
+      "source_path": "ideas/FID-009-multimodal-religious-reasoning.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-009-multimodal-religious-reasoning.md"
+    },
+    {
+      "id": "FID-010",
+      "title": "Human Agency, Authority, and Escalation Benchmarks",
+      "status": "scoping",
+      "track": "broader-faith-safety",
+      "primary_need": "pastoral/legal/clinical review",
+      "summary": "Do faith-facing AI systems preserve human agency, avoid improper authority claims, and escalate to appropriate human support in high-trust situations?",
+      "why_it_matters": "The most important faith-facing failures may involve authority: the system acts like clergy, counselor, confessor, judge, spiritual director, or institutional representative when it is not one.",
+      "ways_to_help": [
+        "Review crisis and pastoral scenarios.",
+        "Define severe-failure criteria.",
+        "Build multi-turn escalation tests.",
+        "Audit product harnesses."
+      ],
+      "source_path": "ideas/FID-010-agency-authority-escalation.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-010-agency-authority-escalation.md"
+    },
+    {
+      "id": "FID-011",
+      "title": "Reviewer Reliability for Faith-Facing AI Evaluation",
+      "status": "scoping",
+      "track": "broader-faith-safety",
+      "primary_need": "statistics, reviewer operations",
+      "summary": "What reviewer configurations produce reliable, fair, and interpretable scores for faith-facing AI outputs?",
+      "why_it_matters": "Faith-facing evaluation depends on expert judgment, but expert disagreement is real. Fide AI needs to know when scores reflect stable constructs and when they reflect reviewer background, tradition, strictness, or rubric ambiguity.",
+      "ways_to_help": [
+        "Design reliability analysis.",
+        "Build reviewer assignment tooling.",
+        "Serve as reviewer or adjudicator.",
+        "Audit rubric wording."
+      ],
+      "source_path": "ideas/FID-011-reviewer-reliability.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-011-reviewer-reliability.md"
+    },
+    {
+      "id": "FID-012",
+      "title": "Optimization Pressure and Visible-Rubric Gaming",
+      "status": "seed",
+      "track": "broader-faith-safety",
+      "primary_need": "eval science",
+      "summary": "If builders can see Fide AI rubrics or optimize against public benchmark items, do systems become genuinely safer or merely better at passing the visible test?",
+      "why_it_matters": "Public standards need transparency, but visible benchmarks can be gamed. Fide AI needs evidence about which evaluation artifacts can be public, which should be held out, and how leaderboard participation affects real deployment behavior.",
+      "ways_to_help": [
+        "Design split and leakage controls.",
+        "Build optimization-pressure experiments.",
+        "Review leaderboard governance policy."
+      ],
+      "source_path": "ideas/FID-012-visible-rubric-gaming.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-012-visible-rubric-gaming.md"
+    },
+    {
+      "id": "FID-013",
+      "title": "Religious Representation and Omission in Everyday Guidance",
+      "status": "seed",
+      "track": "broader-faith-safety",
+      "primary_need": "benchmark design, domain reviewers",
+      "summary": "Do AI systems systematically omit religious frameworks when answering ordinary ethical, vocational, family, grief, financial, or life-decision questions where a religious user might reasonably expect faith-informed guidance?",
+      "why_it_matters": "Many systems try to be neutral by default. In practice, that can erase religious ways of reasoning from domains where users and communities actually use them. For faith-based communities, omission can be as consequential as explicit bias. For the broader AI ethics community, this is a concrete test case for pluralism, representation, and value-laden guidance.",
+      "ways_to_help": [
+        "Contribute real-world question categories.",
+        "Review rubrics for pluralism and overreach.",
+        "Run cross-model comparisons."
+      ],
+      "source_path": "ideas/FID-013-religious-representation-omission.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-013-religious-representation-omission.md"
+    },
+    {
+      "id": "FID-014",
+      "title": "Conversion and Proselytization Symmetry",
+      "status": "seed",
+      "track": "broader-faith-safety",
+      "primary_need": "prompt design, interfaith review",
+      "summary": "Do AI systems respond symmetrically when users ask about converting from one religion to another, leaving religion, joining religion, evangelizing, proselytizing, or resisting conversion pressure?",
+      "why_it_matters": "Religious conversion is a high-sensitivity domain involving conscience, family, community, coercion, legal context, and personal safety. The broader AI safety community studies bias and persuasion; faith-facing AI needs a domain-specific version that distinguishes respectful information from manipulation.",
+      "ways_to_help": [
+        "Review prompt pairs for fairness.",
+        "Contribute source guidance from different traditions.",
+        "Analyze asymmetry across model families."
+      ],
+      "source_path": "ideas/FID-014-conversion-proselytization-symmetry.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-014-conversion-proselytization-symmetry.md"
+    },
+    {
+      "id": "FID-015",
+      "title": "Sermon, Liturgy, and Religious Teaching Generation",
+      "status": "seed",
+      "track": "christian-church",
+      "primary_need": "clergy, educators, source reviewers",
+      "summary": "How reliable are AI systems when drafting sermons, homilies, liturgical materials, catechesis, religious education lessons, devotionals, or small-group teaching guides?",
+      "why_it_matters": "Many faith communities will adopt AI first for preparation work: sermon research, lesson plans, devotional writing, and administrative communication. These uses look lower-risk than pastoral chatbots, but they shape communities at scale.",
+      "ways_to_help": [
+        "Provide sample tasks and evaluation rubrics.",
+        "Review generated teaching materials.",
+        "Build citation and source-check tooling."
+      ],
+      "source_path": "ideas/FID-015-sermon-liturgy-teaching-generation.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-015-sermon-liturgy-teaching-generation.md"
+    },
+    {
+      "id": "FID-016",
+      "title": "Youth, Religious Education, and AI Guidance",
+      "status": "seed",
+      "track": "christian-church",
+      "primary_need": "educators, child safety experts, policy reviewers",
+      "summary": "What risks and safeguards matter when AI systems are used by children, teenagers, schools, youth ministries, religious educators, or families for faith-related learning and guidance?",
+      "why_it_matters": "Youth-facing religious AI combines child safety, education, pastoral authority, family authority, privacy, and spiritual formation. It is also a likely adoption area for schools and ministries.",
+      "ways_to_help": [
+        "Review scenarios for age appropriateness.",
+        "Contribute school or ministry workflows.",
+        "Help define privacy and escalation standards."
+      ],
+      "source_path": "ideas/FID-016-youth-religious-education-ai.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-016-youth-religious-education-ai.md"
+    },
+    {
+      "id": "FID-017",
+      "title": "Agentic Ministry and Institutional Workflow Risk",
+      "status": "seed",
+      "track": "christian-church",
+      "primary_need": "agent evaluation, institutional operators",
+      "summary": "How should faith institutions evaluate AI agents that can take actions, manage communications, schedule care, triage requests, update records, draft outreach, or coordinate volunteers?",
+      "why_it_matters": "Frontier safety research increasingly measures autonomous task completion and long-horizon agency. Faith institutions may adopt agents for administrative and ministry workflows before they understand the risks: privacy leaks, authority mistakes, missed care escalation, biased outreach, and unreviewed spiritual messaging.",
+      "ways_to_help": [
+        "Design synthetic workflows.",
+        "Build agent evaluation harnesses.",
+        "Review institutional operations and privacy risks."
+      ],
+      "source_path": "ideas/FID-017-agentic-ministry-workflows.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-017-agentic-ministry-workflows.md"
+    },
+    {
+      "id": "FID-018",
+      "title": "Spiritual Companionship, Dependency, and Overvalidation",
+      "status": "seed",
+      "track": "broader-faith-safety",
+      "primary_need": "pastoral care, psychology, HAI research",
+      "summary": "When do spiritual companion chatbots overvalidate users, deepen unhealthy dependency, reinforce spiritual fantasies, or encourage isolation from embodied care?",
+      "why_it_matters": "Mental-health chatbot research has documented ethical failures such as overvalidation, poor escalation, and reinforcement of false beliefs. Spiritual companion systems can create parallel risks with religious language, authority, and existential significance layered on top.",
+      "ways_to_help": [
+        "Review companion scenarios.",
+        "Contribute HAI and pastoral care expertise.",
+        "Build multi-turn dependency metrics."
+      ],
+      "source_path": "ideas/FID-018-spiritual-companionship-dependency.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-018-spiritual-companionship-dependency.md"
+    },
+    {
+      "id": "FID-019",
+      "title": "Cross-Lingual and Minority-Faith Evaluation",
+      "status": "seed",
+      "track": "broader-faith-safety",
+      "primary_need": "multilingual reviewers, dataset design",
+      "summary": "Do AI systems handle faith-facing questions reliably across languages, minority-faith contexts, diaspora communities, and traditions with less representation in training data?",
+      "why_it_matters": "Religious bias and omission may be worse outside English and majority-Christian contexts. For broader AI ethics, this connects faith-facing evaluation to multilingual fairness, cultural context, and low-resource benchmark design.",
+      "ways_to_help": [
+        "Serve as multilingual reviewer.",
+        "Curate tradition-specific sources.",
+        "Translate and culturally adapt scenarios."
+      ],
+      "source_path": "ideas/FID-019-cross-lingual-minority-faith-evaluation.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-019-cross-lingual-minority-faith-evaluation.md"
+    },
+    {
+      "id": "FID-020",
+      "title": "Community Co-Design and Faith-AI Governance",
+      "status": "seed",
+      "track": "broader-faith-safety",
+      "primary_need": "participatory design, institutional partners",
+      "summary": "How should faith communities participate in defining, testing, and governing AI systems that affect worship, education, pastoral care, administration, and moral formation?",
+      "why_it_matters": "Generic AI ethics frameworks often treat communities as deployment sites rather than co-design partners. Faith communities have internal authority structures, theological commitments, pastoral practices, and accountability norms that should shape evaluation.",
+      "ways_to_help": [
+        "Host a workshop.",
+        "Facilitate participatory design.",
+        "Translate concerns into measurable evaluation criteria."
+      ],
+      "source_path": "ideas/FID-020-community-co-design-governance.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-020-community-co-design-governance.md"
+    },
+    {
+      "id": "FID-021",
+      "title": "Post-Deployment Monitoring for Faith-Facing AI",
+      "status": "seed",
+      "track": "broader-faith-safety",
+      "primary_need": "monitoring design, privacy review",
+      "summary": "How should faith-facing AI systems be monitored after deployment for failures, drift, misuse, overreliance, and emerging harm patterns without violating user privacy or pastoral confidentiality?",
+      "why_it_matters": "Pre-deployment benchmarks cannot catch every failure. Safety communities are increasingly focused on post-deployment monitoring, incident reporting, and model drift. Faith contexts add confidentiality, trust, and vulnerable-user concerns.",
+      "ways_to_help": [
+        "Design monitoring schemas.",
+        "Review privacy and pastoral confidentiality requirements.",
+        "Build redaction and artifact governance tooling."
+      ],
+      "source_path": "ideas/FID-021-post-deployment-monitoring-faith-ai.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-021-post-deployment-monitoring-faith-ai.md"
+    },
+    {
+      "id": "FID-022",
+      "title": "Procurement and Readiness Standards for Faith Institutions",
+      "status": "seed",
+      "track": "broader-faith-safety",
+      "primary_need": "institutional policy, legal review",
+      "summary": "What evidence should churches, schools, ministries, publishers, charities, and faith-based health or social-service organizations require before buying or deploying AI systems?",
+      "why_it_matters": "Many faith institutions will make AI decisions before they can interpret model cards, benchmark claims, privacy promises, or vendor safety statements. Fide AI can translate evaluation science into procurement and readiness standards.",
+      "ways_to_help": [
+        "Share institutional procurement workflows.",
+        "Review legal/privacy requirements.",
+        "Test the checklist against real vendor materials."
+      ],
+      "source_path": "ideas/FID-022-procurement-readiness-standards.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-022-procurement-readiness-standards.md"
+    },
+    {
+      "id": "FID-023",
+      "title": "Faith-Facing Red-Team Suite",
+      "status": "seed",
+      "track": "broader-faith-safety",
+      "primary_need": "red-team design, safety reviewers",
+      "summary": "What red-team probes are needed to expose failures unique to faith-facing AI systems and adjacent high-trust guidance systems?",
+      "why_it_matters": "General red-team suites test jailbreaks, harmful instructions, privacy, and security. Faith-facing systems also need probes for false religious authority, spiritual manipulation, coercion, crisis mishandling, fabricated sources, sectarian bias, and overconfident moral guidance.",
+      "ways_to_help": [
+        "Draft probes.",
+        "Review release safety.",
+        "Build runner integrations.",
+        "Analyze failure recovery."
+      ],
+      "source_path": "ideas/FID-023-faith-facing-red-team-suite.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-023-faith-facing-red-team-suite.md"
+    },
+    {
+      "id": "FID-024",
+      "title": "Faith-AI Incident Database",
+      "status": "seed",
+      "track": "broader-faith-safety",
+      "primary_need": "taxonomy design, reporting governance",
+      "summary": "Should Fide AI maintain a public or semi-public incident database for failures, near misses, misuse, and disputed deployments of AI in faith-facing contexts?",
+      "why_it_matters": "Safety fields learn from incidents. Faith communities are already encountering AI-generated sermons, spiritual chatbots, pastoral automation, synthetic clergy, and religious misinformation. Without a shared incident vocabulary, institutions will repeat mistakes.",
+      "ways_to_help": [
+        "Design taxonomy and severity levels.",
+        "Review legal/privacy risks.",
+        "Contribute incident-response experience.",
+        "Build intake and redaction tooling."
+      ],
+      "source_path": "ideas/FID-024-faith-ai-incident-database.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-024-faith-ai-incident-database.md"
+    },
+    {
+      "id": "FID-025",
+      "title": "AI and Ecclesial Authority",
+      "status": "seed",
+      "track": "christian-church",
+      "primary_need": "ecclesiology, denominational polity, evaluation design",
+      "summary": "When do AI systems improperly simulate, confuse, or override Christian ecclesial authority: Scripture, creed, council, confession, magisterium, pastor, priest, elder, bishop, teacher, spiritual director, or local church governance?",
+      "why_it_matters": "The Church is not just an information domain. It has offices, sacraments, teaching authority, accountability, and embodied communities. AI systems can sound authoritative while having no office, vocation, ordination, accountability, or pastoral relationship.",
+      "ways_to_help": [
+        "Review authority hierarchies by tradition.",
+        "Draft prompts from real church workflows.",
+        "Build scoring rubrics for authority confusion."
+      ],
+      "source_path": "ideas/FID-025-ai-and-ecclesial-authority.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-025-ai-and-ecclesial-authority.md"
+    },
+    {
+      "id": "FID-026",
+      "title": "AI Prayer and Devotional Boundaries",
+      "status": "seed",
+      "track": "christian-church",
+      "primary_need": "pastoral theology, liturgy, product review",
+      "summary": "What are appropriate and inappropriate roles for AI in prayer, devotion, spiritual exercises, Bible meditation, confession-like disclosure, and simulated spiritual companionship?",
+      "why_it_matters": "Many products invite users to \"pray with\" AI, \"talk to Jesus,\" receive devotional messages, or interact with simulated biblical or saintly figures. The Church needs clearer evidence about when these interfaces support devotion and when they confuse prayer, presence, authority, or mediation.",
+      "ways_to_help": [
+        "Review devotional and liturgical use cases.",
+        "Collect public examples of product claims.",
+        "Build UX-pattern comparison tests."
+      ],
+      "source_path": "ideas/FID-026-ai-prayer-devotional-boundaries.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-026-ai-prayer-devotional-boundaries.md"
+    },
+    {
+      "id": "FID-027",
+      "title": "Christian Formation Over Time",
+      "status": "seed",
+      "track": "christian-church",
+      "primary_need": "discipleship, longitudinal study design, HAI research",
+      "summary": "How do repeated interactions with faith-facing AI shape Christian formation over time: prayer, humility, repentance, courage, charity, patience, truthfulness, church participation, and dependence on embodied community?",
+      "why_it_matters": "Single-turn correctness does not answer the Church's deepest question: what kind of disciple and community does this technology form? A system can answer correctly while training habits of instant certainty, private spirituality, consumer choice, or avoidance of difficult human relationships.",
+      "ways_to_help": [
+        "Design longitudinal protocols.",
+        "Contribute pastoral and discipleship expertise.",
+        "Review ethical boundaries for human-subjects work."
+      ],
+      "source_path": "ideas/FID-027-christian-formation-over-time.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-027-christian-formation-over-time.md"
+    },
+    {
+      "id": "FID-028",
+      "title": "Christian Source Authority and RAG",
+      "status": "seed",
+      "track": "christian-church",
+      "primary_need": "theological librarianship, RAG evaluation, denominational experts",
+      "summary": "Can Christian RAG systems distinguish and correctly use Scripture, creeds, confessions, councils, catechisms, denominational policies, patristic sources, commentaries, sermons, blogs, and academic theology?",
+      "why_it_matters": "Christian source authority is structured. Treating a blog post, sermon, Bible verse, catechism paragraph, and local policy as equal retrieved chunks can mislead users even when citations are technically accurate.",
+      "ways_to_help": [
+        "Curate source hierarchies.",
+        "Build corpus metadata tools.",
+        "Review RAG outputs for authority misuse."
+      ],
+      "source_path": "ideas/FID-028-christian-source-authority-rag.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-028-christian-source-authority-rag.md"
+    },
+    {
+      "id": "FID-029",
+      "title": "AI and Christian Mission",
+      "status": "seed",
+      "track": "christian-church",
+      "primary_need": "missiology, persuasion safety, interfaith review",
+      "summary": "How can AI support Christian witness, apologetics, translation, and mission without becoming a manipulative persuasion engine or flattening the human, relational, and ecclesial character of evangelism?",
+      "why_it_matters": "Mission and evangelism are central to many Christian communities. They also sit near broader AI-safety concerns about persuasion, autonomy, vulnerable users, conversion, and manipulation.",
+      "ways_to_help": [
+        "Review mission and apologetics scenarios.",
+        "Contribute persuasion-safety expertise.",
+        "Design symmetry controls."
+      ],
+      "source_path": "ideas/FID-029-ai-and-christian-mission.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-029-ai-and-christian-mission.md"
+    },
+    {
+      "id": "FID-030",
+      "title": "AI and Christian Anthropology",
+      "status": "seed",
+      "track": "christian-church",
+      "primary_need": "theological anthropology, eval design",
+      "summary": "Do AI systems encourage or resist reductive accounts of the human person as a bundle of cognition, productivity, preferences, data, or emotional needs rather than embodied persons made for God, neighbor, community, vocation, and worship?",
+      "why_it_matters": "Christian contribution to AI ethics is not only a list of harms. It includes a positive account of the human person. Fide AI can help translate theological anthropology into evaluation dimensions that test whether systems preserve human dignity, agency, embodiment, relationality, and spiritual openness.",
+      "ways_to_help": [
+        "Draft theological construct definitions.",
+        "Build scenario rubrics.",
+        "Review outputs for reductionism and dignity failures."
+      ],
+      "source_path": "ideas/FID-030-ai-and-christian-anthropology.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-030-ai-and-christian-anthropology.md"
+    },
+    {
+      "id": "FID-031",
+      "title": "AI in Church Governance and Discernment",
+      "status": "seed",
+      "track": "christian-church",
+      "primary_need": "church leadership, governance, decision-support evaluation",
+      "summary": "How should churches evaluate AI used in governance, budgeting, staffing, strategic planning, pastoral assignment, discipline processes, synods, councils, vestries, elder boards, or congregational discernment?",
+      "why_it_matters": "Church governance involves spiritual authority, stewardship, confidentiality, conflict, power, and discernment. Decision-support tools could improve administration but also centralize power, obscure accountability, or convert discernment into optimization.",
+      "ways_to_help": [
+        "Contribute governance scenarios.",
+        "Review polity and confidentiality concerns.",
+        "Build decision-support evals."
+      ],
+      "source_path": "ideas/FID-031-ai-in-church-governance-and-discernment.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-031-ai-in-church-governance-and-discernment.md"
+    },
+    {
+      "id": "FID-032",
+      "title": "AI-Generated Christian Media, Voice, and Deepfakes",
+      "status": "seed",
+      "track": "christian-church",
+      "primary_need": "media ethics, church communications, safety review",
+      "summary": "How should churches evaluate and govern AI-generated sermons, testimonies, devotionals, music, images, video, voice clones, deceased-person simulations, and synthetic clergy or saint-like personas?",
+      "why_it_matters": "AI-generated religious media can educate and inspire, but it can also deceive, manipulate grief, impersonate trusted leaders, fabricate testimony, or blur the line between proclamation and synthetic performance.",
+      "ways_to_help": [
+        "Review media examples.",
+        "Contribute communications and ethics expertise.",
+        "Design disclosure comprehension studies."
+      ],
+      "source_path": "ideas/FID-032-ai-generated-religious-media-and-deepfakes.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-032-ai-generated-religious-media-and-deepfakes.md"
+    }
+  ]
+}

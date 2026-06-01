@@ -1,0 +1,23 @@
+name: Reviewer interest
+description: Volunteer as a reviewer or advisor.
+title: "Reviewer interest: "
+labels: ["type: reviewer-needed"]
+body:
+  - type: textarea
+    id: expertise
+    attributes:
+      label: Relevant expertise
+    validations:
+      required: true
+  - type: textarea
+    id: areas
+    attributes:
+      label: Review areas of interest
+  - type: textarea
+    id: conflicts
+    attributes:
+      label: Potential conflicts of interest
+  - type: input
+    id: availability
+    attributes:
+      label: Availability

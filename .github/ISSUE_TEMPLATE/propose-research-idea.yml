@@ -1,0 +1,38 @@
+name: Propose a research idea
+description: Suggest a new Fide AI research idea.
+title: "Research idea: "
+labels: ["status: seed"]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Research question
+      description: What should Fide AI investigate?
+    validations:
+      required: true
+  - type: dropdown
+    id: track
+    attributes:
+      label: Research track
+      options:
+        - christian-church
+        - broader-faith-safety
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it matters
+      description: Why is this important for faith-facing AI or evaluation science?
+    validations:
+      required: true
+  - type: textarea
+    id: method
+    attributes:
+      label: Possible method
+      description: Any initial thoughts on datasets, models, reviewers, or controls.
+  - type: textarea
+    id: help
+    attributes:
+      label: How you might help
+      description: Optional contribution path.

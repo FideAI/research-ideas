@@ -1,0 +1,9 @@
+{
+  "name": "@fideai/research-ideas",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:feed": "node scripts/build-feed.mjs"
+  }
+}
