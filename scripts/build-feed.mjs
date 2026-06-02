@@ -9,6 +9,28 @@ const sourceRepo =
   process.env.RESEARCH_IDEAS_SOURCE_REPO ?? "https://github.com/FideAI/research-ideas";
 const sourceBranch = process.env.RESEARCH_IDEAS_SOURCE_BRANCH ?? "main";
 
+async function generatedAt(distFile) {
+  if (process.env.RESEARCH_IDEAS_GENERATED_AT) {
+    return process.env.RESEARCH_IDEAS_GENERATED_AT;
+  }
+
+  try {
+    const existingFeed = JSON.parse(await readFile(distFile, "utf8"));
+    if (
+      typeof existingFeed.generated_at === "string" &&
+      existingFeed.generated_at.trim()
+    ) {
+      return existingFeed.generated_at;
+    }
+  } catch (error) {
+    if (error?.code !== "ENOENT") {
+      throw error;
+    }
+  }
+
+  return new Date().toISOString();
+}
+
 function requiredMatch(content, pattern, field, file) {
   const match = content.match(pattern);
   if (!match?.[1]?.trim()) {
@@ -80,9 +102,11 @@ for (const file of files) {
   ideas.push(parseIdea(file, content));
 }
 
+const distFile = path.join(distDir, "research-ideas.json");
+
 const feed = {
   schema_version: 1,
-  generated_at: new Date().toISOString(),
+  generated_at: await generatedAt(distFile),
   source_repo: sourceRepo,
   source_branch: sourceBranch,
   idea_count: ideas.length,
@@ -97,7 +121,7 @@ const feed = {
 
 await mkdir(distDir, { recursive: true });
 await writeFile(
-  path.join(distDir, "research-ideas.json"),
+  distFile,
   `${JSON.stringify(feed, null, 2)}\n`,
 );
 

@@ -158,6 +158,11 @@ discipline.
 
 ## Source Pointers
 
+For the structured source registry and reviewed source notes, see
+`research/sources.yaml`, `research/source-tags.yaml`, and `research/reviews/`.
+This section remains a short narrative pointer list rather than the canonical
+bibliography.
+
 - UK AI Security Institute Inspect: https://inspect.aisi.org.uk/
 - METR autonomous capability resources: https://metr.org/measuring-autonomous-AI-capabilities
 - OpenAI Preparedness Framework update: https://openai.com/index/updating-our-preparedness-framework/

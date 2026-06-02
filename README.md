@@ -15,7 +15,7 @@ research backlog, issue discussions, pull requests, and generated JSON feed.
 
 ## Current Snapshot
 
-- **32 open research ideas**
+- **45 open research ideas**
 - **2 research tracks**
 - **4 public issue paths** for proposing ideas, claiming work, commenting on
   methodology, and volunteering as a reviewer
@@ -80,8 +80,9 @@ CONTRIBUTING.md                # Detailed contributor and maintainer guide
 CLAIMS_POLICY.md               # How to avoid overstating research ideas
 CODE_OF_CONDUCT.md             # Community expectations
 research-landscape.md          # Broader question families and inspiration
+research/                       # Structured evidence commons and source notes
 ideas/                         # One Markdown brief per research idea
-templates/                     # Reusable templates for briefs and claims
+templates/                     # Reusable templates for briefs, claims, and source notes
 .github/ISSUE_TEMPLATE/        # Public issue paths
 .github/PULL_REQUEST_TEMPLATE.md
 .github/workflows/build-feed.yml
@@ -103,6 +104,21 @@ Then include both the changed Markdown files and the updated
 
 The feed currently includes the idea ID, title, status, track, primary need,
 summary, why-it-matters excerpt, ways to help, source path, and GitHub URL.
+
+## Research Evidence Commons
+
+The `research/` directory maintains a structured evidence commons for papers,
+benchmarks, datasets, reports, policy documents, theology sources, product
+documentation, and other prior work that should inform Fide AI research.
+
+- `research/sources.yaml` is the canonical source registry.
+- `research/source-tags.yaml` defines controlled tags for source relevance.
+- `research/reviews/` contains short notes for reviewed high-priority sources.
+- `templates/source-note.md` is the template for adding a source review.
+
+Use the evidence commons to connect prior work to idea IDs without overloading
+individual seed idea files with bibliographies. See `research/README.md` for the
+source schema, status vocabulary, contribution workflow, and claim boundaries.
 
 ## License
 
