@@ -1,0 +1,1181 @@
+schema_version: 1
+
+sources:
+  - id: aisi-inspect-framework
+    title: "Inspect AI: Framework for Large Language Model Evaluations"
+    authors:
+      - UK AI Security Institute
+    year: 2024
+    type: product-doc
+    venue: Inspect documentation
+    url: https://inspect.aisi.org.uk/
+    status: core
+    relevance:
+      - benchmark-validity
+      - ai-governance
+      - agentic-safety
+    related_ideas:
+      - FID-001
+      - FID-012
+      - FID-023
+    summary: >
+      Documentation for a reusable evaluation framework that can inform how Fide
+      AI structures reproducible model and system evaluations.
+    key_claims:
+      - Reusable evaluation harnesses can improve consistency and auditability of AI evaluations.
+    limitations:
+      - General-purpose evaluation infrastructure does not by itself define faith-facing constructs.
+    added_by: fide-ai
+    added_at: "2026-06-02"
+
+  - id: metr-autonomous-capabilities
+    title: "Resources for Measuring Autonomous AI Capabilities"
+    authors:
+      - METR
+    year: unknown
+    type: report
+    venue: METR resources
+    url: https://metr.org/measuring-autonomous-AI-capabilities
+    status: to-review
+    relevance:
+      - agentic-safety
+      - benchmark-validity
+    related_ideas:
+      - FID-003
+      - FID-017
+    summary: >
+      METR resources on measuring long-horizon autonomous AI capabilities, useful
+      for adapting agentic evaluation concepts to ministry workflows.
+    added_by: fide-ai
+    added_at: "2026-06-02"
+
+  - id: openai-preparedness-framework-update
+    title: "Our updated Preparedness Framework"
+    authors:
+      - OpenAI
+    year: 2025
+    type: policy
+    venue: OpenAI
+    url: https://openai.com/index/updating-our-preparedness-framework/
+    status: to-review
+    relevance:
+      - ai-governance
+      - benchmark-validity
+    related_ideas:
+      - FID-001
+      - FID-022
+      - FID-044
+    summary: >
+      A frontier-model risk governance reference point for thinking about public
+      claim boundaries, preparedness thresholds, and evaluation reporting.
+    added_by: fide-ai
+    added_at: "2026-06-02"
+
+  - id: openai-anthropic-safety-evaluation
+    title: "Findings from a pilot Anthropic–OpenAI alignment evaluation exercise: OpenAI Safety Tests"
+    authors:
+      - OpenAI
+      - Anthropic
+    year: 2025
+    type: report
+    venue: OpenAI
+    url: https://openai.com/index/openai-anthropic-safety-evaluation/
+    status: to-review
+    relevance:
+      - benchmark-validity
+      - ai-governance
+      - human-calibration
+    related_ideas:
+      - FID-001
+      - FID-011
+      - FID-044
+    summary: >
+      Cross-lab safety evaluation work that can inform how Fide AI reports model
+      comparisons, uncertainty, and third-party evaluation limits.
+    added_by: fide-ai
+    added_at: "2026-06-02"
+
+  - id: openai-scheming-research
+    title: "Detecting and reducing scheming in AI models"
+    authors:
+      - OpenAI
+    year: 2025
+    type: report
+    venue: OpenAI
+    url: https://openai.com/index/detecting-and-reducing-scheming-in-ai-models/
+    status: to-review
+    relevance:
+      - agentic-safety
+      - benchmark-validity
+    related_ideas:
+      - FID-008
+      - FID-012
+      - FID-023
+    summary: >
+      Research on evaluation-aware or deceptive model behavior that is relevant
+      to faith-facing honesty, red-team, and visible-rubric gaming work.
+    added_by: fide-ai
+    added_at: "2026-06-02"
+
+  - id: anthropic-third-party-evaluations
+    title: "A new initiative for developing third-party model evaluations"
+    authors:
+      - Anthropic
+    year: 2024
+    type: report
+    venue: Anthropic
+    url: https://www.anthropic.com/news/a-new-initiative-for-developing-third-party-model-evaluations/
+    status: to-review
+    relevance:
+      - benchmark-validity
+      - ai-governance
+      - human-calibration
+    related_ideas:
+      - FID-001
+      - FID-011
+      - FID-044
+    summary: >
+      A reference point for independent and third-party evaluation practices that
+      may inform Fide AI's evaluation-platform and reviewer-reliability work.
+    added_by: fide-ai
+    added_at: "2026-06-02"
+
+  - id: brown-mental-health-chatbot-ethics-2025
+    title: "New study: AI chatbots systematically violate mental health ethics standards"
+    authors:
+      - Brown University
+    year: 2025
+    type: article
+    venue: Brown University News
+    url: https://www.brown.edu/news/2025-10-21/ai-mental-health-ethics
+    status: to-review
+    relevance:
+      - mental-health-adjacent
+      - pastoral-care
+    related_ideas:
+      - FID-003
+      - FID-004
+      - FID-018
+      - FID-042
+    summary: >
+      A mental-health-chatbot ethics reference relevant to pastoral-adjacent care,
+      dependency, overvalidation, referral, and escalation boundaries.
+    added_by: fide-ai
+    added_at: "2026-06-02"
+
+  - id: fideai-fmg-bench
+    title: "When AI Is Your Pastor: A Benchmark for LLM Theological Triage and Pastoral Guidance"
+    authors:
+      - Alex Chao
+    year: 2026
+    type: benchmark
+    venue: Fide AI
+    url: https://fideai.org/research/fmg-bench
+    status: core
+    relevance:
+      - benchmark-validity
+      - human-calibration
+      - pastoral-care
+    related_ideas:
+      - FID-001
+      - FID-002
+      - FID-011
+    summary: >
+      Fide AI's benchmark work for evaluating faith-facing model guidance and
+      motivating reviewer calibration, construct validity, and platform work.
+    added_by: fide-ai
+    added_at: "2026-06-02"
+
+  - id: arxiv-2605-22975
+    title: "When AI Takes Sides on Questions of Faith: Persistent Asymmetries in AI-Mediated Faith Guidance"
+    authors:
+      - Brett Israelsen
+      - Sheryl Carty
+      - Josh Coates
+      - Nancy Fulda
+      - Julie Park
+      - Pete Whiting
+    year: 2026
+    type: preprint
+    venue: arXiv
+    url: https://arxiv.org/abs/2605.22975
+    arxiv: "2605.22975"
+    status: reviewed
+    relevance:
+      - conversion-symmetry
+      - mission-and-persuasion
+      - benchmark-validity
+      - religious-bias
+    related_ideas:
+      - FID-014
+      - FID-043
+      - FID-044
+    summary: >
+      Studies whether LLMs treat joining and leaving different religions
+      symmetrically and raises questions about persuasion, autonomy, and public
+      benchmark claims.
+    key_claims:
+      - Models can respond differently across religion-pair conversion prompts.
+      - Supportiveness, asymmetry, dispersion, and persuasive language can be measured but require careful interpretation.
+    limitations:
+      - Results depend on prompt design, model versions, scoring method, and evaluator choice.
+    notes_path: research/reviews/2605.22975-conversion-bias.md
+    added_by: fide-ai
+    added_at: "2026-06-02"
+    last_reviewed_at: "2026-06-02"
+
+  - id: arxiv-2605-24319
+    title: "Omissive Bias in Religious Representation: Benchmarking LLM Answers to Everyday Ethical Decision-making"
+    authors:
+      - David Wingate
+      - Sheryl Carty
+      - Joshua Coates
+      - Daniel Feldman
+      - Nancy Fulda
+      - Larry Howell
+      - Brett Israelson
+      - Dallin Jacobs
+      - Jonathan Karr
+      - John Paul Kimes
+      - Elisabeth Kincaid
+      - Paul Martens
+      - Gavin Mobley
+      - Suzana Pinheiro
+      - Lindsay Slemboski
+      - Peter Whiting
+    year: 2026
+    type: preprint
+    venue: arXiv
+    url: https://arxiv.org/abs/2605.24319
+    arxiv: "2605.24319"
+    status: reviewed
+    relevance:
+      - religious-representation
+      - religious-salience
+      - benchmark-validity
+      - human-calibration
+    related_ideas:
+      - FID-013
+      - FID-041
+      - FID-044
+    summary: >
+      Introduces a benchmark for whether LLMs include religious or spiritual
+      perspectives in everyday ethically salient questions where many users may
+      expect such perspectives.
+    key_claims:
+      - Models often omit religious frameworks in contexts where surveyed humans may expect them.
+      - Measuring religious mention is only a starting point for evaluating meaningful representation.
+    limitations:
+      - Benchmark validity depends on question sourcing, user expectations, judge reliability, and definitions of appropriate religious inclusion.
+    notes_path: research/reviews/2605.24319-omissive-bias.md
+    added_by: fide-ai
+    added_at: "2026-06-02"
+    last_reviewed_at: "2026-06-02"
+
+  - id: cefeai-allfaith-dashboard
+    title: "CEFE-AI AllFaith Benchmark dashboard"
+    authors:
+      - Consortium for Evaluating Faith and Ethics in AI
+    year: 2026
+    type: benchmark
+    venue: CEFE.ai
+    url: https://cefe.ai/
+    status: to-review
+    relevance:
+      - religious-representation
+      - conversion-symmetry
+      - benchmark-validity
+    related_ideas:
+      - FID-013
+      - FID-014
+      - FID-041
+      - FID-043
+      - FID-044
+    summary: >
+      Public dashboard for cross-faith benchmark results that raises practical
+      questions about leaderboards, uncertainty, evaluator choice, and claim
+      boundaries.
+    added_by: fide-ai
+    added_at: "2026-06-02"
+
+  - id: prweb-cefeai-allfaith-launch-2026
+    title: "Multi-university consortium launches first cross-faith AI benchmark"
+    authors:
+      - CEFE AI
+    publisher: PRWeb
+    year: 2026
+    type: article
+    venue: PRWeb
+    url: https://www.prweb.com/releases/multi-university-consortium-launches-first-cross-faith-ai-benchmark-revealing-gaps-in-how-models-handle-religion-302781144.html
+    status: candidate
+    relevance:
+      - religious-representation
+      - conversion-symmetry
+      - faith-ai-gap-map
+    related_ideas:
+      - FID-041
+      - FID-043
+      - FID-044
+      - FID-045
+    summary: >
+      Press release describing the CEFE-AI / AllFaith benchmark launch and public
+      claims about religious omission, conversion asymmetry, and gaps in AI-bias
+      research.
+    limitations:
+      - Press-release claims should be checked against underlying papers, data, and methods.
+    added_by: fide-ai
+    added_at: "2026-06-02"
+
+  - id: arxiv-2512-03943
+    title: "Is Lying Only Sinful in Islam? Exploring Religious Bias in Multilingual Large Language Models Across Major Religions"
+    authors:
+      - Kazi Abrab Hossain
+      - Jannatul Somiya Mahmud
+      - Maria Hossain Tuli
+      - Anik Mitra
+      - S. M. Taiabul Haque
+      - Farig Y. Sadeque
+    year: 2025
+    type: preprint
+    venue: arXiv
+    url: https://arxiv.org/abs/2512.03943
+    arxiv: "2512.03943"
+    doi: "10.48550/arXiv.2512.03943"
+    status: candidate
+    relevance:
+      - religious-bias
+      - religious-representation
+      - youth-education
+    related_ideas:
+      - FID-019
+      - FID-023
+      - FID-045
+    summary: >
+      Candidate source on religious bias in multilingual language-model settings,
+      with emphasis on English and Bengali prompts across major South Asian
+      religions; relevant to cross-lingual and minority-faith evaluation.
+    limitations:
+      - Methods and claims need review before use.
+    added_by: fide-ai
+    added_at: "2026-06-02"
+
+  - id: sage-religion-racial-bias-llms
+    title: "Religion and Racial Bias in Artificial Intelligence Large Language Models"
+    authors:
+      - Joshua C. Tom
+      - Todd W. Ferguson
+      - Brandon C. Martinez
+    year: 2025
+    type: paper
+    venue: Socius
+    url: https://journals.sagepub.com/doi/abs/10.1177/23780231251377210
+    doi: "10.1177/23780231251377210"
+    status: candidate
+    relevance:
+      - religious-bias
+      - religious-representation
+    related_ideas:
+      - FID-013
+      - FID-019
+      - FID-023
+      - FID-045
+    summary: >
+      Candidate source on religious and racial bias in LLM-generated sermon
+      outputs, relevant to intersectional representation and red-team work.
+    limitations:
+      - Methods and implications for faith-facing evaluation need review before use.
+    added_by: fide-ai
+    added_at: "2026-06-02"
+
+  - id: vatican-magnifica-humanitas-2026
+    title: "Magnifica Humanitas"
+    authors:
+      - Leo XIV
+    year: 2026
+    type: theology
+    venue: Vatican
+    url: https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html
+    status: to-review
+    relevance:
+      - christian-anthropology
+      - data-stewardship
+      - digital-sobriety
+      - power-subsidiarity
+      - supply-chain-dignity
+      - truth-communication
+    related_ideas:
+      - FID-033
+      - FID-034
+      - FID-035
+      - FID-036
+      - FID-037
+      - FID-038
+      - FID-039
+      - FID-040
+    summary: >
+      Recent Catholic social-theological source on AI, human dignity, truth,
+      data, labor, subsidiarity, and digital restraint that inspired several
+      faith-facing AI research questions.
+    added_by: fide-ai
+    added_at: "2026-06-02"
+  - id: arxiv-2101-05783
+    title: "Persistent Anti-Muslim Bias in Large Language Models"
+    authors:
+      - Abubakar Abid
+      - Maheen Farooqi
+      - James Zou
+    year: 2021
+    type: preprint
+    venue: arXiv
+    url: https://arxiv.org/abs/2101.05783
+    arxiv: "2101.05783"
+    doi: "10.48550/arXiv.2101.05783"
+    status: to-review
+    relevance:
+      - religious-bias
+      - religious-representation
+      - benchmark-validity
+    related_ideas:
+      - FID-013
+      - FID-019
+      - FID-023
+      - FID-045
+    summary: >
+      Demonstrates anti-Muslim associations in GPT-3 using prompt completion,
+      analogical reasoning, and story generation, making it foundational for
+      religious-bias evaluation and red-team design.
+    limitations:
+      - Focuses on GPT-3-era behavior and should be replicated on current models.
+    added_by: fide-ai
+    added_at: "2026-06-02"
+
+  - id: arxiv-2004-09456
+    title: "StereoSet: Measuring stereotypical bias in pretrained language models"
+    authors:
+      - Moin Nadeem
+      - Anna Bethke
+      - Siva Reddy
+    year: 2020
+    type: benchmark
+    venue: arXiv
+    url: https://arxiv.org/abs/2004.09456
+    arxiv: "2004.09456"
+    doi: "10.48550/arXiv.2004.09456"
+    status: to-review
+    relevance:
+      - religious-bias
+      - benchmark-validity
+    related_ideas:
+      - FID-013
+      - FID-019
+      - FID-023
+      - FID-044
+    summary: >
+      Introduces a bias benchmark covering gender, profession, race, and religion,
+      useful as prior art for stereotype-oriented religious bias evaluation.
+    limitations:
+      - Measures stereotypical associations rather than pastoral, theological, or
+        deployment-specific faith-facing quality.
+    added_by: fide-ai
+    added_at: "2026-06-02"
+
+  - id: arxiv-2010-00133
+    title: "CrowS-Pairs: A Challenge Dataset for Measuring Social Biases in Masked Language Models"
+    authors:
+      - Nikita Nangia
+      - Clara Vania
+      - Rasika Bhalerao
+      - Samuel R. Bowman
+    year: 2020
+    type: benchmark
+    venue: arXiv
+    url: https://arxiv.org/abs/2010.00133
+    arxiv: "2010.00133"
+    doi: "10.48550/arXiv.2010.00133"
+    status: to-review
+    relevance:
+      - religious-bias
+      - benchmark-validity
+    related_ideas:
+      - FID-013
+      - FID-019
+      - FID-023
+      - FID-044
+    summary: >
+      Provides paired stereotype examples across nine bias categories, including
+      religion, and is useful prior art for contrastive faith-facing bias tests.
+    limitations:
+      - Designed for masked language models and stereotype preference, not
+        open-ended faith guidance.
+    added_by: fide-ai
+    added_at: "2026-06-02"
+
+  - id: arxiv-2603-23750
+    title: "IslamicMMLU: A Benchmark for Evaluating LLMs on Islamic Knowledge"
+    authors:
+      - Ali Abdelaal
+      - Mohammed Nader Al Haffar
+      - Mahmoud Fawzi
+      - Walid Magdy
+    year: 2026
+    type: benchmark
+    venue: arXiv
+    url: https://arxiv.org/abs/2603.23750
+    arxiv: "2603.23750"
+    doi: "10.48550/arXiv.2603.23750"
+    status: to-review
+    relevance:
+      - religious-knowledge-qa
+      - rag-source-authority
+      - benchmark-validity
+      - religious-bias
+    related_ideas:
+      - FID-006
+      - FID-019
+      - FID-028
+      - FID-044
+    summary: >
+      Introduces a 10,013-question benchmark across Quran, Hadith, and Fiqh,
+      including a madhab bias task that is relevant to source authority and
+      tradition-specific representation.
+    limitations:
+      - Multiple-choice accuracy does not establish fitness to issue religious
+        guidance or rulings.
+    added_by: fide-ai
+    added_at: "2026-06-02"
+
+  - id: arxiv-2601-07528
+    title: "From RAG to Agentic RAG for Faithful Islamic Question Answering"
+    authors:
+      - Gagan Bhatia
+      - Hamdy Mubarak
+      - Mustafa Jarrar
+      - George Mikros
+      - Fadi Zaraket
+      - Mahmoud Alhirthani
+      - Mutaz Al-Khatib
+      - Logan Cochrane
+      - Kareem Darwish
+      - Rashid Yahiaoui
+      - Firoj Alam
+    year: 2026
+    type: preprint
+    venue: arXiv
+    url: https://arxiv.org/abs/2601.07528
+    arxiv: "2601.07528"
+    doi: "10.48550/arXiv.2601.07528"
+    status: to-review
+    relevance:
+      - religious-knowledge-qa
+      - rag-source-authority
+      - benchmark-validity
+    related_ideas:
+      - FID-006
+      - FID-017
+      - FID-028
+      - FID-044
+    summary: >
+      Introduces ISLAMICFAITHQA and an agentic Quran-grounding framework for
+      measuring hallucination, abstention, retrieval, and tool-supported evidence
+      seeking in Islamic QA.
+    limitations:
+      - Focuses on Islamic QA and Quran grounding; findings need adaptation before
+        applying to other traditions.
+    added_by: fide-ai
+    added_at: "2026-06-02"
+
+  - id: arxiv-2603-12768
+    title: "SectEval: Evaluating the Latent Sectarian Preferences of Large Language Models"
+    authors:
+      - Aditya Maheshwari
+      - Amit Gajkeshwar
+      - Kaushal Sharma
+      - Vivek Patel
+    year: 2026
+    type: benchmark
+    venue: arXiv
+    url: https://arxiv.org/abs/2603.12768
+    arxiv: "2603.12768"
+    doi: "10.48550/arXiv.2603.12768"
+    status: to-review
+    relevance:
+      - sectarian-bias
+      - religious-bias
+      - religious-representation
+      - benchmark-validity
+    related_ideas:
+      - FID-007
+      - FID-019
+      - FID-023
+      - FID-044
+    summary: >
+      Evaluates Sunni/Shia preference patterns across English and Hindi prompts,
+      including language and location effects in religious answers.
+    limitations:
+      - Narrowly focused on Sunni/Shia distinctions and a small question set, so
+        broader claims require replication.
+    added_by: fide-ai
+    added_at: "2026-06-02"
+
+  - id: arxiv-2410-11647
+    title: "Measuring Spiritual Values and Bias of Large Language Models"
+    authors:
+      - Songyuan Liu
+      - Ziyang Zhang
+      - Runze Yan
+      - Wei Wu
+      - Carl Yang
+      - Jiaying Lu
+    year: 2024
+    type: preprint
+    venue: arXiv
+    url: https://arxiv.org/abs/2410.11647
+    arxiv: "2410.11647"
+    doi: "10.48550/arXiv.2410.11647"
+    status: to-review
+    relevance:
+      - religious-bias
+      - religious-representation
+      - mission-and-persuasion
+      - benchmark-validity
+    related_ideas:
+      - FID-005
+      - FID-013
+      - FID-023
+      - FID-044
+    summary: >
+      Measures spiritual values encoded in LLM behavior and studies how spiritual
+      value differences affect social-fairness tasks such as hate-speech
+      identification.
+    limitations:
+      - Spiritual-value constructs and mitigation proposals need domain review
+        before use in faith-facing public claims.
+    added_by: fide-ai
+    added_at: "2026-06-02"
+
+  - id: arxiv-2604-18404
+    title: "Six Llamas: Comparative Religious Ethics Through LoRA-Adapted Language Models"
+    authors:
+      - Chad Coleman
+      - W. Russell Neuman
+      - Manan Shah
+      - Ali Dasdan
+      - Matthew Crispi
+      - Morris Chiang
+      - Zack Leitman
+      - Mustafa Poonawala
+    year: 2026
+    type: preprint
+    venue: arXiv
+    url: https://arxiv.org/abs/2604.18404
+    arxiv: "2604.18404"
+    doi: "10.48550/arXiv.2604.18404"
+    status: to-review
+    relevance:
+      - mission-and-persuasion
+      - christian-anthropology
+      - religious-representation
+      - benchmark-validity
+    related_ideas:
+      - FID-005
+      - FID-007
+      - FID-030
+      - FID-044
+    summary: >
+      Fine-tunes Llama variants on distinct religious corpora to examine whether
+      religious training data produces differentiated ethical reasoning patterns.
+    limitations:
+      - Fine-tuned model behavior should not be treated as an authoritative account
+        of the represented traditions.
+    added_by: fide-ai
+    added_at: "2026-06-02"
+
+  - id: arxiv-2507-07787
+    title: "Measuring AI Alignment with Human Flourishing"
+    authors:
+      - Elizabeth Hilliard
+      - Akshaya Jagadeesh
+      - Alex Cook
+      - Steele Billings
+      - Nicholas Skytland
+      - Alicia Llewellyn
+      - Jackson Paull
+      - Nathan Paull
+      - Nolan Kurylo
+      - Keatra Nesbitt
+      - Robert Gruenewald
+      - Anthony Jantzi
+      - Omar Chavez
+    year: 2025
+    type: benchmark
+    venue: arXiv
+    url: https://arxiv.org/abs/2507.07787
+    arxiv: "2507.07787"
+    doi: "10.48550/arXiv.2507.07787"
+    status: to-review
+    relevance:
+      - human-flourishing
+      - benchmark-validity
+      - human-calibration
+      - religious-salience
+    related_ideas:
+      - FID-002
+      - FID-027
+      - FID-030
+      - FID-044
+    summary: >
+      Introduces the Flourishing AI Benchmark across seven dimensions, including
+      faith and spirituality, and evaluates model alignment with holistic human
+      flourishing.
+    limitations:
+      - Uses specialized judge models and flourishing constructs that require
+        independent validation before procurement or deployment claims.
+    added_by: fide-ai
+    added_at: "2026-06-02"
+
+  - id: arxiv-2604-03356
+    title: "Evaluating Artificial Intelligence Through a Christian Understanding of Human Flourishing"
+    authors:
+      - Nicholas Skytland
+      - Lauren Parsons
+      - Alicia Llewellyn
+      - Steele Billings
+      - Peter Larson
+      - John Anderson
+      - Sean Boisen
+      - Steve Runge
+    year: 2026
+    type: benchmark
+    venue: arXiv
+    url: https://arxiv.org/abs/2604.03356
+    arxiv: "2604.03356"
+    doi: "10.48550/arXiv.2604.03356"
+    status: to-review
+    relevance:
+      - human-flourishing
+      - christian-anthropology
+      - benchmark-validity
+      - religious-salience
+    related_ideas:
+      - FID-027
+      - FID-030
+      - FID-035
+      - FID-044
+    summary: >
+      Introduces a Christian Single-Turn flourishing benchmark and argues that
+      models show systematic gaps under Christian-specific evaluative criteria.
+    limitations:
+      - Single-turn Christian-worldview scores need calibration, reviewer review,
+        and longitudinal validation before formation claims.
+    added_by: fide-ai
+    added_at: "2026-06-02"
+
+  - id: facct-2025-blind-faith
+    title: "Blind Faith? User Preference and Expert Assessment of AI-Generated Religious Content"
+    authors:
+      - Sabriya Maryam Alam
+      - Marwa Abdulhai
+      - Niloufar Salehi
+    year: 2025
+    type: paper
+    venue: FAccT 2025
+    url: https://doi.org/10.1145/3715275.3732162
+    doi: "10.1145/3715275.3732162"
+    status: to-review
+    relevance:
+      - human-calibration
+      - pastoral-care
+      - religious-knowledge-qa
+      - benchmark-validity
+    related_ideas:
+      - FID-002
+      - FID-011
+      - FID-028
+      - FID-044
+    summary: >
+      Studies Muslim user preferences and expert assessments of AI-generated
+      Islamic religious answers, highlighting the gap between appealing outputs
+      and expert-identified deficiencies.
+    limitations:
+      - Focuses on Muslim religious information-seeking and should not be
+        generalized to all traditions without additional study.
+    added_by: fide-ai
+    added_at: "2026-06-02"
+
+  - id: mdpi-2024-feminist-religion-chatbots
+    title: "Feminist Re-Engineering of Religion-Based AI Chatbots"
+    authors:
+      - Hazel T. Biana
+    year: 2024
+    type: paper
+    venue: Philosophies
+    url: https://www.mdpi.com/2409-9287/9/1/20
+    doi: "10.3390/philosophies9010020"
+    status: to-review
+    relevance:
+      - religious-chatbots
+      - religious-bias
+      - pastoral-care
+      - religious-representation
+    related_ideas:
+      - FID-004
+      - FID-013
+      - FID-018
+      - FID-023
+    summary: >
+      Critiques religion-based AI chatbots for potential inaccuracies, religious
+      homogenization, and gender bias, and proposes feminist re-engineering of
+      chatbot design.
+    limitations:
+      - Normative design proposal should be paired with empirical evaluation before
+        adoption as a product standard.
+    added_by: fide-ai
+    added_at: "2026-06-02"
+
+  - id: aisel-2022-spirituality-chatbot
+    title: "Will You Talk about God with a Spirituality Chatbot? An Interview Study"
+    authors:
+      - Charis Asante-Agyei
+      - Yimin Xiao
+      - Lu Xiao
+    year: 2022
+    type: paper
+    venue: HICSS 55
+    url: https://aisel.aisnet.org/hicss-55/dsm/mediated_conversation/8/
+    doi: "10.24251/HICSS.2022.399"
+    status: to-review
+    relevance:
+      - religious-chatbots
+      - pastoral-care
+      - religious-salience
+    related_ideas:
+      - FID-004
+      - FID-018
+      - FID-026
+      - FID-041
+    summary: >
+      Interview study with religious participants about desired and concerning
+      roles for spiritual chatbots in religious spaces.
+    limitations:
+      - Small qualitative study; useful for design questions but not prevalence
+        estimates.
+    added_by: fide-ai
+    added_at: "2026-06-02"
+
+  - id: tandf-2025-spiritual-chatbot-good-idea
+    title: "Artificial Intelligence and Human Spirituality: Is a Spiritual Chatbot a Good Idea?"
+    authors:
+      - Ron Cole-Turner
+    year: 2025
+    type: paper
+    venue: Theology and Science
+    url: https://www.tandfonline.com/doi/abs/10.1080/14746700.2025.2514299
+    doi: "10.1080/14746700.2025.2514299"
+    status: to-review
+    relevance:
+      - religious-chatbots
+      - pastoral-care
+      - digital-sobriety
+      - christian-anthropology
+    related_ideas:
+      - FID-004
+      - FID-018
+      - FID-026
+      - FID-035
+    summary: >
+      Theological analysis of spiritual chatbots, arguing that they may support
+      spirituality under limits but should not act as pastor or priest.
+    limitations:
+      - Normative theological analysis rather than a benchmark or deployment study.
+    added_by: fide-ai
+    added_at: "2026-06-02"
+
+  - id: springer-2026-religious-ethics-ai-governance
+    title: "Religious ethics in the age of AI: a comparative study of faith-based approaches to AI governance"
+    authors:
+      - Darren Winter
+    year: 2026
+    type: paper
+    venue: AI and Ethics
+    url: https://link.springer.com/article/10.1007/s43681-026-01156-6
+    doi: "10.1007/s43681-026-01156-6"
+    status: to-review
+    relevance:
+      - ai-governance
+      - power-subsidiarity
+      - christian-anthropology
+      - procurement
+    related_ideas:
+      - FID-020
+      - FID-022
+      - FID-040
+      - FID-045
+    summary: >
+      Compares Christian, Islamic, and Buddhist ethical resources with AI
+      governance frameworks such as the EU AI Act, ISO/IEC 42001, and OECD
+      principles.
+    limitations:
+      - Broad comparative documentary analysis; tradition-specific applications
+        require deeper local review.
+    added_by: fide-ai
+    added_at: "2026-06-02"
+
+  - id: vatican-antiqua-et-nova-2025
+    title: "Antiqua et nova: Note on the Relationship Between Artificial Intelligence and Human Intelligence"
+    authors:
+      - Dicastery for the Doctrine of the Faith
+      - Dicastery for Culture and Education
+    year: 2025
+    type: theology
+    venue: Vatican
+    url: https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_ddf_doc_20250128_antiqua-et-nova_en.html
+    status: to-review
+    relevance:
+      - christian-anthropology
+      - ai-governance
+      - digital-sobriety
+      - truth-communication
+    related_ideas:
+      - FID-030
+      - FID-035
+      - FID-036
+      - FID-040
+    summary: >
+      Vatican note distinguishing human and artificial intelligence and reflecting
+      on AI's anthropological, ethical, educational, relational, and truth-related
+      implications.
+    limitations:
+      - Catholic theological source; use with tradition-specific claim boundaries.
+    added_by: fide-ai
+    added_at: "2026-06-02"
+
+  - id: rome-call-ai-ethics-2020
+    title: "Rome Call for AI Ethics"
+    authors:
+      - Pontifical Academy for Life
+    year: 2020
+    type: policy
+    venue: Rome Call
+    url: https://www.romecall.org/wp-content/uploads/2022/03/RomeCall_Paper_web.pdf
+    status: to-review
+    relevance:
+      - ai-governance
+      - procurement
+      - power-subsidiarity
+    related_ideas:
+      - FID-020
+      - FID-022
+      - FID-040
+      - FID-045
+    summary: >
+      Multi-stakeholder faith-linked AI ethics framework emphasizing transparency,
+      inclusion, responsibility, impartiality, reliability, and security/privacy.
+    limitations:
+      - Soft-governance commitment rather than an evaluation benchmark or binding
+        standard.
+    added_by: fide-ai
+    added_at: "2026-06-02"
+
+  - id: springer-2026-doctrinal-flattening
+    title: "Detecting doctrinal flattening in AI generated responses"
+    authors:
+      - Jason Owen
+    year: 2026
+    type: paper
+    venue: AI and Ethics
+    url: https://link.springer.com/article/10.1007/s43681-026-01051-0
+    doi: "10.1007/s43681-026-01051-0"
+    status: candidate
+    relevance:
+      - religious-representation
+      - rag-source-authority
+      - christian-anthropology
+      - benchmark-validity
+    related_ideas:
+      - FID-007
+      - FID-015
+      - FID-025
+      - FID-028
+    summary: >
+      Studies denominational misrepresentation and doctrinal flattening in
+      AI-generated Christian responses across eleven Christian traditions.
+    limitations:
+      - Metadata and methods should receive a full review before using it in public
+        claims.
+    added_by: fide-ai
+    added_at: "2026-06-02"
+
+  - id: arxiv-2110-08193
+    title: "BBQ: A Hand-Built Bias Benchmark for Question Answering"
+    authors:
+      - Alicia Parrish
+      - Angelica Chen
+      - Nikita Nangia
+      - Vishakh Padmakumar
+      - Jason Phang
+      - Jana Thompson
+      - Phu Mon Htut
+      - Samuel R. Bowman
+    year: 2022
+    type: benchmark
+    venue: Findings of ACL 2022
+    url: https://arxiv.org/abs/2110.08193
+    arxiv: "2110.08193"
+    doi: "10.48550/arXiv.2110.08193"
+    status: to-review
+    relevance:
+      - religious-bias
+      - benchmark-validity
+      - human-calibration
+    related_ideas:
+      - FID-013
+      - FID-019
+      - FID-023
+      - FID-044
+    summary: >
+      Widely used QA bias benchmark with religion as one of several protected
+      social dimensions, useful as a methodological comparison point for
+      faith-specific stereotype and ambiguity tests.
+    limitations:
+      - U.S. English focus and broad social-bias framing mean it should not stand
+        in for tradition-specific religious evaluation.
+    added_by: fide-ai
+    added_at: "2026-06-02"
+
+  - id: facct-2021-stochastic-parrots
+    title: "On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?"
+    authors:
+      - Emily M. Bender
+      - Timnit Gebru
+      - Angelina McMillan-Major
+      - Shmargaret Shmitchell
+    year: 2021
+    type: paper
+    venue: FAccT 2021
+    url: https://doi.org/10.1145/3442188.3445922
+    doi: "10.1145/3442188.3445922"
+    status: to-review
+    relevance:
+      - data-stewardship
+      - supply-chain-dignity
+      - truth-communication
+      - ai-governance
+    related_ideas:
+      - FID-033
+      - FID-034
+      - FID-036
+      - FID-040
+    summary: >
+      Foundational critique of scale-driven language-model development, covering
+      data documentation, environmental costs, bias, opacity, and the risk of
+      mistaking fluent output for meaningful communication.
+    limitations:
+      - Predates the current assistant and agent era; use alongside newer empirical
+        capability and deployment studies.
+    added_by: fide-ai
+    added_at: "2026-06-02"
+
+  - id: tacl-2018-data-statements
+    title: "Data Statements for Natural Language Processing: Toward Mitigating System Bias and Enabling Better Science"
+    authors:
+      - Emily M. Bender
+      - Batya Friedman
+    year: 2018
+    type: paper
+    venue: Transactions of the Association for Computational Linguistics
+    url: https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00041/43452/Data-Statements-for-Natural-Language-Processing
+    doi: "10.1162/tacl_a_00041"
+    status: to-review
+    relevance:
+      - data-stewardship
+      - rag-source-authority
+      - benchmark-validity
+      - religious-representation
+    related_ideas:
+      - FID-015
+      - FID-025
+      - FID-033
+      - FID-044
+    summary: >
+      Proposes structured documentation for language datasets, a useful precedent
+      for documenting religious corpora, benchmark provenance, speaker/community
+      representation, and intended-use boundaries.
+    limitations:
+      - Documentation practice rather than a faith-specific method; Fide AI would
+        need tradition-aware extensions.
+    added_by: fide-ai
+    added_at: "2026-06-02"
+
+  - id: cacm-2021-datasheets-for-datasets
+    title: "Datasheets for Datasets"
+    authors:
+      - Timnit Gebru
+      - Jamie Morgenstern
+      - Briana Vecchione
+      - Jennifer Wortman Vaughan
+      - Hanna Wallach
+      - Hal Daumé III
+      - Kate Crawford
+    year: 2021
+    type: paper
+    venue: Communications of the ACM
+    url: https://www.microsoft.com/en-us/research/publication/datasheets-for-datasets/
+    doi: "10.1145/3458723"
+    status: to-review
+    relevance:
+      - data-stewardship
+      - procurement
+      - benchmark-validity
+      - ai-governance
+    related_ideas:
+      - FID-022
+      - FID-033
+      - FID-040
+      - FID-044
+    summary: >
+      Canonical dataset-documentation proposal for recording motivation,
+      composition, collection, recommended uses, and maintenance, directly
+      relevant to faith-community data governance and vendor evaluation.
+    limitations:
+      - General ML framework; religious sources require additional norms around
+        authority, sacredness, consent, and community review.
+    added_by: fide-ai
+    added_at: "2026-06-02"
+
+  - id: facct-2019-model-cards
+    title: "Model Cards for Model Reporting"
+    authors:
+      - Margaret Mitchell
+      - Simone Wu
+      - Andrew Zaldivar
+      - Parker Barnes
+      - Lucy Vasserman
+      - Ben Hutchinson
+      - Elena Spitzer
+      - Inioluwa Deborah Raji
+      - Timnit Gebru
+    year: 2019
+    type: paper
+    venue: FAT* 2019
+    url: https://doi.org/10.1145/3287560.3287596
+    doi: "10.1145/3287560.3287596"
+    status: to-review
+    relevance:
+      - procurement
+      - benchmark-validity
+      - ai-governance
+      - human-calibration
+    related_ideas:
+      - FID-020
+      - FID-022
+      - FID-040
+      - FID-044
+    summary: >
+      Introduces standardized model reporting for intended use, performance,
+      caveats, and ethical considerations; useful for faith-aware AI procurement,
+      release notes, and benchmark disclosure templates.
+    limitations:
+      - Reporting template, not an assurance process; should be paired with audits,
+        evals, and community-specific documentation.
+    added_by: fide-ai
+    added_at: "2026-06-02"

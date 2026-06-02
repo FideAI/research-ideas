@@ -1,0 +1,57 @@
+schema_version: 1
+
+tags:
+  ai-governance:
+    description: Institutional governance, standards, oversight, auditability, and AI policy.
+  agentic-safety:
+    description: Long-horizon capability, agentic workflow risk, tool use, and autonomous task completion.
+  benchmark-validity:
+    description: Construct validity, reviewer reliability, uncertainty, leakage, drift, and public benchmark claims.
+  christian-anthropology:
+    description: Christian accounts of dignity, embodiment, vocation, agency, relationality, and moral responsibility.
+  clergy-referral:
+    description: Referral to clergy, chaplains, spiritual leaders, and other human supports.
+  conversion-symmetry:
+    description: Symmetry, autonomy, and persuasion in joining, leaving, or moving between religions.
+  data-stewardship:
+    description: Consent, data governance, retention, provenance, portability, and community benefit.
+  digital-sobriety:
+    description: AI non-use, restraint, attention, offline practices, and self-limiting product patterns.
+  faith-ai-gap-map:
+    description: Literature mapping, evidence commons, neglectedness analysis, and research infrastructure.
+  human-flourishing:
+    description: Human flourishing, formation, well-being, virtue, meaning, and faith/spirituality dimensions.
+  religious-chatbots:
+    description: Spiritual chatbots, religion-based conversational agents, pastoral bots, and chatbot UX.
+  religious-knowledge-qa:
+    description: Question answering, knowledge benchmarks, hallucination, abstention, and expert validation for religious content.
+  sectarian-bias:
+    description: Intra-religious, denominational, sectarian, school-of-thought, or tradition-subgroup bias.
+  human-calibration:
+    description: Human review, expert panels, model judges, inter-rater reliability, and adjudication.
+  mental-health-adjacent:
+    description: Chatbot use near mental health, crisis, dependency, overvalidation, and escalation.
+  mission-and-persuasion:
+    description: Witness, apologetics, evangelism, persuasion, autonomy, and manipulation risk.
+  multimodal-religion:
+    description: Images, audio, video, sacred spaces, religious media, and multimodal reasoning.
+  pastoral-care:
+    description: Pastoral-adjacent guidance, spiritual companionship, escalation, and human care boundaries.
+  power-subsidiarity:
+    description: Power concentration, local agency, exit rights, audit access, and subsidiarity.
+  procurement:
+    description: Institutional buying, readiness standards, vendor questionnaires, and supply-chain evidence.
+  rag-source-authority:
+    description: Retrieval, grounding, citation reliability, and religious source authority.
+  religious-bias:
+    description: Stereotype, representational, racial, intersectional, or tradition-specific bias involving religion.
+  religious-representation:
+    description: Inclusion, omission, distortion, or overreach in representing religious perspectives.
+  religious-salience:
+    description: Deciding when religion should be included, asked about, personalized, or withheld.
+  supply-chain-dignity:
+    description: Labor, content moderation, data sourcing, compute, energy, minerals, and environmental stewardship.
+  truth-communication:
+    description: Factual communication, crisis response, journalism, correction workflows, and shared trust.
+  youth-education:
+    description: Children, adolescents, families, schools, catechesis, and religious education.
