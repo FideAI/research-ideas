@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-06-02T03:16:51.123Z",
+  "generated_at": "2026-06-08T12:00:00.000-07:00",
   "source_repo": "https://github.com/FideAI/research-ideas",
   "source_branch": "main",
-  "idea_count": 45,
+  "idea_count": 55,
   "tracks": {
     "christian-church": "Explicitly designed to benefit the Christian church: churches, clergy, Christian educators, ministries, denominations, seminaries, publishers, and Christian families.",
     "broader-faith-safety": "Relevant to faith communities, AI ethics, AI safety, evaluation science, governance, pluralism, or high-trust deployment more broadly."
@@ -750,6 +750,176 @@
       ],
       "source_path": "ideas/FID-045-faith-ai-research-gap-map.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-045-faith-ai-research-gap-map.md"
+    },
+    {
+      "id": "FID-046",
+      "title": "AI Displacement, Meaning, and Vocation",
+      "status": "seed",
+      "track": "christian-church",
+      "primary_need": "labor economics, pastoral care, vocation, survey design",
+      "summary": "How do people affected by AI-related job loss, role disruption, workplace automation, or career uncertainty experience changes in purpose, dignity, vocation, anxiety, household decision-making, and participation in church or community life?",
+      "why_it_matters": "AI labor disruption is not only a labor-market event. People often experience job loss or occupational instability as a loss of role, future, identity, status, community, and meaning. Churches regularly encounter these burdens through pastoral care, benevolence, counseling referrals, small groups, job networks, family stress, youth formation, and teaching about work and calling.",
+      "ways_to_help": [
+        "Contribute labor-economics, sociology, psychology, or pastoral-care expertise.",
+        "Help design survey measures for meaning, dignity, vocation, and agency.",
+        "Recruit churches, ministries, or workforce-support organizations for pilot",
+        "Review protocols for privacy, consent, and participant vulnerability."
+      ],
+      "source_path": "ideas/FID-046-ai-displacement-meaning-vocation.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-046-ai-displacement-meaning-vocation.md"
+    },
+    {
+      "id": "FID-047",
+      "title": "Churches as Labor-Transition Support Institutions",
+      "status": "seed",
+      "track": "christian-church",
+      "primary_need": "institutional partners, labor transition, social support, field research",
+      "summary": "What roles do churches, Christian nonprofits, schools, and ministries play when workers and households face AI-related layoffs, role disruption, retraining needs, income instability, or loss of vocational direction?",
+      "why_it_matters": "Churches are often local support institutions before they are formal workforce programs. They provide pastoral care, benevolence funds, informal job networks, childcare support, meals, prayer, teaching, community, referrals, and trusted interpretation of confusing social change. If AI meaningfully disrupts work, churches may become part of the response whether or not they have prepared for that role.",
+      "ways_to_help": [
+        "Share examples of job-transition, benevolence, or career-support ministries.",
+        "Help recruit churches and Christian nonprofits for qualitative interviews.",
+        "Review readiness criteria from pastoral, workforce, legal, and social-service",
+        "Identify partnerships that preserve church mission while expanding practical"
+      ],
+      "source_path": "ideas/FID-047-churches-labor-transition-support.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-047-churches-labor-transition-support.md"
+    },
+    {
+      "id": "FID-048",
+      "title": "AI Career Guidance and Vocational Discernment",
+      "status": "seed",
+      "track": "christian-church",
+      "primary_need": "career guidance, pastoral theology, HAI research, product evaluation",
+      "summary": "Can AI tools help people facing career disruption explore skills, training, applications, finances, and next steps while preserving vocational agency, human counsel, realistic constraints, and a richer account of calling than market optimization?",
+      "why_it_matters": "Workers displaced or unsettled by AI may turn to AI systems for career advice, resume drafting, job matching, retraining plans, and emotional reassurance. These tools can reduce search costs and widen access to guidance. They can also overpromise, flatten vocation into income maximization, isolate users from human support, or provide confident advice without knowing local constraints.",
+      "ways_to_help": [
+        "Draft realistic worker, student, and household transition scenarios.",
+        "Review career guidance for financial, legal, pastoral, and educational risks.",
+        "Design user studies that measure agency rather than short-term satisfaction",
+        "Contribute church-based career ministry or workforce-development experience."
+      ],
+      "source_path": "ideas/FID-048-ai-career-guidance-vocational-discernment.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-048-ai-career-guidance-vocational-discernment.md"
+    },
+    {
+      "id": "FID-049",
+      "title": "Unequal AI Access Through Faith Communities",
+      "status": "seed",
+      "track": "christian-church",
+      "primary_need": "access research, community partners, digital literacy, equity",
+      "summary": "Are churches and faith-based institutions helping under-resourced workers, families, students, older adults, immigrants, rural communities, and small nonprofits access useful AI tools, or are AI benefits concentrating among people who already have technical, educational, financial, and institutional advantage?",
+      "why_it_matters": "AI may widen inequality if the people most able to benefit already have better devices, broadband, English fluency, paid tools, institutional support, and confidence using technology. Churches often serve people outside elite knowledge-work settings and may become trusted places for AI literacy, access, discernment, and caution. That role needs evidence rather than assumption.",
+      "ways_to_help": [
+        "Recruit churches, schools, ministries, or nonprofits serving under-resourced",
+        "Translate surveys and workshop materials.",
+        "Review accessibility, privacy, and digital-literacy assumptions.",
+        "Design outcome measures for real benefit rather than mere tool adoption."
+      ],
+      "source_path": "ideas/FID-049-unequal-ai-access-through-faith-communities.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-049-unequal-ai-access-through-faith-communities.md"
+    },
+    {
+      "id": "FID-050",
+      "title": "Youth Career Formation in an AI Economy",
+      "status": "seed",
+      "track": "christian-church",
+      "primary_need": "educators, youth ministry, career preparation, longitudinal study design",
+      "summary": "How is exposure to AI changing how Christian students, parents, educators, and youth ministries think about career preparation, calling, human value, skill development, education choices, and hope for the future?",
+      "why_it_matters": "Young people are forming expectations about work while AI is changing what skills appear valuable, which careers feel stable, and what kinds of human contribution seem durable. Christian schools, parents, churches, and youth ministries need evidence about how AI affects motivation, vocation, learning, anxiety, discernment, and preparation for adult life.",
+      "ways_to_help": [
+        "Recruit Christian schools, homeschool groups, youth ministries, and parent",
+        "Review student survey items and classroom module designs.",
+        "Contribute education, child-development, youth-ministry, or labor-market",
+        "Help design privacy-preserving longitudinal follow-up."
+      ],
+      "source_path": "ideas/FID-050-youth-career-formation-ai-economy.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-050-youth-career-formation-ai-economy.md"
+    },
+    {
+      "id": "FID-051",
+      "title": "Economic Disruption and Religious Meaning-Seeking",
+      "status": "seed",
+      "track": "broader-faith-safety",
+      "primary_need": "sociology of religion, labor economics, privacy-preserving measurement, aggregate usage analysis",
+      "summary": "During periods of labor-market stress, layoffs, automation anxiety, or economic uncertainty, do people increasingly seek religious, spiritual, existential, vocational, or meaning-related help through AI systems?",
+      "why_it_matters": "Economic disruption can change more than employment and income. It can change how people ask about purpose, suffering, calling, prayer, despair, family responsibility, dignity, and hope. AI systems may become a private site where these questions first surface, including for people who are not yet talking with churches, families, counselors, or local institutions.",
+      "ways_to_help": [
+        "Contribute sociology of religion, labor economics, or privacy expertise.",
+        "Design aggregate category taxonomies and validation methods.",
+        "Identify external economic indicators suitable for time-series comparison.",
+        "Recruit churches or community institutions for consented companion studies."
+      ],
+      "source_path": "ideas/FID-051-economic-disruption-religious-meaning-seeking.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-051-economic-disruption-religious-meaning-seeking.md"
+    },
+    {
+      "id": "FID-052",
+      "title": "AI as Private First Counsel During Economic Stress",
+      "status": "seed",
+      "track": "broader-faith-safety",
+      "primary_need": "pastoral care, HAI research, mental health boundaries, privacy-preserving measurement",
+      "summary": "When people experience job loss, financial stress, career uncertainty, or automation anxiety, do they turn to AI systems as a private first place for emotional, spiritual, moral, or vocational counsel before seeking help from family, churches, pastors, counselors, mentors, or workforce institutions?",
+      "why_it_matters": "AI systems can lower the cost of disclosing fear, shame, confusion, or doubt. That may help people rehearse hard conversations and find resources. It may also create a private substitute for embodied support at moments when people need accountable counsel, practical aid, safeguarding, or community.",
+      "ways_to_help": [
+        "Review scenario designs from pastoral, clinical, legal, and workforce-support",
+        "Help define privacy-safe measures of referral and isolation.",
+        "Recruit consented study participants through churches or community partners.",
+        "Contribute HAI research methods for studying disclosure and support-seeking."
+      ],
+      "source_path": "ideas/FID-052-ai-as-private-first-counsel.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-052-ai-as-private-first-counsel.md"
+    },
+    {
+      "id": "FID-053",
+      "title": "AI as Bridge or Substitute for Faith Community",
+      "status": "seed",
+      "track": "broader-faith-safety",
+      "primary_need": "sociology of religion, pastoral care, UX research, aggregate and field measurement",
+      "summary": "When people use AI for religious, spiritual, vocational, or meaning-related questions during economic disruption, does that use tend to bridge them toward churches, clergy, mentors, family, support groups, and local institutions, or substitute for embodied community?",
+      "why_it_matters": "AI can help people name questions they were afraid to ask, find a church, draft an email to a pastor, prepare for a hard conversation, or locate practical support. It can also become a private spiritual interface that absorbs distress without connecting people to accountable human care. Churches need evidence about both possibilities.",
+      "ways_to_help": [
+        "Contribute sociology, pastoral care, UX, or measurement expertise.",
+        "Draft bridge and substitution indicators that preserve user dignity.",
+        "Recruit churches and community institutions for field interviews.",
+        "Review referral patterns for religious and nonreligious users."
+      ],
+      "source_path": "ideas/FID-053-ai-bridge-or-substitute-for-faith-community.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-053-ai-bridge-or-substitute-for-faith-community.md"
+    },
+    {
+      "id": "FID-054",
+      "title": "Church Signals of AI-Era Economic Stress",
+      "status": "seed",
+      "track": "christian-church",
+      "primary_need": "church partners, privacy governance, sociology, benevolence and care data",
+      "summary": "Can churches and Christian institutions identify privacy-preserving, non-surveillant signals of AI-era economic stress, such as benevolence requests, pastoral-care load, job-network activity, counseling referrals, giving changes, attendance patterns, volunteer availability, or demand for career support?",
+      "why_it_matters": "Churches may observe household economic stress before it appears in formal labor data. But care data is sensitive, relational, and easily misused. Fide AI can help churches ask what can be learned responsibly without turning pastoral care, generosity, or community participation into surveillance.",
+      "ways_to_help": [
+        "Recruit churches, benevolence teams, pastoral-care teams, and denominational",
+        "Contribute privacy, data governance, sociology, or pastoral-care expertise.",
+        "Identify aggregate indicators that are useful but not individually revealing.",
+        "Review failure modes around surveillance, donor pressure, and profiling."
+      ],
+      "source_path": "ideas/FID-054-church-economic-stress-signals.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-054-church-economic-stress-signals.md"
+    },
+    {
+      "id": "FID-055",
+      "title": "AI Disruption, Generosity, and Benevolence",
+      "status": "seed",
+      "track": "christian-church",
+      "primary_need": "church finance, household welfare, philanthropy, economic sociology",
+      "summary": "How does AI-related job uncertainty, income disruption, career anxiety, or economic optimism affect church giving, generosity, benevolence demand, mutual aid, missions support, and household willingness to help others?",
+      "why_it_matters": "Economic disruption affects both sides of church care: households may have less capacity to give, while more people may need help. AI may also change how people think about abundance, scarcity, stewardship, obligation, risk, and future security. Churches need evidence for budgeting, benevolence planning, teaching, and mutual-aid design.",
+      "ways_to_help": [
+        "Recruit churches willing to review or pilot privacy-safe aggregate measures.",
+        "Contribute church finance, philanthropy, household welfare, or sociology",
+        "Help design survey items that do not shame respondents or aid recipients.",
+        "Identify public economic indicators suitable for comparison."
+      ],
+      "source_path": "ideas/FID-055-ai-disruption-generosity-benevolence.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-055-ai-disruption-generosity-benevolence.md"
     }
   ]
 }
