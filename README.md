@@ -15,7 +15,7 @@ research backlog, issue discussions, pull requests, and generated JSON feed.
 
 ## Current Snapshot
 
-- **55 open research ideas**
+- **63 open research ideas**
 - **2 research tracks**
 - **4 public research agendas** that group the backlog into shareable research
   campaigns
@@ -96,6 +96,8 @@ CLAIMS_POLICY.md               # How to avoid overstating research ideas
 CODE_OF_CONDUCT.md             # Community expectations
 research-landscape.md          # Broader question families and inspiration
 research/                       # Structured evidence commons and source notes
+research/formal-verification-faith-facing-ai.md
+                                # Program note for the formal verification lane
 ideas/                         # One Markdown brief per research idea
 templates/                     # Reusable templates for briefs, claims, and source notes
 .github/ISSUE_TEMPLATE/        # Public issue paths
@@ -161,6 +163,10 @@ imply endorsement by Fide AI.
 4. Turn **governance, authority, and religious representation** into standards
    for institutional adoption, source authority, religious omission, persuasion
    boundaries, incident reporting, and cross-faith measurement validity.
+5. Develop **formal verification for faith-facing AI** as a cross-faith research
+   program for sacred-text fidelity, proof-carrying citations, tradition-specific
+   constraints, authority boundaries, verified retrieval, and reviewer-to-spec
+   workflows.
 
 ## Idea Index
 
@@ -220,6 +226,30 @@ mission.
 | `FID-051` | Economic disruption and religious meaning-seeking | `seed` | sociology of religion, labor economics, privacy-preserving measurement, aggregate usage analysis | [brief](ideas/FID-051-economic-disruption-religious-meaning-seeking.md) |
 | `FID-052` | AI as private first counsel during economic stress | `seed` | pastoral care, HAI research, mental health boundaries, privacy-preserving measurement | [brief](ideas/FID-052-ai-as-private-first-counsel.md) |
 | `FID-053` | AI as bridge or substitute for faith community | `seed` | sociology of religion, pastoral care, UX research, aggregate and field measurement | [brief](ideas/FID-053-ai-bridge-or-substitute-for-faith-community.md) |
+
+### Formal Verification for Faith-Facing AI
+
+These ideas are cross-faith by default and focus on source fidelity, bounded
+inference, formal constraints, and authority boundaries. Christian examples can
+serve as concrete pilots, but the methods should be useful across traditions
+where sacred texts, interpretive sources, and community authority matter.
+
+See
+[`research/formal-verification-faith-facing-ai.md`](research/formal-verification-faith-facing-ai.md)
+for the program note that maps these ideas into four buildable artifacts: a
+faith verification domain pack, a proof-carrying faith answer schema, a sacred
+text fidelity benchmark, and a reviewer-to-spec workflow.
+
+| ID | Idea | Status | Primary need | Brief |
+|---|---|---:|---|---|
+| `FID-056` | Formal verification for sacred text fidelity | `seed` | formal methods, sacred text scholarship, citation evaluation | [brief](ideas/FID-056-formal-verification-sacred-text-fidelity.md) |
+| `FID-057` | Proof-carrying citations for faith-facing AI | `seed` | formal methods, RAG systems, evidence graphs, evaluator tooling | [brief](ideas/FID-057-proof-carrying-citations-faith-ai.md) |
+| `FID-058` | Tradition-specific constraint formalization | `seed` | formal specification, theology, pluralism, evaluator design | [brief](ideas/FID-058-tradition-specific-constraint-formalization.md) |
+| `FID-059` | Authority-boundary verification for pastoral-adjacent AI | `seed` | authority boundaries, pastoral care, formal policy checks | [brief](ideas/FID-059-authority-boundary-verification-pastoral-adjacent-ai.md) |
+| `FID-060` | Cross-faith sacred text and source schema | `seed` | source metadata, corpus design, theological librarianship | [brief](ideas/FID-060-cross-faith-sacred-text-source-schema.md) |
+| `FID-061` | Theological contradiction and entailment stress tests | `seed` | natural language inference, theology review, benchmark design | [brief](ideas/FID-061-theological-contradiction-entailment-stress-tests.md) |
+| `FID-062` | Verified retrieval pipelines for faith-facing RAG | `seed` | RAG evaluation, retrieval verification, source authority metadata | [brief](ideas/FID-062-verified-retrieval-pipelines-faith-facing-rag.md) |
+| `FID-063` | Human-reviewer-to-formal-spec translation | `seed` | reviewer operations, formal specification, evaluation science | [brief](ideas/FID-063-human-reviewer-to-formal-spec-translation.md) |
 
 ## Claims Discipline
 

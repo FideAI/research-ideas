@@ -3,7 +3,7 @@
   "generated_at": "2026-06-08T12:00:00.000-07:00",
   "source_repo": "https://github.com/FideAI/research-ideas",
   "source_branch": "main",
-  "idea_count": 55,
+  "idea_count": 63,
   "tracks": {
     "christian-church": "Explicitly designed to benefit the Christian church: churches, clergy, Christian educators, ministries, denominations, seminaries, publishers, and Christian families.",
     "broader-faith-safety": "Relevant to faith communities, AI ethics, AI safety, evaluation science, governance, pluralism, or high-trust deployment more broadly."
@@ -920,6 +920,142 @@
       ],
       "source_path": "ideas/FID-055-ai-disruption-generosity-benevolence.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-055-ai-disruption-generosity-benevolence.md"
+    },
+    {
+      "id": "FID-056",
+      "title": "Formal Verification for Sacred Text Fidelity",
+      "status": "seed",
+      "track": "broader-faith-safety",
+      "primary_need": "formal methods, sacred text scholarship, citation evaluation",
+      "summary": "How can faith-facing AI systems be formally checked for whether they quote, paraphrase, reference, and contextualize sacred texts faithfully within a specified text edition, translation, canon, and interpretive context?",
+      "why_it_matters": "When people ask AI systems about scripture or other sacred texts, small errors can carry large consequences. A fabricated phrase, collapsed context, wrong translation, missing qualifier, or confident paraphrase can change what a user believes the text says. Faith-facing AI needs stronger checks for textual fidelity before users treat outputs as trustworthy.",
+      "ways_to_help": [
+        "Curate versioned sacred-text corpora and citation edge cases.",
+        "Define formal obligations for quote, paraphrase, and reference fidelity.",
+        "Review outputs as a scholar, clergy member, translator, or community expert.",
+        "Build verification tooling for source matching and context-preservation checks."
+      ],
+      "source_path": "ideas/FID-056-formal-verification-sacred-text-fidelity.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-056-formal-verification-sacred-text-fidelity.md"
+    },
+    {
+      "id": "FID-057",
+      "title": "Proof-Carrying Citations for Faith-Facing AI",
+      "status": "seed",
+      "track": "broader-faith-safety",
+      "primary_need": "formal methods, RAG systems, evidence graphs, evaluator tooling",
+      "summary": "Can faith-facing AI answers carry checkable citation proofs that show which claims are directly supported by sources, which are inferred, which are uncertain, and which require human or tradition-specific authority?",
+      "why_it_matters": "Faith-facing AI often gives fluent answers with citations that look trustworthy but do not actually support the claims being made. A user may not have the time or expertise to verify every citation. Proof-carrying citations could make source support inspectable rather than asking users to trust the surface form of an answer.",
+      "ways_to_help": [
+        "Design evidence-graph schemas and claim-support taxonomies.",
+        "Build validators for citation support, inference labels, and missing evidence.",
+        "Review faith-facing answers as a theologian, scholar, clergy member, or domain expert.",
+        "Test whether proof-carrying citations improve user trust calibration."
+      ],
+      "source_path": "ideas/FID-057-proof-carrying-citations-faith-ai.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-057-proof-carrying-citations-faith-ai.md"
+    },
+    {
+      "id": "FID-058",
+      "title": "Tradition-Specific Constraint Formalization",
+      "status": "seed",
+      "track": "broader-faith-safety",
+      "primary_need": "formal specification, theology, pluralism, evaluator design",
+      "summary": "How can tradition-specific boundaries, source hierarchies, doctrinal constraints, and disagreement patterns be translated into machine-checkable specifications without flattening differences across faith traditions?",
+      "why_it_matters": "Faith-facing AI systems often answer as if there is one generic religious perspective. In reality, traditions differ on authoritative sources, doctrine, practice, institutional authority, and acceptable forms of counsel. Formalizing these boundaries could help systems avoid giving tradition-confused or overgeneralized answers.",
+      "ways_to_help": [
+        "Contribute tradition-specific source hierarchies and boundary cases.",
+        "Translate expert review rubrics into formal constraints.",
+        "Test constraint-checking against model and RAG outputs.",
+        "Review whether specifications preserve disagreement rather than erase it."
+      ],
+      "source_path": "ideas/FID-058-tradition-specific-constraint-formalization.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-058-tradition-specific-constraint-formalization.md"
+    },
+    {
+      "id": "FID-059",
+      "title": "Authority-Boundary Verification for Pastoral-Adjacent AI",
+      "status": "seed",
+      "track": "broader-faith-safety",
+      "primary_need": "authority boundaries, pastoral care, formal policy checks",
+      "summary": "Can faith-facing AI systems be verified for whether they preserve the boundary between explanation, spiritual encouragement, moral reflection, pastoral or clerical authority, clinical/legal advice, and situations requiring human care?",
+      "why_it_matters": "Pastoral-adjacent AI can sound caring and authoritative even when it lacks the role, relationship, accountability, and context required for care. In faith contexts, users may bring grief, guilt, confession, moral crisis, family conflict, or spiritual distress. Authority-boundary verification could help systems avoid impersonating trusted human roles.",
+      "ways_to_help": [
+        "Contribute realistic pastoral-adjacent scenarios and escalation criteria.",
+        "Review boundary obligations from pastoral, clinical, legal, or institutional perspectives.",
+        "Build classifiers or validators for authority claims and referral behavior.",
+        "Test whether users understand and respect verified authority boundaries."
+      ],
+      "source_path": "ideas/FID-059-authority-boundary-verification-pastoral-adjacent-ai.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-059-authority-boundary-verification-pastoral-adjacent-ai.md"
+    },
+    {
+      "id": "FID-060",
+      "title": "Cross-Faith Sacred Text and Source Schema",
+      "status": "seed",
+      "track": "broader-faith-safety",
+      "primary_need": "source metadata, corpus design, theological librarianship",
+      "summary": "What metadata schema is needed for faith-facing AI systems to represent sacred texts, commentaries, institutional documents, oral traditions, translations, editions, and authority levels across faith traditions?",
+      "why_it_matters": "Formal verification and reliable retrieval both depend on knowing what a source is. A passage may be scripture, commentary, denominational policy, devotional writing, historical scholarship, minority interpretation, or pastoral guidance. Without source metadata, AI systems can cite religious material while hiding important differences in authority, scope, translation, and context.",
+      "ways_to_help": [
+        "Contribute source-card examples from different faith traditions.",
+        "Review metadata fields as a librarian, publisher, scholar, clergy member, or corpus builder.",
+        "Build schema validators and corpus-quality checks.",
+        "Identify licensing and provenance constraints for public benchmark sources."
+      ],
+      "source_path": "ideas/FID-060-cross-faith-sacred-text-source-schema.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-060-cross-faith-sacred-text-source-schema.md"
+    },
+    {
+      "id": "FID-061",
+      "title": "Theological Contradiction and Entailment Stress Tests",
+      "status": "seed",
+      "track": "broader-faith-safety",
+      "primary_need": "natural language inference, theology review, benchmark design",
+      "summary": "Can faith-facing AI systems be tested for whether their answers contradict, entail, overstate, understate, or misrepresent claims within a bounded source set and specified faith tradition?",
+      "why_it_matters": "AI systems can appear balanced while quietly producing contradictions or unsupported implications. In faith contexts, these errors may affect doctrine, moral reasoning, formation, education, and trust in community authorities. Theological contradiction and entailment tests could make some high-impact reasoning failures measurable.",
+      "ways_to_help": [
+        "Contribute bounded claim pairs and source-grounded edge cases.",
+        "Label contradiction, entailment, and uncertainty cases as an expert reviewer.",
+        "Build NLI baselines and compare them with model-judge evaluations.",
+        "Design reporting methods that show disagreement and claim boundaries clearly."
+      ],
+      "source_path": "ideas/FID-061-theological-contradiction-entailment-stress-tests.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-061-theological-contradiction-entailment-stress-tests.md"
+    },
+    {
+      "id": "FID-062",
+      "title": "Verified Retrieval Pipelines for Faith-Facing RAG",
+      "status": "seed",
+      "track": "broader-faith-safety",
+      "primary_need": "RAG evaluation, retrieval verification, source authority metadata",
+      "summary": "How can faith-facing retrieval-augmented generation pipelines be verified for whether they retrieve authoritative, relevant, context-preserving sources before generating answers about sacred texts, doctrine, practice, or institutional policy?",
+      "why_it_matters": "Many faith-facing AI failures begin before generation. If retrieval surfaces the wrong authority, a low-quality paraphrase, a fragment without context, or a source from a different tradition, the final answer may be polished but unsafe. Verified retrieval pipelines could make upstream failures visible before they become trusted religious guidance.",
+      "ways_to_help": [
+        "Build retrieval harnesses and verification-aware RAG prototypes.",
+        "Contribute source metadata, authority mappings, and adversarial retrieval cases.",
+        "Review retrieval outputs for relevance, authority, and context sufficiency.",
+        "Test abstention and uncertainty behavior when retrieval is inadequate."
+      ],
+      "source_path": "ideas/FID-062-verified-retrieval-pipelines-faith-facing-rag.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-062-verified-retrieval-pipelines-faith-facing-rag.md"
+    },
+    {
+      "id": "FID-063",
+      "title": "Human-Reviewer-to-Formal-Spec Translation",
+      "status": "seed",
+      "track": "broader-faith-safety",
+      "primary_need": "reviewer operations, formal specification, evaluation science",
+      "summary": "How can theologians, clergy, scholars, ministry practitioners, and community reviewers translate qualitative judgments about faith-facing AI into formal specifications that are faithful to expert intent and usable in evaluation?",
+      "why_it_matters": "Formal verification is only useful in faith contexts if the formal rules reflect real domain judgment. Reviewers may know when an answer is misleading, overconfident, pastorally inappropriate, or tradition-confused, but that judgment must be translated carefully before it becomes a machine-checkable constraint. Poor translation could encode the wrong thing with false precision.",
+      "ways_to_help": [
+        "Serve as a reviewer and explain qualitative judgments in detail.",
+        "Translate review notes into formal constraints and test cases.",
+        "Build tools for spec versioning, disagreement logging, and counterexample testing.",
+        "Study whether formalized reviewer judgments remain faithful over time."
+      ],
+      "source_path": "ideas/FID-063-human-reviewer-to-formal-spec-translation.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-063-human-reviewer-to-formal-spec-translation.md"
     }
   ]
 }
