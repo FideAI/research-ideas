@@ -98,6 +98,7 @@ research-landscape.md          # Broader question families and inspiration
 research/                       # Structured evidence commons and source notes
 research/formal-verification-faith-facing-ai.md
                                 # Program note for the formal verification lane
+research/product-translation.md # Research-to-product translation map
 ideas/                         # One Markdown brief per research idea
 templates/                     # Reusable templates for briefs, claims, and source notes
 .github/ISSUE_TEMPLATE/        # Public issue paths
@@ -167,6 +168,9 @@ imply endorsement by Fide AI.
    program for sacred-text fidelity, proof-carrying citations, tradition-specific
    constraints, authority boundaries, verified retrieval, and reviewer-to-spec
    workflows.
+6. Translate the strongest research ideas into product evidence packages for
+   Eval Engine, Fide-Check, Lexicon, Gateway, and readiness reviews. See
+   [`research/product-translation.md`](research/product-translation.md).
 
 ## Idea Index
 
