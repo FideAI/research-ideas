@@ -13,6 +13,13 @@ The companion website publishes a readable snapshot of these ideas at
 `fideai.org/research/calls`. This repository remains the source of truth for the
 research backlog, issue discussions, pull requests, and generated JSON feed.
 
+## Public Scope
+
+Keep this repository focused on research ideas, public methodology, source
+reviews, collaboration needs, and claim boundaries. Do not include
+product-specific plans, customer or partner work, private GTM strategy, or
+company-internal implementation commitments here.
+
 ## Current Snapshot
 
 - **63 open research ideas**
