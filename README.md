@@ -22,7 +22,7 @@ company-internal implementation commitments here.
 
 ## Current Snapshot
 
-- **63 open research ideas**
+- **68 open research ideas**
 - **2 research tracks**
 - **4 public research agendas** that group the backlog into shareable research
   campaigns
@@ -77,10 +77,10 @@ idea briefs in this repository.
 
 | Agenda | Public route | Primary audience | Included ideas |
 |---|---|---|---|
-| AI, work, meaning, and the common good | `/research/calls/work-meaning` | churches, economists, sociologists, funders | `FID-030`, `FID-033`, `FID-034`, `FID-037`, `FID-038`, `FID-040`, `FID-046`-`FID-055` |
-| Pastoral care, spiritual companionship, and formation | `/research/calls/pastoral-formation` | pastors, churches, parents, educators, builders | `FID-003`, `FID-004`, `FID-010`, `FID-015`, `FID-016`, `FID-018`, `FID-025`-`FID-027`, `FID-035`, `FID-041`, `FID-042`, `FID-050`, `FID-052`, `FID-053` |
+| AI, work, meaning, and the common good | `/research/calls/work-meaning` | churches, economists, sociologists, funders | `FID-030`, `FID-033`, `FID-034`, `FID-037`, `FID-038`, `FID-040`, `FID-046`-`FID-055`, `FID-065` |
+| Pastoral care, spiritual companionship, and formation | `/research/calls/pastoral-formation` | pastors, churches, parents, educators, builders | `FID-003`, `FID-004`, `FID-010`, `FID-015`, `FID-016`, `FID-018`, `FID-025`-`FID-027`, `FID-035`, `FID-041`, `FID-042`, `FID-050`, `FID-052`, `FID-053`, `FID-068` |
 | Faith-facing AI evaluation infrastructure | `/research/calls/evaluation-infrastructure` | AI researchers, builders, reviewers, funders | `FID-001`-`FID-003`, `FID-006`, `FID-008`, `FID-011`, `FID-012`, `FID-023`, `FID-028`, `FID-044`, `FID-045` |
-| Governance, authority, and religious representation | `/research/calls/governance-representation` | church leaders, ministries, safety researchers, interfaith reviewers | `FID-005`-`FID-007`, `FID-009`, `FID-013`, `FID-014`, `FID-017`, `FID-019`-`FID-025`, `FID-028`, `FID-029`, `FID-031`, `FID-032`, `FID-036`, `FID-039`-`FID-044` |
+| Governance, authority, and religious representation | `/research/calls/governance-representation` | church leaders, ministries, safety researchers, interfaith reviewers | `FID-005`-`FID-007`, `FID-009`, `FID-013`, `FID-014`, `FID-017`, `FID-019`-`FID-025`, `FID-028`, `FID-029`, `FID-031`, `FID-032`, `FID-036`, `FID-039`-`FID-044`, `FID-064`, `FID-066`, `FID-067` |
 
 ## Status Vocabulary
 
@@ -105,6 +105,8 @@ research-landscape.md          # Broader question families and inspiration
 research/                       # Structured evidence commons and source notes
 research/formal-verification-faith-facing-ai.md
                                 # Program note for the formal verification lane
+research/funding-inspired-call-map.md
+                                # How funding priorities informed selected calls
 ideas/                         # One Markdown brief per research idea
 templates/                     # Reusable templates for briefs, claims, and source notes
 .github/ISSUE_TEMPLATE/        # Public issue paths
@@ -144,6 +146,10 @@ Use the evidence commons to connect prior work to idea IDs without overloading
 individual seed idea files with bibliographies. See `research/README.md` for the
 source schema, status vocabulary, contribution workflow, and claim boundaries.
 
+For a disciplined map of selected external funding priorities to researchable
+questions, see
+[`research/funding-inspired-call-map.md`](research/funding-inspired-call-map.md).
+
 ## License
 
 This repo is intended for open research reuse.
@@ -174,6 +180,9 @@ imply endorsement by Fide AI.
    program for sacred-text fidelity, proof-carrying citations, tradition-specific
    constraints, authority boundaries, verified retrieval, and reviewer-to-spec
    workflows.
+6. Develop **AI, institutions, and collective discernment** questions around
+   local knowledge, plural association, collective intelligence, religious
+   institutional futures, and youth practice design.
 
 ## Idea Index
 
@@ -201,6 +210,9 @@ These ideas are explicitly intended to benefit the Christian church.
 | `FID-050` | Youth career formation in an AI economy | `seed` | educators, youth ministry, career preparation, longitudinal study design | [brief](ideas/FID-050-youth-career-formation-ai-economy.md) |
 | `FID-054` | Church signals of AI-era economic stress | `seed` | church partners, privacy governance, sociology, benevolence and care data | [brief](ideas/FID-054-church-economic-stress-signals.md) |
 | `FID-055` | AI disruption, generosity, and benevolence | `seed` | church finance, household welfare, philanthropy, economic sociology | [brief](ideas/FID-055-ai-disruption-generosity-benevolence.md) |
+| `FID-065` | AI, local knowledge, and faith-based civil society | `seed` | civil-society research, organizational studies, political economy, faith-based partners | [brief](ideas/FID-065-ai-local-knowledge-faith-civil-society.md) |
+| `FID-067` | Religious institutional futures in an AI-mediated society | `seed` | futures studies, sociology of religion, ecclesiology, organizational research, scenario design | [brief](ideas/FID-067-religious-institutional-futures-ai.md) |
+| `FID-068` | Christian practices for AI-era youth discernment | `seed` | youth and young-adult ministry, practical theology, developmental research, ethics review, HAI research | [brief](ideas/FID-068-christian-practices-youth-ai-discernment.md) |
 
 ### Broader Faith, Ethics, and Safety Research
 
@@ -233,6 +245,8 @@ mission.
 | `FID-051` | Economic disruption and religious meaning-seeking | `seed` | sociology of religion, labor economics, privacy-preserving measurement, aggregate usage analysis | [brief](ideas/FID-051-economic-disruption-religious-meaning-seeking.md) |
 | `FID-052` | AI as private first counsel during economic stress | `seed` | pastoral care, HAI research, mental health boundaries, privacy-preserving measurement | [brief](ideas/FID-052-ai-as-private-first-counsel.md) |
 | `FID-053` | AI as bridge or substitute for faith community | `seed` | sociology of religion, pastoral care, UX research, aggregate and field measurement | [brief](ideas/FID-053-ai-bridge-or-substitute-for-faith-community.md) |
+| `FID-064` | Collective intelligence and communal discernment under AI mediation | `seed` | computational social science, theology of discernment, network science, organizational research | [brief](ideas/FID-064-collective-intelligence-communal-discernment.md) |
+| `FID-066` | AI gatekeepers, conscience, and associational pluralism | `seed` | technology governance, law and religion, platform research, pluralism and safety review | [brief](ideas/FID-066-ai-conscience-associational-pluralism.md) |
 
 ### Formal Verification for Faith-Facing AI
 
