@@ -20,6 +20,8 @@ research/
   README.md              # This guide
   sources.yaml           # Canonical structured source registry
   source-tags.yaml       # Controlled vocabulary for relevance tags
+  funding-inspired-call-map.md
+                         # External funding priorities that informed selected calls
   reviews/               # Short annotations for selected sources
 templates/
   source-note.md         # Template for adding a reviewed source note
@@ -120,6 +122,14 @@ The source registry is the default place to link papers to idea IDs. Individual
 idea files may add a `Related Sources` section later when an idea moves into
 `scoping`, `active`, or publication work, but seed ideas do not need embedded
 bibliographies.
+
+## Funding-Inspired Call Map
+
+[`funding-inspired-call-map.md`](funding-inspired-call-map.md) records how
+selected external funding priorities informed a small set of Fide AI research
+questions. It is an agenda map, not a source registry, funder endorsement, or
+statement of grant eligibility. Keep new calls mission-led and evidence-ready;
+do not reshape an idea around a funding category that is not a genuine fit.
 
 ## Public Claim Boundaries
 

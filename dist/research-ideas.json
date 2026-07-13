@@ -3,7 +3,7 @@
   "generated_at": "2026-06-08T12:00:00.000-07:00",
   "source_repo": "https://github.com/FideAI/research-ideas",
   "source_branch": "main",
-  "idea_count": 63,
+  "idea_count": 68,
   "tracks": {
     "christian-church": "Explicitly designed to benefit the Christian church: churches, clergy, Christian educators, ministries, denominations, seminaries, publishers, and Christian families.",
     "broader-faith-safety": "Relevant to faith communities, AI ethics, AI safety, evaluation science, governance, pluralism, or high-trust deployment more broadly."
@@ -1056,6 +1056,86 @@
       ],
       "source_path": "ideas/FID-063-human-reviewer-to-formal-spec-translation.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-063-human-reviewer-to-formal-spec-translation.md"
+    },
+    {
+      "id": "FID-064",
+      "title": "Collective Intelligence and Communal Discernment Under AI Mediation",
+      "status": "seed",
+      "track": "broader-faith-safety",
+      "primary_need": "computational social science, theology of discernment, network science, organizational research",
+      "summary": "How does AI mediation change a community's ability to integrate dispersed knowledge, preserve epistemic diversity, surface dissent, revise judgment, and make accountable decisions? Under what conditions does it strengthen collective inquiry, and under what conditions does it create correlated error, false consensus, or concentrated authority?",
+      "why_it_matters": "AI can summarize documents, recommend options, and coordinate discussion at a scale that may help groups reason together. The same systems can make one model, one prompt pattern, or one institutional default disproportionately influential. Faith communities make consequential judgments through practices that include testimony, deliberation, dissent, counsel, and accountable authority. Those practices should not be reduced to the production of fast agreement.",
+      "ways_to_help": [
+        "Review constructs and scenarios from theology, philosophy, sociology, and collective-intelligence research.",
+        "Contribute transparent modeling, simulation, or causal-inference expertise.",
+        "Identify organizations willing to advise on a future ethics-reviewed pilot."
+      ],
+      "source_path": "ideas/FID-064-collective-intelligence-communal-discernment.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-064-collective-intelligence-communal-discernment.md"
+    },
+    {
+      "id": "FID-065",
+      "title": "AI, Local Knowledge, and Faith-Based Civil Society",
+      "status": "seed",
+      "track": "christian-church",
+      "primary_need": "civil-society research, organizational studies, political economy, faith-based partners",
+      "summary": "How do AI tools affect the ability of churches, ministries, faith-based nonprofits, and faith-rooted social enterprises to discover, steward, and act on local knowledge? Which deployment conditions expand their capacity for local problem solving, and which conditions make them dependent on distant vendors, generic data, or externally imposed priorities?",
+      "why_it_matters": "Faith-based organizations often respond to needs that are difficult to see in centralized datasets: household stress, informal care networks, neighborhood relationships, vocational barriers, and local sources of trust. AI may reduce administrative burden and extend capacity. It may also erase context, extract sensitive information, or shift institutional judgment to systems whose incentives and assumptions are outside the community's control.",
+      "ways_to_help": [
+        "Connect researchers with churches, ministries, nonprofits, and social enterprises willing to inform the study.",
+        "Review the constructs from organizational studies, economics, privacy, and Christian social thought.",
+        "Help design privacy-preserving survey and case-study methods."
+      ],
+      "source_path": "ideas/FID-065-ai-local-knowledge-faith-civil-society.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-065-ai-local-knowledge-faith-civil-society.md"
+    },
+    {
+      "id": "FID-066",
+      "title": "AI Gatekeepers, Conscience, and Associational Pluralism",
+      "status": "seed",
+      "track": "broader-faith-safety",
+      "primary_need": "technology governance, law and religion, platform research, pluralism and safety review",
+      "summary": "Under what technical, contractual, and governance conditions can faith-based associations and their members use, configure, contest, and exit AI systems in ways consistent with lawful conscience commitments while respecting the safety, rights, and dignity of others?",
+      "why_it_matters": "AI systems increasingly mediate communication, information access, fundraising, employment workflows, education, and public participation. When a small number of platforms or model providers define the available options, they can shape whether associations can express their commitments, organize around shared purposes, or obtain a fair hearing when a system's behavior conflicts with their mission. This question cannot be answered by assuming either unrestricted customization or centralized control is sufficient.",
+      "ways_to_help": [
+        "Review case scenarios from law and religion, civil society, AI governance, and safety practice.",
+        "Contribute evidence on platform governance, procurement, and portability.",
+        "Identify missing perspectives and pressure-test the framework's tradeoffs."
+      ],
+      "source_path": "ideas/FID-066-ai-conscience-associational-pluralism.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-066-ai-conscience-associational-pluralism.md"
+    },
+    {
+      "id": "FID-067",
+      "title": "Religious Institutional Futures in an AI-Mediated Society",
+      "status": "seed",
+      "track": "christian-church",
+      "primary_need": "futures studies, sociology of religion, ecclesiology, organizational research, scenario design",
+      "summary": "What plausible institutional futures emerge as churches and other faith communities use AI for learning, administration, care, governance, vocational support, and public communication? Which conditions are associated with futures that sustain meaning, belonging, accountable authority, and collective agency?",
+      "why_it_matters": "Debates about religious AI often focus on a single tool or immediate risk. The larger consequences may arise from interacting changes in authority, staffing, participation, information flows, economic pressure, and expectations of care. Communities need disciplined ways to imagine several futures without treating technology adoption or decline as inevitable.",
+      "ways_to_help": [
+        "Contribute evidence from sociology, futures studies, theology, and organizational research.",
+        "Participate in or help recruit a balanced scenario workshop.",
+        "Review scenario assumptions, omissions, and indicators."
+      ],
+      "source_path": "ideas/FID-067-religious-institutional-futures-ai.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-067-religious-institutional-futures-ai.md"
+    },
+    {
+      "id": "FID-068",
+      "title": "Christian Practices for AI-Era Youth Discernment",
+      "status": "seed",
+      "track": "christian-church",
+      "primary_need": "youth and young-adult ministry, practical theology, developmental research, ethics review, HAI research",
+      "summary": "Which Christian practices and community rhythms help young people examine their AI use with agency, embodiment, truthful attention, relationship, and spiritual discernment? What measurable outcomes and safeguards should guide future formation-oriented research or programming?",
+      "why_it_matters": "Young people are encountering AI through school, work, social life, search, and personal guidance. Generic digital-literacy advice may not address questions of vocation, dependence, prayer, truthfulness, community, attention, and the meaning of human dignity. Churches and educators need evidence before treating any particular practice or curriculum as a solution.",
+      "ways_to_help": [
+        "Review the framework from youth ministry, theology, developmental science, education, and HAI research.",
+        "Contribute safeguarding, consent, and research-ethics expertise.",
+        "Help recruit diverse young-adult and practitioner co-design participants."
+      ],
+      "source_path": "ideas/FID-068-christian-practices-youth-ai-discernment.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-068-christian-practices-youth-ai-discernment.md"
     }
   ]
 }
