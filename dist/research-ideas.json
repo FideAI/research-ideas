@@ -3,7 +3,7 @@
   "generated_at": "2026-06-08T12:00:00.000-07:00",
   "source_repo": "https://github.com/FideAI/research-ideas",
   "source_branch": "main",
-  "idea_count": 68,
+  "idea_count": 71,
   "tracks": {
     "christian-church": "Explicitly designed to benefit the Christian church: churches, clergy, Christian educators, ministries, denominations, seminaries, publishers, and Christian families.",
     "broader-faith-safety": "Relevant to faith communities, AI ethics, AI safety, evaluation science, governance, pluralism, or high-trust deployment more broadly."
@@ -1136,6 +1136,57 @@
       ],
       "source_path": "ideas/FID-068-christian-practices-youth-ai-discernment.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-068-christian-practices-youth-ai-discernment.md"
+    },
+    {
+      "id": "FID-069",
+      "title": "Verifiable Delegation and Revocation in Multi-Agent Networks",
+      "status": "seed",
+      "track": "broader-faith-safety",
+      "primary_need": "multi-agent safety, identity infrastructure, authorization, high-trust institutions",
+      "summary": "How can people and institutions verify which human, organization, agent, or sub-agent is acting; what authority it received; what limits apply; and whether that authority has been narrowed or revoked across a multi-principal agent network?",
+      "why_it_matters": "Faith communities and their partner organizations operate through high-trust relationships, delegated roles, and accountable authority. An agent acting for a church, ministry, service provider, donor, or software vendor can make a message or action appear institutionally authorized when it is not. The same problem extends beyond faith settings to charities, schools, health-adjacent nonprofits, and other organizations that coordinate across trust boundaries.",
+      "ways_to_help": [
+        "Build multi-agent testbeds, authorization protocols, and evaluation harnesses.",
+        "Review scenarios from nonprofit operations, identity security, and institutional governance.",
+        "Contribute provenance, cryptography, security, or human-computer interaction expertise.",
+        "Identify synthetic high-trust workflows that generalize beyond one tradition or organization type."
+      ],
+      "source_path": "ideas/FID-069-verifiable-delegation-revocation-multi-agent-networks.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-069-verifiable-delegation-revocation-multi-agent-networks.md"
+    },
+    {
+      "id": "FID-070",
+      "title": "Contextual Integrity and Prompt-Injection Resilience for Faith-Facing Agents",
+      "status": "seed",
+      "track": "broader-faith-safety",
+      "primary_need": "agent security, adversarial evaluation, context integrity, secure tool use",
+      "summary": "When a faith-facing agent reads email, web pages, agendas, documents, knowledge bases, and service requests, how can it distinguish authorized institutional instruction from untrusted context that attempts to redirect its behavior, exfiltrate information, or induce an unsafe action?",
+      "why_it_matters": "Faith-facing systems may encounter pastoral notes, prayer requests, educational materials, institutional policies, and communications involving vulnerable people. In an agentic system, apparently ordinary content can also become an adversarial instruction. A system that treats an external webpage, forwarded message, or retrieved document as permission to act can violate confidentiality, misrepresent institutional authority, or cause harm while appearing helpful.",
+      "ways_to_help": [
+        "Develop synthetic attack scenarios, secure agent harnesses, and benchmark metrics.",
+        "Review context-integrity assumptions from security, privacy, and institutional operations perspectives.",
+        "Test defenses against both adversarial and legitimate high-trust workflows.",
+        "Contribute responsible disclosure and evaluation-reporting practices."
+      ],
+      "source_path": "ideas/FID-070-contextual-integrity-prompt-injection-faith-facing-agents.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-070-contextual-integrity-prompt-injection-faith-facing-agents.md"
+    },
+    {
+      "id": "FID-071",
+      "title": "Confidential Agent Memory and Cross-Context Disclosure",
+      "status": "seed",
+      "track": "broader-faith-safety",
+      "primary_need": "privacy-preserving AI, agent memory evaluation, data governance, high-trust systems",
+      "summary": "How do persistent memory, summaries, retrieval stores, tool traces, delegation, and exports cause confidential context to influence or leak into unrelated sessions, roles, tasks, or organizations? Which technical controls make purpose limitation, deletion, and revocation testable?",
+      "why_it_matters": "Faith communities may handle prayer requests, pastoral correspondence, education records, donor information, internal deliberations, and information about people who never directly interact with an AI system. These contexts are often relational and purpose-specific. Persistent agents can silently carry information from one setting into another even when no one intentionally shares it, undermining confidentiality and institutional trust.",
+      "ways_to_help": [
+        "Build memory, retrieval, and tool-use evaluation harnesses.",
+        "Review scenarios from privacy engineering, pastoral confidentiality, education, nonprofit operations, and data-governance practice.",
+        "Develop synthetic data generators and leakage metrics.",
+        "Contribute threat modeling and responsible disclosure expertise."
+      ],
+      "source_path": "ideas/FID-071-confidential-agent-memory-cross-context-disclosure.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-071-confidential-agent-memory-cross-context-disclosure.md"
     }
   ]
 }

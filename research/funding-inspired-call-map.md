@@ -67,6 +67,28 @@ scholarly inquiry. Its emphasis on research that serves the North American
 church makes `FID-065`, `FID-067`, and `FID-068` especially natural questions
 for academic-practitioner teams.
 
+## AI Safety and Multi-Agent Systems
+
+The 2026 [Scaling AI Safety for a Multi-Agent World](https://schmidtsciences.smapply.io/prog/scaling_ai_safety_for_a_multi_agent_world/)
+call from Schmidt Sciences and partners identifies a technical agenda around
+realistic testbeds, agent networks, identity and provenance, delegation and
+revocation, and oversight of multi-principal agent populations. This does not
+mean the funders endorse Fide AI or that every related call is eligible. It does
+identify a durable safety problem where high-trust institutions can supply
+rigorous, generalizable synthetic test environments.
+
+| Fide call | External fit | Why it fits |
+|---|---|---|
+| `FID-069` | Direct: agent infrastructure; secondary testbeds and oversight | Evaluates verifiable identity, authority scope, provenance, delegation chains, and revocation across independent organizations and agents. |
+| `FID-064` | Secondary: agent networks and oversight | Adds population-level failure modes, including correlated error and hidden coordination, to its existing work on AI-mediated collective inquiry. |
+| `FID-017` | Complementary, not a direct match by itself | Provides high-trust workflow scenarios and recovery tests, but should not be presented as a multi-principal network proposal unless it includes cross-organization agent interaction. |
+
+`FID-070` is intentionally not mapped to this call: the call explicitly treats
+single-agent prompt injection as out of scope. It instead tracks a distinct,
+important agent-security question. `FID-071` is a related privacy and memory
+evaluation question that may fit other safety, privacy, or high-trust AI funding
+opportunities.
+
 ## Relationship to Fide AI's Current Application
 
 Fide AI's current Religion, Science, and Society concept investigates Christian

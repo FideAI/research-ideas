@@ -31,12 +31,16 @@ tags:
     description: Human review, expert panels, model judges, inter-rater reliability, and adjudication.
   mental-health-adjacent:
     description: Chatbot use near mental health, crisis, dependency, overvalidation, and escalation.
+  multi-agent-safety:
+    description: Safety, security, infrastructure, oversight, and emergent behavior in networks of interacting agents.
   mission-and-persuasion:
     description: Witness, apologetics, evangelism, persuasion, autonomy, and manipulation risk.
   multimodal-religion:
     description: Images, audio, video, sacred spaces, religious media, and multimodal reasoning.
   pastoral-care:
     description: Pastoral-adjacent guidance, spiritual companionship, escalation, and human care boundaries.
+  prompt-injection:
+    description: Indirect prompt injection, contextual manipulation, adversarial content, and agent security.
   power-subsidiarity:
     description: Power concentration, local agency, exit rights, audit access, and subsidiarity.
   procurement:

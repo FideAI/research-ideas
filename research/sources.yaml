@@ -1,6 +1,140 @@
 schema_version: 1
 
 sources:
+  - id: deepmind-multi-agent-safety-funding-2026
+    title: "Investing in multi-agent AI safety research"
+    authors:
+      - Google DeepMind
+      - Schmidt Sciences
+      - Cooperative AI Foundation
+      - Advanced Research and Invention Agency
+      - Google.org
+    year: 2026
+    type: article
+    venue: Google DeepMind
+    url: https://deepmind.google/blog/investing-in-multi-agent-ai-safety-research/
+    status: to-review
+    relevance:
+      - multi-agent-safety
+      - agentic-safety
+      - ai-governance
+    related_ideas:
+      - FID-017
+      - FID-064
+      - FID-069
+    summary: >
+      Announces a research funding call on multi-agent safety, identifying
+      realistic testbeds, network behavior, identity and commitment infrastructure,
+      and scalable oversight as priorities.
+    limitations:
+      - Funding-call priorities are not evidence that a proposed safety mechanism works or that Fide AI is eligible for support.
+    added_by: fide-ai
+    added_at: "2026-07-13"
+
+  - id: schmidt-multi-agent-safety-call-2026
+    title: "Scaling AI Safety for a Multi-Agent World"
+    authors:
+      - Schmidt Sciences
+    year: 2026
+    type: website
+    venue: Schmidt Sciences
+    url: https://schmidtsciences.smapply.io/prog/scaling_ai_safety_for_a_multi_agent_world/
+    status: to-review
+    relevance:
+      - multi-agent-safety
+      - agentic-safety
+      - ai-governance
+    related_ideas:
+      - FID-064
+      - FID-069
+    summary: >
+      Details a technical research agenda for multi-principal agent ecosystems,
+      including testbeds, identity and provenance, commitments and delegation,
+      revocation, and population-level oversight.
+    limitations:
+      - The call's scope excludes single-agent prompt-injection work and does not endorse any individual Fide AI research call.
+    added_by: fide-ai
+    added_at: "2026-07-13"
+
+  - id: anthropic-trustworthy-agents-2026
+    title: "Trustworthy agents in practice"
+    authors:
+      - Anthropic
+    year: 2026
+    type: article
+    venue: Anthropic
+    url: https://www.anthropic.com/research/trustworthy-agents
+    status: to-review
+    relevance:
+      - agentic-safety
+      - prompt-injection
+      - ai-governance
+    related_ideas:
+      - FID-017
+      - FID-070
+      - FID-071
+    summary: >
+      Describes practical safety considerations for agents whose behavior spans
+      models, harnesses, tools, and environments, including authorization and
+      human-control mechanisms.
+    limitations:
+      - Product-lab research guidance should be evaluated alongside independent evidence and deployment-specific tests.
+    added_by: fide-ai
+    added_at: "2026-07-13"
+
+  - id: arxiv-2605-17634-prompt-injections
+    title: "AI Agents May Always Fall for Prompt Injections"
+    authors:
+      - Sahar Abdelnabi
+      - Eugene Bagdasarian
+    year: 2026
+    type: preprint
+    venue: arXiv
+    url: https://arxiv.org/abs/2605.17634
+    arxiv: "2605.17634"
+    status: to-review
+    relevance:
+      - prompt-injection
+      - agentic-safety
+      - benchmark-validity
+    related_ideas:
+      - FID-023
+      - FID-070
+    summary: >
+      Frames prompt injection as a contextual-integrity problem and argues that
+      simple data-instruction separation is inadequate against contextual
+      manipulation in agentic systems.
+    limitations:
+      - Preprint results and proposed mitigations require independent replication across models, tools, and tasks.
+    added_by: fide-ai
+    added_at: "2026-07-13"
+
+  - id: metr-frontier-risk-report-2026
+    title: "Frontier Risk Report (February to March 2026)"
+    authors:
+      - METR
+    year: 2026
+    type: report
+    venue: METR
+    url: https://metr.org/blog/2026-05-19-frontier-risk-report/
+    status: to-review
+    relevance:
+      - agentic-safety
+      - ai-governance
+      - data-stewardship
+    related_ideas:
+      - FID-017
+      - FID-021
+      - FID-071
+    summary: >
+      Documents observed safety-relevant behavior in frontier-agent deployments
+      and provides context for evaluating permissions, oversight, logs, and
+      recovery in high-autonomy workflows.
+    limitations:
+      - Observations from a defined reporting period and deployment context should not be generalized without attention to their methods and coverage.
+    added_by: fide-ai
+    added_at: "2026-07-13"
+
   - id: aisi-inspect-framework
     title: "Inspect AI: Framework for Large Language Model Evaluations"
     authors:
