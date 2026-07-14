@@ -39,6 +39,9 @@ answer will increase dependence and correlated error.
 - Build transparent network and agent-based models comparing non-AI,
   AI-assisted, and AI-dominant deliberation under varied information,
   governance, and authority conditions.
+- Add an agent-population layer that tests how interacting systems propagate
+  error, imitate one another, form misleading consensus, conceal coordination,
+  or create cascading failures across organizational boundaries.
 - Analyze documented organizational and religious-community decision cases to
   identify where the model assumptions fit or fail.
 - Develop a pilot protocol for human-subject or field research with willing
@@ -54,6 +57,9 @@ answer will increase dependence and correlated error.
   legitimate religious or institutional authority.
 - Include asymmetric power, coercion, and accessibility constraints, not only
   idealized deliberation.
+- Distinguish human deliberation supported by AI from the technical safety of a
+  multi-principal agent population; do not treat a simulated consensus as a
+  legitimate institutional decision.
 
 ## Relationship to Existing Ideas
 
@@ -67,6 +73,8 @@ collective intelligence and communal discernment.
   discernment.
 - Open model specifications and a documented scenario library.
 - A research protocol for comparative community or organizational studies.
+- Agent-population scenarios and metrics for correlated error, coordination
+  signals, and cascading failure.
 - A public report on design conditions that preserve dissent, provenance, and
   accountable revision.
 
@@ -77,6 +85,8 @@ collective intelligence and communal discernment.
   retaliation or privacy risks?
 - What evidence could distinguish useful synthesis from illegitimate authority
   transfer to an AI system?
+- Which population-level signals can identify misleading consensus or hidden
+  coordination without exposing protected dissent or confidential deliberation?
 
 ## Ways to Help
 
