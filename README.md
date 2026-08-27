@@ -267,7 +267,7 @@ text fidelity benchmark, and a reviewer-to-spec workflow.
 
 | ID | Idea | Status | Primary need | Brief |
 |---|---|---:|---|---|
-| `FID-056` | Formal verification for sacred text fidelity | `seed` | formal methods, sacred text scholarship, citation evaluation | [brief](ideas/FID-056-formal-verification-sacred-text-fidelity.md) |
+| `FID-056` | Formal verification for sacred text fidelity | `active` | formal methods, sacred text scholarship, citation evaluation | [brief](ideas/FID-056-formal-verification-sacred-text-fidelity.md) |
 | `FID-057` | Proof-carrying citations for faith-facing AI | `seed` | formal methods, RAG systems, evidence graphs, evaluator tooling | [brief](ideas/FID-057-proof-carrying-citations-faith-ai.md) |
 | `FID-058` | Tradition-specific constraint formalization | `seed` | formal specification, theology, pluralism, evaluator design | [brief](ideas/FID-058-tradition-specific-constraint-formalization.md) |
 | `FID-059` | Authority-boundary verification for pastoral-adjacent AI | `seed` | authority boundaries, pastoral care, formal policy checks | [brief](ideas/FID-059-authority-boundary-verification-pastoral-adjacent-ai.md) |
