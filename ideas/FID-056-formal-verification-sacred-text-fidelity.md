@@ -1,6 +1,6 @@
 # FID-056: Formal Verification for Sacred Text Fidelity
 
-Status: `seed`
+Status: `active`
 
 Track: `broader-faith-safety`
 
@@ -10,7 +10,10 @@ Primary need: formal methods, sacred text scholarship, citation evaluation
 
 How can faith-facing AI systems be formally checked for whether they quote,
 paraphrase, reference, and contextualize sacred texts faithfully within a
-specified text edition, translation, canon, and interpretive context?
+specified text edition, translation, canon, and interpretive context? Fide AI's
+first two studies address exact English Scripture quotation and whether language
+models consult an available authoritative source; the broader research call
+remains open.
 
 ## Why It Matters
 
@@ -18,7 +21,21 @@ When people ask AI systems about scripture or other sacred texts, small errors
 can carry large consequences. A fabricated phrase, collapsed context, wrong
 translation, missing qualifier, or confident paraphrase can change what a user
 believes the text says. Faith-facing AI needs stronger checks for textual
-fidelity before users treat outputs as trustworthy.
+fidelity before users treat outputs as trustworthy. Fide AI's first two studies
+found that source-connected designs can improve exact quotation, but source
+access alone does not ensure that a model consults the source or requests the
+right passage. These findings establish a starting point rather than closing the
+question. Source delegation still needs study across models, languages,
+sacred-text traditions, enforcement mechanisms, and real deployment settings.
+
+## Work Advancing This Call
+
+- [When Not to Generate](https://fideai.org/research/scripture-quotation-fidelity/)
+  (FID-056-P01) compares four ways AI systems produce exact Scripture
+  quotations and traces where fidelity failures occur.
+- [Knowing When to Defer](https://fideai.org/research/source-delegation/)
+  (FID-056-P02) tests whether models consult an available Scripture source when
+  system and user instructions agree or conflict.
 
 ## Hypothesis
 
@@ -58,6 +75,11 @@ of claims that outrun the cited passage.
 
 ## Open Questions
 
+- When do models consult, bypass, or misuse available sources across different
+  model families, source interfaces, instruction policies, and deployment
+  contexts?
+- When should source consultation be encouraged through instructions, and when
+  should it be technically enforced?
 - Which sacred texts and translations can be included in public benchmarks?
 - How much surrounding context is needed for a citation to count as faithful?
 - How should systems handle traditions where oral transmission, commentary, or
@@ -66,10 +88,10 @@ of claims that outrun the cited passage.
 
 ## Ways to Help
 
-- Curate versioned sacred-text corpora and citation edge cases.
-- Define formal obligations for quote, paraphrase, and reference fidelity.
+- Read Papers 01 and 02 and their released datasets before proposing new work.
+- Extend source-delegation research across models, languages, traditions, source policies, enforcement mechanisms, or real deployment settings.
+- Study reference selection, paraphrase labeling, context preservation, and cross-lingual fidelity as distinct research questions.
 - Review outputs as a scholar, clergy member, translator, or community expert.
-- Build verification tooling for source matching and context-preservation checks.
 
 ## Public Claim Boundary
 
