@@ -60,11 +60,21 @@ function firstParagraph(markdown) {
 }
 
 function parseList(markdown) {
-  return markdown
-    .split("\n")
-    .map((line) => line.trim())
-    .filter((line) => line.startsWith("- "))
-    .map((line) => line.slice(2).trim());
+  const items = [];
+  let current = "";
+
+  for (const rawLine of markdown.split("\n")) {
+    const line = rawLine.trim();
+    if (line.startsWith("- ")) {
+      if (current) items.push(current);
+      current = line.slice(2).trim();
+    } else if (line && current) {
+      current = `${current} ${line}`;
+    }
+  }
+
+  if (current) items.push(current);
+  return items;
 }
 
 function parseIdea(file, content) {

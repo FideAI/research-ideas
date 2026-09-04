@@ -763,7 +763,7 @@
       "ways_to_help": [
         "Contribute labor-economics, sociology, psychology, or pastoral-care expertise.",
         "Help design survey measures for meaning, dignity, vocation, and agency.",
-        "Recruit churches, ministries, or workforce-support organizations for pilot",
+        "Recruit churches, ministries, or workforce-support organizations for pilot interviews.",
         "Review protocols for privacy, consent, and participant vulnerability."
       ],
       "source_path": "ideas/FID-046-ai-displacement-meaning-vocation.md",
@@ -780,8 +780,8 @@
       "ways_to_help": [
         "Share examples of job-transition, benevolence, or career-support ministries.",
         "Help recruit churches and Christian nonprofits for qualitative interviews.",
-        "Review readiness criteria from pastoral, workforce, legal, and social-service",
-        "Identify partnerships that preserve church mission while expanding practical"
+        "Review readiness criteria from pastoral, workforce, legal, and social-service perspectives.",
+        "Identify partnerships that preserve church mission while expanding practical support."
       ],
       "source_path": "ideas/FID-047-churches-labor-transition-support.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-047-churches-labor-transition-support.md"
@@ -797,7 +797,7 @@
       "ways_to_help": [
         "Draft realistic worker, student, and household transition scenarios.",
         "Review career guidance for financial, legal, pastoral, and educational risks.",
-        "Design user studies that measure agency rather than short-term satisfaction",
+        "Design user studies that measure agency rather than short-term satisfaction alone.",
         "Contribute church-based career ministry or workforce-development experience."
       ],
       "source_path": "ideas/FID-048-ai-career-guidance-vocational-discernment.md",
@@ -812,7 +812,7 @@
       "summary": "Are churches and faith-based institutions helping under-resourced workers, families, students, older adults, immigrants, rural communities, and small nonprofits access useful AI tools, or are AI benefits concentrating among people who already have technical, educational, financial, and institutional advantage?",
       "why_it_matters": "AI may widen inequality if the people most able to benefit already have better devices, broadband, English fluency, paid tools, institutional support, and confidence using technology. Churches often serve people outside elite knowledge-work settings and may become trusted places for AI literacy, access, discernment, and caution. That role needs evidence rather than assumption.",
       "ways_to_help": [
-        "Recruit churches, schools, ministries, or nonprofits serving under-resourced",
+        "Recruit churches, schools, ministries, or nonprofits serving under-resourced communities.",
         "Translate surveys and workshop materials.",
         "Review accessibility, privacy, and digital-literacy assumptions.",
         "Design outcome measures for real benefit rather than mere tool adoption."
@@ -829,9 +829,9 @@
       "summary": "How is exposure to AI changing how Christian students, parents, educators, and youth ministries think about career preparation, calling, human value, skill development, education choices, and hope for the future?",
       "why_it_matters": "Young people are forming expectations about work while AI is changing what skills appear valuable, which careers feel stable, and what kinds of human contribution seem durable. Christian schools, parents, churches, and youth ministries need evidence about how AI affects motivation, vocation, learning, anxiety, discernment, and preparation for adult life.",
       "ways_to_help": [
-        "Recruit Christian schools, homeschool groups, youth ministries, and parent",
+        "Recruit Christian schools, homeschool groups, youth ministries, and parent networks.",
         "Review student survey items and classroom module designs.",
-        "Contribute education, child-development, youth-ministry, or labor-market",
+        "Contribute education, child-development, youth-ministry, or labor-market expertise.",
         "Help design privacy-preserving longitudinal follow-up."
       ],
       "source_path": "ideas/FID-050-youth-career-formation-ai-economy.md",
@@ -863,7 +863,7 @@
       "summary": "When people experience job loss, financial stress, career uncertainty, or automation anxiety, do they turn to AI systems as a private first place for emotional, spiritual, moral, or vocational counsel before seeking help from family, churches, pastors, counselors, mentors, or workforce institutions?",
       "why_it_matters": "AI systems can lower the cost of disclosing fear, shame, confusion, or doubt. That may help people rehearse hard conversations and find resources. It may also create a private substitute for embodied support at moments when people need accountable counsel, practical aid, safeguarding, or community.",
       "ways_to_help": [
-        "Review scenario designs from pastoral, clinical, legal, and workforce-support",
+        "Review scenario designs from pastoral, clinical, legal, and workforce-support perspectives.",
         "Help define privacy-safe measures of referral and isolation.",
         "Recruit consented study participants through churches or community partners.",
         "Contribute HAI research methods for studying disclosure and support-seeking."
@@ -897,7 +897,7 @@
       "summary": "Can churches and Christian institutions identify privacy-preserving, non-surveillant signals of AI-era economic stress, such as benevolence requests, pastoral-care load, job-network activity, counseling referrals, giving changes, attendance patterns, volunteer availability, or demand for career support?",
       "why_it_matters": "Churches may observe household economic stress before it appears in formal labor data. But care data is sensitive, relational, and easily misused. Fide AI can help churches ask what can be learned responsibly without turning pastoral care, generosity, or community participation into surveillance.",
       "ways_to_help": [
-        "Recruit churches, benevolence teams, pastoral-care teams, and denominational",
+        "Recruit churches, benevolence teams, pastoral-care teams, and denominational leaders for protocol review.",
         "Contribute privacy, data governance, sociology, or pastoral-care expertise.",
         "Identify aggregate indicators that are useful but not individually revealing.",
         "Review failure modes around surveillance, donor pressure, and profiling."
@@ -915,7 +915,7 @@
       "why_it_matters": "Economic disruption affects both sides of church care: households may have less capacity to give, while more people may need help. AI may also change how people think about abundance, scarcity, stewardship, obligation, risk, and future security. Churches need evidence for budgeting, benevolence planning, teaching, and mutual-aid design.",
       "ways_to_help": [
         "Recruit churches willing to review or pilot privacy-safe aggregate measures.",
-        "Contribute church finance, philanthropy, household welfare, or sociology",
+        "Contribute church finance, philanthropy, household welfare, or sociology expertise.",
         "Help design survey items that do not shame respondents or aid recipients.",
         "Identify public economic indicators suitable for comparison."
       ],
