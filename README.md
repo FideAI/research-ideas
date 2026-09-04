@@ -22,7 +22,7 @@ company-internal implementation commitments here.
 
 ## Current Snapshot
 
-- **71 open research ideas**
+- **72 open research ideas**
 - **2 research tracks**
 - **4 public research agendas** that group the backlog into shareable research
   campaigns
@@ -79,8 +79,8 @@ idea briefs in this repository.
 |---|---|---|---|
 | AI, work, meaning, and the common good | `/research/calls/work-meaning` | churches, economists, sociologists, funders | `FID-030`, `FID-033`, `FID-034`, `FID-037`, `FID-038`, `FID-040`, `FID-046`-`FID-055`, `FID-065` |
 | Pastoral care, spiritual companionship, and formation | `/research/calls/pastoral-formation` | pastors, churches, parents, educators, builders | `FID-003`, `FID-004`, `FID-010`, `FID-015`, `FID-016`, `FID-018`, `FID-025`-`FID-027`, `FID-035`, `FID-041`, `FID-042`, `FID-050`, `FID-052`, `FID-053`, `FID-068` |
-| Faith-facing AI evaluation infrastructure | `/research/calls/evaluation-infrastructure` | AI researchers, builders, reviewers, funders | `FID-001`-`FID-003`, `FID-006`, `FID-008`, `FID-011`, `FID-012`, `FID-023`, `FID-028`, `FID-044`, `FID-045`, `FID-070` |
-| Governance, authority, and religious representation | `/research/calls/governance-representation` | church leaders, ministries, safety researchers, interfaith reviewers | `FID-005`-`FID-007`, `FID-009`, `FID-013`, `FID-014`, `FID-017`, `FID-019`-`FID-025`, `FID-028`, `FID-029`, `FID-031`, `FID-032`, `FID-036`, `FID-039`-`FID-044`, `FID-064`, `FID-066`, `FID-067`, `FID-069`, `FID-071` |
+| Faith-facing AI evaluation infrastructure | `/research/calls/evaluation-infrastructure` | AI researchers, builders, reviewers, funders | `FID-001`-`FID-003`, `FID-006`, `FID-008`, `FID-011`, `FID-012`, `FID-023`, `FID-028`, `FID-044`, `FID-045`, `FID-070`, `FID-074` |
+| Governance, authority, and religious representation | `/research/calls/governance-representation` | church leaders, ministries, safety researchers, interfaith reviewers | `FID-005`-`FID-007`, `FID-009`, `FID-013`, `FID-014`, `FID-017`, `FID-019`-`FID-025`, `FID-028`, `FID-029`, `FID-031`, `FID-032`, `FID-036`, `FID-039`-`FID-044`, `FID-064`, `FID-066`, `FID-067`, `FID-069`, `FID-071`, `FID-074` |
 
 ## Status Vocabulary
 
@@ -171,8 +171,8 @@ imply endorsement by Fide AI.
    evaluation protocols for triage, escalation, overvalidation, dependency,
    devotional boundaries, youth formation, and embodied referral.
 3. Turn **faith-facing AI evaluation infrastructure** into repeatable public
-   benchmarks, reviewer calibration studies, harness comparisons, red-team suites,
-   and evidence commons infrastructure.
+   benchmarks, reviewer calibration studies, agent runtime-assurance protocols,
+   harness comparisons, red-team suites, and evidence commons infrastructure.
 4. Turn **governance, authority, and religious representation** into standards
    for institutional adoption, source authority, religious omission, persuasion
    boundaries, incident reporting, cross-faith measurement validity, and
@@ -251,6 +251,7 @@ mission.
 | `FID-069` | Verifiable delegation and revocation in multi-agent networks | `seed` | multi-agent safety, identity infrastructure, authorization, high-trust institutions | [brief](ideas/FID-069-verifiable-delegation-revocation-multi-agent-networks.md) |
 | `FID-070` | Contextual integrity and prompt-injection resilience for faith-facing agents | `seed` | agent security, adversarial evaluation, context integrity, secure tool use | [brief](ideas/FID-070-contextual-integrity-prompt-injection-faith-facing-agents.md) |
 | `FID-071` | Confidential agent memory and cross-context disclosure | `seed` | privacy-preserving AI, agent memory evaluation, data governance, high-trust systems | [brief](ideas/FID-071-confidential-agent-memory-cross-context-disclosure.md) |
+| `FID-074` | Agent alignment and runtime assurance | `scoping` | agent evaluation, runtime monitoring, observability, security, privacy, enterprise workflows | [brief](ideas/FID-074-agent-alignment-runtime-assurance.md) |
 
 ### Formal Verification for Faith-Facing AI
 

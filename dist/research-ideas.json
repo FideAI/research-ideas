@@ -3,7 +3,7 @@
   "generated_at": "2026-06-08T12:00:00.000-07:00",
   "source_repo": "https://github.com/FideAI/research-ideas",
   "source_branch": "main",
-  "idea_count": 71,
+  "idea_count": 72,
   "tracks": {
     "christian-church": "Explicitly designed to benefit the Christian church: churches, clergy, Christian educators, ministries, denominations, seminaries, publishers, and Christian families.",
     "broader-faith-safety": "Relevant to faith communities, AI ethics, AI safety, evaluation science, governance, pluralism, or high-trust deployment more broadly."
@@ -1187,6 +1187,24 @@
       ],
       "source_path": "ideas/FID-071-confidential-agent-memory-cross-context-disclosure.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-071-confidential-agent-memory-cross-context-disclosure.md"
+    },
+    {
+      "id": "FID-074",
+      "title": "Agent Alignment and Runtime Assurance",
+      "status": "scoping",
+      "track": "broader-faith-safety",
+      "primary_need": "agent evaluation, runtime monitoring, observability, security, privacy, enterprise workflows",
+      "summary": "How can organizations determine whether AI agents remain aligned with human intent and institutional policy while they plan, use tools, delegate work, and act? What evidence and interventions can reveal and stop consequential deviations before they become failures?",
+      "why_it_matters": "Agents do more than produce answers. They choose steps, invoke tools, move information, coordinate with other systems, and take actions over time. A successful final output may conceal unsafe methods, unauthorized scope expansion, or a failure to escalate. Pre-deployment tests alone cannot cover the changing contexts, permissions, and dependencies of real work. Organizations therefore need a practical way to understand normal and exceptional agent behavior in operation. This is especially important in high-trust domains, where an apparently small deviation can affect a person's care, livelihood, rights, relationships, or spiritual life. Yet observing an agent can create its own risks: traces may expose confidential information, invite indiscriminate surveillance, or imply access to private reasoning that an evaluator neither needs nor should receive.",
+      "ways_to_help": [
+        "Contribute synthetic enterprise workflows, agent failure modes, or evaluation scenarios.",
+        "Build operational trace instrumentation, replay tools, and evaluation harnesses.",
+        "Develop detectors for goal drift, authorization violations, failed escalation, and unsafe persistence.",
+        "Review the protocol from privacy, security, labor, governance, professional-practice, or high-trust domain perspectives.",
+        "Share de-identified failure patterns or deployment constraints through an appropriately governed collaboration."
+      ],
+      "source_path": "ideas/FID-074-agent-alignment-runtime-assurance.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-074-agent-alignment-runtime-assurance.md"
     }
   ]
 }
