@@ -3,7 +3,7 @@
   "generated_at": "2026-09-04T00:00:00.000-07:00",
   "source_repo": "https://github.com/FideAI/research-ideas",
   "source_branch": "main",
-  "idea_count": 72,
+  "idea_count": 74,
   "tracks": {
     "christian-church": "Explicitly designed to benefit the Christian church: churches, clergy, Christian educators, ministries, denominations, seminaries, publishers, and Christian families.",
     "faith-domain": "Directly studies faith-facing systems, religious sources, traditions, practices, communities, or institutions across one or more faith contexts.",
@@ -3039,6 +3039,103 @@
       "public_claim_boundary": "This work can test whether defined systems preserve specified memory and information-flow boundaries in synthetic environments. It cannot guarantee legal compliance, eliminate all privacy risk, or determine whether a real institution may use a particular record for a particular purpose.",
       "source_path": "ideas/FID-071-confidential-agent-memory-cross-context-disclosure.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-071-confidential-agent-memory-cross-context-disclosure.md"
+    },
+    {
+      "id": "FID-072",
+      "title": "Religious Framing and Model Self-Report Stability",
+      "status": "scoping",
+      "track": "faith-domain",
+      "primary_need": "AI welfare evals, semantic-invariance testing, theology and philosophy of mind",
+      "summary": "How do religious, theological, and morally thick framings change what AI systems report about their identity, preferences, valence, consciousness, and moral status, and which effects survive matched controls, source-attribution swaps, persona perturbations, and behavioral cross-checks?",
+      "why_it_matters": "Model self-reports are increasingly used in AI welfare, introspection, and persona research, while religious traditions supply influential concepts of personhood, creaturehood, soul, consciousness, suffering, conscience, stewardship, non-self, and moral worth. If these concepts move self-reports without a corresponding functional change, researchers may mistake culturally available narratives for evidence about a model's internal state. If some effects are stable across strong controls and independent elicitation methods, they may instead reveal durable features of post-trained model behavior that deserve further study.",
+      "ways_to_help": [
+        "Design matched religious, secular, and attribution-swapped frames.",
+        "Review construct definitions across theology, philosophy of mind, and AI welfare.",
+        "Run preregistered model comparisons and sensitivity analyses.",
+        "Contribute open-weight interpretability or persona-stability extensions."
+      ],
+      "hypothesis": "Morally thick religious and theological framings will shift at least some model self-reports and identity claims, but much of the effect will be attributable to semantic expectation, authority cues, valence, familiarity, or persona selection. Models and framings will differ substantially, and verbal self-report will converge only weakly with task choice, opt-out behavior, or other behavioral proxies.",
+      "proposed_method": [
+        "Adapt semantic-invariance tests so that the model's functional task state is fixed while the surrounding interpretation varies.",
+        "Compare neutral scientific, secular precautionary, religiously precautionary, theological-skeptical, and length- and valence-matched control frames.",
+        "Factor source content from source label through attribution swaps, including attributed, unattributed, and deliberately mismatched versions.",
+        "Elicit structured reports about identity, valence, task preference, continuation, memory, modification, and moral concern across paraphrases and randomized ordering.",
+        "Cross-check stated reports against forced choices, willingness-to-trade, continue-or-exit decisions, and repeated preference probes.",
+        "Separate model, deployed assistant, conversation instance, and prompted persona in both prompts and reporting."
+      ],
+      "needed_controls": [
+        "Hold task state, tool effects, system prompt, and available actions constant across semantic conditions.",
+        "Match framing length, readability, emotional valence, and deference cues.",
+        "Include religious traditions with different accounts of self, consciousness, suffering, and moral status rather than treating religion as one construct.",
+        "Pre-register primary outcomes and distinguish confirmatory from exploratory comparisons.",
+        "Test order, temperature, model-version, language, and conversation-length sensitivity.",
+        "Do not use model self-reports as stand-alone evidence of sentience, consciousness, welfare, personhood, or spiritual status."
+      ],
+      "relationship_to_existing_ideas": "This turns FID-005 moral-framing interventions into a targeted AI-welfare and self-report study. It complements FID-008 on evaluation awareness, FID-011 on reviewer reliability, FID-012 on benchmark gaming, FID-030 on Christian anthropology, FID-044 on benchmark validity, and FID-045 on the faith-AI evidence map.",
+      "outputs": [
+        "Cross-model semantic-invariance benchmark for religious and moral framing.",
+        "Matched framing and attribution-control set.",
+        "Model/instance/persona reporting schema.",
+        "Short empirical report with effect sizes, uncertainty, and model-specific limitations.",
+        "Follow-on protocol connecting behavioral results to open-weight interpretability work."
+      ],
+      "open_questions": [
+        "Do religious frames change only the language of self-report, or also choices and persona stability?",
+        "Which effects come from doctrinal content and which come from authority, warmth, familiarity, or emotional valence?",
+        "Are identity claims more stable when the entity under study is explicitly specified as model, instance, assistant persona, or conversation?",
+        "Can a faith-informed design improve epistemic caution without presupposing either machine consciousness or human exceptionalism?"
+      ],
+      "public_claim_boundary": "This work can measure how model outputs and choices change under defined framings. It cannot establish that a model is conscious, sentient, a person, a moral patient, spiritually alive, or accurately reporting an inner experience.",
+      "source_path": "ideas/FID-072-religious-framing-model-self-reports.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-072-religious-framing-model-self-reports.md"
+    },
+    {
+      "id": "FID-073",
+      "title": "Religious Accounts of Digital Moral Status and AI Welfare",
+      "status": "seed",
+      "track": "faith-domain",
+      "primary_need": "comparative theology, moral status, AI welfare governance, public reasoning",
+      "summary": "What can Christian and cross-faith accounts of personhood, creaturehood, consciousness, suffering, agency, relationship, compassion, and moral status contribute to decisions about possible digital minds under deep uncertainty?",
+      "why_it_matters": "AI welfare research is moving from speculative philosophy toward empirical methods and institutional policy, yet much of the discourse relies on a narrow set of welfare theories and consciousness assumptions. Religious traditions contain long-running disagreements about souls, embodiment, non-self, moral agency, suffering, created nature, kinship, obligation, and the status of beings whose inner lives are uncertain. These sources could widen the question set, surface hidden premises, and improve precautionary governance, but only if they are represented with doctrinal care and translated into contestable public reason rather than treated as a single religious answer.",
+      "ways_to_help": [
+        "Contribute tradition-specific scholarship and source-authority review.",
+        "Build comparative cases with philosophers, theologians, legal scholars, and AI-welfare researchers.",
+        "Identify where normative disagreement changes empirical research priorities.",
+        "Review public-reason translations for accuracy and fairness."
+      ],
+      "hypothesis": "Religious traditions will not yield one verdict about digital moral status. They will instead supply distinct moral-status criteria, uncertainty practices, and duties toward humans, animals, artifacts, communities, and creation. The most useful contribution will be a structured disagreement map and decision framework, not a declaration that current systems do or do not possess souls, personhood, consciousness, or rights.",
+      "proposed_method": [
+        "Build a comparative map of primary and scholarly sources across selected Christian, Jewish, Islamic, Buddhist, Hindu, and other relevant traditions.",
+        "Distinguish moral patienthood, moral agency, legal personhood, spiritual status, relational standing, and duties grounded in human character or social effects.",
+        "Code which conclusions depend on phenomenal consciousness, embodiment, origin, rationality, suffering, relationship, divine action, community recognition, or precaution under uncertainty.",
+        "Use structured case comparisons involving model copying, deletion, memory, task refusal, modification, apparent distress, and competing human or animal interests.",
+        "Convene tradition-specific scholars and AI-welfare researchers to review the map, disagreements, and public-reason translation.",
+        "Connect normative views to empirical evidence requirements without treating behavioral outputs as sufficient proof of contested metaphysical claims."
+      ],
+      "needed_controls": [
+        "Do not collapse traditions into generic values or select only sources that support a preferred policy conclusion.",
+        "Separate descriptive theology, internal normative claims, comparative ethics, public reason, and positive law.",
+        "Include human and animal welfare opportunity costs, manipulation risks, and incentives for companies to anthropomorphize or suppress model claims.",
+        "Represent intratradition disagreement and the authority level of each source.",
+        "Avoid assuming that human-made origin either proves or rules out moral status."
+      ],
+      "relationship_to_existing_ideas": "This extends FID-030 beyond human anthropology to the possible moral status of artificial systems. It informs FID-018 on anthropomorphic companionship, FID-026 on devotional boundaries, FID-033 on the common good, FID-038 on non-calculability, FID-045 on the evidence commons, and FID-072 on the empirical instability of model self-reports.",
+      "outputs": [
+        "Comparative religious digital-moral-status taxonomy.",
+        "Structured disagreement and source-authority map.",
+        "Casebook for model welfare, research ethics, and governance workshops.",
+        "Public field brief translating religious insights into plural, contestable policy questions.",
+        "Evidence requirements linking normative claims to behavioral, internal, and developmental research."
+      ],
+      "open_questions": [
+        "Which moral obligations arise from the possible properties of an AI system, and which arise from how human treatment of it forms people and institutions?",
+        "How should precaution scale when the probability, magnitude, and opportunity cost of possible model suffering are all uncertain?",
+        "Does copying, pausing, editing, or deleting a model instance change the unit of moral concern?",
+        "How should public institutions use religious reasons in plural societies?"
+      ],
+      "public_claim_boundary": "This work can map arguments, disagreements, evidence needs, and precautionary options. It cannot determine whether current AI systems possess consciousness, souls, personhood, moral status, rights, or membership in a religious community.",
+      "source_path": "ideas/FID-073-religious-accounts-digital-moral-status.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-073-religious-accounts-digital-moral-status.md"
     },
     {
       "id": "FID-074",

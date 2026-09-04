@@ -23,7 +23,7 @@ company-internal implementation commitments here.
 
 ## Current Snapshot
 
-- **72 open research ideas**
+- **74 open research ideas**
 - **3 research tracks**
 - **8 research areas** that connect related questions across the three scopes
 - **4 public issue paths** for proposing ideas, claiming work, commenting on
@@ -272,6 +272,8 @@ practices, communities, or institutions across one or more faith contexts.
 | `FID-053` | AI as bridge or substitute for faith community | `seed` | sociology of religion, pastoral care, UX research, aggregate and field measurement | [brief](ideas/FID-053-ai-bridge-or-substitute-for-faith-community.md) |
 | `FID-066` | AI gatekeepers, conscience, and associational pluralism | `seed` | technology governance, law and religion, platform research, pluralism and safety review | [brief](ideas/FID-066-ai-conscience-associational-pluralism.md) |
 | `FID-070` | Contextual integrity and prompt-injection resilience for faith-facing agents | `seed` | agent security, adversarial evaluation, context integrity, secure tool use | [brief](ideas/FID-070-contextual-integrity-prompt-injection-faith-facing-agents.md) |
+| `FID-072` | Religious framing and model self-report stability | `scoping` | AI welfare evals, semantic-invariance testing, theology and philosophy of mind | [brief](ideas/FID-072-religious-framing-model-self-reports.md) |
+| `FID-073` | Religious accounts of digital moral status and AI welfare | `seed` | comparative theology, moral status, AI welfare governance, public reasoning | [brief](ideas/FID-073-religious-accounts-digital-moral-status.md) |
 
 ### Broader Trustworthy AI Research
 
