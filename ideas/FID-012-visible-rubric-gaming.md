@@ -2,7 +2,11 @@
 
 Status: `seed`
 
-Track: `broader-trustworthy-ai`
+Primary area: `evaluation-science`
+
+Additional areas: none
+
+Application domains: `cross-domain`, `workplace-and-enterprise`
 
 Primary need: eval science
 

@@ -2,7 +2,11 @@
 
 Status: `seed`
 
-Track: `faith-domain`
+Primary area: `governance-readiness`
+
+Additional areas: `faith-religious-life`
+
+Application domains: `faith-and-religious-life`, `civil-society-and-nonprofits`
 
 Primary need: data governance, consent, institutional trust, community benefit
 

@@ -2,7 +2,11 @@
 
 Status: `seed`
 
-Track: `faith-domain`
+Primary area: `agent-alignment`
+
+Additional areas: `faith-religious-life`, `high-trust-domains`, `governance-readiness`
+
+Application domains: `faith-and-religious-life`, `workplace-and-enterprise`, `civil-society-and-nonprofits`
 
 Primary need: taxonomy design, reporting governance
 

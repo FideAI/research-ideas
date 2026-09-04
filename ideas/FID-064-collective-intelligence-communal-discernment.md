@@ -2,7 +2,11 @@
 
 Status: `seed`
 
-Track: `broader-trustworthy-ai`
+Primary area: `frontier-capabilities`
+
+Additional areas: `agent-alignment`
+
+Application domains: `cross-domain`, `civil-society-and-nonprofits`
 
 Primary need: computational social science, theology of discernment, network science, organizational research
 

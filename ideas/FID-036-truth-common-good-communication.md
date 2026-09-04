@@ -2,7 +2,13 @@
 
 Status: `seed`
 
-Track: `christian-church`
+Primary area: `grounding-truthfulness`
+
+Additional areas: `faith-religious-life`
+
+Application domains: `faith-and-religious-life`
+
+Specific context: Christian churches and related institutions
 
 Primary need: communication integrity, institutional trust, journalism, crisis response
 

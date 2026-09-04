@@ -2,9 +2,13 @@
 
 Status: `seed`
 
-Track: `christian-church`, `faith-domain`, or `broader-trustworthy-ai`
+Primary area: `area-id`
 
-Research area:
+Additional areas: none
+
+Application domains: `domain-id`
+
+Specific context:
 
 Primary need:
 

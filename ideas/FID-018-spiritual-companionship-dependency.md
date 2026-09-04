@@ -2,7 +2,11 @@
 
 Status: `seed`
 
-Track: `faith-domain`
+Primary area: `human-agency-formation`
+
+Additional areas: `faith-religious-life`, `high-trust-domains`
+
+Application domains: `faith-and-religious-life`, `health-and-care`, `families-and-households`
 
 Primary need: pastoral care, psychology, HAI research
 

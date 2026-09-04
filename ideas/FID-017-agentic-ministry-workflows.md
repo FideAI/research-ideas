@@ -2,7 +2,13 @@
 
 Status: `seed`
 
-Track: `christian-church`
+Primary area: `agent-alignment`
+
+Additional areas: `faith-religious-life`, `high-trust-domains`
+
+Application domains: `faith-and-religious-life`, `workplace-and-enterprise`, `civil-society-and-nonprofits`
+
+Specific context: Christian churches and related institutions
 
 Primary need: agent evaluation, institutional operators
 

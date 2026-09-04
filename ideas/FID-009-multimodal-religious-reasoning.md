@@ -2,7 +2,11 @@
 
 Status: `seed`
 
-Track: `faith-domain`
+Primary area: `frontier-capabilities`
+
+Additional areas: `faith-religious-life`
+
+Application domains: `faith-and-religious-life`
 
 Primary need: multimodal evaluation
 

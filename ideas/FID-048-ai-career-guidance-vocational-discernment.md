@@ -2,7 +2,13 @@
 
 Status: `seed`
 
-Track: `christian-church`
+Primary area: `work-common-good`
+
+Additional areas: `faith-religious-life`, `high-trust-domains`
+
+Application domains: `faith-and-religious-life`, `workplace-and-enterprise`, `families-and-households`
+
+Specific context: Christian churches and related institutions
 
 Primary need: career guidance, pastoral theology, HAI research, product evaluation
 

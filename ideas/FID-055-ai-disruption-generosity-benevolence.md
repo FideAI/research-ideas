@@ -2,7 +2,13 @@
 
 Status: `seed`
 
-Track: `christian-church`
+Primary area: `work-common-good`
+
+Additional areas: `faith-religious-life`, `high-trust-domains`
+
+Application domains: `faith-and-religious-life`, `workplace-and-enterprise`, `civil-society-and-nonprofits`, `families-and-households`
+
+Specific context: Christian churches and related institutions
 
 Primary need: church finance, household welfare, philanthropy, economic sociology
 

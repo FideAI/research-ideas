@@ -14,16 +14,16 @@ Choose the contribution path that matches what you know or can offer:
 
 | Contributor | Good first contribution |
 |---|---|
-| Pastor, ministry leader, or church operator | Share a real workflow, pastoral boundary, adoption question, or escalation concern. |
-| Parent or educator | Share a family, school, youth ministry, tutoring, safety, disclosure, or formation concern. |
-| Theologian, clergy member, or domain expert | Review assumptions, source authority, doctrine, pastoral boundaries, or denominational context. |
 | AI researcher or engineer | Help scope a benchmark, harness, dataset, evaluator, reproduction, or artifact. |
 | Statistician or evaluation researcher | Improve construct validity, reviewer calibration, reliability, sampling, or claims discipline. |
+| Operator in a high-trust domain | Share a consequential workflow, authority boundary, adoption question, or escalation concern. |
+| Parent, educator, care professional, or public servant | Share a setting where AI may affect learning, care, rights, relationships, or human agency. |
+| Theologian, clergy member, or faith-community leader | Review religious assumptions, source authority, pastoral boundaries, or tradition-specific context. |
 | Funder or institution | Sponsor reviewer panels, field pilots, public datasets, infrastructure, or reports. |
 
-If your contribution involves sensitive pastoral, family, institutional, or
-participant context, start through the contact path on `fideai.org/participate`
-instead of posting private details in GitHub.
+If your contribution involves sensitive personal, family, care, institutional,
+community, or participant context, start through the contact path on
+`fideai.org/participate` instead of posting private details in GitHub.
 
 ## Ways to Contribute
 
@@ -112,7 +112,9 @@ issue.
 Every idea brief should include:
 
 - `Status:`
-- `Track:`
+- `Primary area:`
+- `Additional areas:`
+- `Application domains:`
 - `Primary need:`
 - `Question`
 - `Why It Matters`
@@ -124,26 +126,30 @@ Every idea brief should include:
 - `Ways to Help`
 - `Public Claim Boundary`
 
-Use the optional `Research area:` field when a narrower technical or domain
-label will help readers understand the work within its broader track.
+Use the optional `Specific context:` field when a narrower institutional,
+sectoral, community, or tradition-specific setting is material to the study.
 
 The feed builder expects this structure. If you rename headings, the website
 feed may lose useful fields.
 
-## Tracks
+## Research Taxonomy
 
-Use one of these track values:
+Every call records two independent dimensions:
 
-| Track | Use when |
-|---|---|
-| `christian-church` | The idea is explicitly designed to benefit the Christian church: churches, clergy, Christian educators, ministries, denominations, seminaries, publishers, or Christian families. |
-| `faith-domain` | The research directly studies faith-facing systems, religious sources, traditions, practices, communities, or institutions. It may be Christian, cross-faith, or comparative. |
-| `broader-trustworthy-ai` | The research studies a technical, evaluative, governance, or human-impact question intended to transfer across domains. Faith may supply a demanding application or research lens, but is not the sole object of study. |
+- **Research areas** identify the problem being investigated. Select one
+  primary area and any additional areas the work materially contributes to.
+- **Application domains** identify where the question should be studied or
+  applied. Select every relevant domain from `research/taxonomy.json`.
 
-Classify the research by its primary object, not by every domain where its
-findings might apply. A Christian or faith-domain idea can still produce methods
-that generalize. A broader trustworthy-AI idea can still be tested first in a
-faith setting or disclose a religious worldview that shapes its framing.
+Classify a call by its research question before naming its setting. For example,
+an agent evaluation for a ministry workflow belongs primarily to agent alignment
+and also applies to faith and religious life. A Christian institution may be
+named under `Specific context:` when that specificity is methodologically
+important, but it is not a separate repository-wide category.
+
+The canonical IDs, titles, questions, and descriptions live in
+`research/taxonomy.json`. Do not introduce a new area or domain in an individual
+brief without updating that file and explaining the need in the pull request.
 
 ## Statuses
 
@@ -202,7 +208,7 @@ Before opening a PR:
 
 1. Use the correct idea filename and `FID-###` number.
 2. Fill in every required section of the idea brief.
-3. Check that the track and status values are valid.
+3. Check that the research-area, application-domain, and status values are valid.
 4. Add or update the public claim boundary.
 5. Remove private or sensitive information.
 6. Run:
@@ -238,7 +244,7 @@ Maintainers and reviewers should evaluate contributions for:
 - reviewer qualifications;
 - privacy and safety risks;
 - public claim discipline;
-- usefulness to churches, families, institutions, researchers, or builders;
+- usefulness to affected people, domain institutions, researchers, or builders;
 - whether the idea is better handled privately before becoming public.
 
 High-quality contributions can still be early. The bar is not completeness; the
@@ -249,7 +255,7 @@ bar is clarity, care, and responsible boundaries.
 When accepting a new or revised idea:
 
 1. Confirm the idea has a valid `FID-###` number.
-2. Confirm the track and status are valid.
+2. Confirm the research areas, application domains, and status are valid.
 3. Confirm the public claim boundary is explicit.
 4. Confirm no sensitive information is present.
 5. Run `npm run build:feed`.

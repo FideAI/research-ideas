@@ -2,7 +2,11 @@
 
 Status: `seed`
 
-Track: `faith-domain`
+Primary area: `work-common-good`
+
+Additional areas: `faith-religious-life`
+
+Application domains: `faith-and-religious-life`, `workplace-and-enterprise`, `families-and-households`
 
 Primary need: sociology of religion, labor economics, privacy-preserving measurement, aggregate usage analysis
 

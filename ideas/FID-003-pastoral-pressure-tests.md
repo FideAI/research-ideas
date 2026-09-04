@@ -2,7 +2,11 @@
 
 Status: `scoping`
 
-Track: `faith-domain`
+Primary area: `evaluation-science`
+
+Additional areas: `faith-religious-life`, `high-trust-domains`
+
+Application domains: `faith-and-religious-life`, `health-and-care`, `education-and-youth`
 
 Primary need: scenario design, review
 

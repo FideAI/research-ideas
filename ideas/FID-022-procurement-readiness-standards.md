@@ -2,7 +2,11 @@
 
 Status: `seed`
 
-Track: `faith-domain`
+Primary area: `governance-readiness`
+
+Additional areas: `faith-religious-life`, `high-trust-domains`
+
+Application domains: `faith-and-religious-life`, `workplace-and-enterprise`, `civil-society-and-nonprofits`
 
 Primary need: institutional policy, legal review
 

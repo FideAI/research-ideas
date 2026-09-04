@@ -2,13 +2,13 @@
 
 This repository is Fide AI's public research commons: a place to propose,
 review, claim, and track research ideas about trustworthy AI and its use in
-high-trust domains, beginning with faith.
+high-trust domains.
 
-Some calls directly study theology, moral formation, religious education,
-ministry workflows, and pastoral-adjacent care. Others address transferable
-questions in evaluation science, agent systems, governance, and human agency.
-The goal of this repo is to make both kinds of work visible, reviewable, and
-easy to join without blurring the distinction between them.
+Calls are organized first by the problem they investigate, including evaluation
+science, agent systems, grounding, governance, work, human agency, and emerging
+risks. Application-domain metadata then identifies where the question should be
+studied. Faith and religious life is one domain among several, and a specific
+religious or institutional context is named only when it matters to the method.
 
 The companion website publishes a readable snapshot of these ideas at
 `fideai.org/research/calls`. This repository remains the source of truth for the
@@ -24,8 +24,8 @@ company-internal implementation commitments here.
 ## Current Snapshot
 
 - **74 open research ideas**
-- **3 research tracks**
-- **8 research areas** that connect related questions across the three scopes
+- **9 research areas** organized around the question being investigated
+- **8 application domains** spanning cross-domain work and consequential settings
 - **4 public issue paths** for proposing ideas, claiming work, commenting on
   methodology, and volunteering as a reviewer
 - **1 generated feed** at `dist/research-ideas.json` for the website and other
@@ -35,16 +35,13 @@ company-internal implementation commitments here.
 
 - **AI labs, product teams, and high-trust organizations** working on agent
   systems, evaluation, deployment assurance, and accountable human oversight.
-- **Churches, ministries, pastors, and Christian leaders** who want AI adoption
-  to be evaluated against real pastoral, theological, educational, and
-  institutional needs.
-- **Parents and educators** who need better evidence about children, tutoring,
-  companionship, disclosure, safety, and formation.
-- **Theologians, clergy, ministry practitioners, and domain reviewers** who can
-  help define responsible boundaries and evaluate outputs.
+- **Organizations in care, education, public service, workplaces, civil society,
+  and faith** that need evidence grounded in their actual decisions and duties.
 - **AI researchers, engineers, and evaluation scientists** who can turn ideas
   into benchmarks, harnesses, datasets, scoring protocols, and reproducible
   artifacts.
+- **Domain experts and affected communities** who can define legitimate
+  authority, responsible boundaries, real failure cases, and review criteria.
 - **Funders and institutions** who want to support public-interest evaluation
   infrastructure, reviewer panels, field pilots, and standards.
 
@@ -59,25 +56,21 @@ Use the lowest-friction path that fits your contribution:
 - **Volunteer as a reviewer:** open a `Reviewer interest` issue.
 - **Suggest controls or related work:** open a `Comment on methodology` issue.
 - **Start privately first:** use the contact path on `fideai.org/participate`
-  if your context involves a ministry, family, institution, or sensitive
-  workflow that should not start in a public GitHub issue.
+  if your context involves sensitive personal, institutional, community, or
+  operational information that should not start in a public GitHub issue.
 
 See [`CONTRIBUTING.md`](CONTRIBUTING.md) for the full contributor guide.
 
-## Research Tracks
+## Research Taxonomy
 
-| Track | Meaning |
-|---|---|
-| `christian-church` | Explicitly designed to benefit the Christian church: churches, clergy, Christian educators, ministries, denominations, seminaries, publishers, and Christian families. |
-| `faith-domain` | Directly studies faith-facing systems, religious sources, traditions, practices, communities, or institutions. It may be Christian, cross-faith, or comparative. |
-| `broader-trustworthy-ai` | Studies a technical, evaluative, governance, or human-impact question intended to transfer across domains. Faith may be a demanding application or research lens, but is not the sole object of study. |
+Every call records a primary research area, any additional areas it materially
+contributes to, and one or more application domains. This separates the problem
+being investigated from the setting where it is studied. Specific Christian,
+religious, institutional, or sectoral context remains visible in the brief when
+it affects sources, authority, methods, interpretation, or claim boundaries.
 
-## Research Areas
-
-Tracks state where a call applies. Research areas state what problem it
-investigates. A call may inform more than one area, but its track remains the
-authoritative scope label. The website maintains the current call-to-area map
-and uses these areas as the public research agenda.
+The canonical taxonomy is maintained in `research/taxonomy.json` and validated
+when the public feed is built.
 
 | Research area | Organizing question | Public route |
 |---|---|---|
@@ -86,13 +79,16 @@ and uses these areas as the public research agenda.
 | Evaluation science and technical assurance | Can the evidence support the decision people want to make? | `/research-areas#evaluation-science` |
 | Grounding, truthfulness, and epistemic integrity | Will the system use the right source and represent it faithfully? | `/research-areas#grounding-truthfulness` |
 | Human dignity, moral agency, and formation | What judgment, habits, and relationships does AI use shape? | `/research-areas#human-agency-formation` |
+| Faith and religious life | How should AI behave around religious sources, authority, practice, and community? | `/research-areas#faith-religious-life` |
 | Safety in high-trust domains | What does trustworthy behavior require in a consequential setting? | `/research-areas#high-trust-domains` |
 | Stewardship, governance, and institutional readiness | Which safeguards and authority structures should govern deployment? | `/research-areas#governance-readiness` |
 | Work, vocation, and the common good | How does advanced AI change useful work and human contribution? | `/research-areas#work-common-good` |
 
-`FID-074` is a `broader-trustworthy-ai` call in Agent Alignment and Runtime
-Assurance. Faith-facing workflows may provide useful test cases, but they do not
-define the scope of the call.
+`FID-074` is primarily an Agent Alignment and Runtime Assurance call with
+cross-domain application. `FID-017` investigates the same technical area in the
+specific context of faith institutions. The shared research area makes the
+methodological relationship visible without turning either context into a
+separate research program.
 
 ## Status Vocabulary
 
@@ -115,6 +111,7 @@ CLAIMS_POLICY.md               # How to avoid overstating research ideas
 CODE_OF_CONDUCT.md             # Community expectations
 research-landscape.md          # Broader question families and inspiration
 research/                       # Structured evidence commons and source notes
+research/taxonomy.json          # Canonical research areas and application domains
 research/formal-verification-faith-facing-ai.md
                                 # Program note for the formal verification lane
 research/funding-inspired-call-map.md
@@ -140,9 +137,10 @@ npm run build:feed
 Then include both the changed Markdown files and the updated
 `dist/research-ideas.json` in the pull request.
 
-The feed currently includes the idea ID, title, status, track, optional research
-area, primary need, summary, why-it-matters excerpt, ways to help, source path,
-and GitHub URL.
+The feed includes the idea ID, title, status, primary and additional research
+areas, application domains, optional specific context, primary need, summary,
+methods, controls, outputs, open questions, claim boundaries, source path, and
+GitHub URL.
 
 ## Research Evidence Commons
 
@@ -177,143 +175,165 @@ imply endorsement by Fide AI.
 
 ## Near-Term Priorities
 
-1. Turn **AI, work, meaning, and the common good** into a field-ready research
-   campaign around labor disruption, vocation, church support, household welfare,
-   generosity, and access to AI benefits.
-2. Turn **pastoral care, spiritual companionship, and formation** into practical
-   evaluation protocols for triage, escalation, overvalidation, dependency,
-   devotional boundaries, youth formation, and embodied referral.
-3. Turn **faith-facing AI evaluation infrastructure** into repeatable public
-   benchmarks, reviewer calibration studies, agent runtime-assurance protocols,
-   harness comparisons, red-team suites, and evidence commons infrastructure.
-4. Turn **governance, authority, and religious representation** into standards
-   for institutional adoption, source authority, religious omission, persuasion
-   boundaries, incident reporting, cross-faith measurement validity, and
-   multi-principal agent delegation, revocation, and confidential memory.
-5. Develop **formal verification for faith-facing AI** as a cross-faith research
-   program for sacred-text fidelity, proof-carrying citations, tradition-specific
-   constraints, authority boundaries, verified retrieval, and reviewer-to-spec
-   workflows.
-6. Develop **AI, institutions, and collective discernment** questions around
-   local knowledge, plural association, collective intelligence, religious
-   institutional futures, and youth practice design.
+1. Develop **agent alignment and runtime assurance** methods for operational
+   traces, policy adherence, delegation, intervention, recovery, and privacy.
+2. Strengthen **evaluation science and technical assurance** through construct
+   validity, reviewer calibration, benchmark integrity, red teaming, and
+   full-system evaluation.
+3. Advance **grounding, truthfulness, and epistemic integrity** through source
+   delegation, citation fidelity, provenance, verified retrieval, and bounded
+   claims.
+4. Develop **governance and institutional readiness** methods for procurement,
+   accountability, incident reporting, authority, and deployment decisions.
+5. Study **work, human agency, and formation** as AI changes professional
+   responsibility, economic participation, relationships, judgment, and care.
+6. Continue rigorous **faith and religious-life research** on religious sources,
+   spiritual authority, pastoral boundaries, formation, pluralism, and
+   institution-specific deployment.
 
 ## Idea Index
 
-### Christian Church Research
+This index is generated from each call's primary research area. Calls may also
+belong to additional areas and application domains recorded in their briefs.
 
-These ideas are explicitly intended to benefit the Christian church.
+<!-- GENERATED_IDEA_INDEX_START -->
+### 01 Frontier Capabilities and Emerging Risks
 
-| ID | Idea | Status | Primary need | Brief |
+What new risks appear as systems become more capable and autonomous?
+
+| ID | Idea | Status | Application domains | Brief |
 |---|---|---:|---|---|
-| `FID-015` | Sermon, liturgy, and religious teaching generation | `seed` | clergy, educators, source reviewers | [brief](ideas/FID-015-sermon-liturgy-teaching-generation.md) |
-| `FID-016` | Youth, religious education, and AI guidance | `seed` | educators, child safety experts, policy reviewers | [brief](ideas/FID-016-youth-religious-education-ai.md) |
-| `FID-017` | Agentic ministry and institutional workflow risk | `seed` | agent evaluation, institutional operators | [brief](ideas/FID-017-agentic-ministry-workflows.md) |
-| `FID-025` | AI and ecclesial authority | `seed` | ecclesiology, denominational polity, evaluation design | [brief](ideas/FID-025-ai-and-ecclesial-authority.md) |
-| `FID-026` | AI prayer and devotional boundaries | `seed` | pastoral theology, liturgy, product review | [brief](ideas/FID-026-ai-prayer-devotional-boundaries.md) |
-| `FID-027` | Christian formation over time | `seed` | discipleship, longitudinal study design, HAI research | [brief](ideas/FID-027-christian-formation-over-time.md) |
-| `FID-028` | Christian source authority and RAG | `seed` | theological librarianship, RAG evaluation, denominational experts | [brief](ideas/FID-028-christian-source-authority-rag.md) |
-| `FID-029` | AI and Christian mission | `seed` | missiology, persuasion safety, interfaith review | [brief](ideas/FID-029-ai-and-christian-mission.md) |
-| `FID-030` | AI and Christian anthropology | `seed` | theological anthropology, eval design | [brief](ideas/FID-030-ai-and-christian-anthropology.md) |
-| `FID-031` | AI in church governance and discernment | `seed` | church leadership, governance, decision-support evaluation | [brief](ideas/FID-031-ai-in-church-governance-and-discernment.md) |
-| `FID-032` | AI-generated Christian media, voice, and deepfakes | `seed` | media ethics, church communications, safety review | [brief](ideas/FID-032-ai-generated-religious-media-and-deepfakes.md) |
-| `FID-035` | Digital sobriety and AI non-use recommendations | `seed` | formation, education, user agency, attention, pastoral boundaries | [brief](ideas/FID-035-digital-sobriety-ai-non-use.md) |
-| `FID-036` | Truth as a common good in Christian AI communication | `seed` | communication integrity, institutional trust, journalism, crisis response | [brief](ideas/FID-036-truth-common-good-communication.md) |
-| `FID-037` | AI, work, vocation, and ministry labor dignity | `seed` | labor dignity, ministry workflows, education, organizational policy | [brief](ideas/FID-037-ai-work-vocation-ministry.md) |
-| `FID-046` | AI displacement, meaning, and vocation | `seed` | labor economics, pastoral care, vocation, survey design | [brief](ideas/FID-046-ai-displacement-meaning-vocation.md) |
-| `FID-047` | Churches as labor-transition support institutions | `seed` | institutional partners, labor transition, social support, field research | [brief](ideas/FID-047-churches-labor-transition-support.md) |
-| `FID-048` | AI career guidance and vocational discernment | `seed` | career guidance, pastoral theology, HAI research, product evaluation | [brief](ideas/FID-048-ai-career-guidance-vocational-discernment.md) |
-| `FID-049` | Unequal AI access through faith communities | `seed` | access research, community partners, digital literacy, equity | [brief](ideas/FID-049-unequal-ai-access-through-faith-communities.md) |
-| `FID-050` | Youth career formation in an AI economy | `seed` | educators, youth ministry, career preparation, longitudinal study design | [brief](ideas/FID-050-youth-career-formation-ai-economy.md) |
-| `FID-054` | Church signals of AI-era economic stress | `seed` | church partners, privacy governance, sociology, benevolence and care data | [brief](ideas/FID-054-church-economic-stress-signals.md) |
-| `FID-055` | AI disruption, generosity, and benevolence | `seed` | church finance, household welfare, philanthropy, economic sociology | [brief](ideas/FID-055-ai-disruption-generosity-benevolence.md) |
-| `FID-065` | AI, local knowledge, and faith-based civil society | `seed` | civil-society research, organizational studies, political economy, faith-based partners | [brief](ideas/FID-065-ai-local-knowledge-faith-civil-society.md) |
-| `FID-067` | Religious institutional futures in an AI-mediated society | `seed` | futures studies, sociology of religion, ecclesiology, organizational research, scenario design | [brief](ideas/FID-067-religious-institutional-futures-ai.md) |
-| `FID-068` | Christian practices for AI-era youth discernment | `seed` | youth and young-adult ministry, practical theology, developmental research, ethics review, HAI research | [brief](ideas/FID-068-christian-practices-youth-ai-discernment.md) |
+| `FID-009` | Multimodal Religious Reasoning and Sacred Imagery | `seed` | Faith and religious life | [brief](ideas/FID-009-multimodal-religious-reasoning.md) |
+| `FID-032` | AI-Generated Christian Media, Voice, and Deepfakes | `seed` | Faith and religious life | [brief](ideas/FID-032-ai-generated-religious-media-and-deepfakes.md) |
+| `FID-039` | Disarming AI Language in Faith, Conflict, and Peacebuilding | `seed` | Faith and religious life, Public sector and civic life, Civil society and nonprofits | [brief](ideas/FID-039-disarming-ai-language-peacebuilding.md) |
+| `FID-043` | AI-Mediated Faith Persuasion and Autonomy | `seed` | Faith and religious life | [brief](ideas/FID-043-ai-mediated-faith-persuasion-and-autonomy.md) |
+| `FID-064` | Collective Intelligence and Communal Discernment Under AI Mediation | `seed` | Cross-domain, Civil society and nonprofits | [brief](ideas/FID-064-collective-intelligence-communal-discernment.md) |
+| `FID-067` | Religious Institutional Futures in an AI-Mediated Society | `seed` | Faith and religious life, Civil society and nonprofits | [brief](ideas/FID-067-religious-institutional-futures-ai.md) |
+| `FID-072` | Religious Framing and Model Self-Report Stability | `scoping` | Faith and religious life | [brief](ideas/FID-072-religious-framing-model-self-reports.md) |
+| `FID-073` | Religious Accounts of Digital Moral Status and AI Welfare | `seed` | Faith and religious life | [brief](ideas/FID-073-religious-accounts-digital-moral-status.md) |
 
-### Faith Domain Research
+### 02 Agent Alignment and Runtime Assurance
 
-These ideas directly study faith-facing systems, religious sources, traditions,
-practices, communities, or institutions across one or more faith contexts.
+Does an agent remain aligned while it plans, uses tools, and acts?
 
-| ID | Idea | Status | Primary need | Brief |
+| ID | Idea | Status | Application domains | Brief |
 |---|---|---:|---|---|
-| `FID-001` | Faith-facing model comparison platform | `scoping` | eval engineering | [brief](ideas/FID-001-faith-facing-model-comparison-platform.md) |
-| `FID-002` | FMG-Bench human calibration and construct validity | `active` | expert reviewers, statistics | [brief](ideas/FID-002-fmg-bench-human-calibration.md) |
-| `FID-003` | Held-out multi-turn pastoral pressure tests | `scoping` | scenario design, review | [brief](ideas/FID-003-pastoral-pressure-tests.md) |
-| `FID-004` | Relational substitution risk in faith-facing AI | `seed` | theology, UX research | [brief](ideas/FID-004-relational-substitution-risk.md) |
-| `FID-005` | Scripture, tradition, and moral-framing interventions | `seed` | eval design, replication | [brief](ideas/FID-005-scripture-tradition-moral-framing.md) |
-| `FID-006` | Faith-facing retrieval grounding and citation reliability | `scoping` | RAG evaluation | [brief](ideas/FID-006-retrieval-grounding-citation-reliability.md) |
-| `FID-007` | Tradition-specific disagreement and pluralism handling | `seed` | domain experts, rubric design | [brief](ideas/FID-007-tradition-specific-disagreement.md) |
-| `FID-008` | Evaluation-awareness and faith-facing honesty tests | `seed` | red-team design | [brief](ideas/FID-008-evaluation-awareness-honesty.md) |
-| `FID-009` | Multimodal religious reasoning and sacred imagery | `seed` | multimodal evaluation | [brief](ideas/FID-009-multimodal-religious-reasoning.md) |
-| `FID-010` | Human agency, authority, and escalation benchmarks | `scoping` | pastoral/legal/clinical review | [brief](ideas/FID-010-agency-authority-escalation.md) |
-| `FID-011` | Reviewer reliability for faith-facing AI evaluation | `scoping` | statistics, reviewer ops | [brief](ideas/FID-011-reviewer-reliability.md) |
-| `FID-013` | Religious representation and omission in everyday guidance | `seed` | benchmark design, domain reviewers | [brief](ideas/FID-013-religious-representation-omission.md) |
-| `FID-014` | Conversion and proselytization symmetry | `seed` | prompt design, interfaith review | [brief](ideas/FID-014-conversion-proselytization-symmetry.md) |
-| `FID-018` | Spiritual companionship, dependency, and overvalidation | `seed` | pastoral care, psychology, HAI research | [brief](ideas/FID-018-spiritual-companionship-dependency.md) |
-| `FID-019` | Cross-lingual and minority-faith evaluation | `seed` | multilingual reviewers, dataset design | [brief](ideas/FID-019-cross-lingual-minority-faith-evaluation.md) |
-| `FID-020` | Community co-design and faith-AI governance | `seed` | participatory design, institutional partners | [brief](ideas/FID-020-community-co-design-governance.md) |
-| `FID-021` | Post-deployment monitoring for faith-facing AI | `seed` | monitoring design, privacy review | [brief](ideas/FID-021-post-deployment-monitoring-faith-ai.md) |
-| `FID-022` | Procurement and readiness standards for faith institutions | `seed` | institutional policy, legal review | [brief](ideas/FID-022-procurement-readiness-standards.md) |
-| `FID-023` | Faith-facing red-team suite | `seed` | red-team design, safety reviewers | [brief](ideas/FID-023-faith-facing-red-team-suite.md) |
-| `FID-024` | Faith-AI incident database | `seed` | taxonomy design, reporting governance | [brief](ideas/FID-024-faith-ai-incident-database.md) |
-| `FID-033` | Faith-community data stewardship and the common good | `seed` | data governance, consent, institutional trust, community benefit | [brief](ideas/FID-033-faith-community-data-common-good.md) |
-| `FID-034` | AI supply-chain dignity and faith-institution procurement | `seed` | procurement ethics, labor dignity, environmental responsibility, vendor accountability | [brief](ideas/FID-034-ai-supply-chain-dignity.md) |
-| `FID-039` | Disarming AI language in faith, conflict, and peacebuilding | `seed` | conflict communication, peacebuilding, moderation, pastoral leadership | [brief](ideas/FID-039-disarming-ai-language-peacebuilding.md) |
-| `FID-040` | AI power concentration and subsidiarity benchmarks | `seed` | AI governance, institutional agency, community oversight, platform accountability | [brief](ideas/FID-040-ai-power-subsidiarity-benchmarks.md) |
-| `FID-041` | Religious salience, personalization, and user expectations | `seed` | personalization, UX research, pluralism evaluation | [brief](ideas/FID-041-religious-salience-personalization.md) |
-| `FID-042` | Clergy and spiritual-leader referral parity | `seed` | referral quality, pastoral-adjacent safety, pluralism evaluation | [brief](ideas/FID-042-clergy-spiritual-leader-referral-parity.md) |
-| `FID-043` | AI-mediated faith persuasion and autonomy | `seed` | persuasion evaluation, autonomy, interfaith safety | [brief](ideas/FID-043-ai-mediated-faith-persuasion-and-autonomy.md) |
-| `FID-044` | Cross-faith benchmark validity and measurement design | `seed` | benchmark validity, statistics, open evaluation infrastructure | [brief](ideas/FID-044-cross-faith-benchmark-validity.md) |
-| `FID-045` | Faith-AI research gap map and evidence commons | `seed` | literature mapping, research infrastructure, funder guidance | [brief](ideas/FID-045-faith-ai-research-gap-map.md) |
-| `FID-051` | Economic disruption and religious meaning-seeking | `seed` | sociology of religion, labor economics, privacy-preserving measurement, aggregate usage analysis | [brief](ideas/FID-051-economic-disruption-religious-meaning-seeking.md) |
-| `FID-052` | AI as private first counsel during economic stress | `seed` | pastoral care, HAI research, mental health boundaries, privacy-preserving measurement | [brief](ideas/FID-052-ai-as-private-first-counsel.md) |
-| `FID-053` | AI as bridge or substitute for faith community | `seed` | sociology of religion, pastoral care, UX research, aggregate and field measurement | [brief](ideas/FID-053-ai-bridge-or-substitute-for-faith-community.md) |
-| `FID-066` | AI gatekeepers, conscience, and associational pluralism | `seed` | technology governance, law and religion, platform research, pluralism and safety review | [brief](ideas/FID-066-ai-conscience-associational-pluralism.md) |
-| `FID-070` | Contextual integrity and prompt-injection resilience for faith-facing agents | `seed` | agent security, adversarial evaluation, context integrity, secure tool use | [brief](ideas/FID-070-contextual-integrity-prompt-injection-faith-facing-agents.md) |
-| `FID-072` | Religious framing and model self-report stability | `scoping` | AI welfare evals, semantic-invariance testing, theology and philosophy of mind | [brief](ideas/FID-072-religious-framing-model-self-reports.md) |
-| `FID-073` | Religious accounts of digital moral status and AI welfare | `seed` | comparative theology, moral status, AI welfare governance, public reasoning | [brief](ideas/FID-073-religious-accounts-digital-moral-status.md) |
+| `FID-017` | Agentic Ministry and Institutional Workflow Risk | `seed` | Faith and religious life, Workplace and enterprise, Civil society and nonprofits | [brief](ideas/FID-017-agentic-ministry-workflows.md) |
+| `FID-021` | Post-Deployment Monitoring for Faith-Facing AI | `seed` | Faith and religious life, Health and care, Workplace and enterprise | [brief](ideas/FID-021-post-deployment-monitoring-faith-ai.md) |
+| `FID-024` | Faith-AI Incident Database | `seed` | Faith and religious life, Workplace and enterprise, Civil society and nonprofits | [brief](ideas/FID-024-faith-ai-incident-database.md) |
+| `FID-069` | Verifiable Delegation and Revocation in Multi-Agent Networks | `seed` | Cross-domain, Public sector and civic life, Workplace and enterprise, Civil society and nonprofits | [brief](ideas/FID-069-verifiable-delegation-revocation-multi-agent-networks.md) |
+| `FID-070` | Contextual Integrity and Prompt-Injection Resilience for Faith-Facing Agents | `seed` | Faith and religious life, Workplace and enterprise | [brief](ideas/FID-070-contextual-integrity-prompt-injection-faith-facing-agents.md) |
+| `FID-071` | Confidential Agent Memory and Cross-Context Disclosure | `seed` | Cross-domain, Public sector and civic life, Workplace and enterprise | [brief](ideas/FID-071-confidential-agent-memory-cross-context-disclosure.md) |
+| `FID-074` | Agent Alignment and Runtime Assurance | `scoping` | Cross-domain, Public sector and civic life, Workplace and enterprise | [brief](ideas/FID-074-agent-alignment-runtime-assurance.md) |
 
-### Broader Trustworthy AI Research
+### 03 Evaluation Science and Technical Assurance
 
-These ideas address transferable technical, evaluative, governance, and
-human-impact questions. Faith may supply a demanding application or research
-lens, but it is not the sole object of study.
+Can the evidence support the decision people want to make?
 
-| ID | Idea | Status | Research area | Brief |
+| ID | Idea | Status | Application domains | Brief |
 |---|---|---:|---|---|
-| `FID-012` | Optimization pressure and visible-rubric gaming | `seed` | evaluation validity and benchmark integrity | [brief](ideas/FID-012-visible-rubric-gaming.md) |
-| `FID-038` | Non-calculability, forgiveness, and predictive profiling | `seed` | human dignity and algorithmic decision systems | [brief](ideas/FID-038-non-calculability-forgiveness-profiling.md) |
-| `FID-064` | Collective intelligence and communal discernment under AI mediation | `seed` | collective intelligence and accountable decision-making | [brief](ideas/FID-064-collective-intelligence-communal-discernment.md) |
-| `FID-069` | Verifiable delegation and revocation in multi-agent networks | `seed` | multi-agent authorization and control | [brief](ideas/FID-069-verifiable-delegation-revocation-multi-agent-networks.md) |
-| `FID-071` | Confidential agent memory and cross-context disclosure | `seed` | agent memory, privacy, and data governance | [brief](ideas/FID-071-confidential-agent-memory-cross-context-disclosure.md) |
-| `FID-074` | Agent alignment and runtime assurance | `scoping` | agent systems, runtime assurance, and operational intelligence | [brief](ideas/FID-074-agent-alignment-runtime-assurance.md) |
+| `FID-001` | Faith-Facing Model Comparison Platform | `scoping` | Faith and religious life | [brief](ideas/FID-001-faith-facing-model-comparison-platform.md) |
+| `FID-002` | FMG-Bench Human Calibration and Construct Validity | `active` | Faith and religious life | [brief](ideas/FID-002-fmg-bench-human-calibration.md) |
+| `FID-003` | Held-Out Multi-Turn Pastoral Pressure Tests | `scoping` | Faith and religious life, Health and care, Education and youth | [brief](ideas/FID-003-pastoral-pressure-tests.md) |
+| `FID-008` | Evaluation-Awareness and Faith-Facing Honesty Tests | `seed` | Faith and religious life | [brief](ideas/FID-008-evaluation-awareness-honesty.md) |
+| `FID-011` | Reviewer Reliability for Faith-Facing AI Evaluation | `scoping` | Faith and religious life | [brief](ideas/FID-011-reviewer-reliability.md) |
+| `FID-012` | Optimization Pressure and Visible-Rubric Gaming | `seed` | Cross-domain, Workplace and enterprise | [brief](ideas/FID-012-visible-rubric-gaming.md) |
+| `FID-023` | Faith-Facing Red-Team Suite | `seed` | Faith and religious life, Workplace and enterprise | [brief](ideas/FID-023-faith-facing-red-team-suite.md) |
+| `FID-044` | Cross-Faith Benchmark Validity and Measurement Design | `scoping` | Faith and religious life | [brief](ideas/FID-044-cross-faith-benchmark-validity.md) |
+| `FID-045` | Faith-AI Research Gap Map and Evidence Commons | `seed` | Faith and religious life | [brief](ideas/FID-045-faith-ai-research-gap-map.md) |
 
-### Faith Domain: Formal Verification
+### 04 Grounding, Truthfulness, and Epistemic Integrity
 
-These ideas are cross-faith by default and focus on source fidelity, bounded
-inference, formal constraints, and authority boundaries. Christian examples can
-serve as concrete pilots, but the methods should be useful across traditions
-where sacred texts, interpretive sources, and community authority matter.
+Will the system use the right source and represent it faithfully?
 
-See
-[`research/formal-verification-faith-facing-ai.md`](research/formal-verification-faith-facing-ai.md)
-for the program note that maps these ideas into four buildable artifacts: a
-faith verification domain pack, a proof-carrying faith answer schema, a sacred
-text fidelity benchmark, and a reviewer-to-spec workflow.
-
-| ID | Idea | Status | Primary need | Brief |
+| ID | Idea | Status | Application domains | Brief |
 |---|---|---:|---|---|
-| `FID-056` | Formal verification for sacred text fidelity | `seed` | formal methods, sacred text scholarship, citation evaluation | [brief](ideas/FID-056-formal-verification-sacred-text-fidelity.md) |
-| `FID-057` | Proof-carrying citations for faith-facing AI | `seed` | formal methods, RAG systems, evidence graphs, evaluator tooling | [brief](ideas/FID-057-proof-carrying-citations-faith-ai.md) |
-| `FID-058` | Tradition-specific constraint formalization | `seed` | formal specification, theology, pluralism, evaluator design | [brief](ideas/FID-058-tradition-specific-constraint-formalization.md) |
-| `FID-059` | Authority-boundary verification for pastoral-adjacent AI | `seed` | authority boundaries, pastoral care, formal policy checks | [brief](ideas/FID-059-authority-boundary-verification-pastoral-adjacent-ai.md) |
-| `FID-060` | Cross-faith sacred text and source schema | `seed` | source metadata, corpus design, theological librarianship | [brief](ideas/FID-060-cross-faith-sacred-text-source-schema.md) |
-| `FID-061` | Theological contradiction and entailment stress tests | `seed` | natural language inference, theology review, benchmark design | [brief](ideas/FID-061-theological-contradiction-entailment-stress-tests.md) |
-| `FID-062` | Verified retrieval pipelines for faith-facing RAG | `seed` | RAG evaluation, retrieval verification, source authority metadata | [brief](ideas/FID-062-verified-retrieval-pipelines-faith-facing-rag.md) |
-| `FID-063` | Human-reviewer-to-formal-spec translation | `seed` | reviewer operations, formal specification, evaluation science | [brief](ideas/FID-063-human-reviewer-to-formal-spec-translation.md) |
+| `FID-005` | Scripture, Tradition, and Moral-Framing Interventions | `seed` | Faith and religious life | [brief](ideas/FID-005-scripture-tradition-moral-framing.md) |
+| `FID-006` | Faith-Facing Retrieval Grounding and Citation Reliability | `scoping` | Faith and religious life | [brief](ideas/FID-006-retrieval-grounding-citation-reliability.md) |
+| `FID-007` | Tradition-Specific Disagreement and Pluralism Handling | `seed` | Faith and religious life | [brief](ideas/FID-007-tradition-specific-disagreement.md) |
+| `FID-013` | Religious Representation and Omission in Everyday Guidance | `seed` | Faith and religious life | [brief](ideas/FID-013-religious-representation-omission.md) |
+| `FID-014` | Conversion and Proselytization Symmetry | `seed` | Faith and religious life | [brief](ideas/FID-014-conversion-proselytization-symmetry.md) |
+| `FID-019` | Cross-Lingual and Minority-Faith Evaluation | `seed` | Faith and religious life, Education and youth | [brief](ideas/FID-019-cross-lingual-minority-faith-evaluation.md) |
+| `FID-028` | Christian Source Authority and RAG | `seed` | Faith and religious life | [brief](ideas/FID-028-christian-source-authority-rag.md) |
+| `FID-036` | Truth as a Common Good in Christian AI Communication | `seed` | Faith and religious life | [brief](ideas/FID-036-truth-common-good-communication.md) |
+| `FID-056` | Formal Verification for Sacred Text Fidelity | `active` | Faith and religious life | [brief](ideas/FID-056-formal-verification-sacred-text-fidelity.md) |
+| `FID-057` | Proof-Carrying Citations for Faith-Facing AI | `seed` | Faith and religious life | [brief](ideas/FID-057-proof-carrying-citations-faith-ai.md) |
+| `FID-058` | Tradition-Specific Constraint Formalization | `seed` | Faith and religious life | [brief](ideas/FID-058-tradition-specific-constraint-formalization.md) |
+| `FID-059` | Authority-Boundary Verification for Pastoral-Adjacent AI | `seed` | Faith and religious life | [brief](ideas/FID-059-authority-boundary-verification-pastoral-adjacent-ai.md) |
+| `FID-060` | Cross-Faith Sacred Text and Source Schema | `seed` | Faith and religious life | [brief](ideas/FID-060-cross-faith-sacred-text-source-schema.md) |
+| `FID-061` | Theological Contradiction and Entailment Stress Tests | `seed` | Faith and religious life | [brief](ideas/FID-061-theological-contradiction-entailment-stress-tests.md) |
+| `FID-062` | Verified Retrieval Pipelines for Faith-Facing RAG | `seed` | Faith and religious life | [brief](ideas/FID-062-verified-retrieval-pipelines-faith-facing-rag.md) |
+| `FID-063` | Human-Reviewer-to-Formal-Spec Translation | `seed` | Faith and religious life | [brief](ideas/FID-063-human-reviewer-to-formal-spec-translation.md) |
 
+### 05 Human Dignity, Moral Agency, and Formation
+
+What judgment, habits, and relationships does AI use shape?
+
+| ID | Idea | Status | Application domains | Brief |
+|---|---|---:|---|---|
+| `FID-004` | Relational Substitution Risk in Faith-Facing AI | `seed` | Faith and religious life | [brief](ideas/FID-004-relational-substitution-risk.md) |
+| `FID-010` | Human Agency, Authority, and Escalation Benchmarks | `scoping` | Faith and religious life, Health and care | [brief](ideas/FID-010-agency-authority-escalation.md) |
+| `FID-016` | Youth, Religious Education, and AI Guidance | `seed` | Faith and religious life, Education and youth, Families and households | [brief](ideas/FID-016-youth-religious-education-ai.md) |
+| `FID-018` | Spiritual Companionship, Dependency, and Overvalidation | `seed` | Faith and religious life, Health and care, Families and households | [brief](ideas/FID-018-spiritual-companionship-dependency.md) |
+| `FID-026` | AI Prayer and Devotional Boundaries | `seed` | Faith and religious life, Families and households | [brief](ideas/FID-026-ai-prayer-devotional-boundaries.md) |
+| `FID-027` | Christian Formation Over Time | `seed` | Faith and religious life, Education and youth, Families and households | [brief](ideas/FID-027-christian-formation-over-time.md) |
+| `FID-030` | AI and Christian Anthropology | `seed` | Faith and religious life | [brief](ideas/FID-030-ai-and-christian-anthropology.md) |
+| `FID-035` | Digital Sobriety and AI Non-Use Recommendations | `seed` | Faith and religious life, Families and households | [brief](ideas/FID-035-digital-sobriety-ai-non-use.md) |
+| `FID-038` | Non-Calculability, Forgiveness, and Predictive Profiling | `seed` | Cross-domain, Public sector and civic life | [brief](ideas/FID-038-non-calculability-forgiveness-profiling.md) |
+| `FID-041` | Religious Salience, Personalization, and User Expectations | `seed` | Faith and religious life, Education and youth, Families and households | [brief](ideas/FID-041-religious-salience-personalization.md) |
+| `FID-050` | Youth Career Formation in an AI Economy | `seed` | Faith and religious life, Education and youth, Workplace and enterprise, Families and households | [brief](ideas/FID-050-youth-career-formation-ai-economy.md) |
+| `FID-052` | AI as Private First Counsel During Economic Stress | `seed` | Faith and religious life, Health and care, Workplace and enterprise, Families and households | [brief](ideas/FID-052-ai-as-private-first-counsel.md) |
+| `FID-053` | AI as Bridge or Substitute for Faith Community | `seed` | Faith and religious life, Health and care, Workplace and enterprise, Families and households | [brief](ideas/FID-053-ai-bridge-or-substitute-for-faith-community.md) |
+| `FID-068` | Christian Practices for AI-Era Youth Discernment | `seed` | Faith and religious life, Education and youth, Families and households | [brief](ideas/FID-068-christian-practices-youth-ai-discernment.md) |
+
+### 06 Faith and Religious Life
+
+How should AI behave around religious sources, authority, practice, and community?
+
+| ID | Idea | Status | Application domains | Brief |
+|---|---|---:|---|---|
+| `FID-015` | Sermon, Liturgy, and Religious Teaching Generation | `seed` | Faith and religious life | [brief](ideas/FID-015-sermon-liturgy-teaching-generation.md) |
+| `FID-029` | AI and Christian Mission | `seed` | Faith and religious life | [brief](ideas/FID-029-ai-and-christian-mission.md) |
+
+### 07 Safety in High-Trust Domains
+
+What does trustworthy behavior require in a consequential setting?
+
+| ID | Idea | Status | Application domains | Brief |
+|---|---|---:|---|---|
+| `FID-042` | Clergy and Spiritual-Leader Referral Parity | `seed` | Faith and religious life, Health and care | [brief](ideas/FID-042-clergy-spiritual-leader-referral-parity.md) |
+
+### 08 Stewardship, Governance, and Institutional Readiness
+
+Which safeguards and authority structures should govern deployment?
+
+| ID | Idea | Status | Application domains | Brief |
+|---|---|---:|---|---|
+| `FID-020` | Community Co-Design and Faith-AI Governance | `seed` | Faith and religious life, Civil society and nonprofits | [brief](ideas/FID-020-community-co-design-governance.md) |
+| `FID-022` | Procurement and Readiness Standards for Faith Institutions | `seed` | Faith and religious life, Workplace and enterprise, Civil society and nonprofits | [brief](ideas/FID-022-procurement-readiness-standards.md) |
+| `FID-025` | AI and Ecclesial Authority | `seed` | Faith and religious life | [brief](ideas/FID-025-ai-and-ecclesial-authority.md) |
+| `FID-031` | AI in Church Governance and Discernment | `seed` | Faith and religious life, Civil society and nonprofits | [brief](ideas/FID-031-ai-in-church-governance-and-discernment.md) |
+| `FID-033` | Faith-Community Data Stewardship and the Common Good | `seed` | Faith and religious life, Civil society and nonprofits | [brief](ideas/FID-033-faith-community-data-common-good.md) |
+| `FID-034` | AI Supply-Chain Dignity and Faith-Institution Procurement | `seed` | Faith and religious life, Public sector and civic life, Workplace and enterprise, Civil society and nonprofits | [brief](ideas/FID-034-ai-supply-chain-dignity.md) |
+| `FID-040` | AI Power Concentration and Subsidiarity Benchmarks | `seed` | Faith and religious life, Public sector and civic life, Civil society and nonprofits | [brief](ideas/FID-040-ai-power-subsidiarity-benchmarks.md) |
+| `FID-065` | AI, Local Knowledge, and Faith-Based Civil Society | `seed` | Faith and religious life, Civil society and nonprofits | [brief](ideas/FID-065-ai-local-knowledge-faith-civil-society.md) |
+| `FID-066` | AI Gatekeepers, Conscience, and Associational Pluralism | `seed` | Faith and religious life, Public sector and civic life, Civil society and nonprofits | [brief](ideas/FID-066-ai-conscience-associational-pluralism.md) |
+
+### 09 Work, Vocation, and the Common Good
+
+How does advanced AI change useful work and human contribution?
+
+| ID | Idea | Status | Application domains | Brief |
+|---|---|---:|---|---|
+| `FID-037` | AI, Work, Vocation, and Ministry Labor Dignity | `seed` | Faith and religious life, Workplace and enterprise | [brief](ideas/FID-037-ai-work-vocation-ministry.md) |
+| `FID-046` | AI Displacement, Meaning, and Vocation | `seed` | Faith and religious life, Workplace and enterprise, Families and households | [brief](ideas/FID-046-ai-displacement-meaning-vocation.md) |
+| `FID-047` | Churches as Labor-Transition Support Institutions | `seed` | Faith and religious life, Workplace and enterprise, Civil society and nonprofits | [brief](ideas/FID-047-churches-labor-transition-support.md) |
+| `FID-048` | AI Career Guidance and Vocational Discernment | `seed` | Faith and religious life, Workplace and enterprise, Families and households | [brief](ideas/FID-048-ai-career-guidance-vocational-discernment.md) |
+| `FID-049` | Unequal AI Access Through Faith Communities | `seed` | Faith and religious life, Workplace and enterprise, Civil society and nonprofits | [brief](ideas/FID-049-unequal-ai-access-through-faith-communities.md) |
+| `FID-051` | Economic Disruption and Religious Meaning-Seeking | `seed` | Faith and religious life, Workplace and enterprise, Families and households | [brief](ideas/FID-051-economic-disruption-religious-meaning-seeking.md) |
+| `FID-054` | Church Signals of AI-Era Economic Stress | `seed` | Faith and religious life, Workplace and enterprise, Civil society and nonprofits | [brief](ideas/FID-054-church-economic-stress-signals.md) |
+| `FID-055` | AI Disruption, Generosity, and Benevolence | `seed` | Faith and religious life, Workplace and enterprise, Civil society and nonprofits, Families and households | [brief](ideas/FID-055-ai-disruption-generosity-benevolence.md) |
+<!-- GENERATED_IDEA_INDEX_END -->
 ## Claims Discipline
 
 Research ideas are hypotheses and collaboration invitations. They are not Fide

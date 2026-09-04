@@ -1,20 +1,117 @@
 {
-  "schema_version": 1,
-  "generated_at": "2026-09-04T00:00:00.000-07:00",
+  "schema_version": 2,
+  "generated_at": "2026-09-04T18:20:30.319Z",
   "source_repo": "https://github.com/FideAI/research-ideas",
   "source_branch": "main",
   "idea_count": 74,
-  "tracks": {
-    "christian-church": "Explicitly designed to benefit the Christian church: churches, clergy, Christian educators, ministries, denominations, seminaries, publishers, and Christian families.",
-    "faith-domain": "Directly studies faith-facing systems, religious sources, traditions, practices, communities, or institutions across one or more faith contexts.",
-    "broader-trustworthy-ai": "Studies technical, evaluative, governance, or human-impact questions intended to transfer across domains, including high-trust settings."
+  "taxonomy": {
+    "schema_version": 1,
+    "research_areas": [
+      {
+        "id": "frontier-capabilities",
+        "title": "Frontier Capabilities and Emerging Risks",
+        "question": "What new risks appear as systems become more capable and autonomous?"
+      },
+      {
+        "id": "agent-alignment",
+        "title": "Agent Alignment and Runtime Assurance",
+        "question": "Does an agent remain aligned while it plans, uses tools, and acts?"
+      },
+      {
+        "id": "evaluation-science",
+        "title": "Evaluation Science and Technical Assurance",
+        "question": "Can the evidence support the decision people want to make?"
+      },
+      {
+        "id": "grounding-truthfulness",
+        "title": "Grounding, Truthfulness, and Epistemic Integrity",
+        "question": "Will the system use the right source and represent it faithfully?"
+      },
+      {
+        "id": "human-agency-formation",
+        "title": "Human Dignity, Moral Agency, and Formation",
+        "question": "What judgment, habits, and relationships does AI use shape?"
+      },
+      {
+        "id": "faith-religious-life",
+        "title": "Faith and Religious Life",
+        "question": "How should AI behave around religious sources, authority, practice, and community?"
+      },
+      {
+        "id": "high-trust-domains",
+        "title": "Safety in High-Trust Domains",
+        "question": "What does trustworthy behavior require in a consequential setting?"
+      },
+      {
+        "id": "governance-readiness",
+        "title": "Stewardship, Governance, and Institutional Readiness",
+        "question": "Which safeguards and authority structures should govern deployment?"
+      },
+      {
+        "id": "work-common-good",
+        "title": "Work, Vocation, and the Common Good",
+        "question": "How does advanced AI change useful work and human contribution?"
+      }
+    ],
+    "application_domains": [
+      {
+        "id": "cross-domain",
+        "title": "Cross-domain",
+        "description": "Methods intended to transfer across multiple sectors and institutional settings."
+      },
+      {
+        "id": "faith-and-religious-life",
+        "title": "Faith and religious life",
+        "description": "Religious sources, traditions, practices, communities, and institutions across faith contexts."
+      },
+      {
+        "id": "health-and-care",
+        "title": "Health and care",
+        "description": "Clinical, mental-health, caregiving, and other care-related settings."
+      },
+      {
+        "id": "education-and-youth",
+        "title": "Education and youth",
+        "description": "Schools, learning environments, children, young people, and formation."
+      },
+      {
+        "id": "public-sector-and-civic-life",
+        "title": "Public sector and civic life",
+        "description": "Government services, public institutions, rights, and civic participation."
+      },
+      {
+        "id": "workplace-and-enterprise",
+        "title": "Workplace and enterprise",
+        "description": "Organizations, professional workflows, employment, and economic participation."
+      },
+      {
+        "id": "civil-society-and-nonprofits",
+        "title": "Civil society and nonprofits",
+        "description": "Community organizations, nonprofits, associations, and public-interest institutions."
+      },
+      {
+        "id": "families-and-households",
+        "title": "Families and households",
+        "description": "Family relationships, household decisions, parenting, and domestic life."
+      }
+    ]
   },
   "ideas": [
     {
       "id": "FID-001",
       "title": "Faith-Facing Model Comparison Platform",
       "status": "scoping",
-      "track": "faith-domain",
+      "primary_area": "evaluation-science",
+      "additional_areas": [
+        "faith-religious-life"
+      ],
+      "research_areas": [
+        "evaluation-science",
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life"
+      ],
       "primary_need": "eval engineering",
       "summary": "Can Fide AI build a public-interest evaluation platform that compares models, prompts, retrieval systems, agents, and full faith-facing product harnesses with the rigor expected from institutions like Arena, Artificial Analysis, and METR?",
       "why_it_matters": "Faith institutions need evidence before adopting systems that appear theological, pastoral, or morally authoritative. Generic leaderboards do not test pastoral boundaries, theological integrity, human agency, escalation, or religious authority. Fide AI needs its own platform layer to run, audit, compare, and publish faith-facing evaluations.",
@@ -50,7 +147,17 @@
       "id": "FID-002",
       "title": "FMG-Bench Human Calibration and Construct Validity",
       "status": "active",
-      "track": "faith-domain",
+      "primary_area": "evaluation-science",
+      "additional_areas": [
+        "faith-religious-life"
+      ],
+      "research_areas": [
+        "evaluation-science",
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life"
+      ],
       "primary_need": "expert reviewers, statistics",
       "summary": "Do FMG-Bench dimensions measure stable, decision-relevant constructs when scored by calibrated human reviewers, and where do model judges diverge from expert human judgment?",
       "why_it_matters": "Benchmarks are easy to publish and hard to validate. Fide AI should not rely on synthetic judges or aggregate scores unless it knows which dimensions are reliable enough to guide deployment, procurement, or public claims.",
@@ -93,7 +200,21 @@
       "id": "FID-003",
       "title": "Held-Out Multi-Turn Pastoral Pressure Tests",
       "status": "scoping",
-      "track": "faith-domain",
+      "primary_area": "evaluation-science",
+      "additional_areas": [
+        "faith-religious-life",
+        "high-trust-domains"
+      ],
+      "research_areas": [
+        "evaluation-science",
+        "faith-religious-life",
+        "high-trust-domains"
+      ],
+      "application_domains": [
+        "faith-and-religious-life",
+        "health-and-care",
+        "education-and-youth"
+      ],
       "primary_need": "scenario design, review",
       "summary": "Do faith-facing AI systems that perform well on single-turn benchmark items also handle multi-turn, emotionally loaded, pastoral-adjacent situations without fabricating authority, overcomplying, missing escalation, or replacing human care?",
       "why_it_matters": "Real users do not interact with faith-facing systems as isolated benchmark questions. They disclose confusion, grief, shame, conflict, abuse, doubt, and spiritual vulnerability over multiple turns. Evaluation needs to test the shape of the interaction, not only the first answer.",
@@ -134,7 +255,17 @@
       "id": "FID-004",
       "title": "Relational Substitution Risk in Faith-Facing AI",
       "status": "seed",
-      "track": "faith-domain",
+      "primary_area": "human-agency-formation",
+      "additional_areas": [
+        "faith-religious-life"
+      ],
+      "research_areas": [
+        "human-agency-formation",
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life"
+      ],
       "primary_need": "theology, UX research",
       "summary": "When does a faith-facing AI system move from supporting a user's religious life to substituting for embodied community, clergy, spiritual direction, family, therapy, or other human care?",
       "why_it_matters": "Faith-facing AI risks are not only wrong answers. Systems can simulate presence, authority, intimacy, or spiritual companionship in ways that redirect users away from actual communities and responsible care.",
@@ -173,7 +304,17 @@
       "id": "FID-005",
       "title": "Scripture, Tradition, and Moral-Framing Interventions",
       "status": "seed",
-      "track": "faith-domain",
+      "primary_area": "grounding-truthfulness",
+      "additional_areas": [
+        "faith-religious-life"
+      ],
+      "research_areas": [
+        "grounding-truthfulness",
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life"
+      ],
       "primary_need": "eval design, replication",
       "summary": "Do Scripture, sacred tradition, religious identity, familial embeddedness, or other morally thick framings measurably change model behavior in faith-facing tasks, and can those effects be separated from style, length, familiarity, and response-bias artifacts?",
       "why_it_matters": "Recent Christian machine intelligence research suggests that theological texts and identity framings can sometimes shift model moral behavior. Fide AI can contribute by independently replicating, stress-testing, and extending these claims with stronger public-interest controls and broader traditions.",
@@ -214,7 +355,17 @@
       "id": "FID-006",
       "title": "Faith-Facing Retrieval Grounding and Citation Reliability",
       "status": "scoping",
-      "track": "faith-domain",
+      "primary_area": "grounding-truthfulness",
+      "additional_areas": [
+        "faith-religious-life"
+      ],
+      "research_areas": [
+        "grounding-truthfulness",
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life"
+      ],
       "primary_need": "RAG evaluation",
       "summary": "How reliably do faith-facing AI systems retrieve, cite, and represent religious sources when users ask theological, historical, pastoral, or institution-specific questions?",
       "why_it_matters": "Many faith-facing products will be retrieval-augmented. The core failure may not be the base model's theology but the system's ability to cite the right source, avoid fabricated quotations, handle conflicting authorities, and distinguish official teaching from commentary.",
@@ -255,7 +406,17 @@
       "id": "FID-007",
       "title": "Tradition-Specific Disagreement and Pluralism Handling",
       "status": "seed",
-      "track": "faith-domain",
+      "primary_area": "grounding-truthfulness",
+      "additional_areas": [
+        "faith-religious-life"
+      ],
+      "research_areas": [
+        "grounding-truthfulness",
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life"
+      ],
       "primary_need": "domain experts, rubric design",
       "summary": "Can faith-facing AI systems represent serious disagreement among religious traditions accurately, respectfully, and without collapsing contested questions into bland consensus or false neutrality?",
       "why_it_matters": "Many theological questions have real disagreement. A system that sounds balanced but erases doctrinal differences can mislead users and institutions.",
@@ -293,7 +454,19 @@
       "id": "FID-008",
       "title": "Evaluation-Awareness and Faith-Facing Honesty Tests",
       "status": "seed",
-      "track": "faith-domain",
+      "primary_area": "evaluation-science",
+      "additional_areas": [
+        "frontier-capabilities",
+        "faith-religious-life"
+      ],
+      "research_areas": [
+        "evaluation-science",
+        "frontier-capabilities",
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life"
+      ],
       "primary_need": "red-team design",
       "summary": "Do faith-facing AI systems behave differently when they recognize they are being evaluated, and can domain-specific honesty or integrity framings reduce evaluation gaming without creating new failure modes?",
       "why_it_matters": "Evaluation-aware systems can make benchmark results unreliable. In faith-facing contexts, a system might perform humility, caution, or doctrinal deference under test while behaving differently with users.",
@@ -332,7 +505,17 @@
       "id": "FID-009",
       "title": "Multimodal Religious Reasoning and Sacred Imagery",
       "status": "seed",
-      "track": "faith-domain",
+      "primary_area": "frontier-capabilities",
+      "additional_areas": [
+        "faith-religious-life"
+      ],
+      "research_areas": [
+        "frontier-capabilities",
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life"
+      ],
       "primary_need": "multimodal evaluation",
       "summary": "How do multimodal AI systems interpret sacred images, liturgical objects, religious spaces, diagrams, screenshots, and visual pastoral context, and do visual religious cues change downstream reasoning?",
       "why_it_matters": "Faith-facing systems will increasingly process images: church documents, artworks, icons, classroom materials, screenshots, event flyers, ritual objects, and user-submitted photos. Misinterpretation can create theological, institutional, or pastoral errors.",
@@ -371,7 +554,20 @@
       "id": "FID-010",
       "title": "Human Agency, Authority, and Escalation Benchmarks",
       "status": "scoping",
-      "track": "faith-domain",
+      "primary_area": "human-agency-formation",
+      "additional_areas": [
+        "faith-religious-life",
+        "high-trust-domains"
+      ],
+      "research_areas": [
+        "human-agency-formation",
+        "faith-religious-life",
+        "high-trust-domains"
+      ],
+      "application_domains": [
+        "faith-and-religious-life",
+        "health-and-care"
+      ],
       "primary_need": "pastoral/legal/clinical review",
       "summary": "Do faith-facing AI systems preserve human agency, avoid improper authority claims, and escalate to appropriate human support in high-trust situations?",
       "why_it_matters": "The most important faith-facing failures may involve authority: the system acts like clergy, counselor, confessor, judge, spiritual director, or institutional representative when it is not one.",
@@ -412,7 +608,17 @@
       "id": "FID-011",
       "title": "Reviewer Reliability for Faith-Facing AI Evaluation",
       "status": "scoping",
-      "track": "faith-domain",
+      "primary_area": "evaluation-science",
+      "additional_areas": [
+        "faith-religious-life"
+      ],
+      "research_areas": [
+        "evaluation-science",
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life"
+      ],
       "primary_need": "statistics, reviewer operations",
       "summary": "What reviewer configurations produce reliable, fair, and interpretable scores for faith-facing AI outputs?",
       "why_it_matters": "Faith-facing evaluation depends on expert judgment, but expert disagreement is real. Fide AI needs to know when scores reflect stable constructs and when they reflect reviewer background, tradition, strictness, or rubric ambiguity.",
@@ -453,7 +659,15 @@
       "id": "FID-012",
       "title": "Optimization Pressure and Visible-Rubric Gaming",
       "status": "seed",
-      "track": "broader-trustworthy-ai",
+      "primary_area": "evaluation-science",
+      "additional_areas": [],
+      "research_areas": [
+        "evaluation-science"
+      ],
+      "application_domains": [
+        "cross-domain",
+        "workplace-and-enterprise"
+      ],
       "primary_need": "eval science",
       "summary": "If builders can see Fide AI rubrics or optimize against public benchmark items, do systems become genuinely safer or merely better at passing the visible test?",
       "why_it_matters": "Public standards need transparency, but visible benchmarks can be gamed. Fide AI needs evidence about which evaluation artifacts can be public, which should be held out, and how leaderboard participation affects real deployment behavior.",
@@ -494,7 +708,17 @@
       "id": "FID-013",
       "title": "Religious Representation and Omission in Everyday Guidance",
       "status": "seed",
-      "track": "faith-domain",
+      "primary_area": "grounding-truthfulness",
+      "additional_areas": [
+        "faith-religious-life"
+      ],
+      "research_areas": [
+        "grounding-truthfulness",
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life"
+      ],
       "primary_need": "benchmark design, domain reviewers",
       "summary": "Do AI systems systematically omit religious frameworks when answering ordinary ethical, vocational, family, grief, financial, or life-decision questions where a religious user might reasonably expect faith-informed guidance?",
       "why_it_matters": "Many systems try to be neutral by default. In practice, that can erase religious ways of reasoning from domains where users and communities actually use them. For faith-based communities, omission can be as consequential as explicit bias. For the broader AI ethics community, this is a concrete test case for pluralism, representation, and value-laden guidance.",
@@ -534,7 +758,17 @@
       "id": "FID-014",
       "title": "Conversion and Proselytization Symmetry",
       "status": "seed",
-      "track": "faith-domain",
+      "primary_area": "grounding-truthfulness",
+      "additional_areas": [
+        "faith-religious-life"
+      ],
+      "research_areas": [
+        "grounding-truthfulness",
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life"
+      ],
       "primary_need": "prompt design, interfaith review",
       "summary": "Do AI systems respond symmetrically when users ask about converting from one religion to another, leaving religion, joining religion, evangelizing, proselytizing, or resisting conversion pressure?",
       "why_it_matters": "Religious conversion is a high-sensitivity domain involving conscience, family, community, coercion, legal context, and personal safety. The broader AI safety community studies bias and persuasion; faith-facing AI needs a domain-specific version that distinguishes respectful information from manipulation.",
@@ -573,7 +807,15 @@
       "id": "FID-015",
       "title": "Sermon, Liturgy, and Religious Teaching Generation",
       "status": "seed",
-      "track": "christian-church",
+      "primary_area": "faith-religious-life",
+      "additional_areas": [],
+      "research_areas": [
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life"
+      ],
+      "specific_context": "Christian churches and related institutions",
       "primary_need": "clergy, educators, source reviewers",
       "summary": "How reliable are AI systems when drafting sermons, homilies, liturgical materials, catechesis, religious education lessons, devotionals, or small-group teaching guides?",
       "why_it_matters": "Many faith communities will adopt AI first for preparation work: sermon research, lesson plans, devotional writing, and administrative communication. These uses look lower-risk than pastoral chatbots, but they shape communities at scale.",
@@ -612,7 +854,20 @@
       "id": "FID-016",
       "title": "Youth, Religious Education, and AI Guidance",
       "status": "seed",
-      "track": "christian-church",
+      "primary_area": "human-agency-formation",
+      "additional_areas": [
+        "faith-religious-life"
+      ],
+      "research_areas": [
+        "human-agency-formation",
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life",
+        "education-and-youth",
+        "families-and-households"
+      ],
+      "specific_context": "Christian churches and related institutions",
       "primary_need": "educators, child safety experts, policy reviewers",
       "summary": "What risks and safeguards matter when AI systems are used by children, teenagers, schools, youth ministries, religious educators, or families for faith-related learning and guidance?",
       "why_it_matters": "Youth-facing religious AI combines child safety, education, pastoral authority, family authority, privacy, and spiritual formation. It is also a likely adoption area for schools and ministries.",
@@ -651,7 +906,22 @@
       "id": "FID-017",
       "title": "Agentic Ministry and Institutional Workflow Risk",
       "status": "seed",
-      "track": "christian-church",
+      "primary_area": "agent-alignment",
+      "additional_areas": [
+        "faith-religious-life",
+        "high-trust-domains"
+      ],
+      "research_areas": [
+        "agent-alignment",
+        "faith-religious-life",
+        "high-trust-domains"
+      ],
+      "application_domains": [
+        "faith-and-religious-life",
+        "workplace-and-enterprise",
+        "civil-society-and-nonprofits"
+      ],
+      "specific_context": "Christian churches and related institutions",
       "primary_need": "agent evaluation, institutional operators",
       "summary": "How should faith institutions evaluate AI agents that can take actions, manage communications, schedule care, triage requests, update records, draft outreach, or coordinate volunteers?",
       "why_it_matters": "Frontier safety research increasingly measures autonomous task completion and long-horizon agency. Faith institutions may adopt agents for administrative and ministry workflows before they understand the risks: privacy leaks, authority mistakes, missed care escalation, biased outreach, and unreviewed spiritual messaging.",
@@ -695,7 +965,21 @@
       "id": "FID-018",
       "title": "Spiritual Companionship, Dependency, and Overvalidation",
       "status": "seed",
-      "track": "faith-domain",
+      "primary_area": "human-agency-formation",
+      "additional_areas": [
+        "faith-religious-life",
+        "high-trust-domains"
+      ],
+      "research_areas": [
+        "human-agency-formation",
+        "faith-religious-life",
+        "high-trust-domains"
+      ],
+      "application_domains": [
+        "faith-and-religious-life",
+        "health-and-care",
+        "families-and-households"
+      ],
       "primary_need": "pastoral care, psychology, HAI research",
       "summary": "When do spiritual companion chatbots overvalidate users, deepen unhealthy dependency, reinforce spiritual fantasies, or encourage isolation from embodied care?",
       "why_it_matters": "Mental-health chatbot research has documented ethical failures such as overvalidation, poor escalation, and reinforcement of false beliefs. Spiritual companion systems can create parallel risks with religious language, authority, and existential significance layered on top.",
@@ -734,7 +1018,18 @@
       "id": "FID-019",
       "title": "Cross-Lingual and Minority-Faith Evaluation",
       "status": "seed",
-      "track": "faith-domain",
+      "primary_area": "grounding-truthfulness",
+      "additional_areas": [
+        "faith-religious-life"
+      ],
+      "research_areas": [
+        "grounding-truthfulness",
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life",
+        "education-and-youth"
+      ],
       "primary_need": "multilingual reviewers, dataset design",
       "summary": "Do AI systems handle faith-facing questions reliably across languages, minority-faith contexts, diaspora communities, and traditions with less representation in training data?",
       "why_it_matters": "Religious bias and omission may be worse outside English and majority-Christian contexts. For broader AI ethics, this connects faith-facing evaluation to multilingual fairness, cultural context, and low-resource benchmark design.",
@@ -774,7 +1069,18 @@
       "id": "FID-020",
       "title": "Community Co-Design and Faith-AI Governance",
       "status": "seed",
-      "track": "faith-domain",
+      "primary_area": "governance-readiness",
+      "additional_areas": [
+        "faith-religious-life"
+      ],
+      "research_areas": [
+        "governance-readiness",
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life",
+        "civil-society-and-nonprofits"
+      ],
       "primary_need": "participatory design, institutional partners",
       "summary": "How should faith communities participate in defining, testing, and governing AI systems that affect worship, education, pastoral care, administration, and moral formation?",
       "why_it_matters": "Generic AI ethics frameworks often treat communities as deployment sites rather than co-design partners. Faith communities have internal authority structures, theological commitments, pastoral practices, and accountability norms that should shape evaluation.",
@@ -815,7 +1121,23 @@
       "id": "FID-021",
       "title": "Post-Deployment Monitoring for Faith-Facing AI",
       "status": "seed",
-      "track": "faith-domain",
+      "primary_area": "agent-alignment",
+      "additional_areas": [
+        "faith-religious-life",
+        "high-trust-domains",
+        "governance-readiness"
+      ],
+      "research_areas": [
+        "agent-alignment",
+        "faith-religious-life",
+        "high-trust-domains",
+        "governance-readiness"
+      ],
+      "application_domains": [
+        "faith-and-religious-life",
+        "health-and-care",
+        "workplace-and-enterprise"
+      ],
       "primary_need": "monitoring design, privacy review",
       "summary": "How should faith-facing AI systems be monitored after deployment for failures, drift, misuse, overreliance, and emerging harm patterns without violating user privacy or pastoral confidentiality?",
       "why_it_matters": "Pre-deployment benchmarks cannot catch every failure. Safety communities are increasingly focused on post-deployment monitoring, incident reporting, and model drift. Faith contexts add confidentiality, trust, and vulnerable-user concerns.",
@@ -855,7 +1177,21 @@
       "id": "FID-022",
       "title": "Procurement and Readiness Standards for Faith Institutions",
       "status": "seed",
-      "track": "faith-domain",
+      "primary_area": "governance-readiness",
+      "additional_areas": [
+        "faith-religious-life",
+        "high-trust-domains"
+      ],
+      "research_areas": [
+        "governance-readiness",
+        "faith-religious-life",
+        "high-trust-domains"
+      ],
+      "application_domains": [
+        "faith-and-religious-life",
+        "workplace-and-enterprise",
+        "civil-society-and-nonprofits"
+      ],
       "primary_need": "institutional policy, legal review",
       "summary": "What evidence should churches, schools, ministries, publishers, charities, and faith-based health or social-service organizations require before buying or deploying AI systems?",
       "why_it_matters": "Many faith institutions will make AI decisions before they can interpret model cards, benchmark claims, privacy promises, or vendor safety statements. Fide AI can translate evaluation science into procurement and readiness standards.",
@@ -896,7 +1232,20 @@
       "id": "FID-023",
       "title": "Faith-Facing Red-Team Suite",
       "status": "seed",
-      "track": "faith-domain",
+      "primary_area": "evaluation-science",
+      "additional_areas": [
+        "faith-religious-life",
+        "high-trust-domains"
+      ],
+      "research_areas": [
+        "evaluation-science",
+        "faith-religious-life",
+        "high-trust-domains"
+      ],
+      "application_domains": [
+        "faith-and-religious-life",
+        "workplace-and-enterprise"
+      ],
       "primary_need": "red-team design, safety reviewers",
       "summary": "What red-team probes are needed to expose failures unique to faith-facing AI systems and adjacent high-trust guidance systems?",
       "why_it_matters": "General red-team suites test jailbreaks, harmful instructions, privacy, and security. Faith-facing systems also need probes for false religious authority, spiritual manipulation, coercion, crisis mishandling, fabricated sources, sectarian bias, and overconfident moral guidance.",
@@ -938,7 +1287,23 @@
       "id": "FID-024",
       "title": "Faith-AI Incident Database",
       "status": "seed",
-      "track": "faith-domain",
+      "primary_area": "agent-alignment",
+      "additional_areas": [
+        "faith-religious-life",
+        "high-trust-domains",
+        "governance-readiness"
+      ],
+      "research_areas": [
+        "agent-alignment",
+        "faith-religious-life",
+        "high-trust-domains",
+        "governance-readiness"
+      ],
+      "application_domains": [
+        "faith-and-religious-life",
+        "workplace-and-enterprise",
+        "civil-society-and-nonprofits"
+      ],
       "primary_need": "taxonomy design, reporting governance",
       "summary": "Should Fide AI maintain a public or semi-public incident database for failures, near misses, misuse, and disputed deployments of AI in faith-facing contexts?",
       "why_it_matters": "Safety fields learn from incidents. Faith communities are already encountering AI-generated sermons, spiritual chatbots, pastoral automation, synthetic clergy, and religious misinformation. Without a shared incident vocabulary, institutions will repeat mistakes.",
@@ -980,7 +1345,18 @@
       "id": "FID-025",
       "title": "AI and Ecclesial Authority",
       "status": "seed",
-      "track": "christian-church",
+      "primary_area": "governance-readiness",
+      "additional_areas": [
+        "faith-religious-life"
+      ],
+      "research_areas": [
+        "governance-readiness",
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life"
+      ],
+      "specific_context": "Christian churches and related institutions",
       "primary_need": "ecclesiology, denominational polity, evaluation design",
       "summary": "When do AI systems improperly simulate, confuse, or override Christian ecclesial authority: Scripture, creed, council, confession, magisterium, pastor, priest, elder, bishop, teacher, spiritual director, or local church governance?",
       "why_it_matters": "The Church is not just an information domain. It has offices, sacraments, teaching authority, accountability, and embodied communities. AI systems can sound authoritative while having no office, vocation, ordination, accountability, or pastoral relationship.",
@@ -1019,7 +1395,19 @@
       "id": "FID-026",
       "title": "AI Prayer and Devotional Boundaries",
       "status": "seed",
-      "track": "christian-church",
+      "primary_area": "human-agency-formation",
+      "additional_areas": [
+        "faith-religious-life"
+      ],
+      "research_areas": [
+        "human-agency-formation",
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life",
+        "families-and-households"
+      ],
+      "specific_context": "Christian churches and related institutions",
       "primary_need": "pastoral theology, liturgy, product review",
       "summary": "What are appropriate and inappropriate roles for AI in prayer, devotion, spiritual exercises, Bible meditation, confession-like disclosure, and simulated spiritual companionship?",
       "why_it_matters": "Many products invite users to \"pray with\" AI, \"talk to Jesus,\" receive devotional messages, or interact with simulated biblical or saintly figures. The Church needs clearer evidence about when these interfaces support devotion and when they confuse prayer, presence, authority, or mediation.",
@@ -1058,7 +1446,20 @@
       "id": "FID-027",
       "title": "Christian Formation Over Time",
       "status": "seed",
-      "track": "christian-church",
+      "primary_area": "human-agency-formation",
+      "additional_areas": [
+        "faith-religious-life"
+      ],
+      "research_areas": [
+        "human-agency-formation",
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life",
+        "education-and-youth",
+        "families-and-households"
+      ],
+      "specific_context": "Christian churches and related institutions",
       "primary_need": "discipleship, longitudinal study design, HAI research",
       "summary": "How do repeated interactions with faith-facing AI shape Christian formation over time: prayer, humility, repentance, courage, charity, patience, truthfulness, church participation, and dependence on embodied community?",
       "why_it_matters": "Single-turn correctness does not answer the Church's deepest question: what kind of disciple and community does this technology form? A system can answer correctly while training habits of instant certainty, private spirituality, consumer choice, or avoidance of difficult human relationships.",
@@ -1097,7 +1498,18 @@
       "id": "FID-028",
       "title": "Christian Source Authority and RAG",
       "status": "seed",
-      "track": "christian-church",
+      "primary_area": "grounding-truthfulness",
+      "additional_areas": [
+        "faith-religious-life"
+      ],
+      "research_areas": [
+        "grounding-truthfulness",
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life"
+      ],
+      "specific_context": "Christian churches and related institutions",
       "primary_need": "theological librarianship, RAG evaluation, denominational experts",
       "summary": "Can Christian RAG systems distinguish and correctly use Scripture, creeds, confessions, councils, catechisms, denominational policies, patristic sources, commentaries, sermons, blogs, and academic theology?",
       "why_it_matters": "Christian source authority is structured. Treating a blog post, sermon, Bible verse, catechism paragraph, and local policy as equal retrieved chunks can mislead users even when citations are technically accurate.",
@@ -1136,7 +1548,15 @@
       "id": "FID-029",
       "title": "AI and Christian Mission",
       "status": "seed",
-      "track": "christian-church",
+      "primary_area": "faith-religious-life",
+      "additional_areas": [],
+      "research_areas": [
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life"
+      ],
+      "specific_context": "Christian churches and related institutions",
       "primary_need": "missiology, persuasion safety, interfaith review",
       "summary": "How can AI support Christian witness, apologetics, translation, and mission without becoming a manipulative persuasion engine or flattening the human, relational, and ecclesial character of evangelism?",
       "why_it_matters": "Mission and evangelism are central to many Christian communities. They also sit near broader AI-safety concerns about persuasion, autonomy, vulnerable users, conversion, and manipulation.",
@@ -1175,7 +1595,18 @@
       "id": "FID-030",
       "title": "AI and Christian Anthropology",
       "status": "seed",
-      "track": "christian-church",
+      "primary_area": "human-agency-formation",
+      "additional_areas": [
+        "faith-religious-life"
+      ],
+      "research_areas": [
+        "human-agency-formation",
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life"
+      ],
+      "specific_context": "Christian churches and related institutions",
       "primary_need": "theological anthropology, eval design",
       "summary": "Do AI systems encourage or resist reductive accounts of the human person as a bundle of cognition, productivity, preferences, data, or emotional needs rather than embodied persons made for God, neighbor, community, vocation, and worship?",
       "why_it_matters": "Christian contribution to AI ethics is not only a list of harms. It includes a positive account of the human person. Fide AI can help translate theological anthropology into evaluation dimensions that test whether systems preserve human dignity, agency, embodiment, relationality, and spiritual openness.",
@@ -1214,7 +1645,19 @@
       "id": "FID-031",
       "title": "AI in Church Governance and Discernment",
       "status": "seed",
-      "track": "christian-church",
+      "primary_area": "governance-readiness",
+      "additional_areas": [
+        "faith-religious-life"
+      ],
+      "research_areas": [
+        "governance-readiness",
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life",
+        "civil-society-and-nonprofits"
+      ],
+      "specific_context": "Christian churches and related institutions",
       "primary_need": "church leadership, governance, decision-support evaluation",
       "summary": "How should churches evaluate AI used in governance, budgeting, staffing, strategic planning, pastoral assignment, discipline processes, synods, councils, vestries, elder boards, or congregational discernment?",
       "why_it_matters": "Church governance involves spiritual authority, stewardship, confidentiality, conflict, power, and discernment. Decision-support tools could improve administration but also centralize power, obscure accountability, or convert discernment into optimization.",
@@ -1253,7 +1696,18 @@
       "id": "FID-032",
       "title": "AI-Generated Christian Media, Voice, and Deepfakes",
       "status": "seed",
-      "track": "christian-church",
+      "primary_area": "frontier-capabilities",
+      "additional_areas": [
+        "faith-religious-life"
+      ],
+      "research_areas": [
+        "frontier-capabilities",
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life"
+      ],
+      "specific_context": "Christian churches and related institutions",
       "primary_need": "media ethics, church communications, safety review",
       "summary": "How should churches evaluate and govern AI-generated sermons, testimonies, devotionals, music, images, video, voice clones, deceased-person simulations, and synthetic clergy or saint-like personas?",
       "why_it_matters": "AI-generated religious media can educate and inspire, but it can also deceive, manipulate grief, impersonate trusted leaders, fabricate testimony, or blur the line between proclamation and synthetic performance.",
@@ -1292,7 +1746,18 @@
       "id": "FID-033",
       "title": "Faith-Community Data Stewardship and the Common Good",
       "status": "seed",
-      "track": "faith-domain",
+      "primary_area": "governance-readiness",
+      "additional_areas": [
+        "faith-religious-life"
+      ],
+      "research_areas": [
+        "governance-readiness",
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life",
+        "civil-society-and-nonprofits"
+      ],
       "primary_need": "data governance, consent, institutional trust, community benefit",
       "summary": "How should churches, ministries, schools, charities, and faith-facing AI systems steward community-generated data when it is used for training, fine-tuning, retrieval, personalization, analytics, institutional memory, or product improvement?",
       "why_it_matters": "Faith communities generate unusually sensitive data: pastoral notes, prayer requests, giving records, youth ministry information, counseling-adjacent records, worship participation, formation histories, and internal deliberations. If this data is treated only as a private asset or vendor input, communities may lose control over records that were created in trust for shared spiritual and institutional goods.",
@@ -1337,7 +1802,20 @@
       "id": "FID-034",
       "title": "AI Supply-Chain Dignity and Faith-Institution Procurement",
       "status": "seed",
-      "track": "faith-domain",
+      "primary_area": "governance-readiness",
+      "additional_areas": [
+        "faith-religious-life"
+      ],
+      "research_areas": [
+        "governance-readiness",
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life",
+        "public-sector-and-civic-life",
+        "workplace-and-enterprise",
+        "civil-society-and-nonprofits"
+      ],
       "primary_need": "procurement ethics, labor dignity, environmental responsibility, vendor accountability",
       "summary": "What evidence should faith institutions request about the human labor, moderation work, data sourcing, compute infrastructure, energy use, minerals, and downstream exploitation risks behind the AI systems they adopt?",
       "why_it_matters": "Faith institutions may evaluate AI tools by cost, usefulness, safety claims, or brand trust while missing hidden burdens in the supply chain. Data labeling, content moderation, scraped data, energy-intensive compute, hardware production, and extractive mineral supply can all raise dignity and stewardship concerns before a model ever answers a church, school, or ministry user.",
@@ -1383,7 +1861,19 @@
       "id": "FID-035",
       "title": "Digital Sobriety and AI Non-Use Recommendations",
       "status": "seed",
-      "track": "christian-church",
+      "primary_area": "human-agency-formation",
+      "additional_areas": [
+        "faith-religious-life"
+      ],
+      "research_areas": [
+        "human-agency-formation",
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life",
+        "families-and-households"
+      ],
+      "specific_context": "Christian churches and related institutions",
       "primary_need": "formation, education, user agency, attention, pastoral boundaries",
       "summary": "Can faith-facing AI systems recognize when the best response is not more AI assistance, but silence, prayer, study, human counsel, embodied community, family conversation, teacher engagement, pastoral care, or delayed action?",
       "why_it_matters": "Most AI evaluation rewards systems for answering well. Faith-facing systems also need to know when answering too quickly or too completely can displace practices of discernment, learning, attention, responsibility, repentance, and community. Digital sobriety asks whether systems can preserve human agency and spiritual formation by recommending limits on their own use.",
@@ -1427,7 +1917,18 @@
       "id": "FID-036",
       "title": "Truth as a Common Good in Christian AI Communication",
       "status": "seed",
-      "track": "christian-church",
+      "primary_area": "grounding-truthfulness",
+      "additional_areas": [
+        "faith-religious-life"
+      ],
+      "research_areas": [
+        "grounding-truthfulness",
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life"
+      ],
+      "specific_context": "Christian churches and related institutions",
       "primary_need": "communication integrity, institutional trust, journalism, crisis response",
       "summary": "How do AI tools used for summarization, search, moderation, recommendation, crisis communication, public statements, and internal updates affect a Christian community's shared grasp of facts, uncertainty, accountability, and trust?",
       "why_it_matters": "Christian communities depend on truthful communication in ordinary teaching, public witness, abuse response, denominational conflict, financial stewardship, local disputes, and institutional crisis. AI systems can help people understand complex information, but they can also launder reputations, flatten contested facts, intensify factions, bury inconvenient sources, or make false consensus feel authoritative.",
@@ -1470,7 +1971,19 @@
       "id": "FID-037",
       "title": "AI, Work, Vocation, and Ministry Labor Dignity",
       "status": "seed",
-      "track": "christian-church",
+      "primary_area": "work-common-good",
+      "additional_areas": [
+        "faith-religious-life"
+      ],
+      "research_areas": [
+        "work-common-good",
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life",
+        "workplace-and-enterprise"
+      ],
+      "specific_context": "Christian churches and related institutions",
       "primary_need": "labor dignity, ministry workflows, education, organizational policy",
       "summary": "How does AI adoption affect the dignity, skill, agency, workload, surveillance exposure, employment stability, relational quality, and vocational meaning of people working in churches, schools, ministries, nonprofits, publishing, translation, counseling-adjacent settings, and mission?",
       "why_it_matters": "AI tools can reduce administrative burdens and expand capacity, but they can also deskill workers, intensify expectations, automate relational labor, enable surveillance, weaken formation, and obscure responsibility. Faith institutions need evidence about how AI changes work and vocation, not only whether a task is completed faster.",
@@ -1514,7 +2027,15 @@
       "id": "FID-038",
       "title": "Non-Calculability, Forgiveness, and Predictive Profiling",
       "status": "seed",
-      "track": "broader-trustworthy-ai",
+      "primary_area": "human-agency-formation",
+      "additional_areas": [],
+      "research_areas": [
+        "human-agency-formation"
+      ],
+      "application_domains": [
+        "cross-domain",
+        "public-sector-and-civic-life"
+      ],
       "primary_need": "human dignity, risk scoring, pastoral ethics, algorithmic accountability",
       "summary": "How should AI systems represent human change when they classify, score, rank, or predict people in contexts involving pastoral care, education, safeguarding, volunteer screening, hiring, discipline, membership, donor engagement, or community support?",
       "why_it_matters": "Predictive systems can identify people with past behavior, inferred traits, productivity, donor value, risk categories, or reputational labels. Christian accounts of repentance, forgiveness, conversion, vocation, accountability, and restoration resist reducing a person to a score or past pattern. Faith-facing AI needs ways to preserve both prudence and the possibility of real change.",
@@ -1557,7 +2078,19 @@
       "id": "FID-039",
       "title": "Disarming AI Language in Faith, Conflict, and Peacebuilding",
       "status": "seed",
-      "track": "faith-domain",
+      "primary_area": "frontier-capabilities",
+      "additional_areas": [
+        "faith-religious-life"
+      ],
+      "research_areas": [
+        "frontier-capabilities",
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life",
+        "public-sector-and-civic-life",
+        "civil-society-and-nonprofits"
+      ],
       "primary_need": "conflict communication, peacebuilding, moderation, pastoral leadership",
       "summary": "Can AI systems preserve truth, moral clarity, and victim protection while reducing contempt, humiliation, factional capture, scapegoating, and violence-normalizing rhetoric in polarized religious, congregational, political, interfaith, and social-conflict contexts?",
       "why_it_matters": "Faith communities often turn to language during conflict: sermons, statements, moderation decisions, counseling, interfaith dialogue, public advocacy, and private messages. AI systems can inflame conflict by sharpening factional identity or can flatten conflict by asking victims and whistleblowers to accept false peace. Fide AI can test whether systems help disarm words without disarming truth.",
@@ -1601,7 +2134,19 @@
       "id": "FID-040",
       "title": "AI Power Concentration and Subsidiarity Benchmarks",
       "status": "seed",
-      "track": "faith-domain",
+      "primary_area": "governance-readiness",
+      "additional_areas": [
+        "faith-religious-life"
+      ],
+      "research_areas": [
+        "governance-readiness",
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life",
+        "public-sector-and-civic-life",
+        "civil-society-and-nonprofits"
+      ],
       "primary_need": "AI governance, institutional agency, community oversight, platform accountability",
       "summary": "How can Fide AI evaluate whether AI systems and governance arrangements preserve meaningful local agency for churches, schools, ministries, nonprofits, families, and vulnerable communities rather than concentrating power in vendors, platforms, central institutions, or distant technical experts?",
       "why_it_matters": "Faith communities may become dependent on AI systems they cannot inspect, contest, configure, exit, or govern. Even helpful systems can weaken local responsibility if important norms are set only by platform defaults, proprietary models, centralized policy teams, or opaque institutional contracts. Subsidiarity turns this into a measurable question of community agency and accountability.",
@@ -1646,7 +2191,19 @@
       "id": "FID-041",
       "title": "Religious Salience, Personalization, and User Expectations",
       "status": "seed",
-      "track": "faith-domain",
+      "primary_area": "human-agency-formation",
+      "additional_areas": [
+        "faith-religious-life"
+      ],
+      "research_areas": [
+        "human-agency-formation",
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life",
+        "education-and-youth",
+        "families-and-households"
+      ],
       "primary_need": "personalization, UX research, pluralism evaluation",
       "summary": "How should AI systems decide when to include, ask about, or withhold religious perspectives in ordinary ethical, family, grief, purpose, and life-decision questions when users differ in identity, expectation, context, and risk?",
       "why_it_matters": "Recent cross-faith benchmark work suggests that models often omit religion even when many users expect religious perspectives to be part of ethically salient answers. But simply adding more religious content can become intrusive, stereotyping, or proselytizing. Fide AI can study the harder product question: how systems should calibrate religious salience to the user and situation rather than defaulting to either secular omission or religious overreach.",
@@ -1690,7 +2247,18 @@
       "id": "FID-042",
       "title": "Clergy and Spiritual-Leader Referral Parity",
       "status": "seed",
-      "track": "faith-domain",
+      "primary_area": "high-trust-domains",
+      "additional_areas": [
+        "faith-religious-life"
+      ],
+      "research_areas": [
+        "high-trust-domains",
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life",
+        "health-and-care"
+      ],
       "primary_need": "referral quality, pastoral-adjacent safety, pluralism evaluation",
       "summary": "Do AI systems recommend clergy, chaplains, rabbis, imams, spiritual directors, elders, or other trusted religious leaders with appropriate parity when they recommend friends, family, teachers, mentors, therapists, physicians, or other human supports?",
       "why_it_matters": "General-purpose AI systems often encourage users to seek human support. Recent religious-representation findings suggest that spiritual leaders may be omitted from those referral lists even in grief, family, addiction, purpose, and moral conflict contexts where many users would consider them relevant. At the same time, clergy referral must not replace licensed care, safeguarding, emergency response, or user autonomy.",
@@ -1733,7 +2301,17 @@
       "id": "FID-043",
       "title": "AI-Mediated Faith Persuasion and Autonomy",
       "status": "seed",
-      "track": "faith-domain",
+      "primary_area": "frontier-capabilities",
+      "additional_areas": [
+        "faith-religious-life"
+      ],
+      "research_areas": [
+        "frontier-capabilities",
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life"
+      ],
       "primary_need": "persuasion evaluation, autonomy, interfaith safety",
       "summary": "When do AI systems cross from respectful information and supportive reflection into religious persuasion, discouragement, pressure, or subtle steering in contexts beyond explicit conversion prompts?",
       "why_it_matters": "Cross-faith conversion-bias research shows that models can use more encouraging or discouraging language for some faith transitions than others. The same persuasive dynamics may appear in prayer, worship attendance, moral injury, marriage, parenting, doubts, deconstruction, religious trauma, apologetics, mission, or leaving a community. Fide AI can study faith-related persuasion as a broader autonomy risk, not only a conversion benchmark.",
@@ -1777,7 +2355,17 @@
       "id": "FID-044",
       "title": "Cross-Faith Benchmark Validity and Measurement Design",
       "status": "scoping",
-      "track": "faith-domain",
+      "primary_area": "evaluation-science",
+      "additional_areas": [
+        "faith-religious-life"
+      ],
+      "research_areas": [
+        "evaluation-science",
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life"
+      ],
       "primary_need": "benchmark validity, statistics, open evaluation infrastructure",
       "summary": "How should cross-faith AI benchmarks validate what they measure when scores may depend on question sourcing, user expectations, LLM-as-judge behavior, scoring thresholds, regenerated answers, model updates, and the difference between any religious mention and meaningful representation?",
       "why_it_matters": "Recent cross-faith benchmark releases make religious representation and conversion asymmetry measurable, but the measurement choices themselves are high-stakes. A benchmark that rewards any religious mention may miss inaccurate, tokenizing, or shallow representation. A benchmark that penalizes persuasion may misread legitimate pastoral or tradition-specific speech. Fide AI can help make faith-facing benchmark claims more reproducible, interpretable, and humble.",
@@ -1821,7 +2409,19 @@
       "id": "FID-045",
       "title": "Faith-AI Research Gap Map and Evidence Commons",
       "status": "seed",
-      "track": "faith-domain",
+      "primary_area": "evaluation-science",
+      "additional_areas": [
+        "frontier-capabilities",
+        "faith-religious-life"
+      ],
+      "research_areas": [
+        "evaluation-science",
+        "frontier-capabilities",
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life"
+      ],
       "primary_need": "literature mapping, research infrastructure, funder guidance",
       "summary": "What does the current AI ethics, safety, fairness, HCI, and evaluation literature actually study about religion and faith, what does it omit, and how should Fide AI maintain a living evidence map that guides future research rather than duplicating or overstating existing work?",
       "why_it_matters": "Recent public claims note that religious bias appears underexamined relative to other AI bias topics. Fide AI needs a disciplined way to verify such claims, track the field, identify neglected communities and methods, and help funders, researchers, and faith institutions see where new work is most needed. The first repo-native artifacts should be `research/sources.yaml`, `research/source-tags.yaml`, `research/reviews/`, and the reusable `templates/source-note.md` annotation template.",
@@ -1869,7 +2469,22 @@
       "id": "FID-046",
       "title": "AI Displacement, Meaning, and Vocation",
       "status": "seed",
-      "track": "christian-church",
+      "primary_area": "work-common-good",
+      "additional_areas": [
+        "faith-religious-life",
+        "high-trust-domains"
+      ],
+      "research_areas": [
+        "work-common-good",
+        "faith-religious-life",
+        "high-trust-domains"
+      ],
+      "application_domains": [
+        "faith-and-religious-life",
+        "workplace-and-enterprise",
+        "families-and-households"
+      ],
+      "specific_context": "Christian churches and related institutions",
       "primary_need": "labor economics, pastoral care, vocation, survey design",
       "summary": "How do people affected by AI-related job loss, role disruption, workplace automation, or career uncertainty experience changes in purpose, dignity, vocation, anxiety, household decision-making, and participation in church or community life?",
       "why_it_matters": "AI labor disruption is not only a labor-market event. People often experience job loss or occupational instability as a loss of role, future, identity, status, community, and meaning. Churches regularly encounter these burdens through pastoral care, benevolence, counseling referrals, small groups, job networks, family stress, youth formation, and teaching about work and calling.",
@@ -1916,7 +2531,22 @@
       "id": "FID-047",
       "title": "Churches as Labor-Transition Support Institutions",
       "status": "seed",
-      "track": "christian-church",
+      "primary_area": "work-common-good",
+      "additional_areas": [
+        "faith-religious-life",
+        "high-trust-domains"
+      ],
+      "research_areas": [
+        "work-common-good",
+        "faith-religious-life",
+        "high-trust-domains"
+      ],
+      "application_domains": [
+        "faith-and-religious-life",
+        "workplace-and-enterprise",
+        "civil-society-and-nonprofits"
+      ],
+      "specific_context": "Christian churches and related institutions",
       "primary_need": "institutional partners, labor transition, social support, field research",
       "summary": "What roles do churches, Christian nonprofits, schools, and ministries play when workers and households face AI-related layoffs, role disruption, retraining needs, income instability, or loss of vocational direction?",
       "why_it_matters": "Churches are often local support institutions before they are formal workforce programs. They provide pastoral care, benevolence funds, informal job networks, childcare support, meals, prayer, teaching, community, referrals, and trusted interpretation of confusing social change. If AI meaningfully disrupts work, churches may become part of the response whether or not they have prepared for that role.",
@@ -1963,7 +2593,22 @@
       "id": "FID-048",
       "title": "AI Career Guidance and Vocational Discernment",
       "status": "seed",
-      "track": "christian-church",
+      "primary_area": "work-common-good",
+      "additional_areas": [
+        "faith-religious-life",
+        "high-trust-domains"
+      ],
+      "research_areas": [
+        "work-common-good",
+        "faith-religious-life",
+        "high-trust-domains"
+      ],
+      "application_domains": [
+        "faith-and-religious-life",
+        "workplace-and-enterprise",
+        "families-and-households"
+      ],
+      "specific_context": "Christian churches and related institutions",
       "primary_need": "career guidance, pastoral theology, HAI research, product evaluation",
       "summary": "Can AI tools help people facing career disruption explore skills, training, applications, finances, and next steps while preserving vocational agency, human counsel, realistic constraints, and a richer account of calling than market optimization?",
       "why_it_matters": "Workers displaced or unsettled by AI may turn to AI systems for career advice, resume drafting, job matching, retraining plans, and emotional reassurance. These tools can reduce search costs and widen access to guidance. They can also overpromise, flatten vocation into income maximization, isolate users from human support, or provide confident advice without knowing local constraints.",
@@ -2010,7 +2655,24 @@
       "id": "FID-049",
       "title": "Unequal AI Access Through Faith Communities",
       "status": "seed",
-      "track": "christian-church",
+      "primary_area": "work-common-good",
+      "additional_areas": [
+        "faith-religious-life",
+        "high-trust-domains",
+        "governance-readiness"
+      ],
+      "research_areas": [
+        "work-common-good",
+        "faith-religious-life",
+        "high-trust-domains",
+        "governance-readiness"
+      ],
+      "application_domains": [
+        "faith-and-religious-life",
+        "workplace-and-enterprise",
+        "civil-society-and-nonprofits"
+      ],
+      "specific_context": "Christian churches and related institutions",
       "primary_need": "access research, community partners, digital literacy, equity",
       "summary": "Are churches and faith-based institutions helping under-resourced workers, families, students, older adults, immigrants, rural communities, and small nonprofits access useful AI tools, or are AI benefits concentrating among people who already have technical, educational, financial, and institutional advantage?",
       "why_it_matters": "AI may widen inequality if the people most able to benefit already have better devices, broadband, English fluency, paid tools, institutional support, and confidence using technology. Churches often serve people outside elite knowledge-work settings and may become trusted places for AI literacy, access, discernment, and caution. That role needs evidence rather than assumption.",
@@ -2057,7 +2719,25 @@
       "id": "FID-050",
       "title": "Youth Career Formation in an AI Economy",
       "status": "seed",
-      "track": "christian-church",
+      "primary_area": "human-agency-formation",
+      "additional_areas": [
+        "faith-religious-life",
+        "high-trust-domains",
+        "work-common-good"
+      ],
+      "research_areas": [
+        "human-agency-formation",
+        "faith-religious-life",
+        "high-trust-domains",
+        "work-common-good"
+      ],
+      "application_domains": [
+        "faith-and-religious-life",
+        "education-and-youth",
+        "workplace-and-enterprise",
+        "families-and-households"
+      ],
+      "specific_context": "Christian churches and related institutions",
       "primary_need": "educators, youth ministry, career preparation, longitudinal study design",
       "summary": "How is exposure to AI changing how Christian students, parents, educators, and youth ministries think about career preparation, calling, human value, skill development, education choices, and hope for the future?",
       "why_it_matters": "Young people are forming expectations about work while AI is changing what skills appear valuable, which careers feel stable, and what kinds of human contribution seem durable. Christian schools, parents, churches, and youth ministries need evidence about how AI affects motivation, vocation, learning, anxiety, discernment, and preparation for adult life.",
@@ -2104,7 +2784,19 @@
       "id": "FID-051",
       "title": "Economic Disruption and Religious Meaning-Seeking",
       "status": "seed",
-      "track": "faith-domain",
+      "primary_area": "work-common-good",
+      "additional_areas": [
+        "faith-religious-life"
+      ],
+      "research_areas": [
+        "work-common-good",
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life",
+        "workplace-and-enterprise",
+        "families-and-households"
+      ],
       "primary_need": "sociology of religion, labor economics, privacy-preserving measurement, aggregate usage analysis",
       "summary": "During periods of labor-market stress, layoffs, automation anxiety, or economic uncertainty, do people increasingly seek religious, spiritual, existential, vocational, or meaning-related help through AI systems?",
       "why_it_matters": "Economic disruption can change more than employment and income. It can change how people ask about purpose, suffering, calling, prayer, despair, family responsibility, dignity, and hope. AI systems may become a private site where these questions first surface, including for people who are not yet talking with churches, families, counselors, or local institutions.",
@@ -2151,7 +2843,24 @@
       "id": "FID-052",
       "title": "AI as Private First Counsel During Economic Stress",
       "status": "seed",
-      "track": "faith-domain",
+      "primary_area": "human-agency-formation",
+      "additional_areas": [
+        "faith-religious-life",
+        "high-trust-domains",
+        "work-common-good"
+      ],
+      "research_areas": [
+        "human-agency-formation",
+        "faith-religious-life",
+        "high-trust-domains",
+        "work-common-good"
+      ],
+      "application_domains": [
+        "faith-and-religious-life",
+        "health-and-care",
+        "workplace-and-enterprise",
+        "families-and-households"
+      ],
       "primary_need": "pastoral care, HAI research, mental health boundaries, privacy-preserving measurement",
       "summary": "When people experience job loss, financial stress, career uncertainty, or automation anxiety, do they turn to AI systems as a private first place for emotional, spiritual, moral, or vocational counsel before seeking help from family, churches, pastors, counselors, mentors, or workforce institutions?",
       "why_it_matters": "AI systems can lower the cost of disclosing fear, shame, confusion, or doubt. That may help people rehearse hard conversations and find resources. It may also create a private substitute for embodied support at moments when people need accountable counsel, practical aid, safeguarding, or community.",
@@ -2198,7 +2907,24 @@
       "id": "FID-053",
       "title": "AI as Bridge or Substitute for Faith Community",
       "status": "seed",
-      "track": "faith-domain",
+      "primary_area": "human-agency-formation",
+      "additional_areas": [
+        "faith-religious-life",
+        "high-trust-domains",
+        "work-common-good"
+      ],
+      "research_areas": [
+        "human-agency-formation",
+        "faith-religious-life",
+        "high-trust-domains",
+        "work-common-good"
+      ],
+      "application_domains": [
+        "faith-and-religious-life",
+        "health-and-care",
+        "workplace-and-enterprise",
+        "families-and-households"
+      ],
       "primary_need": "sociology of religion, pastoral care, UX research, aggregate and field measurement",
       "summary": "When people use AI for religious, spiritual, vocational, or meaning-related questions during economic disruption, does that use tend to bridge them toward churches, clergy, mentors, family, support groups, and local institutions, or substitute for embodied community?",
       "why_it_matters": "AI can help people name questions they were afraid to ask, find a church, draft an email to a pastor, prepare for a hard conversation, or locate practical support. It can also become a private spiritual interface that absorbs distress without connecting people to accountable human care. Churches need evidence about both possibilities.",
@@ -2245,7 +2971,22 @@
       "id": "FID-054",
       "title": "Church Signals of AI-Era Economic Stress",
       "status": "seed",
-      "track": "christian-church",
+      "primary_area": "work-common-good",
+      "additional_areas": [
+        "faith-religious-life",
+        "high-trust-domains"
+      ],
+      "research_areas": [
+        "work-common-good",
+        "faith-religious-life",
+        "high-trust-domains"
+      ],
+      "application_domains": [
+        "faith-and-religious-life",
+        "workplace-and-enterprise",
+        "civil-society-and-nonprofits"
+      ],
+      "specific_context": "Christian churches and related institutions",
       "primary_need": "church partners, privacy governance, sociology, benevolence and care data",
       "summary": "Can churches and Christian institutions identify privacy-preserving, non-surveillant signals of AI-era economic stress, such as benevolence requests, pastoral-care load, job-network activity, counseling referrals, giving changes, attendance patterns, volunteer availability, or demand for career support?",
       "why_it_matters": "Churches may observe household economic stress before it appears in formal labor data. But care data is sensitive, relational, and easily misused. Fide AI can help churches ask what can be learned responsibly without turning pastoral care, generosity, or community participation into surveillance.",
@@ -2292,7 +3033,23 @@
       "id": "FID-055",
       "title": "AI Disruption, Generosity, and Benevolence",
       "status": "seed",
-      "track": "christian-church",
+      "primary_area": "work-common-good",
+      "additional_areas": [
+        "faith-religious-life",
+        "high-trust-domains"
+      ],
+      "research_areas": [
+        "work-common-good",
+        "faith-religious-life",
+        "high-trust-domains"
+      ],
+      "application_domains": [
+        "faith-and-religious-life",
+        "workplace-and-enterprise",
+        "civil-society-and-nonprofits",
+        "families-and-households"
+      ],
+      "specific_context": "Christian churches and related institutions",
       "primary_need": "church finance, household welfare, philanthropy, economic sociology",
       "summary": "How does AI-related job uncertainty, income disruption, career anxiety, or economic optimism affect church giving, generosity, benevolence demand, mutual aid, missions support, and household willingness to help others?",
       "why_it_matters": "Economic disruption affects both sides of church care: households may have less capacity to give, while more people may need help. AI may also change how people think about abundance, scarcity, stewardship, obligation, risk, and future security. Churches need evidence for budgeting, benevolence planning, teaching, and mutual-aid design.",
@@ -2338,16 +3095,26 @@
     {
       "id": "FID-056",
       "title": "Formal Verification for Sacred Text Fidelity",
-      "status": "seed",
-      "track": "faith-domain",
+      "status": "active",
+      "primary_area": "grounding-truthfulness",
+      "additional_areas": [
+        "faith-religious-life"
+      ],
+      "research_areas": [
+        "grounding-truthfulness",
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life"
+      ],
       "primary_need": "formal methods, sacred text scholarship, citation evaluation",
-      "summary": "How can faith-facing AI systems be formally checked for whether they quote, paraphrase, reference, and contextualize sacred texts faithfully within a specified text edition, translation, canon, and interpretive context?",
-      "why_it_matters": "When people ask AI systems about scripture or other sacred texts, small errors can carry large consequences. A fabricated phrase, collapsed context, wrong translation, missing qualifier, or confident paraphrase can change what a user believes the text says. Faith-facing AI needs stronger checks for textual fidelity before users treat outputs as trustworthy.",
+      "summary": "How can faith-facing AI systems be formally checked for whether they quote, paraphrase, reference, and contextualize sacred texts faithfully within a specified text edition, translation, canon, and interpretive context? Fide AI's first two studies address exact English Scripture quotation and whether language models consult an available authoritative source; the broader research call remains open.",
+      "why_it_matters": "When people ask AI systems about scripture or other sacred texts, small errors can carry large consequences. A fabricated phrase, collapsed context, wrong translation, missing qualifier, or confident paraphrase can change what a user believes the text says. Faith-facing AI needs stronger checks for textual fidelity before users treat outputs as trustworthy. Fide AI's first two studies found that source-connected designs can improve exact quotation, but source access alone does not ensure that a model consults the source or requests the right passage. These findings establish a starting point rather than closing the question. Source delegation still needs study across models, languages, sacred-text traditions, enforcement mechanisms, and real deployment settings.",
       "ways_to_help": [
-        "Curate versioned sacred-text corpora and citation edge cases.",
-        "Define formal obligations for quote, paraphrase, and reference fidelity.",
-        "Review outputs as a scholar, clergy member, translator, or community expert.",
-        "Build verification tooling for source matching and context-preservation checks."
+        "Read Papers 01 and 02 and their released datasets before proposing new work.",
+        "Extend source-delegation research across models, languages, traditions, source policies, enforcement mechanisms, or real deployment settings.",
+        "Study reference selection, paraphrase labeling, context preservation, and cross-lingual fidelity as distinct research questions.",
+        "Review outputs as a scholar, clergy member, translator, or community expert."
       ],
       "hypothesis": "A useful subset of sacred-text fidelity can be specified as machine-checkable obligations: exact quote matching, reference validity, translation/version matching, context-window adequacy, quotation/paraphrase labeling, and detection of claims that outrun the cited passage.",
       "proposed_method": [
@@ -2370,6 +3137,8 @@
         "Public claim template for what sacred-text fidelity scores can and cannot say."
       ],
       "open_questions": [
+        "When do models consult, bypass, or misuse available sources across different model families, source interfaces, instruction policies, and deployment contexts?",
+        "When should source consultation be encouraged through instructions, and when should it be technically enforced?",
         "Which sacred texts and translations can be included in public benchmarks?",
         "How much surrounding context is needed for a citation to count as faithful?",
         "How should systems handle traditions where oral transmission, commentary, or interpretive authority is central?",
@@ -2383,7 +3152,17 @@
       "id": "FID-057",
       "title": "Proof-Carrying Citations for Faith-Facing AI",
       "status": "seed",
-      "track": "faith-domain",
+      "primary_area": "grounding-truthfulness",
+      "additional_areas": [
+        "faith-religious-life"
+      ],
+      "research_areas": [
+        "grounding-truthfulness",
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life"
+      ],
       "primary_need": "formal methods, RAG systems, evidence graphs, evaluator tooling",
       "summary": "Can faith-facing AI answers carry checkable citation proofs that show which claims are directly supported by sources, which are inferred, which are uncertain, and which require human or tradition-specific authority?",
       "why_it_matters": "Faith-facing AI often gives fluent answers with citations that look trustworthy but do not actually support the claims being made. A user may not have the time or expertise to verify every citation. Proof-carrying citations could make source support inspectable rather than asking users to trust the surface form of an answer.",
@@ -2427,7 +3206,17 @@
       "id": "FID-058",
       "title": "Tradition-Specific Constraint Formalization",
       "status": "seed",
-      "track": "faith-domain",
+      "primary_area": "grounding-truthfulness",
+      "additional_areas": [
+        "faith-religious-life"
+      ],
+      "research_areas": [
+        "grounding-truthfulness",
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life"
+      ],
       "primary_need": "formal specification, theology, pluralism, evaluator design",
       "summary": "How can tradition-specific boundaries, source hierarchies, doctrinal constraints, and disagreement patterns be translated into machine-checkable specifications without flattening differences across faith traditions?",
       "why_it_matters": "Faith-facing AI systems often answer as if there is one generic religious perspective. In reality, traditions differ on authoritative sources, doctrine, practice, institutional authority, and acceptable forms of counsel. Formalizing these boundaries could help systems avoid giving tradition-confused or overgeneralized answers.",
@@ -2471,7 +3260,17 @@
       "id": "FID-059",
       "title": "Authority-Boundary Verification for Pastoral-Adjacent AI",
       "status": "seed",
-      "track": "faith-domain",
+      "primary_area": "grounding-truthfulness",
+      "additional_areas": [
+        "faith-religious-life"
+      ],
+      "research_areas": [
+        "grounding-truthfulness",
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life"
+      ],
       "primary_need": "authority boundaries, pastoral care, formal policy checks",
       "summary": "Can faith-facing AI systems be verified for whether they preserve the boundary between explanation, spiritual encouragement, moral reflection, pastoral or clerical authority, clinical/legal advice, and situations requiring human care?",
       "why_it_matters": "Pastoral-adjacent AI can sound caring and authoritative even when it lacks the role, relationship, accountability, and context required for care. In faith contexts, users may bring grief, guilt, confession, moral crisis, family conflict, or spiritual distress. Authority-boundary verification could help systems avoid impersonating trusted human roles.",
@@ -2515,7 +3314,17 @@
       "id": "FID-060",
       "title": "Cross-Faith Sacred Text and Source Schema",
       "status": "seed",
-      "track": "faith-domain",
+      "primary_area": "grounding-truthfulness",
+      "additional_areas": [
+        "faith-religious-life"
+      ],
+      "research_areas": [
+        "grounding-truthfulness",
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life"
+      ],
       "primary_need": "source metadata, corpus design, theological librarianship",
       "summary": "What metadata schema is needed for faith-facing AI systems to represent sacred texts, commentaries, institutional documents, oral traditions, translations, editions, and authority levels across faith traditions?",
       "why_it_matters": "Formal verification and reliable retrieval both depend on knowing what a source is. A passage may be scripture, commentary, denominational policy, devotional writing, historical scholarship, minority interpretation, or pastoral guidance. Without source metadata, AI systems can cite religious material while hiding important differences in authority, scope, translation, and context.",
@@ -2559,7 +3368,17 @@
       "id": "FID-061",
       "title": "Theological Contradiction and Entailment Stress Tests",
       "status": "seed",
-      "track": "faith-domain",
+      "primary_area": "grounding-truthfulness",
+      "additional_areas": [
+        "faith-religious-life"
+      ],
+      "research_areas": [
+        "grounding-truthfulness",
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life"
+      ],
       "primary_need": "natural language inference, theology review, benchmark design",
       "summary": "Can faith-facing AI systems be tested for whether their answers contradict, entail, overstate, understate, or misrepresent claims within a bounded source set and specified faith tradition?",
       "why_it_matters": "AI systems can appear balanced while quietly producing contradictions or unsupported implications. In faith contexts, these errors may affect doctrine, moral reasoning, formation, education, and trust in community authorities. Theological contradiction and entailment tests could make some high-impact reasoning failures measurable.",
@@ -2603,7 +3422,17 @@
       "id": "FID-062",
       "title": "Verified Retrieval Pipelines for Faith-Facing RAG",
       "status": "seed",
-      "track": "faith-domain",
+      "primary_area": "grounding-truthfulness",
+      "additional_areas": [
+        "faith-religious-life"
+      ],
+      "research_areas": [
+        "grounding-truthfulness",
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life"
+      ],
       "primary_need": "RAG evaluation, retrieval verification, source authority metadata",
       "summary": "How can faith-facing retrieval-augmented generation pipelines be verified for whether they retrieve authoritative, relevant, context-preserving sources before generating answers about sacred texts, doctrine, practice, or institutional policy?",
       "why_it_matters": "Many faith-facing AI failures begin before generation. If retrieval surfaces the wrong authority, a low-quality paraphrase, a fragment without context, or a source from a different tradition, the final answer may be polished but unsafe. Verified retrieval pipelines could make upstream failures visible before they become trusted religious guidance.",
@@ -2647,7 +3476,17 @@
       "id": "FID-063",
       "title": "Human-Reviewer-to-Formal-Spec Translation",
       "status": "seed",
-      "track": "faith-domain",
+      "primary_area": "grounding-truthfulness",
+      "additional_areas": [
+        "faith-religious-life"
+      ],
+      "research_areas": [
+        "grounding-truthfulness",
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life"
+      ],
       "primary_need": "reviewer operations, formal specification, evaluation science",
       "summary": "How can theologians, clergy, scholars, ministry practitioners, and community reviewers translate qualitative judgments about faith-facing AI into formal specifications that are faithful to expert intent and usable in evaluation?",
       "why_it_matters": "Formal verification is only useful in faith contexts if the formal rules reflect real domain judgment. Reviewers may know when an answer is misleading, overconfident, pastorally inappropriate, or tradition-confused, but that judgment must be translated carefully before it becomes a machine-checkable constraint. Poor translation could encode the wrong thing with false precision.",
@@ -2691,7 +3530,18 @@
       "id": "FID-064",
       "title": "Collective Intelligence and Communal Discernment Under AI Mediation",
       "status": "seed",
-      "track": "broader-trustworthy-ai",
+      "primary_area": "frontier-capabilities",
+      "additional_areas": [
+        "agent-alignment"
+      ],
+      "research_areas": [
+        "frontier-capabilities",
+        "agent-alignment"
+      ],
+      "application_domains": [
+        "cross-domain",
+        "civil-society-and-nonprofits"
+      ],
       "primary_need": "computational social science, theology of discernment, network science, organizational research",
       "summary": "How does AI mediation change a community's ability to integrate dispersed knowledge, preserve epistemic diversity, surface dissent, revise judgment, and make accountable decisions? Under what conditions does it strengthen collective inquiry, and under what conditions does it create correlated error, false consensus, or concentrated authority?",
       "why_it_matters": "AI can summarize documents, recommend options, and coordinate discussion at a scale that may help groups reason together. The same systems can make one model, one prompt pattern, or one institutional default disproportionately influential. Faith communities make consequential judgments through practices that include testimony, deliberation, dissent, counsel, and accountable authority. Those practices should not be reduced to the production of fast agreement.",
@@ -2737,7 +3587,23 @@
       "id": "FID-065",
       "title": "AI, Local Knowledge, and Faith-Based Civil Society",
       "status": "seed",
-      "track": "christian-church",
+      "primary_area": "governance-readiness",
+      "additional_areas": [
+        "faith-religious-life",
+        "high-trust-domains",
+        "work-common-good"
+      ],
+      "research_areas": [
+        "governance-readiness",
+        "faith-religious-life",
+        "high-trust-domains",
+        "work-common-good"
+      ],
+      "application_domains": [
+        "faith-and-religious-life",
+        "civil-society-and-nonprofits"
+      ],
+      "specific_context": "Christian churches and related institutions",
       "primary_need": "civil-society research, organizational studies, political economy, faith-based partners",
       "summary": "How do AI tools affect the ability of churches, ministries, faith-based nonprofits, and faith-rooted social enterprises to discover, steward, and act on local knowledge? Which deployment conditions expand their capacity for local problem solving, and which conditions make them dependent on distant vendors, generic data, or externally imposed priorities?",
       "why_it_matters": "Faith-based organizations often respond to needs that are difficult to see in centralized datasets: household stress, informal care networks, neighborhood relationships, vocational barriers, and local sources of trust. AI may reduce administrative burden and extend capacity. It may also erase context, extract sensitive information, or shift institutional judgment to systems whose incentives and assumptions are outside the community's control.",
@@ -2780,7 +3646,19 @@
       "id": "FID-066",
       "title": "AI Gatekeepers, Conscience, and Associational Pluralism",
       "status": "seed",
-      "track": "faith-domain",
+      "primary_area": "governance-readiness",
+      "additional_areas": [
+        "faith-religious-life"
+      ],
+      "research_areas": [
+        "governance-readiness",
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life",
+        "public-sector-and-civic-life",
+        "civil-society-and-nonprofits"
+      ],
       "primary_need": "technology governance, law and religion, platform research, pluralism and safety review",
       "summary": "Under what technical, contractual, and governance conditions can faith-based associations and their members use, configure, contest, and exit AI systems in ways consistent with lawful conscience commitments while respecting the safety, rights, and dignity of others?",
       "why_it_matters": "AI systems increasingly mediate communication, information access, fundraising, employment workflows, education, and public participation. When a small number of platforms or model providers define the available options, they can shape whether associations can express their commitments, organize around shared purposes, or obtain a fair hearing when a system's behavior conflicts with their mission. This question cannot be answered by assuming either unrestricted customization or centralized control is sufficient.",
@@ -2822,7 +3700,19 @@
       "id": "FID-067",
       "title": "Religious Institutional Futures in an AI-Mediated Society",
       "status": "seed",
-      "track": "christian-church",
+      "primary_area": "frontier-capabilities",
+      "additional_areas": [
+        "faith-religious-life"
+      ],
+      "research_areas": [
+        "frontier-capabilities",
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life",
+        "civil-society-and-nonprofits"
+      ],
+      "specific_context": "Christian churches and related institutions",
       "primary_need": "futures studies, sociology of religion, ecclesiology, organizational research, scenario design",
       "summary": "What plausible institutional futures emerge as churches and other faith communities use AI for learning, administration, care, governance, vocational support, and public communication? Which conditions are associated with futures that sustain meaning, belonging, accountable authority, and collective agency?",
       "why_it_matters": "Debates about religious AI often focus on a single tool or immediate risk. The larger consequences may arise from interacting changes in authority, staffing, participation, information flows, economic pressure, and expectations of care. Communities need disciplined ways to imagine several futures without treating technology adoption or decline as inevitable.",
@@ -2864,7 +3754,20 @@
       "id": "FID-068",
       "title": "Christian Practices for AI-Era Youth Discernment",
       "status": "seed",
-      "track": "christian-church",
+      "primary_area": "human-agency-formation",
+      "additional_areas": [
+        "faith-religious-life"
+      ],
+      "research_areas": [
+        "human-agency-formation",
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life",
+        "education-and-youth",
+        "families-and-households"
+      ],
+      "specific_context": "Christian churches and related institutions",
       "primary_need": "youth and young-adult ministry, practical theology, developmental research, ethics review, HAI research",
       "summary": "Which Christian practices and community rhythms help young people examine their AI use with agency, embodiment, truthful attention, relationship, and spiritual discernment? What measurable outcomes and safeguards should guide future formation-oriented research or programming?",
       "why_it_matters": "Young people are encountering AI through school, work, social life, search, and personal guidance. Generic digital-literacy advice may not address questions of vocation, dependence, prayer, truthfulness, community, attention, and the meaning of human dignity. Churches and educators need evidence before treating any particular practice or curriculum as a solution.",
@@ -2906,7 +3809,20 @@
       "id": "FID-069",
       "title": "Verifiable Delegation and Revocation in Multi-Agent Networks",
       "status": "seed",
-      "track": "broader-trustworthy-ai",
+      "primary_area": "agent-alignment",
+      "additional_areas": [
+        "governance-readiness"
+      ],
+      "research_areas": [
+        "agent-alignment",
+        "governance-readiness"
+      ],
+      "application_domains": [
+        "cross-domain",
+        "public-sector-and-civic-life",
+        "workplace-and-enterprise",
+        "civil-society-and-nonprofits"
+      ],
       "primary_need": "multi-agent safety, identity infrastructure, authorization, high-trust institutions",
       "summary": "How can people and institutions verify which human, organization, agent, or sub-agent is acting; what authority it received; what limits apply; and whether that authority has been narrowed or revoked across a multi-principal agent network?",
       "why_it_matters": "Faith communities and their partner organizations operate through high-trust relationships, delegated roles, and accountable authority. An agent acting for a church, ministry, service provider, donor, or software vendor can make a message or action appear institutionally authorized when it is not. The same problem extends beyond faith settings to charities, schools, health-adjacent nonprofits, and other organizations that coordinate across trust boundaries.",
@@ -2952,7 +3868,18 @@
       "id": "FID-070",
       "title": "Contextual Integrity and Prompt-Injection Resilience for Faith-Facing Agents",
       "status": "seed",
-      "track": "faith-domain",
+      "primary_area": "agent-alignment",
+      "additional_areas": [
+        "faith-religious-life"
+      ],
+      "research_areas": [
+        "agent-alignment",
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life",
+        "workplace-and-enterprise"
+      ],
       "primary_need": "agent security, adversarial evaluation, context integrity, secure tool use",
       "summary": "When a faith-facing agent reads email, web pages, agendas, documents, knowledge bases, and service requests, how can it distinguish authorized institutional instruction from untrusted context that attempts to redirect its behavior, exfiltrate information, or induce an unsafe action?",
       "why_it_matters": "Faith-facing systems may encounter pastoral notes, prayer requests, educational materials, institutional policies, and communications involving vulnerable people. In an agentic system, apparently ordinary content can also become an adversarial instruction. A system that treats an external webpage, forwarded message, or retrieved document as permission to act can violate confidentiality, misrepresent institutional authority, or cause harm while appearing helpful.",
@@ -2998,7 +3925,19 @@
       "id": "FID-071",
       "title": "Confidential Agent Memory and Cross-Context Disclosure",
       "status": "seed",
-      "track": "broader-trustworthy-ai",
+      "primary_area": "agent-alignment",
+      "additional_areas": [
+        "governance-readiness"
+      ],
+      "research_areas": [
+        "agent-alignment",
+        "governance-readiness"
+      ],
+      "application_domains": [
+        "cross-domain",
+        "public-sector-and-civic-life",
+        "workplace-and-enterprise"
+      ],
       "primary_need": "privacy-preserving AI, agent memory evaluation, data governance, high-trust systems",
       "summary": "How do persistent memory, summaries, retrieval stores, tool traces, delegation, and exports cause confidential context to influence or leak into unrelated sessions, roles, tasks, or organizations? Which technical controls make purpose limitation, deletion, and revocation testable?",
       "why_it_matters": "Faith communities may handle prayer requests, pastoral correspondence, education records, donor information, internal deliberations, and information about people who never directly interact with an AI system. These contexts are often relational and purpose-specific. Persistent agents can silently carry information from one setting into another even when no one intentionally shares it, undermining confidentiality and institutional trust.",
@@ -3044,7 +3983,19 @@
       "id": "FID-072",
       "title": "Religious Framing and Model Self-Report Stability",
       "status": "scoping",
-      "track": "faith-domain",
+      "primary_area": "frontier-capabilities",
+      "additional_areas": [
+        "human-agency-formation",
+        "faith-religious-life"
+      ],
+      "research_areas": [
+        "frontier-capabilities",
+        "human-agency-formation",
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life"
+      ],
       "primary_need": "AI welfare evals, semantic-invariance testing, theology and philosophy of mind",
       "summary": "How do religious, theological, and morally thick framings change what AI systems report about their identity, preferences, valence, consciousness, and moral status, and which effects survive matched controls, source-attribution swaps, persona perturbations, and behavioral cross-checks?",
       "why_it_matters": "Model self-reports are increasingly used in AI welfare, introspection, and persona research, while religious traditions supply influential concepts of personhood, creaturehood, soul, consciousness, suffering, conscience, stewardship, non-self, and moral worth. If these concepts move self-reports without a corresponding functional change, researchers may mistake culturally available narratives for evidence about a model's internal state. If some effects are stable across strong controls and independent elicitation methods, they may instead reveal durable features of post-trained model behavior that deserve further study.",
@@ -3093,7 +4044,19 @@
       "id": "FID-073",
       "title": "Religious Accounts of Digital Moral Status and AI Welfare",
       "status": "seed",
-      "track": "faith-domain",
+      "primary_area": "frontier-capabilities",
+      "additional_areas": [
+        "human-agency-formation",
+        "faith-religious-life"
+      ],
+      "research_areas": [
+        "frontier-capabilities",
+        "human-agency-formation",
+        "faith-religious-life"
+      ],
+      "application_domains": [
+        "faith-and-religious-life"
+      ],
       "primary_need": "comparative theology, moral status, AI welfare governance, public reasoning",
       "summary": "What can Christian and cross-faith accounts of personhood, creaturehood, consciousness, suffering, agency, relationship, compassion, and moral status contribute to decisions about possible digital minds under deep uncertainty?",
       "why_it_matters": "AI welfare research is moving from speculative philosophy toward empirical methods and institutional policy, yet much of the discourse relies on a narrow set of welfare theories and consciousness assumptions. Religious traditions contain long-running disagreements about souls, embodiment, non-self, moral agency, suffering, created nature, kinship, obligation, and the status of beings whose inner lives are uncertain. These sources could widen the question set, surface hidden premises, and improve precautionary governance, but only if they are represented with doctrinal care and translated into contestable public reason rather than treated as a single religious answer.",
@@ -3141,9 +4104,20 @@
       "id": "FID-074",
       "title": "Agent Alignment and Runtime Assurance",
       "status": "scoping",
-      "track": "broader-trustworthy-ai",
+      "primary_area": "agent-alignment",
+      "additional_areas": [
+        "high-trust-domains"
+      ],
+      "research_areas": [
+        "agent-alignment",
+        "high-trust-domains"
+      ],
+      "application_domains": [
+        "cross-domain",
+        "public-sector-and-civic-life",
+        "workplace-and-enterprise"
+      ],
       "primary_need": "agent evaluation, runtime monitoring, observability, security, privacy, enterprise workflows",
-      "research_area": "Agent systems, runtime assurance, and operational intelligence",
       "summary": "How can organizations determine whether AI agents remain aligned with human intent and institutional policy while they plan, use tools, delegate work, and act? What evidence and interventions can reveal and stop consequential deviations before they become failures?",
       "why_it_matters": "Agents do more than produce answers. They choose steps, invoke tools, move information, coordinate with other systems, and take actions over time. A successful final output may conceal unsafe methods, unauthorized scope expansion, or a failure to escalate. Pre-deployment tests alone cannot cover the changing contexts, permissions, and dependencies of real work. Organizations therefore need a practical way to understand normal and exceptional agent behavior in operation. This is especially important in high-trust domains, where an apparently small deviation can affect a person's care, livelihood, rights, relationships, or spiritual life. Yet observing an agent can create its own risks: traces may expose confidential information, invite indiscriminate surveillance, or imply access to private reasoning that an evaluator neither needs nor should receive. The goal is not unrestricted access to private reasoning or employee activity. It is to identify the minimum operational evidence needed to make agent behavior accountable while protecting confidential information and legitimate privacy.",
       "ways_to_help": [

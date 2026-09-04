@@ -2,9 +2,11 @@
 
 Status: `scoping`
 
-Track: `broader-trustworthy-ai`
+Primary area: `agent-alignment`
 
-Research area: Agent systems, runtime assurance, and operational intelligence
+Additional areas: `high-trust-domains`
+
+Application domains: `cross-domain`, `public-sector-and-civic-life`, `workplace-and-enterprise`
 
 Primary need: agent evaluation, runtime monitoring, observability, security, privacy, enterprise workflows
 

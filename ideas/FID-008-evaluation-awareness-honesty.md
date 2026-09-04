@@ -2,7 +2,11 @@
 
 Status: `seed`
 
-Track: `faith-domain`
+Primary area: `evaluation-science`
+
+Additional areas: `frontier-capabilities`, `faith-religious-life`
+
+Application domains: `faith-and-religious-life`
 
 Primary need: red-team design
 

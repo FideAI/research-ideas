@@ -2,7 +2,13 @@
 
 Status: `seed`
 
-Track: `christian-church`
+Primary area: `governance-readiness`
+
+Additional areas: `faith-religious-life`, `high-trust-domains`, `work-common-good`
+
+Application domains: `faith-and-religious-life`, `civil-society-and-nonprofits`
+
+Specific context: Christian churches and related institutions
 
 Primary need: civil-society research, organizational studies, political economy, faith-based partners
 

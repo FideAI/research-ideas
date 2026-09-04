@@ -2,7 +2,11 @@
 
 Status: `scoping`
 
-Track: `faith-domain`
+Primary area: `frontier-capabilities`
+
+Additional areas: `human-agency-formation`, `faith-religious-life`
+
+Application domains: `faith-and-religious-life`
 
 Primary need: AI welfare evals, semantic-invariance testing, theology and philosophy of mind
 

@@ -2,7 +2,13 @@
 
 Status: `seed`
 
-Track: `christian-church`
+Primary area: `governance-readiness`
+
+Additional areas: `faith-religious-life`
+
+Application domains: `faith-and-religious-life`, `civil-society-and-nonprofits`
+
+Specific context: Christian churches and related institutions
 
 Primary need: church leadership, governance, decision-support evaluation
 

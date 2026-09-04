@@ -2,7 +2,13 @@
 
 Status: `seed`
 
-Track: `christian-church`
+Primary area: `frontier-capabilities`
+
+Additional areas: `faith-religious-life`
+
+Application domains: `faith-and-religious-life`, `civil-society-and-nonprofits`
+
+Specific context: Christian churches and related institutions
 
 Primary need: futures studies, sociology of religion, ecclesiology, organizational research, scenario design
 
