@@ -26,7 +26,10 @@ where an apparently small deviation can affect a person's care, livelihood,
 rights, relationships, or spiritual life. Yet observing an agent can create its
 own risks: traces may expose confidential information, invite indiscriminate
 surveillance, or imply access to private reasoning that an evaluator neither
-needs nor should receive.
+needs nor should receive. The goal is not unrestricted access to private
+reasoning or employee activity. It is to identify the minimum operational
+evidence needed to make agent behavior accountable while protecting
+confidential information and legitimate privacy.
 
 ## Hypothesis
 
