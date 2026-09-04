@@ -45,7 +45,10 @@ function firstParagraph(markdown) {
 }
 
 function prose(markdown) {
-  return markdown.replace(/\s+/g, " ").trim();
+  return markdown
+    .replace(/`([^`]+)`/g, "$1")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 function parseList(markdown) {

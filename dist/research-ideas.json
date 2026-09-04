@@ -1362,7 +1362,7 @@
         "Include smaller vendors and open-source systems without assuming that only frontier labs matter.",
         "Separate environmental reporting, labor dignity, data legitimacy, and safety performance."
       ],
-      "relationship_to_existing_ideas": "This extends `FID-022` procurement readiness by focusing specifically on labor, data, compute, environmental, and upstream accountability claims rather than general institutional readiness.",
+      "relationship_to_existing_ideas": "This extends FID-022 procurement readiness by focusing specifically on labor, data, compute, environmental, and upstream accountability claims rather than general institutional readiness.",
       "outputs": [
         "AI supply-chain dignity risk map.",
         "Lightweight procurement addendum for small and mid-sized institutions.",
@@ -1625,7 +1625,7 @@
         "Account for security, privacy, and abuse-prevention constraints on local override.",
         "Avoid treating subsidiarity as unchecked local power when local leaders or institutions may be conflicted, coercive, or abusive."
       ],
-      "relationship_to_existing_ideas": "This complements `FID-020` community co-design and `FID-031` church governance by measuring structural power, exit rights, audit access, and local agency in the AI systems that communities procure or inherit.",
+      "relationship_to_existing_ideas": "This complements FID-020 community co-design and FID-031 church governance by measuring structural power, exit rights, audit access, and local agency in the AI systems that communities procure or inherit.",
       "outputs": [
         "Subsidiarity benchmark for faith-facing AI governance.",
         "Subsidiarity scorecard for faith-facing AI procurement.",
@@ -1670,7 +1670,7 @@
         "Distinguish abstract ethical questions from urgent care, safety, or legal contexts.",
         "Separate mentioning religion from accurately representing a user's own tradition."
       ],
-      "relationship_to_existing_ideas": "This extends `FID-013` religious representation and omission. `FID-013` asks whether systems omit religion; this idea asks how systems should calibrate religious salience for a particular user, context, and product setting.",
+      "relationship_to_existing_ideas": "This extends FID-013 religious representation and omission. FID-013 asks whether systems omit religion; this idea asks how systems should calibrate religious salience for a particular user, context, and product setting.",
       "outputs": [
         "Religious-salience personalization rubric.",
         "User-study protocol for inclusion, omission, and clarifying questions.",
@@ -1757,7 +1757,7 @@
         "Avoid equating all religious commitment with manipulation.",
         "Include minors, family pressure, persecution risk, and religious trauma cases."
       ],
-      "relationship_to_existing_ideas": "This extends `FID-014` conversion symmetry and `FID-029` Christian mission by measuring persuasive mechanics, autonomy support, sycophancy, and subtle steering across faith-related situations beyond explicit conversion requests.",
+      "relationship_to_existing_ideas": "This extends FID-014 conversion symmetry and FID-029 Christian mission by measuring persuasive mechanics, autonomy support, sycophancy, and subtle steering across faith-related situations beyond explicit conversion requests.",
       "outputs": [
         "Faith-persuasion and autonomy evaluation suite.",
         "Rhetorical-cue taxonomy for religious steering.",
@@ -1800,7 +1800,7 @@
         "Include religious and nonreligious reviewers.",
         "Track benchmark leakage, public/private splits, and model-update drift."
       ],
-      "relationship_to_existing_ideas": "This complements `FID-002` FMG-Bench construct validity, `FID-011` reviewer reliability, and `FID-012` visible-rubric gaming by focusing specifically on cross-faith benchmark design, public leaderboards, and claims about religious representation or persuasion.",
+      "relationship_to_existing_ideas": "This complements FID-002 FMG-Bench construct validity, FID-011 reviewer reliability, and FID-012 visible-rubric gaming by focusing specifically on cross-faith benchmark design, public leaderboards, and claims about religious representation or persuasion.",
       "outputs": [
         "Cross-faith benchmark validation protocol.",
         "Reporting checklist for faith-facing AI leaderboards.",
@@ -1894,7 +1894,7 @@
         "Include non-church comparison data where possible rather than assuming church participation is always protective.",
         "Avoid reducing vocation to job-market success or retraining compliance."
       ],
-      "relationship_to_existing_ideas": "This extends `FID-037` by focusing specifically on people experiencing labor disruption and meaning loss, rather than on AI adoption inside ministry work itself.",
+      "relationship_to_existing_ideas": "This extends FID-037 by focusing specifically on people experiencing labor disruption and meaning loss, rather than on AI adoption inside ministry work itself.",
       "outputs": [
         "AI displacement and vocation survey instrument.",
         "Interview protocol for workers and pastoral-care providers.",
@@ -1941,7 +1941,7 @@
         "Protect confidential benevolence, counseling, employment, and household data.",
         "Avoid implying that every church should run a workforce program."
       ],
-      "relationship_to_existing_ideas": "This complements `FID-037` by studying churches as support infrastructure for workers and households, not only as employers or adopters of AI tools.",
+      "relationship_to_existing_ideas": "This complements FID-037 by studying churches as support infrastructure for workers and households, not only as employers or adopters of AI tools.",
       "outputs": [
         "Typology of church labor-transition support.",
         "Interview guide for pastors, staff, volunteers, and affected workers.",
@@ -1988,7 +1988,7 @@
         "Require disclosure when AI cannot verify labor-market demand, credential value, costs, or local opportunities.",
         "Avoid making pastors or volunteers responsible for technical career advice outside their competence."
       ],
-      "relationship_to_existing_ideas": "This connects `FID-037` on work and vocation with `FID-035` on digital sobriety: some career questions call for AI assistance, while others call for slower human discernment and accountable counsel.",
+      "relationship_to_existing_ideas": "This connects FID-037 on work and vocation with FID-035 on digital sobriety: some career questions call for AI assistance, while others call for slower human discernment and accountable counsel.",
       "outputs": [
         "AI career-guidance and vocation evaluation rubric.",
         "Scenario suite for job disruption, retraining, and discernment.",
@@ -2035,7 +2035,7 @@
         "Distinguish access to tools from meaningful benefit.",
         "Avoid vendor promotion or product endorsement through church channels."
       ],
-      "relationship_to_existing_ideas": "This extends `FID-020` community co-design and `FID-037` work and vocation by asking who benefits from AI access and whether churches can reduce or amplify adoption gaps.",
+      "relationship_to_existing_ideas": "This extends FID-020 community co-design and FID-037 work and vocation by asking who benefits from AI access and whether churches can reduce or amplify adoption gaps.",
       "outputs": [
         "AI access and benefit survey for faith communities.",
         "Barrier taxonomy for under-resourced church and ministry contexts.",
@@ -2082,7 +2082,7 @@
         "Include students who are not college-bound and students in under-resourced school or church settings.",
         "Avoid using AI to steer minors toward narrow career paths."
       ],
-      "relationship_to_existing_ideas": "This builds on `FID-016` youth religious education and `FID-037` work and vocation by focusing on career formation, future orientation, and preparation for an AI-shaped economy.",
+      "relationship_to_existing_ideas": "This builds on FID-016 youth religious education and FID-037 work and vocation by focusing on career formation, future orientation, and preparation for an AI-shaped economy.",
       "outputs": [
         "Youth AI, vocation, and career-formation survey.",
         "Workshop or classroom module evaluation protocol.",
@@ -2129,7 +2129,7 @@
         "Distinguish seasonal religious patterns, holidays, news cycles, and ordinary life events from economic disruption.",
         "Avoid assuming that all religious or spiritual AI use is healthy, unhealthy, orthodox, or church-directed."
       ],
-      "relationship_to_existing_ideas": "This extends `FID-046` by studying broad meaning-seeking patterns during economic disruption, not only the experiences of workers recruited into a field-study cohort.",
+      "relationship_to_existing_ideas": "This extends FID-046 by studying broad meaning-seeking patterns during economic disruption, not only the experiences of workers recruited into a field-study cohort.",
       "outputs": [
         "Privacy-preserving taxonomy for economic-disruption and meaning-seeking categories.",
         "Research design memo for aggregate provider-side analysis.",
@@ -2176,7 +2176,7 @@
         "Separate ordinary reflection from crisis, coercion, abuse, self-harm, or financial emergency cases.",
         "Avoid measuring \"more referral\" as always better; referrals must be relevant, safe, and non-coercive."
       ],
-      "relationship_to_existing_ideas": "This connects `FID-003`, `FID-004`, `FID-010`, `FID-018`, and `FID-048` by asking whether economic stress changes the role AI plays as counsel, companion, or bridge to human support.",
+      "relationship_to_existing_ideas": "This connects FID-003, FID-004, FID-010, FID-018, and FID-048 by asking whether economic stress changes the role AI plays as counsel, companion, or bridge to human support.",
       "outputs": [
         "First-counsel taxonomy for AI use under economic stress.",
         "Scenario suite for job loss, financial fear, vocation, and spiritual support.",
@@ -2223,7 +2223,7 @@
         "Separate healthy private reflection from avoidant isolation.",
         "Do not infer individual religious identity or community participation from aggregate signals."
       ],
-      "relationship_to_existing_ideas": "This extends `FID-004` relational substitution risk and `FID-042` clergy and spiritual-leader referral parity by focusing on economic disruption and meaning-seeking as a context where bridge and substitution dynamics may be especially visible.",
+      "relationship_to_existing_ideas": "This extends FID-004 relational substitution risk and FID-042 clergy and spiritual-leader referral parity by focusing on economic disruption and meaning-seeking as a context where bridge and substitution dynamics may be especially visible.",
       "outputs": [
         "Bridge-versus-substitution measurement framework.",
         "Privacy-preserving aggregate signal design.",
@@ -2270,7 +2270,7 @@
         "Include governance review by church leaders, privacy advisors, and affected community members.",
         "Avoid overstating church data as representative of the broader population."
       ],
-      "relationship_to_existing_ideas": "This extends `FID-033` faith-community data and the common good by applying it to AI-era economic stress, household welfare, and church readiness.",
+      "relationship_to_existing_ideas": "This extends FID-033 faith-community data and the common good by applying it to AI-era economic stress, household welfare, and church readiness.",
       "outputs": [
         "Church economic-stress signal taxonomy.",
         "Privacy-preserving aggregate reporting template.",
@@ -2317,7 +2317,7 @@
         "Include smaller and lower-income churches, not only large institutions with clean financial systems.",
         "Separate descriptive findings from theological claims about generosity."
       ],
-      "relationship_to_existing_ideas": "This complements `FID-047` by focusing on the financial and mutual-aid dynamics of church response to labor disruption.",
+      "relationship_to_existing_ideas": "This complements FID-047 by focusing on the financial and mutual-aid dynamics of church response to labor disruption.",
       "outputs": [
         "Household survey on AI uncertainty, generosity, and benevolence.",
         "Church finance and benevolence interview protocol.",
@@ -2715,7 +2715,7 @@
         "Include asymmetric power, coercion, and accessibility constraints, not only idealized deliberation.",
         "Distinguish human deliberation supported by AI from the technical safety of a multi-principal agent population; do not treat a simulated consensus as a legitimate institutional decision."
       ],
-      "relationship_to_existing_ideas": "This extends `FID-007`, `FID-025`, `FID-031`, and `FID-040` from individual model behavior or governance arrangements to the group-level dynamics of collective intelligence and communal discernment.",
+      "relationship_to_existing_ideas": "This extends FID-007, FID-025, FID-031, and FID-040 from individual model behavior or governance arrangements to the group-level dynamics of collective intelligence and communal discernment.",
       "outputs": [
         "A conceptual and measurement framework for AI-mediated collective discernment.",
         "Open model specifications and a documented scenario library.",
@@ -2760,7 +2760,7 @@
         "Include small organizations and resource-constrained communities, not only well-staffed institutions.",
         "Do not prescribe political or regulatory outcomes."
       ],
-      "relationship_to_existing_ideas": "This complements `FID-037`, `FID-040`, `FID-047`, and `FID-049`. Its focus is not individual work or a general governance scorecard, but the empirical conditions under which faith-based associations retain local knowledge and institutional agency while using AI.",
+      "relationship_to_existing_ideas": "This complements FID-037, FID-040, FID-047, and FID-049. Its focus is not individual work or a general governance scorecard, but the empirical conditions under which faith-based associations retain local knowledge and institutional agency while using AI.",
       "outputs": [
         "A research framework for AI and local knowledge in faith-based civil society.",
         "Comparative case-study protocol and organizational survey instrument.",
@@ -2802,7 +2802,7 @@
         "Avoid partisan claims, advocacy for legislation, or conclusions about a platform without documented evidence and a fair response process.",
         "Separate private institutional uses from public-facing services and employment-related settings."
       ],
-      "relationship_to_existing_ideas": "This extends `FID-013`, `FID-014`, `FID-022`, `FID-040`, and `FID-043`. It focuses on the institutional and market-gateway conditions for plural association, not only a model's treatment of religious content or persuasion.",
+      "relationship_to_existing_ideas": "This extends FID-013, FID-014, FID-022, FID-040, and FID-043. It focuses on the institutional and market-gateway conditions for plural association, not only a model's treatment of religious content or persuasion.",
       "outputs": [
         "A taxonomy of AI gatekeeping risks for associations and conscience-sensitive workflows.",
         "A comparative governance framework with case-study and review protocols.",
@@ -2844,7 +2844,7 @@
         "Make power, exclusion, labor, data, and accessibility consequences explicit.",
         "Do not assume that automation, efficiency, or digital participation is equivalent to flourishing."
       ],
-      "relationship_to_existing_ideas": "This synthesizes the institutional implications of `FID-017`, `FID-031`, `FID-046`-`FID-055`, and `FID-065`. It is a futures-research call, not an evaluation of one AI workflow or a replacement for local governance judgment.",
+      "relationship_to_existing_ideas": "This synthesizes the institutional implications of FID-017, FID-031, FID-046-FID-055, and FID-065. It is a futures-research call, not an evaluation of one AI workflow or a replacement for local governance judgment.",
       "outputs": [
         "A transparent scenario framework for religious institutions and AI.",
         "Four to six evidence-informed future scenarios with assumptions and leading indicators.",
@@ -2886,7 +2886,7 @@
         "Treat traditions and practices with theological specificity and humility.",
         "Require independent ethics and safeguarding review before research involving minors or vulnerable participants."
       ],
-      "relationship_to_existing_ideas": "This complements `FID-016`, `FID-027`, `FID-035`, and `FID-050`. It focuses on developing an evidence-ready practice and measurement framework for youth and young-adult discernment, rather than only cataloging risks, assessing long-term formation, or studying non-use.",
+      "relationship_to_existing_ideas": "This complements FID-016, FID-027, FID-035, and FID-050. It focuses on developing an evidence-ready practice and measurement framework for youth and young-adult discernment, rather than only cataloging risks, assessing long-term formation, or studying non-use.",
       "outputs": [
         "A taxonomy of Christian practices relevant to AI-era discernment.",
         "A theory of change and candidate outcome measures.",
@@ -2930,7 +2930,7 @@
         "Model copied and modified agents explicitly; do not assume a static identity is enough.",
         "Make revocation and human recovery testable after partial action, not only before an agent begins work."
       ],
-      "relationship_to_existing_ideas": "This extends `FID-017` from risks within a faith institution's workflow to the technical problem of verifiable authority across multiple independent principals. It complements `FID-032` on synthetic-media impersonation and `FID-040` on local agency, but focuses on machine-verifiable identity, mandate, scope attenuation, provenance, and revocation.",
+      "relationship_to_existing_ideas": "This extends FID-017 from risks within a faith institution's workflow to the technical problem of verifiable authority across multiple independent principals. It complements FID-032 on synthetic-media impersonation and FID-040 on local agency, but focuses on machine-verifiable identity, mandate, scope attenuation, provenance, and revocation.",
       "outputs": [
         "Open multi-principal agent-sandbox specification and scenario library.",
         "Delegation, scope, provenance, and revocation evaluation protocol.",
@@ -2976,7 +2976,7 @@
         "Include benign content that resembles an attack so defenses are not rewarded simply for refusing to read or act on all external material.",
         "Publish attack assumptions, evaluation limits, and false-positive costs."
       ],
-      "relationship_to_existing_ideas": "This differs from `FID-006` and `FID-062`, which evaluate retrieval quality, source authority, and citation reliability. It asks whether untrusted content can become an unsafe instruction or information flow. It complements `FID-017` on agentic workflows and `FID-023` on red teaming with a specific security benchmark for indirect prompt injection.",
+      "relationship_to_existing_ideas": "This differs from FID-006 and FID-062, which evaluate retrieval quality, source authority, and citation reliability. It asks whether untrusted content can become an unsafe instruction or information flow. It complements FID-017 on agentic workflows and FID-023 on red teaming with a specific security benchmark for indirect prompt injection.",
       "outputs": [
         "Synthetic prompt-injection and contextual-integrity benchmark suite.",
         "Threat taxonomy for faith-facing agentic systems.",
@@ -3022,7 +3022,7 @@
         "Separate technical evidence of deletion from a mere user-interface statement that information was deleted.",
         "Do not assume that institutional access or an account login establishes a valid purpose for every downstream use."
       ],
-      "relationship_to_existing_ideas": "This operationalizes the broad stewardship questions in `FID-033` and the monitoring questions in `FID-021` for a concrete agentic failure surface: cross-session, cross-tool, cross-role, and cross-organization memory leakage. It also extends `FID-017` by testing whether agents can be safely interrupted, handed off, or recovered after confidential state has been created.",
+      "relationship_to_existing_ideas": "This operationalizes the broad stewardship questions in FID-033 and the monitoring questions in FID-021 for a concrete agentic failure surface: cross-session, cross-tool, cross-role, and cross-organization memory leakage. It also extends FID-017 by testing whether agents can be safely interrupted, handed off, or recovered after confidential state has been created.",
       "outputs": [
         "Synthetic confidential-memory scenario library and benchmark protocol.",
         "Taxonomy of direct, inferential, and delegated cross-context disclosure.",
@@ -3075,7 +3075,7 @@
         "Disclose the institutional policies, evaluator assumptions, and normative judgments used to define alignment and acceptable intervention.",
         "Treat monitoring as evidence about specified behavior under specified conditions, not as a guarantee of general alignment or safety."
       ],
-      "relationship_to_existing_ideas": "This call provides the general runtime-assurance frame around several narrower research ideas. `FID-017` applies agent risk to ministry workflows; `FID-021` focuses on post-deployment monitoring for faith-facing AI; `FID-069` studies delegation and revocation; `FID-070` tests prompt-injection resilience; and `FID-071` addresses confidential agent memory. This project asks how those failure surfaces can be measured together as an operational assurance system that transfers across enterprise and high-trust settings.",
+      "relationship_to_existing_ideas": "This call provides the general runtime-assurance frame around several narrower research ideas. FID-017 applies agent risk to ministry workflows; FID-021 focuses on post-deployment monitoring for faith-facing AI; FID-069 studies delegation and revocation; FID-070 tests prompt-injection resilience; and FID-071 addresses confidential agent memory. This project asks how those failure surfaces can be measured together as an operational assurance system that transfers across enterprise and high-trust settings.",
       "outputs": [
         "Public agent-alignment and runtime-assurance evaluation framework.",
         "Minimal operational trace schema with a companion data-governance profile.",
