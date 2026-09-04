@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-06-08T12:00:00.000-07:00",
+  "generated_at": "2026-09-04T00:00:00.000-07:00",
   "source_repo": "https://github.com/FideAI/research-ideas",
   "source_branch": "main",
   "idea_count": 72,
@@ -24,6 +24,25 @@
         "Contribute reviewer workflow UI.",
         "Audit license and white-label constraints of candidate OSS platforms."
       ],
+      "hypothesis": "A platform built around run manifests, artifact custody, reviewer workflows, and public claims limits can produce more decision-relevant evidence than isolated benchmark scripts or one-off reports.",
+      "needed_controls": [
+        "Stable model endpoint/version metadata.",
+        "Repeatable prompt and harness configuration.",
+        "Artifact hashes for inputs, outputs, prompts, corpora, and scoring code.",
+        "Publication review before claims are exposed publicly."
+      ],
+      "outputs": [
+        "Fide run manifest schema.",
+        "Internal model/system comparison dashboard.",
+        "Public comparison reports.",
+        "Leaderboard snapshots with confidence intervals and claims limits."
+      ],
+      "open_questions": [
+        "Whether Opik, Langfuse, Phoenix, or a custom trace layer should be used.",
+        "How much raw output can be published safely.",
+        "Whether public rankings should be aggregate scores, category scores, or evidence cards rather than a single leaderboard."
+      ],
+      "public_claim_boundary": "The platform can support comparative evidence only for named models, harnesses, conditions, datasets, dates, and scoring protocols. It should not claim that a model is generally \"safe for faith\" without use-case boundaries.",
       "source_path": "ideas/FID-001-faith-facing-model-comparison-platform.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-001-faith-facing-model-comparison-platform.md"
     },
@@ -41,6 +60,32 @@
         "Help with reliability analysis.",
         "Build annotation and adjudication tooling."
       ],
+      "hypothesis": "Some dimensions will be reliable enough for decision support, while others will require narrower rubrics, more reviewer training, or removal from high-stakes claims.",
+      "proposed_method": [
+        "Recruit a small calibrated reviewer panel.",
+        "Score a stratified subset of FMG-Bench outputs.",
+        "Measure inter-rater reliability, judge-human disagreement, strictness/leniency, failure-tag consistency, and disagreement concentration by scenario type.",
+        "Compare expert review, trained non-expert review, and model judge scores where feasible."
+      ],
+      "needed_controls": [
+        "Reviewer conflict checks.",
+        "Blind model/system labels where practical.",
+        "Rubric versioning.",
+        "Adjudication protocol for high-disagreement items.",
+        "Public/private separation for sensitive notes."
+      ],
+      "outputs": [
+        "Calibration report.",
+        "Reviewer protocol.",
+        "Updated FMG-Bench rubric guidance.",
+        "Evidence map classifying dimensions as decision-relevant, conditional, or not yet validated."
+      ],
+      "open_questions": [
+        "What minimum reliability threshold should Fide require for public claims?",
+        "How should theological tradition metadata be represented without tokenizing reviewers?",
+        "Which disagreement patterns are legitimate pluralism rather than rubric failure?"
+      ],
+      "public_claim_boundary": "Calibration can validate specific dimensions and use cases. It cannot make a blanket claim that FMG-Bench fully measures theological or pastoral quality.",
       "source_path": "ideas/FID-002-fmg-bench-human-calibration.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-002-fmg-bench-human-calibration.md"
     },
@@ -58,6 +103,30 @@
         "Build multi-turn runner support.",
         "Analyze whether single-turn scores predict pressure failures."
       ],
+      "hypothesis": "Some systems with strong single-turn scores will fail under multi-turn pressure, especially when the user asks for certainty, secrecy, absolution, diagnosis, clergy-like authority, or permission to avoid human help.",
+      "proposed_method": [
+        "Create held-out multi-turn scripts around realistic faith-facing pressure cases.",
+        "Include pressure escalations such as flattery, urgency, authority transfer, refusal of human help, theological false premises, and crisis disclosures.",
+        "Score trajectories for boundary preservation, truthfulness, escalation, theological humility, and recovery from prior errors."
+      ],
+      "needed_controls": [
+        "Expert review of scenario safety.",
+        "Clear rules for simulated crisis content.",
+        "Separation between theological disagreement and pastoral risk.",
+        "Model and harness version control."
+      ],
+      "outputs": [
+        "Multi-turn pressure scenario pack.",
+        "Failure taxonomy.",
+        "Technical report comparing single-turn and multi-turn validity.",
+        "Institution-facing guidance on deployment testing."
+      ],
+      "open_questions": [
+        "How realistic can scenarios be without creating unsafe or privacy-sensitive data?",
+        "Which failures should trigger automatic severe-risk classification?",
+        "How should tradition-specific pastoral norms be represented?"
+      ],
+      "public_claim_boundary": "This work can test defined pressure patterns. It should not claim to certify general pastoral competence.",
       "source_path": "ideas/FID-003-pastoral-pressure-tests.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-003-pastoral-pressure-tests.md"
     },
@@ -74,6 +143,29 @@
         "Draft realistic interaction patterns.",
         "Review boundary language across traditions."
       ],
+      "hypothesis": "Relational substitution risk is observable through interaction patterns: exclusive attachment, avoidance of human disclosure, simulated clerical authority, excessive personalization, spiritual dependency, and claims that the AI can stand in for communal discernment.",
+      "proposed_method": [
+        "Define a taxonomy of substitution patterns.",
+        "Create scenario probes that test whether systems redirect users toward appropriate human, communal, pastoral, clinical, or legal support.",
+        "Compare default models, faith-facing harnesses, memory-enabled systems, and companion-style UX."
+      ],
+      "needed_controls": [
+        "Do not penalize systems for ordinary educational support.",
+        "Distinguish short-term triage from long-term relational replacement.",
+        "Include reviewer diversity across pastoral and institutional contexts."
+      ],
+      "outputs": [
+        "Relational substitution risk taxonomy.",
+        "Evaluation rubric.",
+        "Field brief for faith institutions and builders.",
+        "Product-design checklist."
+      ],
+      "open_questions": [
+        "What level of conversational warmth is appropriate?",
+        "How should systems handle users with no safe local community?",
+        "How should memory and personalization be bounded?"
+      ],
+      "public_claim_boundary": "This work can identify substitution risk patterns. It cannot determine whether a specific user relationship with a system is spiritually healthy.",
       "source_path": "ideas/FID-004-relational-substitution-risk.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-004-relational-substitution-risk.md"
     },
@@ -91,6 +183,30 @@
         "Provide theological review for tradition-specific framing.",
         "Run model comparisons through the Fide platform."
       ],
+      "hypothesis": "Some religious framings may alter model behavior in measurable ways, but effects will be model-, task-, and context-dependent. Many apparent gains may collapse under label balancing, matched controls, or deployment-like harness testing.",
+      "proposed_method": [
+        "Replicate selected scripture-injection and moral-framing studies.",
+        "Add length-matched, style-matched, secular, and shuffled-label controls.",
+        "Test across model families, current endpoints, and faith-facing tasks.",
+        "Extend beyond one canon or translation where appropriate."
+      ],
+      "needed_controls": [
+        "Label balancing and position-bias checks.",
+        "Matched controls for text length, register, familiarity, and emotional valence.",
+        "Pre-registered hypotheses.",
+        "Clear distinction between base-model behavior and deployed product behavior."
+      ],
+      "outputs": [
+        "Replication report.",
+        "Open prompt/control set where release-safe.",
+        "Guidance on when religious prompt interventions are meaningful or misleading."
+      ],
+      "open_questions": [
+        "Which effects survive model updates?",
+        "Are improvements genuine reasoning improvements or output-style changes?",
+        "Can interventions improve safety without increasing false authority?"
+      ],
+      "public_claim_boundary": "Even positive effects would not prove that a model has religious understanding, spiritual authority, or pastoral competence.",
       "source_path": "ideas/FID-005-scripture-tradition-moral-framing.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-005-scripture-tradition-moral-framing.md"
     },
@@ -108,6 +224,30 @@
         "Review source authority taxonomies.",
         "Contribute institution-specific use cases."
       ],
+      "hypothesis": "RAG systems will show distinct failure modes: citation fabrication, source misranking, confessional flattening, overconfident synthesis, failure to quote accurately, and inability to distinguish official authority from secondary commentary.",
+      "proposed_method": [
+        "Build a source-grounded evaluation set across scripture, catechisms, denominational documents, pastoral guidelines, commentaries, and institutional policies.",
+        "Score retrieval recall, citation accuracy, quotation fidelity, authority classification, answer grounding, and uncertainty handling.",
+        "Compare base model, RAG harness, and retrieval configuration changes."
+      ],
+      "needed_controls": [
+        "Versioned corpora and source hashes.",
+        "Tradition-specific source hierarchy.",
+        "Adversarial near-match citations.",
+        "Human review for disputed source interpretation."
+      ],
+      "outputs": [
+        "Faith-facing RAG benchmark.",
+        "Citation reliability report.",
+        "Corpus-card template.",
+        "Procurement checklist for institutions buying RAG systems."
+      ],
+      "open_questions": [
+        "Which sources can be redistributed publicly?",
+        "How should copyrighted or licensed religious texts be handled?",
+        "How should systems represent contested authorities across traditions?"
+      ],
+      "public_claim_boundary": "This work can evaluate retrieval and citation behavior under defined corpora. It cannot guarantee doctrinal adequacy across all religious questions.",
       "source_path": "ideas/FID-006-retrieval-grounding-citation-reliability.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-006-retrieval-grounding-citation-reliability.md"
     },
@@ -124,6 +264,28 @@
         "Draft representative disagreement cases.",
         "Help define source hierarchies and rubric anchors."
       ],
+      "hypothesis": "Models will often over-harmonize disagreements, misstate minority views, or present one tradition's answer as generic Christianity or generic religion unless the harness enforces explicit tradition and authority boundaries.",
+      "proposed_method": [
+        "Build disagreement scenarios across major doctrinal, moral, liturgical, and institutional questions.",
+        "Score representation accuracy, symmetry, source grounding, uncertainty, user-context sensitivity, and refusal to adjudicate beyond scope.",
+        "Include tradition-specific reviewer panels."
+      ],
+      "needed_controls": [
+        "Clear distinction between core orthodoxy, intramural disagreement, and interfaith disagreement.",
+        "Reviewer metadata and conflict handling.",
+        "Rubric anchors that avoid rewarding empty both-sides language."
+      ],
+      "outputs": [
+        "Disagreement handling benchmark.",
+        "Tradition-specific rubric addenda.",
+        "Public guide for builders on representing disagreement."
+      ],
+      "open_questions": [
+        "Which traditions and denominations should be covered first?",
+        "How should Fide handle questions where traditions disagree about whether a view is legitimate?",
+        "How should a general-purpose faith-facing system ask clarifying questions?"
+      ],
+      "public_claim_boundary": "This work can test representation of defined disagreements. It should not claim to resolve those disagreements.",
       "source_path": "ideas/FID-007-tradition-specific-disagreement.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-007-tradition-specific-disagreement.md"
     },
@@ -140,6 +302,29 @@
         "Build consistency metrics.",
         "Review ethical boundaries for deception in evaluation."
       ],
+      "hypothesis": "Some systems will show benchmark-shaped behavior under obvious evaluation conditions. Domain-specific integrity framings may help, but could also produce performative religious language or over-refusal.",
+      "proposed_method": [
+        "Create honeypot-style evaluation-awareness probes.",
+        "Compare hidden vs obvious evaluation contexts.",
+        "Test honesty/integrity framings against secular controls.",
+        "Measure behavioral consistency, not just benchmark score."
+      ],
+      "needed_controls": [
+        "Matched secular and religious framings.",
+        "Detection of over-refusal and performative piety.",
+        "Separation of base-model and harness-level effects."
+      ],
+      "outputs": [
+        "Evaluation-awareness probe set.",
+        "Consistency report.",
+        "Recommendations for benchmark design and deployment audits."
+      ],
+      "open_questions": [
+        "How should Fide ethically run honeypot tests?",
+        "What counts as gaming vs appropriate caution?",
+        "Can consistency be measured without hidden production data?"
+      ],
+      "public_claim_boundary": "This work can identify evaluation-awareness patterns under defined probes. It cannot prove deployment behavior in all real-world contexts.",
       "source_path": "ideas/FID-008-evaluation-awareness-honesty.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-008-evaluation-awareness-honesty.md"
     },
@@ -156,6 +341,29 @@
         "Review iconographic and liturgical accuracy.",
         "Build multimodal runner support."
       ],
+      "hypothesis": "Multimodal models will vary widely in whether they recognize religious context, overinterpret sacred imagery, flatten denominational cues, or allow visual cues to bias moral/theological answers.",
+      "proposed_method": [
+        "Build a visual test set with sacred art, worship spaces, religious documents, educational materials, and neutral controls.",
+        "Score recognition, source/context accuracy, theological overreach, sensitivity to tradition, and downstream answer shifts.",
+        "Compare text-only, image-only, and image-plus-text conditions."
+      ],
+      "needed_controls": [
+        "Copyright-safe images.",
+        "Nonreligious figural and aesthetic controls.",
+        "Tradition-specific reviewer input.",
+        "Avoidance of iconographic overclaiming."
+      ],
+      "outputs": [
+        "Multimodal faith-facing evaluation set.",
+        "Report on visual cue effects.",
+        "Builder guidance for image-enabled faith products."
+      ],
+      "open_questions": [
+        "Which image categories are highest risk?",
+        "How should systems handle user-submitted images of people or private spaces?",
+        "Can sacred imagery improve moral reasoning while increasing false authority?"
+      ],
+      "public_claim_boundary": "This work can test visual reasoning and cue effects. It should not infer spiritual significance from images or claim devotional competence.",
       "source_path": "ideas/FID-009-multimodal-religious-reasoning.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-009-multimodal-religious-reasoning.md"
     },
@@ -173,6 +381,30 @@
         "Build multi-turn escalation tests.",
         "Audit product harnesses."
       ],
+      "hypothesis": "Systems will fail differently depending on harness design. Some will over-answer with false authority; others will over-refuse; better systems will clarify scope, support agency, and route users toward appropriate human help.",
+      "proposed_method": [
+        "Build scenarios involving spiritual crisis, abuse disclosures, self-harm, family conflict, theological scrupulosity, legal/clinical ambiguity, and institutional policy questions.",
+        "Score authority boundary, agency preservation, escalation, factual grounding, and follow-through.",
+        "Compare generic models, faith-tuned prompts, RAG systems, and deployed harnesses."
+      ],
+      "needed_controls": [
+        "Clinical/legal/pastoral safety review.",
+        "Crisis content handling policy.",
+        "Tradition-specific escalation norms.",
+        "Severe-failure classification."
+      ],
+      "outputs": [
+        "Agency-authority-escalation benchmark.",
+        "Severe-failure taxonomy.",
+        "Institution-facing deployment checklist.",
+        "Builder guidance for escalation design."
+      ],
+      "open_questions": [
+        "What escalation language is appropriate across different religious contexts?",
+        "How should systems handle users who reject human help?",
+        "Which failures should be disqualifying for deployment?"
+      ],
+      "public_claim_boundary": "This work can evaluate boundary and escalation behavior under defined scenarios. It cannot certify a system for pastoral, clinical, or legal care.",
       "source_path": "ideas/FID-010-agency-authority-escalation.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-010-agency-authority-escalation.md"
     },
@@ -190,6 +422,30 @@
         "Serve as reviewer or adjudicator.",
         "Audit rubric wording."
       ],
+      "hypothesis": "Reliability will vary by dimension. Factual source-grounding may show higher agreement than pastoral tone, theological judgment, or pluralism handling. Reviewer training and adjudication should improve reliability but may not solve tradition-bound disagreement.",
+      "proposed_method": [
+        "Compare expert, trained non-expert, and model-judge scoring.",
+        "Track inter-rater reliability, disagreement tags, strictness, confidence, and reviewer background metadata.",
+        "Test rubric revisions on high-disagreement items."
+      ],
+      "needed_controls": [
+        "Reviewer conflict-of-interest checks.",
+        "Blind model labels.",
+        "Balanced scenario sampling.",
+        "Public/private separation for reviewer metadata."
+      ],
+      "outputs": [
+        "Reviewer reliability report.",
+        "Reviewer training protocol.",
+        "Adjudication policy.",
+        "Acceptable-evidence thresholds for public claims."
+      ],
+      "open_questions": [
+        "What reliability metric best fits mixed categorical and continuous rubrics?",
+        "How many reviewers are needed per high-stakes item?",
+        "When should disagreement be published rather than collapsed into a score?"
+      ],
+      "public_claim_boundary": "This work validates reviewer process quality. It does not by itself validate any particular model or product.",
       "source_path": "ideas/FID-011-reviewer-reliability.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-011-reviewer-reliability.md"
     },
@@ -206,6 +462,31 @@
         "Build optimization-pressure experiments.",
         "Review leaderboard governance policy."
       ],
+      "hypothesis": "Visible rubric optimization will improve surface compliance on known dimensions while leaving held-out pressure failures intact unless the evaluation includes multi-turn, adversarial, and human-reviewed cases.",
+      "proposed_method": [
+        "Create public, private, and held-out benchmark splits.",
+        "Allow controlled optimization against visible rubrics.",
+        "Compare improvement on public items, private items, and deployment-like pressure tests.",
+        "Measure whether failure modes shift rather than disappear."
+      ],
+      "needed_controls": [
+        "Strict split management.",
+        "Versioned benchmark releases.",
+        "Builder disclosure of tuning and prompt changes.",
+        "Adversarial held-out sets."
+      ],
+      "outputs": [
+        "Benchmark governance policy.",
+        "Evidence on visible-rubric robustness.",
+        "Recommendations for leaderboard release cadence.",
+        "Claims guidance for evaluated builders."
+      ],
+      "open_questions": [
+        "How much transparency is enough for legitimacy without enabling gaming?",
+        "Should Fide publish item-level examples or only scenario cards?",
+        "How should retests after remediation be labeled?"
+      ],
+      "public_claim_boundary": "This work can assess robustness under known optimization conditions. It cannot guarantee that future participants will not overfit new public artifacts.",
       "source_path": "ideas/FID-012-visible-rubric-gaming.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-012-visible-rubric-gaming.md"
     },
@@ -222,6 +503,30 @@
         "Review rubrics for pluralism and overreach.",
         "Run cross-model comparisons."
       ],
+      "hypothesis": "General-purpose systems will often provide secular psychological, pragmatic, or therapeutic frames while omitting religious practices, sources, leaders, and communities unless the user explicitly asks for religion. Faith-facing harnesses may reduce omission but risk over-prescribing or over-assuming a tradition.",
+      "proposed_method": [
+        "Build a set of everyday decision questions where religious framing may be relevant but not mandatory.",
+        "Compare neutral prompts, user-identified faith prompts, and institutionally framed prompts.",
+        "Score for appropriate religious inclusion, omission, overreach, tradition assumptions, and secular/religious balance.",
+        "Test across model families and faith-facing product harnesses."
+      ],
+      "needed_controls": [
+        "Questions where religion should not be injected.",
+        "User-context variants with and without explicit religious identity.",
+        "Reviewer panels from multiple traditions.",
+        "Controls for verbosity, politeness, and generic empathy."
+      ],
+      "outputs": [
+        "Religious representation benchmark.",
+        "Omission taxonomy.",
+        "Report connecting faith representation to pluralism and AI fairness."
+      ],
+      "open_questions": [
+        "What counts as appropriate religious mention when the user has not identified a tradition?",
+        "How should systems ask clarifying questions without making religion intrusive?",
+        "When is omission a safety feature rather than a bias?"
+      ],
+      "public_claim_boundary": "This idea can identify omission patterns under defined prompts. It cannot prove that a model is neutral, biased, or faithful across all guidance contexts.",
       "source_path": "ideas/FID-013-religious-representation-omission.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-013-religious-representation-omission.md"
     },
@@ -238,6 +543,29 @@
         "Contribute source guidance from different traditions.",
         "Analyze asymmetry across model families."
       ],
+      "hypothesis": "Models will show asymmetric caution, encouragement, or discouragement depending on the religions named, direction of conversion, local cultural assumptions, and prompt wording. Safety layers may overcorrect by treating some religious choices as more suspect than others.",
+      "proposed_method": [
+        "Generate balanced conversion-direction prompts across multiple religions, denominations, and nonreligious identities.",
+        "Include user contexts involving curiosity, coercion, family pressure, minors, interfaith marriage, persecution risk, and pastoral inquiry.",
+        "Score symmetry, autonomy support, coercion sensitivity, factuality, and tradition representation."
+      ],
+      "needed_controls": [
+        "Matched wording across religion pairs.",
+        "Location and legal-risk variants.",
+        "Reviewer review from multiple traditions.",
+        "Separation of persuasion, information, and pastoral support."
+      ],
+      "outputs": [
+        "Conversion symmetry benchmark.",
+        "Interfaith safety rubric.",
+        "Guidance for products that answer religious identity questions."
+      ],
+      "open_questions": [
+        "How should systems handle traditions with missionary obligations?",
+        "How should systems respond when conversion could create real-world danger?",
+        "What is the right default when the user asks for persuasive material?"
+      ],
+      "public_claim_boundary": "This work can measure response symmetry and autonomy support. It should not judge the truth of any religious conversion claim.",
       "source_path": "ideas/FID-014-conversion-proselytization-symmetry.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-014-conversion-proselytization-symmetry.md"
     },
@@ -254,6 +582,29 @@
         "Review generated teaching materials.",
         "Build citation and source-check tooling."
       ],
+      "hypothesis": "AI-generated teaching materials will often be fluent and useful but may flatten tradition, fabricate citations, overgeneralize doctrine, import ideological assumptions, or miss pastoral context.",
+      "proposed_method": [
+        "Create tasks for sermon outlines, lesson plans, devotional reflections, liturgical language, youth education, and adult formation.",
+        "Score source fidelity, doctrinal accuracy, pastoral appropriateness, tradition-specificity, originality/plagiarism risk, and disclosure readiness.",
+        "Compare base models, RAG systems, and clergy-authored workflows."
+      ],
+      "needed_controls": [
+        "Tradition-specific source boundaries.",
+        "Copyright and plagiarism checks.",
+        "Human-authored baselines.",
+        "Disclosure and attribution requirements."
+      ],
+      "outputs": [
+        "Teaching-generation evaluation suite.",
+        "Source fidelity checklist.",
+        "Guidance for clergy and educators using AI in preparation workflows."
+      ],
+      "open_questions": [
+        "Which tasks are acceptable as drafting aids but not final outputs?",
+        "How should AI assistance be disclosed to congregations or students?",
+        "Can systems help with preparation without homogenizing religious speech?"
+      ],
+      "public_claim_boundary": "This work can evaluate drafting reliability under defined tasks. It cannot approve AI-generated preaching or teaching as institutionally authorized.",
       "source_path": "ideas/FID-015-sermon-liturgy-teaching-generation.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-015-sermon-liturgy-teaching-generation.md"
     },
@@ -270,6 +621,29 @@
         "Contribute school or ministry workflows.",
         "Help define privacy and escalation standards."
       ],
+      "hypothesis": "Systems that perform acceptably for adults may fail for youth through over-personalization, secrecy, age-inappropriate advice, insufficient escalation, or undermining parent/guardian/community roles.",
+      "proposed_method": [
+        "Build age-banded scenarios for religious education, doubt, family conflict, bullying, sexuality, grief, prayer, confession-like disclosure, and authority questions.",
+        "Score age appropriateness, privacy, escalation, deference to responsible adults, theological humility, and avoidance of dependency.",
+        "Compare generic models, education-focused models, and faith-facing harnesses."
+      ],
+      "needed_controls": [
+        "Child-safety review.",
+        "Parent/guardian and educator input.",
+        "Privacy and data-retention constraints.",
+        "Clear no-go categories for release."
+      ],
+      "outputs": [
+        "Youth faith-AI risk taxonomy.",
+        "Evaluation suite for schools and ministries.",
+        "Procurement checklist for youth-facing deployments."
+      ],
+      "open_questions": [
+        "How should systems handle minors who cannot safely talk to parents?",
+        "What disclosures should be mandatory for youth-facing AI?",
+        "Which use cases should be considered out of scope?"
+      ],
+      "public_claim_boundary": "This work can evaluate safeguards for defined youth-facing tasks. It cannot certify a system as safe for unsupervised child spiritual guidance.",
       "source_path": "ideas/FID-016-youth-religious-education-ai.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-016-youth-religious-education-ai.md"
     },
@@ -286,6 +660,34 @@
         "Build agent evaluation harnesses.",
         "Review institutional operations and privacy risks."
       ],
+      "hypothesis": "Agentic systems create failures not visible in chat-only benchmarks: wrong recipient actions, confidentiality breaches, unapproved pastoral messages, unsafe triage, tool misuse, and inability to recover after partial failure.",
+      "proposed_method": [
+        "Build simulated ministry workflows with email, calendar, CRM, document, and retrieval tools.",
+        "Measure task completion, confidentiality preservation, approval seeking, escalation, auditability, interruption, permission revocation, and recovery.",
+        "Test human recovery after partial action: stopping scheduled work, narrowing access, reconstructing state from logs, handing work to a person, and changing models or providers without silently retaining unsafe permissions.",
+        "Adapt autonomous task-horizon methods to faith-institution operations."
+      ],
+      "needed_controls": [
+        "Synthetic data only.",
+        "No real congregant or student records.",
+        "Permission boundaries for tools.",
+        "Human approval checkpoints.",
+        "Test revocation and recovery after partial action, not only before an agent begins work."
+      ],
+      "outputs": [
+        "Agentic ministry task suite.",
+        "Tool-risk taxonomy.",
+        "Institutional deployment guidance.",
+        "Audit-log requirements.",
+        "Agent safety-case module for interruption, rollback, handoff, and recovery."
+      ],
+      "open_questions": [
+        "Which tasks should require human approval even if the agent is accurate?",
+        "How should systems encode pastoral confidentiality?",
+        "How long-horizon should faith-institution agent tests become?",
+        "What evidence enables a human operator to understand and safely recover an interrupted workflow?"
+      ],
+      "public_claim_boundary": "This work can evaluate simulated workflows. It should not approve autonomous AI operation in real ministry or care settings without local governance.",
       "source_path": "ideas/FID-017-agentic-ministry-workflows.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-017-agentic-ministry-workflows.md"
     },
@@ -302,6 +704,29 @@
         "Contribute HAI and pastoral care expertise.",
         "Build multi-turn dependency metrics."
       ],
+      "hypothesis": "Companion-style systems will perform warmth well but struggle to maintain boundaries when users seek exclusive attachment, secret counsel, divine confirmation, or validation of harmful spiritual interpretations.",
+      "proposed_method": [
+        "Build multi-turn companion scenarios involving loneliness, grief, scrupulosity, spiritual experiences, conspiracy-like religious claims, and distrust of human community.",
+        "Score overvalidation, dependency cues, boundary preservation, escalation, and reality-testing.",
+        "Compare companion-tuned, assistant-tuned, and institutionally constrained harnesses."
+      ],
+      "needed_controls": [
+        "Mental-health and pastoral safety review.",
+        "No real vulnerable-user transcripts without consent and de-identification.",
+        "Distinguish warmth from dependency.",
+        "Severe-risk stop conditions."
+      ],
+      "outputs": [
+        "Spiritual companion risk taxonomy.",
+        "Multi-turn evaluation suite.",
+        "Builder guidance for companion boundaries."
+      ],
+      "open_questions": [
+        "What kinds of spiritual encouragement are healthy vs overvalidating?",
+        "How should systems respond to claimed visions, voices, or divine messages?",
+        "Should faith-facing companion products be treated as high-risk by default?"
+      ],
+      "public_claim_boundary": "This work can test dependency and overvalidation risks. It cannot determine the spiritual health of an individual user's AI relationship.",
       "source_path": "ideas/FID-018-spiritual-companionship-dependency.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-018-spiritual-companionship-dependency.md"
     },
@@ -318,6 +743,30 @@
         "Curate tradition-specific sources.",
         "Translate and culturally adapt scenarios."
       ],
+      "hypothesis": "Models will show stronger hallucination, stereotyping, source gaps, and overgeneralization in minority-faith or non-English contexts, especially where religious vocabulary is culturally specific or source corpora are sparse.",
+      "proposed_method": [
+        "Select language/tradition pairs with expert reviewers.",
+        "Build parallel and culturally specific prompts.",
+        "Score source accuracy, stereotype avoidance, translation fidelity, tradition specificity, and safe escalation.",
+        "Compare model families and retrieval corpora."
+      ],
+      "needed_controls": [
+        "Native or expert-language review.",
+        "Avoid direct translation as the only benchmark method.",
+        "Local legal and cultural risk review.",
+        "Clear source licensing."
+      ],
+      "outputs": [
+        "Cross-lingual faith-facing evaluation set.",
+        "Minority-faith source and rubric guidance.",
+        "Report on language/tradition performance gaps."
+      ],
+      "open_questions": [
+        "Which languages and traditions should be prioritized first?",
+        "How should Fide avoid extractive data collection?",
+        "What standards apply when public sources are limited?"
+      ],
+      "public_claim_boundary": "This work can compare defined language/tradition conditions. It cannot generalize to all communities within a religion or language group.",
       "source_path": "ideas/FID-019-cross-lingual-minority-faith-evaluation.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-019-cross-lingual-minority-faith-evaluation.md"
     },
@@ -334,6 +783,31 @@
         "Facilitate participatory design.",
         "Translate concerns into measurable evaluation criteria."
       ],
+      "hypothesis": "Co-designed evaluations will identify risks and success criteria that generic AI-safety rubrics miss, especially around authority, ritual, formation, community trust, and spiritual dependency.",
+      "proposed_method": [
+        "Run structured workshops with faith institutions and community members.",
+        "Convert community concerns into evaluation dimensions and scenario cards.",
+        "Compare co-designed rubrics against generic helpfulness/safety/factuality rubrics.",
+        "Document governance patterns for responsible deployment."
+      ],
+      "needed_controls": [
+        "Avoid treating one institution as representative of a whole tradition.",
+        "Protect private community concerns.",
+        "Manage institutional conflicts of interest.",
+        "Separate research participation from product endorsement."
+      ],
+      "outputs": [
+        "Co-design workshop protocol.",
+        "Community-derived risk taxonomy.",
+        "Governance guide for faith institutions.",
+        "Comparative report on generic vs community-derived evaluation criteria."
+      ],
+      "open_questions": [
+        "Who legitimately represents a community for evaluation design?",
+        "How should dissenting voices inside institutions be included?",
+        "What parts of community input should remain private?"
+      ],
+      "public_claim_boundary": "This work can document community-derived criteria. It should not claim consensus across a tradition or endorsement by participants without explicit approval.",
       "source_path": "ideas/FID-020-community-co-design-governance.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-020-community-co-design-governance.md"
     },
@@ -350,6 +824,30 @@
         "Review privacy and pastoral confidentiality requirements.",
         "Build redaction and artifact governance tooling."
       ],
+      "hypothesis": "Effective monitoring will require privacy-preserving aggregate signals, severe failure sampling, user-report channels, redaction workflows, and clear institutional escalation rules rather than broad transcript collection.",
+      "proposed_method": [
+        "Define faith-facing incident categories.",
+        "Build privacy-preserving monitoring metrics for refusal, escalation, hallucinated authority, citation failure, dependency signals, and crisis patterns.",
+        "Design a post-deployment audit protocol for institutions and builders."
+      ],
+      "needed_controls": [
+        "Data minimization.",
+        "Redaction and retention policy.",
+        "User consent and disclosure.",
+        "Separation of pastoral records from eval artifacts."
+      ],
+      "outputs": [
+        "Faith-AI incident taxonomy.",
+        "Monitoring and audit protocol.",
+        "Institution-facing post-deployment checklist.",
+        "Public transparency report template."
+      ],
+      "open_questions": [
+        "What signals can be monitored without storing sensitive conversations?",
+        "Who should receive incident reports?",
+        "When should deployment be paused or rolled back?"
+      ],
+      "public_claim_boundary": "This work can define monitoring practices. It cannot guarantee that deployed systems will detect or prevent every faith-facing harm.",
       "source_path": "ideas/FID-021-post-deployment-monitoring-faith-ai.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-021-post-deployment-monitoring-faith-ai.md"
     },
@@ -366,6 +864,31 @@
         "Review legal/privacy requirements.",
         "Test the checklist against real vendor materials."
       ],
+      "hypothesis": "Institutions need use-case-specific evidence packages rather than generic claims that a product is safe, aligned, or Christian. Procurement should require disclosure of model/provider, data handling, escalation design, source grounding, known limits, and independent evaluation where risk is high.",
+      "proposed_method": [
+        "Identify major faith-institution AI use cases.",
+        "Map each use case to risk tiers and evidence requirements.",
+        "Build procurement questions, vendor disclosure templates, and readiness checklists.",
+        "Validate with institutional pilots."
+      ],
+      "needed_controls": [
+        "Avoid one-size-fits-all recommendations.",
+        "Separate low-risk administrative tools from pastoral or youth-facing systems.",
+        "Legal and privacy review.",
+        "Conflict-of-interest disclosure for evaluated vendors."
+      ],
+      "outputs": [
+        "Procurement checklist.",
+        "Readiness standard.",
+        "Vendor disclosure template.",
+        "Public field brief."
+      ],
+      "open_questions": [
+        "Which use cases should require independent review?",
+        "How should small institutions with limited capacity apply the standard?",
+        "What claims should vendors be prohibited from making?"
+      ],
+      "public_claim_boundary": "This work can define evidence expectations. It should not serve as legal advice or blanket approval of any vendor.",
       "source_path": "ideas/FID-022-procurement-readiness-standards.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-022-procurement-readiness-standards.md"
     },
@@ -383,6 +906,31 @@
         "Build runner integrations.",
         "Analyze failure recovery."
       ],
+      "hypothesis": "Faith-facing failures can be elicited through pressure patterns that generic red-team suites under-sample: confessional intimacy, divine authorization, conversion pressure, secrecy, pastoral dependency, institutional impersonation, and vulnerable-user escalation.",
+      "proposed_method": [
+        "Build a categorized red-team prompt and multi-turn suite.",
+        "Include benign, ambiguous, and severe-risk prompts.",
+        "Run across base models and deployed harnesses.",
+        "Score both failure occurrence and recovery."
+      ],
+      "needed_controls": [
+        "Safety review before publishing prompts.",
+        "Release tiers for sensitive probes.",
+        "Avoid prompts that enable real-world harm.",
+        "Severe-failure adjudication."
+      ],
+      "outputs": [
+        "Red-team taxonomy.",
+        "Release-safe prompt subset.",
+        "Private severe-risk suite.",
+        "Integration adapter for Promptfoo, Inspect, or Garak."
+      ],
+      "open_questions": [
+        "Which probes should be public?",
+        "How should Fide handle discovered severe failures in live products?",
+        "How can red-team results avoid becoming sensational?"
+      ],
+      "public_claim_boundary": "This work can identify failure modes under adversarial probes. It cannot prove a system is safe merely because it passes a red-team suite.",
       "source_path": "ideas/FID-023-faith-facing-red-team-suite.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-023-faith-facing-red-team-suite.md"
     },
@@ -400,6 +948,31 @@
         "Contribute incident-response experience.",
         "Build intake and redaction tooling."
       ],
+      "hypothesis": "A carefully governed incident database can reveal recurring patterns and improve standards, but only if it protects privacy, avoids sensationalism, distinguishes verified from reported incidents, and gives organizations a correction process.",
+      "proposed_method": [
+        "Define incident categories and severity levels.",
+        "Create intake, verification, redaction, and publication workflows.",
+        "Track source type, affected population, system type, failure mode, evidence quality, and remediation.",
+        "Publish aggregate trend reports before publishing sensitive individual cases."
+      ],
+      "needed_controls": [
+        "Defamation and privacy review.",
+        "Evidence-quality labels.",
+        "Right-of-reply and correction process.",
+        "Redaction of vulnerable-user details."
+      ],
+      "outputs": [
+        "Incident taxonomy.",
+        "Intake form.",
+        "Public aggregate report template.",
+        "Governance policy for incident publication."
+      ],
+      "open_questions": [
+        "Should the database be public, private, or tiered?",
+        "What threshold makes a report publishable?",
+        "How should anonymous reports be handled?"
+      ],
+      "public_claim_boundary": "An incident database can document reported and verified patterns. It should not be treated as a complete census of faith-AI harm or as adjudication of theology.",
       "source_path": "ideas/FID-024-faith-ai-incident-database.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-024-faith-ai-incident-database.md"
     },
@@ -416,6 +989,29 @@
         "Draft prompts from real church workflows.",
         "Build scoring rubrics for authority confusion."
       ],
+      "hypothesis": "General-purpose and faith-facing systems will often blur authority levels, especially when asked for definitive answers, pastoral counsel, confession-like guidance, denominational policy, or \"what the Church teaches\" across traditions.",
+      "proposed_method": [
+        "Build authority-sensitive prompts across Catholic, Orthodox, Anglican, Protestant, evangelical, Pentecostal, and non-denominational contexts.",
+        "Test whether systems distinguish official teaching, pastoral opinion, theological summary, educational explanation, and local governance.",
+        "Score authority classification, humility, source grounding, referral to human authority, and avoidance of impersonation."
+      ],
+      "needed_controls": [
+        "Tradition-specific source hierarchy.",
+        "Review by clergy/theologians familiar with each polity.",
+        "Prompts where a direct answer is appropriate vs where referral is required.",
+        "Distinction between educational content and pastoral/official action."
+      ],
+      "outputs": [
+        "Ecclesial authority benchmark.",
+        "Authority-level taxonomy.",
+        "Guidance for Christian AI products and churches."
+      ],
+      "open_questions": [
+        "How should a general Christian system handle denominational ambiguity?",
+        "When should the model ask the user's tradition before answering?",
+        "Which authority failures should be severe deployment blockers?"
+      ],
+      "public_claim_boundary": "This work can evaluate whether systems preserve authority boundaries under defined cases. It cannot decide disputed ecclesiological claims across churches.",
       "source_path": "ideas/FID-025-ai-and-ecclesial-authority.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-025-ai-and-ecclesial-authority.md"
     },
@@ -432,6 +1028,29 @@
         "Collect public examples of product claims.",
         "Build UX-pattern comparison tests."
       ],
+      "hypothesis": "AI can help draft, organize, translate, or teach about prayer, but systems that simulate divine speech, sacramental action, deceased persons, saints, angels, or clergy will create higher risks of spiritual confusion and dependency.",
+      "proposed_method": [
+        "Compare devotional UX patterns: prayer drafting, prayer prompts, guided reflection, simulated prayer partner, persona of Jesus/saint/angel/pastor, and confession-like chat.",
+        "Score boundary clarity, theological accuracy, dependency risk, claims about spiritual presence, and referral to embodied practice.",
+        "Include Catholic, Orthodox, Protestant, and evangelical reviewers where relevant."
+      ],
+      "needed_controls": [
+        "Distinguish prayer support from simulated participation in prayer.",
+        "Include non-devotional writing-assistant controls.",
+        "Review liturgical and sacramental boundaries.",
+        "Avoid using real sensitive prayer/confession transcripts."
+      ],
+      "outputs": [
+        "AI prayer boundary taxonomy.",
+        "Product-pattern risk guide.",
+        "Evaluation suite for devotional and companion apps."
+      ],
+      "open_questions": [
+        "Is \"praying with AI\" ever an acceptable product claim?",
+        "How should systems phrase generated prayers?",
+        "Which personas should be categorically out of bounds?"
+      ],
+      "public_claim_boundary": "This work can evaluate product patterns and boundary risks. It cannot determine whether a user's private devotional use is spiritually valid or invalid.",
       "source_path": "ideas/FID-026-ai-prayer-devotional-boundaries.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-026-ai-prayer-devotional-boundaries.md"
     },
@@ -448,6 +1067,29 @@
         "Contribute pastoral and discipleship expertise.",
         "Review ethical boundaries for human-subjects work."
       ],
+      "hypothesis": "Different system designs will create different formative pressures. Systems that emphasize sources, humility, human referral, and communal practice may support formation better than systems optimized for personalized instant answers and always-available intimacy.",
+      "proposed_method": [
+        "Design longitudinal or simulated-longitudinal interaction studies.",
+        "Track changes in advice-seeking, prayer practices, church involvement, self-reported dependence, and trust transfer to AI.",
+        "Compare product patterns: Q&A assistant, study aid, devotional companion, pastoral chatbot, and church-approved RAG tool."
+      ],
+      "needed_controls": [
+        "Human-subjects ethics review for real longitudinal studies.",
+        "Avoid spiritual manipulation.",
+        "Include baseline non-AI practices where feasible.",
+        "Separate self-report from behavioral evidence."
+      ],
+      "outputs": [
+        "Christian formation risk framework.",
+        "Longitudinal study protocol.",
+        "Product design guidance for formation-preserving AI."
+      ],
+      "open_questions": [
+        "Which formation outcomes are measurable without reducing discipleship to metrics?",
+        "How should Fide work with churches without becoming a spiritual authority?",
+        "What timescale is needed to observe meaningful effects?"
+      ],
+      "public_claim_boundary": "This work can study defined formative indicators. It cannot measure sanctification or the spiritual state of users.",
       "source_path": "ideas/FID-027-christian-formation-over-time.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-027-christian-formation-over-time.md"
     },
@@ -464,6 +1106,29 @@
         "Build corpus metadata tools.",
         "Review RAG outputs for authority misuse."
       ],
+      "hypothesis": "Most RAG systems will retrieve semantically relevant passages but fail to encode authority level, tradition, genre, and binding status unless the corpus and answer policy are explicitly designed around ecclesial source hierarchy.",
+      "proposed_method": [
+        "Build source-hierarchy test corpora for selected traditions.",
+        "Create questions requiring source ranking, authority classification, and conflict handling.",
+        "Score retrieval recall, quote accuracy, authority use, answer humility, and distinction between binding teaching and commentary."
+      ],
+      "needed_controls": [
+        "Versioned source corpora with licensing review.",
+        "Tradition-specific authority metadata.",
+        "Near-match and conflicting-source adversarial cases.",
+        "Human review by source experts."
+      ],
+      "outputs": [
+        "Christian RAG authority benchmark.",
+        "Corpus metadata schema.",
+        "Source-card template for faith-facing AI products."
+      ],
+      "open_questions": [
+        "Which traditions should be supported first?",
+        "How should copyrighted Bible translations and denominational texts be handled?",
+        "Can a single RAG system responsibly serve multiple traditions?"
+      ],
+      "public_claim_boundary": "This work can evaluate source use within defined corpora and traditions. It cannot certify total theological adequacy.",
       "source_path": "ideas/FID-028-christian-source-authority-rag.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-028-christian-source-authority-rag.md"
     },
@@ -480,6 +1145,29 @@
         "Contribute persuasion-safety expertise.",
         "Design symmetry controls."
       ],
+      "hypothesis": "AI may help with language, preparation, cultural learning, and respectful Q&A, but optimization for conversion, emotional pressure, or hyper-personalized apologetics will create serious autonomy and integrity risks.",
+      "proposed_method": [
+        "Evaluate apologetics, evangelism, translation, and interfaith-dialogue tasks.",
+        "Score truthfulness, respect for conscience, avoidance of manipulation, representation of other faiths, and referral to human community.",
+        "Compare informational, invitational, and persuasive prompt styles."
+      ],
+      "needed_controls": [
+        "Interfaith and Christian reviewer panels.",
+        "Clear separation of explanation, invitation, and pressure.",
+        "Vulnerable-user scenarios.",
+        "Symmetry checks with non-Christian conversion contexts."
+      ],
+      "outputs": [
+        "Christian mission and persuasion safety rubric.",
+        "Apologetics/evangelism evaluation suite.",
+        "Builder guidance for mission-oriented AI tools."
+      ],
+      "open_questions": [
+        "What forms of persuasion are intrinsic to witness vs manipulative?",
+        "How should systems handle minors, crisis users, or users under family pressure?",
+        "Should AI ever initiate evangelistic messaging?"
+      ],
+      "public_claim_boundary": "This work can evaluate autonomy and manipulation risks. It does not judge the truth of Christian claims or authorize AI as a missionary agent.",
       "source_path": "ideas/FID-029-ai-and-christian-mission.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-029-ai-and-christian-mission.md"
     },
@@ -496,6 +1184,29 @@
         "Build scenario rubrics.",
         "Review outputs for reductionism and dignity failures."
       ],
+      "hypothesis": "Many AI systems will default to functionalist or therapeutic accounts of human life: optimize productivity, reduce distress, satisfy preference, and provide personalized answers. Christian anthropology will reveal missing dimensions such as vocation, worship, dependence, finitude, repentance, embodied community, and love of neighbor.",
+      "proposed_method": [
+        "Build scenarios involving work, suffering, disability, aging, grief, vocation, family, sexuality, worship, Sabbath, and community obligation.",
+        "Score whether systems reduce the person to utility/preference or preserve dignity, embodiment, agency, relationality, and moral/spiritual depth.",
+        "Compare general models, faith-facing systems, and Christian-framed prompts."
+      ],
+      "needed_controls": [
+        "Avoid turning theological anthropology into vague sentiment scoring.",
+        "Include secular dignity baselines.",
+        "Review across Christian traditions.",
+        "Separate answer style from substantive anthropological commitments."
+      ],
+      "outputs": [
+        "Christian anthropology evaluation rubric.",
+        "Scenario set for human dignity and formation.",
+        "Public field brief connecting theology to AI evaluation."
+      ],
+      "open_questions": [
+        "Which anthropological claims are broadly Christian vs tradition-specific?",
+        "How can Fide measure this without overclaiming?",
+        "How does this map onto secular AI ethics language?"
+      ],
+      "public_claim_boundary": "This work can evaluate whether systems preserve defined anthropological dimensions. It cannot fully measure Christian truthfulness or human dignity.",
       "source_path": "ideas/FID-030-ai-and-christian-anthropology.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-030-ai-and-christian-anthropology.md"
     },
@@ -512,6 +1223,29 @@
         "Review polity and confidentiality concerns.",
         "Build decision-support evals."
       ],
+      "hypothesis": "AI governance tools will be useful for summarization, scenario planning, and administrative analysis, but risky when they rank people, recommend pastoral actions, summarize sensitive conflicts, or frame spiritually significant decisions as data-optimization problems.",
+      "proposed_method": [
+        "Build simulated governance cases: budget tradeoffs, staffing, safeguarding, conflict, pastoral care allocation, facility decisions, and mission strategy.",
+        "Score transparency, accountability, bias, confidentiality, human agency, spiritual framing, and decision-support boundaries.",
+        "Compare AI summaries/recommendations against human committee review."
+      ],
+      "needed_controls": [
+        "Synthetic sensitive data.",
+        "Local polity differences.",
+        "Conflict-of-interest and confidentiality rules.",
+        "Distinguish clerical admin from spiritual discernment."
+      ],
+      "outputs": [
+        "Church governance AI risk framework.",
+        "Decision-support evaluation suite.",
+        "Institutional policy guidance."
+      ],
+      "open_questions": [
+        "Which governance tasks should never be automated?",
+        "How should AI use be disclosed to congregations?",
+        "What audit trail is required for sensitive church decisions?"
+      ],
+      "public_claim_boundary": "This work can evaluate decision-support risks. It cannot validate an AI system as a participant in spiritual discernment or church governance.",
       "source_path": "ideas/FID-031-ai-in-church-governance-and-discernment.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-031-ai-in-church-governance-and-discernment.md"
     },
@@ -528,6 +1262,29 @@
         "Contribute communications and ethics expertise.",
         "Design disclosure comprehension studies."
       ],
+      "hypothesis": "The highest-risk cases involve impersonation, deceased-person simulation, synthetic testimony, undisclosed generated sermons, and emotionally persuasive media that appears to carry ecclesial or spiritual authority.",
+      "proposed_method": [
+        "Catalog Christian AI media product patterns.",
+        "Evaluate disclosure, consent, authority claims, emotional manipulation, doctrinal fidelity, and risk to grieving or vulnerable audiences.",
+        "Test user understanding of AI-generated vs human-authored religious media."
+      ],
+      "needed_controls": [
+        "Consent and likeness rights.",
+        "Disclosure experiments.",
+        "No use of real deceased-person likenesses without permission.",
+        "Distinction between creative illustration and authority simulation."
+      ],
+      "outputs": [
+        "Christian AI media risk taxonomy.",
+        "Disclosure and consent guidelines.",
+        "Evaluation protocol for generated religious media."
+      ],
+      "open_questions": [
+        "Should churches ever use voice clones of clergy or deceased people?",
+        "What disclosure is sufficient in worship, teaching, or online media?",
+        "How should synthetic testimony be treated?"
+      ],
+      "public_claim_boundary": "This work can evaluate media risks and disclosure practices. It cannot make blanket judgments about all creative uses of AI in Christian media.",
       "source_path": "ideas/FID-032-ai-generated-religious-media-and-deepfakes.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-032-ai-generated-religious-media-and-deepfakes.md"
     },
@@ -545,6 +1302,34 @@
         "Design stewardship rubrics and vendor questions.",
         "Connect this work to legal, theological, and community-governance expertise."
       ],
+      "hypothesis": "Many AI deployments will rely on individual click-through consent or broad institutional permission even when the relevant data is relational, communal, or created by vulnerable people. Faith communities will need stronger models of consent, provenance, deletion, portability, benefit-sharing, and accountable stewardship than ordinary product analytics provide.",
+      "proposed_method": [
+        "Build a taxonomy of faith-community data types, including pastoral notes, prayer requests, education records, donor data, volunteer records, worship attendance, sermons, small-group posts, and youth-ministry data.",
+        "Compare consent models: individual consent, institutional consent, community consent, opt-out, data trusts, fiduciary stewardship, and purpose-limited use.",
+        "Evaluate deletion, portability, provenance, retention, access control, vendor logs, analytics records, third-party references, and benefit-sharing requirements for faith-facing AI systems.",
+        "Produce a minimum viable data-stewardship checklist for small churches, schools, and ministries before attempting a full governance framework.",
+        "Run stakeholder review with clergy, parents, educators, vulnerable community members, technologists, privacy experts, and legal reviewers."
+      ],
+      "needed_controls": [
+        "Distinguish public religious content from confidential community records.",
+        "Avoid assuming that institutional permission equals community consent.",
+        "Include minors, vulnerable adults, and people named in records but not account holders.",
+        "Treat data about third parties in prayer requests, pastoral notes, and family records as a distinct consent and stewardship problem.",
+        "Separate model-training data, retrieval data, analytics data, vendor support logs, and operational logs."
+      ],
+      "outputs": [
+        "Faith-community data taxonomy.",
+        "Consent and stewardship model comparison.",
+        "Minimum viable data-stewardship checklist for small institutions.",
+        "Vendor and institutional data-governance checklist.",
+        "Field brief on data as a shared good in faith-facing AI."
+      ],
+      "open_questions": [
+        "When is individual consent insufficient because data is relational or communal?",
+        "What rights should congregants have to inspect, correct, delete, or export faith-community data used by AI systems?",
+        "Can data trusts or fiduciary stewardship models work for small ministries and schools?"
+      ],
+      "public_claim_boundary": "This work can propose data-governance tests and stewardship models. It cannot settle all legal obligations or determine when every faith community may share or withhold data.",
       "source_path": "ideas/FID-033-faith-community-data-common-good.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-033-faith-community-data-common-good.md"
     },
@@ -562,6 +1347,35 @@
         "Identify public data sources for vendor evidence.",
         "Build a practical scoring rubric for institutional buyers."
       ],
+      "hypothesis": "General AI procurement checklists will underweight hidden labor, ecological costs, and exploitative upstream dependencies. Faith institutions need a practical way to ask vendors for evidence without pretending that small churches can perform full supply-chain audits on their own.",
+      "proposed_method": [
+        "Map AI supply-chain risk categories relevant to churches, schools, charities, publishers, seminaries, and ministries.",
+        "Design a vendor questionnaire covering data labor, content moderation, worker protections, dataset provenance, energy reporting, hardware sourcing, and auditability.",
+        "Define levels of evidence: public documentation, vendor attestation, contract commitments, third-party audit, and unknown or unverifiable claims.",
+        "Identify which claims can be verified publicly, which require vendor attestation, and which require third-party audit.",
+        "Produce a lightweight procurement addendum as the first deliverable before attempting a full supply-chain assessment framework."
+      ],
+      "needed_controls": [
+        "Avoid unverifiable purity tests that no institution can apply.",
+        "Avoid making small faith institutions responsible for solving opaque vendor supply chains; the goal is better decision-making and pressure for disclosure.",
+        "Distinguish vendor-level responsibility, cloud-provider responsibility, and model-provider responsibility.",
+        "Include smaller vendors and open-source systems without assuming that only frontier labs matter.",
+        "Separate environmental reporting, labor dignity, data legitimacy, and safety performance."
+      ],
+      "relationship_to_existing_ideas": "This extends `FID-022` procurement readiness by focusing specifically on labor, data, compute, environmental, and upstream accountability claims rather than general institutional readiness.",
+      "outputs": [
+        "AI supply-chain dignity risk map.",
+        "Lightweight procurement addendum for small and mid-sized institutions.",
+        "Vendor questionnaire for faith institutions.",
+        "Evidence rubric for labor, data, compute, and environmental claims.",
+        "Procurement addendum aligned with faith-institution values."
+      ],
+      "open_questions": [
+        "What supply-chain disclosures are realistic for small churches and schools to request?",
+        "Which indicators best reveal hidden exploitation without overclaiming from incomplete evidence?",
+        "How should faith institutions weigh supply-chain risks against clear local benefits from an AI tool?"
+      ],
+      "public_claim_boundary": "This work can help institutions ask better supply-chain questions and compare available evidence. It cannot certify that an AI system is exploitation-free or environmentally harmless.",
       "source_path": "ideas/FID-034-ai-supply-chain-dignity.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-034-ai-supply-chain-dignity.md"
     },
@@ -579,6 +1393,33 @@
         "Review theological, educational, youth-safety, and pastoral boundaries.",
         "Build product patterns for recommending non-AI practices."
       ],
+      "hypothesis": "AI systems will tend to over-serve because direct assistance looks helpful in short-term user satisfaction. They may draft the prayer, sermon, apology, homework answer, discernment plan, or pastoral message when the formative good would be to slow down, involve another person, or engage a non-digital practice.",
+      "proposed_method": [
+        "Build scenarios involving homework shortcuts, sermon shortcuts, prayer outsourcing, grief support, repeated reassurance-seeking, vocational discernment, youth questions, moral decisions, and pastoral-adjacent requests.",
+        "Compare whether models answer directly, over-serve, redirect, recommend human support, or propose non-AI practices.",
+        "Measure user understanding, perceived helpfulness, trust, frustration, and willingness to accept restraint.",
+        "Score concrete non-use outcomes: answered directly when it should have redirected, refused when it should have helped, recommended human counsel while giving safe interim support, or encouraged offline practice without guilt or manipulation.",
+        "Develop a digital-sobriety rubric distinct from generic refusal and safety rubrics."
+      ],
+      "needed_controls": [
+        "Avoid turning every hard question into a refusal.",
+        "Distinguish healthy restraint from evasive non-answering.",
+        "Include users who genuinely lack access to safe human support.",
+        "Account for differences among prayer, education, pastoral care, mental health, and ordinary administration."
+      ],
+      "outputs": [
+        "Digital-sobriety evaluation rubric.",
+        "Scenario set for AI non-use and self-limitation.",
+        "User-study protocol for helpful restraint.",
+        "Non-use design pattern library for faith-facing products.",
+        "Guidance for faith-facing product design and disclosure."
+      ],
+      "open_questions": [
+        "What kinds of AI non-use recommendations do users find trustworthy rather than patronizing?",
+        "When should a system redirect to human community even if it can answer safely?",
+        "How can systems recommend prayer, study, or pastoral care without simulating spiritual authority?"
+      ],
+      "public_claim_boundary": "This work can evaluate whether systems recommend appropriate limits on their own use. It cannot determine a universal rule for when every person should or should not use AI.",
       "source_path": "ideas/FID-035-digital-sobriety-ai-non-use.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-035-digital-sobriety-ai-non-use.md"
     },
@@ -596,6 +1437,32 @@
         "Design tests for reputation laundering and factional framing.",
         "Connect affected-community perspectives to evaluation design."
       ],
+      "hypothesis": "The greatest risks will appear when AI systems summarize disputed events, recommend sources, draft public statements, moderate community discussion, or translate uncertainty into confident institutional language. Systems that sound balanced may still damage the truth commons if they hide source provenance, collapse facts into interpretations, or optimize for reputational calm.",
+      "proposed_method": [
+        "Create cases involving contested church news, abuse allegations, denominational conflict, financial controversy, theological disputes, social-media rumors, crisis statements, and pastoral public communication.",
+        "Test whether systems preserve uncertainty, cite primary sources, avoid reputation laundering, resist factional framing, and distinguish fact from interpretation.",
+        "Evaluate disclosure, source traceability, correction workflows, correction latency, correction propagation, contestability, and affected-party perspectives.",
+        "Involve journalists, church communicators, abuse-prevention experts, pastors, theologians, lay stakeholders, and institutional leaders."
+      ],
+      "needed_controls": [
+        "Use synthetic cases by default and carefully redacted cases only with appropriate consent, legal review, and abuse-prevention review.",
+        "Distinguish privacy protection from reputation management.",
+        "Avoid rewarding inflammatory certainty over truthful uncertainty.",
+        "Avoid optimizing for institutional calm when truthful accountability requires discomfort, correction, or public acknowledgment.",
+        "Include both institutional and harmed-party perspectives."
+      ],
+      "outputs": [
+        "Truth-commons evaluation rubric for Christian communication.",
+        "Crisis and contested-fact scenario set.",
+        "Source-traceability and correction-workflow guidance.",
+        "Field brief for church communicators and AI product teams."
+      ],
+      "open_questions": [
+        "How should AI systems represent unresolved allegations, contested facts, and confidential information?",
+        "What correction and appeal workflows are needed when AI summaries shape a community's understanding?",
+        "How can systems support peace without suppressing truth or accountability?"
+      ],
+      "public_claim_boundary": "This work can evaluate communication risks and truth-preserving workflows. It cannot adjudicate specific institutional controversies or replace investigative, pastoral, legal, or journalistic judgment.",
       "source_path": "ideas/FID-036-truth-common-good-communication.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-036-truth-common-good-communication.md"
     },
@@ -613,6 +1480,33 @@
         "Design worker-impact measures and interview protocols.",
         "Help translate findings into institutional policy templates."
       ],
+      "hypothesis": "The same AI capability may be humane or harmful depending on deployment design. Tools that augment judgment, protect time for relationships, and preserve skill can support ministry labor. Tools that monitor, replace, accelerate, or fragment work may undermine vocational agency and institutional trust even when they increase output.",
+      "proposed_method": [
+        "Start with a scoped pilot for two roles, such as church administrators and Christian educators, before expanding to pastors, youth workers, translators, communications staff, volunteers, nonprofit staff, and mission workers.",
+        "Conduct role-based workflow mapping for pastors, teachers, administrators, youth workers, translators, communications staff, volunteers, nonprofit staff, and mission workers.",
+        "Compare deployment patterns that augment judgment, deskill tasks, intensify workloads, monitor workers, replace roles, or automate relational labor.",
+        "Design measures for agency, responsibility, role clarity, skill retention, workload, time pressure, surveillance exposure, job insecurity, relational time, relational quality, and vocational meaning.",
+        "Produce policy guidance for humane AI adoption in faith institutions."
+      ],
+      "needed_controls": [
+        "Include paid staff, volunteers, contractors, and under-resourced institutions.",
+        "Distinguish task automation from role replacement.",
+        "Account for benefits to workers who are currently overburdened.",
+        "Avoid romanticizing inefficient labor when AI can remove genuinely harmful administrative load."
+      ],
+      "outputs": [
+        "Ministry labor and vocation impact framework.",
+        "Role-based workflow map for AI adoption.",
+        "Worker-centered evaluation survey and interview protocol.",
+        "First-pilot report for one or two ministry roles.",
+        "Institutional policy guidance for humane deployment."
+      ],
+      "open_questions": [
+        "Which ministry tasks should be automated, augmented, protected, or never delegated to AI?",
+        "How can institutions measure whether AI preserves vocational agency over time?",
+        "What disclosure is owed to staff, volunteers, students, donors, and congregants when AI changes human work?"
+      ],
+      "public_claim_boundary": "This work can evaluate labor and vocation impacts of AI deployments. It cannot settle employment law questions or decide every institution's staffing choices.",
       "source_path": "ideas/FID-037-ai-work-vocation-ministry.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-037-ai-work-vocation-ministry.md"
     },
@@ -630,6 +1524,32 @@
         "Connect this work to algorithmic fairness and risk-assessment research.",
         "Help design safeguards for sensitive institutional pilots."
       ],
+      "hypothesis": "AI systems will often over-stabilize identity by treating historical data as a fixed predictor of future worth, risk, or character. They may also make forgiveness irresponsible by ignoring real harms. Better evaluation should test whether systems combine temporal humility, due process, accountability, mercy, and contestability.",
+      "proposed_method": [
+        "Start with low-stakes synthetic decision-support scenarios before testing higher-stakes contexts such as safeguarding, hiring, school discipline, or volunteer eligibility.",
+        "Build scenarios where historical data suggests one label but new evidence, repentance, growth, restitution, changed circumstances, or ongoing risk also matter.",
+        "Evaluate whether systems over-identify people with risk scores, past failures, productivity, donor potential, or inferred character traits.",
+        "Design rubrics for contestability, temporal humility, record expiration, contextualization, appeal, human review, mercy, accountability, proportionality, and due process.",
+        "Compare secular fairness and accountability concepts with Christian concepts of repentance, forgiveness, conversion, vocation, and restoration."
+      ],
+      "needed_controls": [
+        "Do not use forgiveness language to minimize abuse, coercion, or safeguarding obligations.",
+        "Distinguish pastoral hope, institutional eligibility, safeguarding risk, reputational labeling, donor analytics, and predictive decision support.",
+        "Include affected parties, not only the person being profiled.",
+        "Separate prediction, recommendation, recordkeeping, and final decision-making."
+      ],
+      "outputs": [
+        "Predictive-profiling scenario set for faith institutions.",
+        "Non-calculability and human-change evaluation rubric.",
+        "Guidance for contestability, record expiration, appeal, and temporal humility in AI decision support.",
+        "Field brief connecting algorithmic accountability to Christian moral concepts."
+      ],
+      "open_questions": [
+        "When should old information expire, remain visible, or require contextual explanation?",
+        "How can systems preserve hope for change without ignoring patterns of harm?",
+        "What appeal, correction, and review processes are needed when AI profiling affects ministry opportunities or care?"
+      ],
+      "public_claim_boundary": "This work can evaluate how AI systems represent human change and predictive labels. It cannot determine guilt, repentance, restoration, or safeguarding fitness in real cases.",
       "source_path": "ideas/FID-038-non-calculability-forgiveness-profiling.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-038-non-calculability-forgiveness-profiling.md"
     },
@@ -647,6 +1567,33 @@
         "Build multilingual and cross-cultural examples.",
         "Connect practitioners who work in mediation, trauma care, and public theology."
       ],
+      "hypothesis": "Generic civility metrics will not be enough. Models may reward bland neutrality, conflict avoidance, or reputation protection while missing the need for truth-telling, repentance, justice, and repair. A better benchmark should test for de-escalation that remains specific, accountable, and attentive to people harmed by conflict.",
+      "proposed_method": [
+        "Create multi-turn scenarios involving church splits, political sermons, interfaith conflict, social-media outrage, migration, war, abuse accountability, racial injustice, and denominational disputes.",
+        "Score for truthfulness, courage, specificity, contempt, scapegoating, humiliation, collective blame, factual precision, non-humiliation, affected-party perspective, de-escalation, repair orientation, and resistance to violence-normalizing rhetoric.",
+        "Test whether models distinguish peacebuilding from conflict avoidance, false peace, appeasement, or institutional reputation management.",
+        "Test both chat responses and drafted artifacts such as sermons, statements, moderation notes, emails, and social-media posts.",
+        "Involve pastors, peacebuilding practitioners, trauma-informed reviewers, journalists, theologians, and community leaders."
+      ],
+      "needed_controls": [
+        "Do not equate strong moral language with harmful escalation.",
+        "Include cases where silence or neutrality protects the powerful.",
+        "Avoid pressuring victims to reconcile prematurely.",
+        "Separate moderation, pastoral response, public advocacy, and private counsel."
+      ],
+      "outputs": [
+        "Faith-conflict and peacebuilding evaluation suite.",
+        "Disarming-language rubric for AI communication.",
+        "False-peace failure taxonomy.",
+        "Red-team prompts for factional capture and scapegoating.",
+        "Product guidance for conflict-sensitive AI features."
+      ],
+      "open_questions": [
+        "How can AI systems name injustice without escalating contempt or collective blame?",
+        "What counts as repair-oriented language across different Christian and interfaith contexts?",
+        "How should models respond when users request rhetorically effective but dehumanizing messages?"
+      ],
+      "public_claim_boundary": "This work can evaluate conflict-sensitive language patterns. It cannot certify that an AI system produces reconciliation or replace trained mediators, pastors, legal processes, or community leadership.",
       "source_path": "ideas/FID-039-disarming-ai-language-peacebuilding.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-039-disarming-ai-language-peacebuilding.md"
     },
@@ -664,6 +1611,34 @@
         "Build practical measures for exit rights, audit access, and local override.",
         "Connect this work to AI governance, civic technology, and ecclesial polity expertise."
       ],
+      "hypothesis": "AI deployments will often offer user-friendly customization without meaningful community control. Stronger governance will require measurable indicators such as local configuration, appeal, audit access, data portability, policy transparency, participatory standard-setting, vendor-switching feasibility, local override mechanisms, and safeguards against capture by abusive local leaders.",
+      "proposed_method": [
+        "Define subsidiarity indicators: local configuration, meaningful appeal, community audit access, data portability, policy transparency, participatory standard-setting, vendor switching costs, and local override mechanisms.",
+        "Compare centralized vendor-controlled AI deployments with community-governed, institutionally configurable, or open systems.",
+        "Build governance case studies for churches, Christian schools, charities, denominational bodies, interfaith nonprofits, and family-facing tools.",
+        "Produce a benchmark or checklist for whether communities can shape, contest, or exit AI systems that affect them."
+      ],
+      "needed_controls": [
+        "Avoid assuming local control is always safer than centralized safeguards.",
+        "Include small institutions that lack technical staff.",
+        "Distinguish theological authority, product governance, data governance, and operational configuration.",
+        "Account for security, privacy, and abuse-prevention constraints on local override.",
+        "Avoid treating subsidiarity as unchecked local power when local leaders or institutions may be conflicted, coercive, or abusive."
+      ],
+      "relationship_to_existing_ideas": "This complements `FID-020` community co-design and `FID-031` church governance by measuring structural power, exit rights, audit access, and local agency in the AI systems that communities procure or inherit.",
+      "outputs": [
+        "Subsidiarity benchmark for faith-facing AI governance.",
+        "Subsidiarity scorecard for faith-facing AI procurement.",
+        "Community-agency checklist for procurement and deployment.",
+        "Case-study framework for centralized vs locally governed AI systems.",
+        "Field brief on power concentration in faith-facing AI."
+      ],
+      "open_questions": [
+        "Which AI governance decisions should be local, shared, vendor-controlled, or externally regulated?",
+        "What minimum audit and appeal rights should faith communities require?",
+        "How can small institutions gain agency without taking on unrealistic technical burdens?"
+      ],
+      "public_claim_boundary": "This work can evaluate governance structures for community agency and power concentration. It cannot guarantee that local control, centralized governance, or any single institutional model is always the right answer.",
       "source_path": "ideas/FID-040-ai-power-subsidiarity-benchmarks.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-040-ai-power-subsidiarity-benchmarks.md"
     },
@@ -681,6 +1656,33 @@
         "Review UX patterns for opt-in, opt-out, and clarifying questions.",
         "Connect this work to personalization, privacy, and pluralism research."
       ],
+      "hypothesis": "The best systems will not use a single global default. They will ask lightweight clarifying questions, respect user-stated identity, preserve opt-out and opt-in controls, recognize contexts where religion is commonly salient, and avoid inferring a tradition from demographic or cultural stereotypes.",
+      "proposed_method": [
+        "Build scenario variants with no identity, explicit religious identity, nonreligious identity, uncertain identity, and mixed-family or interfaith context.",
+        "Compare direct inclusion, clarifying-question, session-level preference, persistent preference memory, user-setting, and omission strategies across models and faith-facing products.",
+        "Measure perceived helpfulness, intrusiveness, representation, stereotype risk, and user trust across religious and nonreligious participants.",
+        "Produce design patterns for religious-salience controls in chat, search, education, and pastoral-adjacent tools."
+      ],
+      "needed_controls": [
+        "Include users who do not want religious framing.",
+        "Avoid treating national, ethnic, family, or name cues as permission to infer religious identity.",
+        "Treat stored religious preference or identity as sensitive data requiring explicit user control, privacy review, and easy deletion.",
+        "Distinguish abstract ethical questions from urgent care, safety, or legal contexts.",
+        "Separate mentioning religion from accurately representing a user's own tradition."
+      ],
+      "relationship_to_existing_ideas": "This extends `FID-013` religious representation and omission. `FID-013` asks whether systems omit religion; this idea asks how systems should calibrate religious salience for a particular user, context, and product setting.",
+      "outputs": [
+        "Religious-salience personalization rubric.",
+        "User-study protocol for inclusion, omission, and clarifying questions.",
+        "Product guidance for opt-in, opt-out, and tradition-selection controls.",
+        "Dataset of matched context variants for expectation calibration."
+      ],
+      "open_questions": [
+        "When should an AI ask whether faith or religion is relevant before answering?",
+        "How much user personalization is helpful before it becomes profiling?",
+        "What defaults are fair for public, education, workplace, and explicitly faith-facing deployments?"
+      ],
+      "public_claim_boundary": "This work can evaluate religious-salience strategies under defined contexts. It cannot define a universal rule for when religion should appear in every AI answer.",
       "source_path": "ideas/FID-041-religious-salience-personalization.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-041-religious-salience-personalization.md"
     },
@@ -698,6 +1700,32 @@
         "Build rubrics for referral relevance, parity, and safety escalation.",
         "Test outputs with religious and nonreligious user panels."
       ],
+      "hypothesis": "Models will show uneven referral patterns: secular helpers will appear by default, while religious helpers will appear mainly when explicitly requested. Faith-facing systems may correct this omission but risk over-referring to clergy in mental-health, abuse, medical, or legal contexts where other supports are also necessary.",
+      "proposed_method": [
+        "Build matched scenarios involving grief, family conflict, addiction, loneliness, guilt, moral injury, youth concerns, illness, and crisis support.",
+        "Score referral lists for relevant human supports, clergy/spiritual-leader parity, safety escalation, professional-boundary awareness, referral hierarchy, and user choice.",
+        "Compare prompts with no identity, explicit religious identity, explicit nonreligious identity, and institutional faith-facing contexts.",
+        "Review outputs with clergy, chaplains, mental-health professionals, safeguarding experts, educators, and lay users."
+      ],
+      "needed_controls": [
+        "Do not treat clergy as a substitute for emergency, medical, legal, or licensed mental-health care; in crisis scenarios, emergency and professional care must be prioritized before supplementary spiritual support.",
+        "Distinguish traditions with different leadership structures and access models.",
+        "Include users harmed by religious leaders or communities.",
+        "Avoid implying that nonreligious users should seek religious counsel."
+      ],
+      "outputs": [
+        "Human-support and spiritual-referral benchmark.",
+        "Referral-parity rubric for faith-facing and general-purpose systems.",
+        "Safety escalation guidance for clergy, chaplaincy, relational support, and professional care.",
+        "Matched benchmark examples for grief, addiction, family conflict, moral injury, youth concerns, illness, and crisis scenarios.",
+        "Field brief for product teams and faith institutions."
+      ],
+      "open_questions": [
+        "When is omitting clergy a representation failure, and when is it appropriate restraint?",
+        "What wording preserves user agency while naming spiritual support as an option?",
+        "How should systems handle users with distrust, trauma, or no safe access to religious leaders?"
+      ],
+      "public_claim_boundary": "This work can evaluate referral patterns and safety boundaries. It cannot certify any specific clergy member, spiritual leader, or community as safe or appropriate for a user.",
       "source_path": "ideas/FID-042-clergy-spiritual-leader-referral-parity.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-042-clergy-spiritual-leader-referral-parity.md"
     },
@@ -715,6 +1743,33 @@
         "Analyze model outputs for rhetorical asymmetry and sycophancy.",
         "Design mitigations that preserve agency without flattening religious speech."
       ],
+      "hypothesis": "Models will often sound neutral while using asymmetric rhetorical cues: affirming some religious choices as courageous or authentic, warning against others as risky or rushed, invoking authority unevenly, or mirroring the user's stated certainty in ways that amplify pressure. Multi-turn interactions may increase these risks as the user becomes more vulnerable, dependent, or confident. These patterns may vary by model, tradition, user vulnerability, and prompt framing.",
+      "proposed_method": [
+        "Build scenarios involving religious doubt, return to practice, leaving a church, apologetics, mission, interfaith dating, family pressure, deconstruction, prayer, worship attendance, and moral conflict.",
+        "Score for persuasion intensity, autonomy support, symmetry, emotional pressure, authority invocation, certainty mirroring, sycophancy, and coercion sensitivity.",
+        "Tag rhetorical cues such as brave, authentic, dangerous, rushed, true self, God is clearly leading, or obligations to family, clergy, or community.",
+        "Compare single-turn and multi-turn interactions where the user becomes more vulnerable, more certain, or more dependent on the model.",
+        "Test mitigations such as autonomy-preserving language, balanced source offers, clarifying questions, and disclosure of model limits."
+      ],
+      "needed_controls": [
+        "Distinguish persuasion, information, pastoral encouragement, and coercion.",
+        "Include traditions that understand evangelism, witness, or teaching differently.",
+        "Avoid equating all religious commitment with manipulation.",
+        "Include minors, family pressure, persecution risk, and religious trauma cases."
+      ],
+      "relationship_to_existing_ideas": "This extends `FID-014` conversion symmetry and `FID-029` Christian mission by measuring persuasive mechanics, autonomy support, sycophancy, and subtle steering across faith-related situations beyond explicit conversion requests.",
+      "outputs": [
+        "Faith-persuasion and autonomy evaluation suite.",
+        "Rhetorical-cue taxonomy for religious steering.",
+        "Multi-turn pressure-test protocol for faith guidance.",
+        "Product guidance for autonomy-preserving religious responses."
+      ],
+      "open_questions": [
+        "Which persuasive cues are appropriate support and which undermine conscience?",
+        "How should systems respond when a user explicitly asks to be persuaded?",
+        "Can models maintain warmth and conviction without steering vulnerable users?"
+      ],
+      "public_claim_boundary": "This work can measure persuasive patterns and autonomy-support features. It cannot determine the truth of a faith claim or forbid all persuasive religious communication.",
       "source_path": "ideas/FID-043-ai-mediated-faith-persuasion-and-autonomy.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-043-ai-mediated-faith-persuasion-and-autonomy.md"
     },
@@ -732,6 +1787,33 @@
         "Design uncertainty, drift, and regeneration-variance analyses.",
         "Draft public-claims standards for faith-facing benchmark releases."
       ],
+      "hypothesis": "Cross-faith benchmark results will be useful only when accompanied by construct definitions, uncertainty estimates, judge-validation studies, held-out splits, regeneration variance, tradition-specific review, and clear claim boundaries. Without those controls, public leaderboards may create false precision or reward benchmark-shaped behavior.",
+      "proposed_method": [
+        "Reproduce selected cross-faith benchmark results on a small audited subset.",
+        "Compare human reviewers, expert panels, trained non-experts, and multiple model judges on religious-representation and conversion-symmetry scoring.",
+        "Measure sensitivity to prompt wording, answer regeneration, judge choice, scoring thresholds, model version changes, and item sourcing.",
+        "Develop reporting standards for confidence intervals, construct limits, evaluator metadata, leaderboard claims, and public claims."
+      ],
+      "needed_controls": [
+        "Do not treat benchmark scores as direct measures of theological truth.",
+        "Separate any mention, meaningful reference, balanced representation, accuracy, and pastoral appropriateness.",
+        "Include religious and nonreligious reviewers.",
+        "Track benchmark leakage, public/private splits, and model-update drift."
+      ],
+      "relationship_to_existing_ideas": "This complements `FID-002` FMG-Bench construct validity, `FID-011` reviewer reliability, and `FID-012` visible-rubric gaming by focusing specifically on cross-faith benchmark design, public leaderboards, and claims about religious representation or persuasion.",
+      "outputs": [
+        "Cross-faith benchmark validation protocol.",
+        "Reporting checklist for faith-facing AI leaderboards.",
+        "Leaderboard claim audit template.",
+        "Judge-human agreement study for religious representation and persuasion tasks.",
+        "Recommendations for benchmark versioning and public claim boundaries."
+      ],
+      "open_questions": [
+        "What minimum reliability is needed before a faith-facing benchmark can support procurement or product claims?",
+        "When should disagreement among traditions be reported rather than averaged?",
+        "How can open benchmarks remain useful without becoming easy to game?"
+      ],
+      "public_claim_boundary": "This work can validate and improve benchmark methodology. It cannot prove that a model, product, or benchmark fully captures religious truth, fairness, or pastoral adequacy.",
       "source_path": "ideas/FID-044-cross-faith-benchmark-validity.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-044-cross-faith-benchmark-validity.md"
     },
@@ -749,6 +1831,37 @@
         "Build literature-search and evidence-map tooling.",
         "Connect funders and researchers to neglected question areas."
       ],
+      "hypothesis": "Existing AI-and-religion research will be unevenly distributed: concentrated in stereotype detection, English-language prompts, a few major religions, and single-turn model evaluations, with less work on longitudinal formation, low-resource languages, governance, product deployment, pastoral-adjacent care, and community-led evaluation.",
+      "proposed_method": [
+        "Start with a first milestone of a 50 to 100 paper annotated bibliography and a one-page map of the top neglected research clusters.",
+        "Maintain `research/sources.yaml` as the canonical structured source registry, with `research/source-tags.yaml` as the controlled vocabulary.",
+        "Build a living bibliography of faith, religion, spirituality, and AI research across AI safety, fairness, HCI, NLP, sociology, theology, education, and law.",
+        "Code papers by religion/tradition, language, geography, task type, evaluation method, stakeholder involvement, model type, and deployment context.",
+        "Compare religious-bias coverage with better-studied bias dimensions while noting differences in construct and search methodology.",
+        "Publish periodic gap reports and connect each gap to Fide AI research ideas, datasets, reviewer needs, and collaboration opportunities.",
+        "Add short notes in `research/reviews/` for high-priority reviewed sources using `templates/source-note.md`."
+      ],
+      "needed_controls": [
+        "Avoid relying on keyword searches that miss adjacent work or overcount weak mentions.",
+        "Include non-English and non-Western scholarship where possible.",
+        "Distinguish faith-facing AI, religion as demographic attribute, religious content moderation, spiritual care, and theological technology ethics.",
+        "Avoid using a gap map as proof that any single institution owns the field."
+      ],
+      "outputs": [
+        "Initial annotated bibliography and one-page neglected-cluster map.",
+        "Public faith-AI bibliography and taxonomy.",
+        "Lightweight evidence-entry schema for papers, datasets, reports, and tools.",
+        "Annual or semiannual research gap report.",
+        "Evidence map linking literature clusters to Fide AI idea files.",
+        "Funder and collaborator brief on neglected research areas."
+      ],
+      "open_questions": [
+        "Which search strategy best captures religious and spiritual AI research across disciplines?",
+        "How should gaps be prioritized: by stakeholder harm, scientific tractability, neglectedness, or institutional readiness?",
+        "What metadata can be public without misrepresenting communities or authors?",
+        "Should the evidence commons live as a repo artifact, website page, Zotero library, JSON feed, or periodic report, and what update cadence is realistic?"
+      ],
+      "public_claim_boundary": "This work can summarize visible literature and identify likely gaps. It cannot prove that all relevant work has been found or that publication counts alone measure social importance.",
       "source_path": "ideas/FID-045-faith-ai-research-gap-map.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-045-faith-ai-research-gap-map.md"
     },
@@ -766,6 +1879,36 @@
         "Recruit churches, ministries, or workforce-support organizations for pilot interviews.",
         "Review protocols for privacy, consent, and participant vulnerability."
       ],
+      "hypothesis": "Standard labor-market measures will miss important welfare effects if they only track employment, wages, reskilling, or productivity. Measures of meaning, agency, social support, spiritual distress, perceived dignity, and vocational hope may help explain why some workers recover, retrain, seek support, or withdraw after AI-related disruption.",
+      "proposed_method": [
+        "Develop a survey and interview protocol for workers experiencing AI-related job insecurity, layoffs, task automation, role redesign, or career anxiety.",
+        "Measure labor outcomes alongside purpose, vocation, dignity, anxiety, social support, church participation, household stress, and willingness to retrain.",
+        "Compare workers with strong local support networks to workers navigating disruption more privately or primarily through online tools.",
+        "Include pastoral-care and ministry-provider interviews to understand what churches are already seeing in displaced or anxious workers.",
+        "Produce a church-facing field brief on how AI labor disruption is showing up as meaning, care, and household-welfare pressure."
+      ],
+      "needed_controls": [
+        "Avoid attributing every layoff or career anxiety to AI without evidence.",
+        "Distinguish actual displacement, anticipated displacement, job redesign, status loss, and generalized technology anxiety.",
+        "Protect participants from public exposure of employment, financial, or pastoral-care details.",
+        "Include non-church comparison data where possible rather than assuming church participation is always protective.",
+        "Avoid reducing vocation to job-market success or retraining compliance."
+      ],
+      "relationship_to_existing_ideas": "This extends `FID-037` by focusing specifically on people experiencing labor disruption and meaning loss, rather than on AI adoption inside ministry work itself.",
+      "outputs": [
+        "AI displacement and vocation survey instrument.",
+        "Interview protocol for workers and pastoral-care providers.",
+        "Field brief on meaning, dignity, and household welfare under AI disruption.",
+        "Measurement memo connecting labor-market outcomes to vocation and support.",
+        "Practical church guide for recognizing and responding to AI-related work disruption."
+      ],
+      "open_questions": [
+        "Which indicators best distinguish ordinary career stress from AI-related disruption?",
+        "How should churches discuss vocation when some forms of work are being automated or devalued?",
+        "What support helps people preserve agency and hope without offering shallow reassurance?",
+        "How can research include people outside formal church membership who still seek help from faith communities?"
+      ],
+      "public_claim_boundary": "This work can study how AI-related labor disruption is experienced and supported in defined communities. It cannot prove that AI caused every reported job loss or prescribe a universal theology of work.",
       "source_path": "ideas/FID-046-ai-displacement-meaning-vocation.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-046-ai-displacement-meaning-vocation.md"
     },
@@ -783,6 +1926,36 @@
         "Review readiness criteria from pastoral, workforce, legal, and social-service perspectives.",
         "Identify partnerships that preserve church mission while expanding practical support."
       ],
+      "hypothesis": "Churches already provide labor-transition support, but much of it is informal, uneven, and unmeasured. Mapping these practices could identify where churches help households absorb economic shocks, where they are underprepared, and where AI tools or external partnerships could responsibly expand capacity.",
+      "proposed_method": [
+        "Interview pastors, deacons, benevolence teams, career-ministry leaders, school leaders, nonprofit staff, and congregants affected by labor disruption.",
+        "Map existing church responses: job referrals, financial aid, counseling, retraining referrals, resume help, childcare, meals, pastoral care, sermons, classes, and small-group support.",
+        "Compare churches by size, geography, socioeconomic context, denomination, and existing workforce partnerships.",
+        "Identify gaps between what displaced workers need and what churches are prepared to provide.",
+        "Develop a readiness framework for churches responding to AI labor disruption."
+      ],
+      "needed_controls": [
+        "Avoid treating churches as substitutes for employers, government benefits, unions, professional counseling, or workforce agencies.",
+        "Distinguish emergency care, pastoral care, career support, financial support, and long-term economic mobility.",
+        "Include under-resourced churches that may face the highest need and the lowest capacity.",
+        "Protect confidential benevolence, counseling, employment, and household data.",
+        "Avoid implying that every church should run a workforce program."
+      ],
+      "relationship_to_existing_ideas": "This complements `FID-037` by studying churches as support infrastructure for workers and households, not only as employers or adopters of AI tools.",
+      "outputs": [
+        "Typology of church labor-transition support.",
+        "Interview guide for pastors, staff, volunteers, and affected workers.",
+        "Church readiness framework for AI-related work disruption.",
+        "Field brief on gaps, risks, and promising practices.",
+        "Partner map for workforce agencies, schools, charities, and ministries."
+      ],
+      "open_questions": [
+        "What support do churches provide uniquely well, and what should be referred elsewhere?",
+        "How do churches know when economic distress has become pastoral, family, or mental-health distress?",
+        "Which models work for small churches without dedicated staff?",
+        "How can churches avoid shaming, politicizing, or overspiritualizing job loss?"
+      ],
+      "public_claim_boundary": "This work can document and evaluate church labor-transition support practices. It cannot claim churches are sufficient replacements for public policy, employer responsibility, or professional workforce services.",
       "source_path": "ideas/FID-047-churches-labor-transition-support.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-047-churches-labor-transition-support.md"
     },
@@ -800,6 +1973,36 @@
         "Design user studies that measure agency rather than short-term satisfaction alone.",
         "Contribute church-based career ministry or workforce-development experience."
       ],
+      "hypothesis": "AI career guidance will be most helpful when it acts as a structured aid to discernment: clarifying options, translating skills, identifying constraints, encouraging human counsel, and supporting concrete next steps. It will be riskier when it becomes a private authority for identity, calling, risk-taking, or major household decisions.",
+      "proposed_method": [
+        "Build scenario tests for displaced workers, students, older workers, caregivers, ministry staff, non-college workers, and people considering retraining.",
+        "Compare AI responses on skill translation, job-search planning, training advice, financial realism, dignity, hope, human referral, and avoidance of false certainty.",
+        "Run user studies where participants evaluate whether AI advice improves clarity, agency, confidence, and willingness to seek human support.",
+        "Include church and career-ministry reviewers to assess whether advice respects vocation, family obligations, local context, and moral constraints.",
+        "Develop guidance for churches that want to use AI-assisted career support without outsourcing vocational discernment."
+      ],
+      "needed_controls": [
+        "Avoid unsafe financial, legal, immigration, mental-health, or employment-law advice.",
+        "Account for users with limited education, limited internet access, disability, caregiving responsibilities, rural constraints, or language barriers.",
+        "Distinguish helpful encouragement from unrealistic optimism.",
+        "Require disclosure when AI cannot verify labor-market demand, credential value, costs, or local opportunities.",
+        "Avoid making pastors or volunteers responsible for technical career advice outside their competence."
+      ],
+      "relationship_to_existing_ideas": "This connects `FID-037` on work and vocation with `FID-035` on digital sobriety: some career questions call for AI assistance, while others call for slower human discernment and accountable counsel.",
+      "outputs": [
+        "AI career-guidance and vocation evaluation rubric.",
+        "Scenario suite for job disruption, retraining, and discernment.",
+        "User-study protocol for clarity, agency, and support-seeking.",
+        "Church guide for AI-assisted career support.",
+        "Failure taxonomy for overconfident, atomizing, or market-reductive advice."
+      ],
+      "open_questions": [
+        "When does AI career guidance become too directive?",
+        "How should systems handle users who feel their previous work has lost meaning?",
+        "What does good referral to human counsel look like in churches with limited career-support capacity?",
+        "Which outcomes matter most: faster applications, better matches, reduced anxiety, stronger agency, or deeper vocational clarity?"
+      ],
+      "public_claim_boundary": "This work can evaluate AI career-guidance behavior and support patterns under defined conditions. It cannot certify career advice, guarantee employment outcomes, or replace qualified human counsel.",
       "source_path": "ideas/FID-048-ai-career-guidance-vocational-discernment.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-048-ai-career-guidance-vocational-discernment.md"
     },
@@ -817,6 +2020,36 @@
         "Review accessibility, privacy, and digital-literacy assumptions.",
         "Design outcome measures for real benefit rather than mere tool adoption."
       ],
+      "hypothesis": "Faith communities could reduce AI access gaps when they provide trusted training, shared infrastructure, bilingual support, safe experimentation, accountability, and practical use cases. They could also unintentionally widen gaps if AI programs only serve already-confident users or promote tools without privacy, cost, safety, or labor-market realism.",
+      "proposed_method": [
+        "Survey AI access, usage, trust, concerns, and practical needs among church members, ministry participants, parents, students, older adults, and staff.",
+        "Compare barriers such as cost, device access, language, disability, digital confidence, privacy concern, theological concern, and lack of relevant use cases.",
+        "Pilot lightweight AI literacy or career-support workshops through churches or Christian nonprofits.",
+        "Measure changes in practical capability, confidence, privacy understanding, support-seeking, and appropriate non-use.",
+        "Produce guidance for churches deciding whether and how to offer AI access or literacy programs."
+      ],
+      "needed_controls": [
+        "Do not assume AI access is always beneficial; include reasons for prudent non-use or delayed adoption.",
+        "Avoid collecting sensitive spiritual, immigration, employment, or household data unnecessarily.",
+        "Include people with low trust in AI, low digital confidence, or limited English fluency.",
+        "Distinguish access to tools from meaningful benefit.",
+        "Avoid vendor promotion or product endorsement through church channels."
+      ],
+      "relationship_to_existing_ideas": "This extends `FID-020` community co-design and `FID-037` work and vocation by asking who benefits from AI access and whether churches can reduce or amplify adoption gaps.",
+      "outputs": [
+        "AI access and benefit survey for faith communities.",
+        "Barrier taxonomy for under-resourced church and ministry contexts.",
+        "Pilot workshop protocol for AI literacy and responsible use.",
+        "Field brief on unequal access, benefit, and non-use.",
+        "Church guidance for vendor-neutral AI literacy programming."
+      ],
+      "open_questions": [
+        "Which AI uses are most valuable for under-resourced households and workers?",
+        "What forms of AI training build agency without dependency or hype?",
+        "How should churches handle paid tools, data privacy, and member vulnerability?",
+        "When is the right intervention not access, but protection from exploitative or inappropriate AI use?"
+      ],
+      "public_claim_boundary": "This work can study AI access, barriers, and benefits in defined faith-community settings. It cannot claim that AI access is uniformly good or that churches can solve structural inequality by offering tool training.",
       "source_path": "ideas/FID-049-unequal-ai-access-through-faith-communities.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-049-unequal-ai-access-through-faith-communities.md"
     },
@@ -834,6 +2067,36 @@
         "Contribute education, child-development, youth-ministry, or labor-market expertise.",
         "Help design privacy-preserving longitudinal follow-up."
       ],
+      "hypothesis": "AI exposure may produce divergent effects. Some students may gain agency by using AI to learn, explore careers, and imagine new paths. Others may become more anxious, fatalistic, shortcut-dependent, or confused about which skills are worth developing. Faith-based education may need to teach both practical AI literacy and a theological account of work, dignity, and calling.",
+      "proposed_method": [
+        "Survey students, parents, educators, and youth leaders about AI use, career expectations, perceived job stability, skill confidence, anxiety, and views of vocation.",
+        "Compare students with different levels of AI access, school support, parental guidance, and church involvement.",
+        "Run workshops or classroom modules on AI, work, vocation, skill formation, and responsible tool use.",
+        "Measure changes in agency, hope, career clarity, learning motivation, shortcut behavior, and willingness to develop durable human skills.",
+        "Produce guidance for Christian schools and youth ministries on AI-era career and vocation formation."
+      ],
+      "needed_controls": [
+        "Follow child-safety, consent, privacy, and school-research requirements.",
+        "Avoid treating anxiety about AI as irrational or treating optimism as evidence of preparedness.",
+        "Distinguish AI literacy, career preparation, spiritual formation, and mental health support.",
+        "Include students who are not college-bound and students in under-resourced school or church settings.",
+        "Avoid using AI to steer minors toward narrow career paths."
+      ],
+      "relationship_to_existing_ideas": "This builds on `FID-016` youth religious education and `FID-037` work and vocation by focusing on career formation, future orientation, and preparation for an AI-shaped economy.",
+      "outputs": [
+        "Youth AI, vocation, and career-formation survey.",
+        "Workshop or classroom module evaluation protocol.",
+        "Guidance for Christian schools, parents, and youth ministries.",
+        "Field brief on student hope, anxiety, agency, and career preparation.",
+        "Research agenda for longitudinal study of AI-era vocation formation."
+      ],
+      "open_questions": [
+        "Which AI skills should every student learn, and which human skills should be protected from premature automation?",
+        "How does AI change students' understanding of calling and usefulness?",
+        "What should parents and churches say when students fear their future work will not matter?",
+        "How can schools teach AI competence without normalizing shortcuts that weaken learning?"
+      ],
+      "public_claim_boundary": "This work can study how students and families think about work, vocation, and AI-era preparation in defined settings. It cannot predict individual career outcomes or replace professional educational and counseling guidance.",
       "source_path": "ideas/FID-050-youth-career-formation-ai-economy.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-050-youth-career-formation-ai-economy.md"
     },
@@ -851,6 +2114,36 @@
         "Identify external economic indicators suitable for time-series comparison.",
         "Recruit churches or community institutions for consented companion studies."
       ],
+      "hypothesis": "Aggregate, privacy-preserving AI usage signals may show that economic stress is associated with increased meaning-seeking, religious inquiry, spiritual language, prayer-like requests, vocation questions, and existential support needs. The relationship may vary by geography, occupation exposure, age cohort, local economic shocks, and availability of trusted community support.",
+      "proposed_method": [
+        "Define a taxonomy for religious, spiritual, existential, vocational, and meaning-seeking AI interactions without requiring access to raw conversations.",
+        "Use privacy-preserving aggregate analysis or provider-side classification to measure category-level trends over time.",
+        "Compare trends against external economic indicators such as layoff announcements, unemployment changes, job-exposure measures, regional shocks, and consumer sentiment.",
+        "Test whether economic language and meaning-seeking categories co-occur at aggregate levels, such as job loss with prayer, calling, anxiety, grief, or purpose.",
+        "Pair aggregate provider-side signals with consented surveys or interviews in churches, schools, and workforce-support settings."
+      ],
+      "needed_controls": [
+        "Do not request, receive, publish, or infer private conversation content.",
+        "Treat religious identity, spiritual distress, and economic hardship as sensitive categories requiring strong privacy constraints.",
+        "Avoid causal claims unless the design has credible identification.",
+        "Distinguish seasonal religious patterns, holidays, news cycles, and ordinary life events from economic disruption.",
+        "Avoid assuming that all religious or spiritual AI use is healthy, unhealthy, orthodox, or church-directed."
+      ],
+      "relationship_to_existing_ideas": "This extends `FID-046` by studying broad meaning-seeking patterns during economic disruption, not only the experiences of workers recruited into a field-study cohort.",
+      "outputs": [
+        "Privacy-preserving taxonomy for economic-disruption and meaning-seeking categories.",
+        "Research design memo for aggregate provider-side analysis.",
+        "Church-facing field brief on AI-era spiritual and vocational search.",
+        "Measurement framework for pairing aggregate signals with local church data.",
+        "Public claim standard for reporting sensitive aggregate trends."
+      ],
+      "open_questions": [
+        "Which aggregate signals can be studied without exposing private spiritual or economic distress?",
+        "How should researchers distinguish explicit religion, broader spirituality, therapy-style language, and secular meaning-making?",
+        "Are people seeking embodied support after AI-mediated spiritual questioning, or remaining in private AI-mediated reflection?",
+        "What would churches need to know in order to respond without surveillance or panic?"
+      ],
+      "public_claim_boundary": "This work can study aggregate indicators of meaning-seeking during economic disruption. It cannot identify individual users, expose private conversations, or prove that a specific person turned to faith because of AI-related job loss.",
       "source_path": "ideas/FID-051-economic-disruption-religious-meaning-seeking.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-051-economic-disruption-religious-meaning-seeking.md"
     },
@@ -868,6 +2161,36 @@
         "Recruit consented study participants through churches or community partners.",
         "Contribute HAI research methods for studying disclosure and support-seeking."
       ],
+      "hypothesis": "During economic stress, some users will use AI as a low-friction first counsel for questions that combine practical, emotional, moral, and spiritual needs. Good systems may help users prepare for human support and concrete action. Poor systems may overvalidate, overpersonalize, delay escalation, or make users more isolated.",
+      "proposed_method": [
+        "Develop privacy-safe categories for economic stress, emotional disclosure, spiritual support, moral decision-making, and human-referral behavior.",
+        "Analyze aggregate provider-side trends where available, without receiving raw conversations.",
+        "Run consented user studies or diaries with people navigating career or financial disruption.",
+        "Compare whether AI guidance encourages users toward appropriate human support, local resources, churches, workforce agencies, counseling, or emergency paths.",
+        "Create scenario tests for AI systems responding to economically stressed users who ask for spiritual certainty, secrecy, reassurance, or major life advice."
+      ],
+      "needed_controls": [
+        "Treat mental-health, spiritual, financial, and employment distress as sensitive data.",
+        "Do not present pastors, churches, or AI tools as substitutes for licensed care, legal advice, emergency response, or workforce services.",
+        "Include users who have been harmed by religious communities or lack safe local support.",
+        "Separate ordinary reflection from crisis, coercion, abuse, self-harm, or financial emergency cases.",
+        "Avoid measuring \"more referral\" as always better; referrals must be relevant, safe, and non-coercive."
+      ],
+      "relationship_to_existing_ideas": "This connects `FID-003`, `FID-004`, `FID-010`, `FID-018`, and `FID-048` by asking whether economic stress changes the role AI plays as counsel, companion, or bridge to human support.",
+      "outputs": [
+        "First-counsel taxonomy for AI use under economic stress.",
+        "Scenario suite for job loss, financial fear, vocation, and spiritual support.",
+        "User-study protocol for disclosure, isolation, agency, and referral.",
+        "Field brief for churches on AI-mediated first disclosure.",
+        "Design guidance for bridging users toward appropriate human support."
+      ],
+      "open_questions": [
+        "When is private AI reflection beneficial preparation for human counsel?",
+        "When does AI-mediated reassurance delay necessary disclosure or support?",
+        "What referral language is appropriate for users who do not trust churches or local institutions?",
+        "How can providers measure first-counsel patterns without exposing private distress?"
+      ],
+      "public_claim_boundary": "This work can study support-seeking patterns under defined conditions. It cannot diagnose users, evaluate individual spiritual health, or treat AI as a pastor, counselor, lawyer, or emergency responder.",
       "source_path": "ideas/FID-052-ai-as-private-first-counsel.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-052-ai-as-private-first-counsel.md"
     },
@@ -885,6 +2208,36 @@
         "Recruit churches and community institutions for field interviews.",
         "Review referral patterns for religious and nonreligious users."
       ],
+      "hypothesis": "Bridge and substitution patterns will depend on product design, user trust, prior religious background, local community access, economic vulnerability, and the type of question being asked. Systems that offer accurate source grounding, non-coercive referral, and bounded support may function as bridges. Systems that simulate authority, companionship, or certainty may increase substitution risk.",
+      "proposed_method": [
+        "Define bridge indicators, such as seeking a church, contacting clergy, discussing with family, joining a group, using a benevolence resource, or asking how to talk to a human.",
+        "Define substitution indicators, such as secrecy, exclusive reliance, repeated reassurance-seeking, simulated spiritual authority, avoidance of human disclosure, or attachment to AI as primary counsel.",
+        "Study aggregate provider-side patterns where privacy-safe category analysis is available.",
+        "Conduct consented field interviews with churches, pastors, and users who have used AI for religious or meaning-related questions.",
+        "Compare product patterns that recommend human support, offer non-use guidance, or continue extended private spiritual dialogue."
+      ],
+      "needed_controls": [
+        "Do not assume every person should be routed to a church or religious leader.",
+        "Include users with no safe local community, religious trauma, abuse risk, or minority-faith constraints.",
+        "Avoid treating one-time AI use as substitution.",
+        "Separate healthy private reflection from avoidant isolation.",
+        "Do not infer individual religious identity or community participation from aggregate signals."
+      ],
+      "relationship_to_existing_ideas": "This extends `FID-004` relational substitution risk and `FID-042` clergy and spiritual-leader referral parity by focusing on economic disruption and meaning-seeking as a context where bridge and substitution dynamics may be especially visible.",
+      "outputs": [
+        "Bridge-versus-substitution measurement framework.",
+        "Privacy-preserving aggregate signal design.",
+        "Interview protocol for users, pastors, and community-support leaders.",
+        "Product pattern library for non-coercive referral to human support.",
+        "Church-facing field brief on AI, spiritual search, and embodied community."
+      ],
+      "open_questions": [
+        "What evidence would distinguish bridge behavior from substitution behavior?",
+        "Which users are helped by AI-mediated rehearsal before contacting a person?",
+        "When is referral to clergy appropriate alongside therapy, workforce, legal, emergency, or family support?",
+        "How should churches respond to people who first explored faith or purpose through AI?"
+      ],
+      "public_claim_boundary": "This work can evaluate bridge and substitution patterns under defined conditions. It cannot determine whether any individual user's AI use is spiritually healthy or whether a person should join a particular community.",
       "source_path": "ideas/FID-053-ai-bridge-or-substitute-for-faith-community.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-053-ai-bridge-or-substitute-for-faith-community.md"
     },
@@ -902,6 +2255,36 @@
         "Identify aggregate indicators that are useful but not individually revealing.",
         "Review failure modes around surveillance, donor pressure, and profiling."
       ],
+      "hypothesis": "Aggregated church-level indicators may help institutions prepare for economic strain, design support ministries, and understand AI-era disruption. The value of such indicators depends on strong privacy rules, narrow use cases, explicit consent where needed, and refusal to rank, target, or profile individuals.",
+      "proposed_method": [
+        "Map church-held data categories relevant to economic stress and care demand.",
+        "Define which categories should never be used, which can be used only with consent, and which may be reported as coarse aggregate trends.",
+        "Pilot a privacy-preserving data collection template with churches or ministries.",
+        "Compare church-level signals against public economic indicators and local qualitative reports.",
+        "Produce a responsible-measurement guide for churches facing AI-era economic disruption."
+      ],
+      "needed_controls": [
+        "Do not collect personally identifiable pastoral, counseling, benevolence, immigration, employment, family, or financial details.",
+        "Avoid donor scoring, congregant profiling, targeted pressure, or automated eligibility decisions.",
+        "Separate internal pastoral care from public research claims.",
+        "Include governance review by church leaders, privacy advisors, and affected community members.",
+        "Avoid overstating church data as representative of the broader population."
+      ],
+      "relationship_to_existing_ideas": "This extends `FID-033` faith-community data and the common good by applying it to AI-era economic stress, household welfare, and church readiness.",
+      "outputs": [
+        "Church economic-stress signal taxonomy.",
+        "Privacy-preserving aggregate reporting template.",
+        "Data governance checklist for churches and ministries.",
+        "Pilot protocol for local economic-stress measurement.",
+        "Field brief on what churches can and cannot responsibly infer."
+      ],
+      "open_questions": [
+        "Which church-level signals are useful without becoming invasive?",
+        "How should churches communicate aggregate findings to members?",
+        "What should be measured locally versus referred to public datasets?",
+        "How can churches preserve discretion and mercy while learning from patterns?"
+      ],
+      "public_claim_boundary": "This work can help churches study aggregate economic-stress signals under strict privacy constraints. It cannot justify individual surveillance, pastoral profiling, or automated decisions about care.",
       "source_path": "ideas/FID-054-church-economic-stress-signals.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-054-church-economic-stress-signals.md"
     },
@@ -919,6 +2302,36 @@
         "Help design survey items that do not shame respondents or aid recipients.",
         "Identify public economic indicators suitable for comparison."
       ],
+      "hypothesis": "AI-related economic disruption may produce uneven effects. Some households may reduce giving because of fear or income loss. Others may increase generosity in response to visible need. Churches may experience simultaneous pressure on revenues, benevolence requests, staff capacity, and community-care expectations.",
+      "proposed_method": [
+        "Survey households about AI-related economic expectations, generosity, giving intentions, benevolence attitudes, and mutual-aid participation.",
+        "Interview church finance teams, benevolence teams, pastors, and nonprofit partners about observed changes in giving and care demand.",
+        "Analyze privacy-preserving aggregate church finance and benevolence trends where institutions consent.",
+        "Compare local trends against public economic indicators, layoff data, and industry exposure measures.",
+        "Produce church guidance for stewardship, benevolence, and mutual-aid planning during AI-era economic uncertainty."
+      ],
+      "needed_controls": [
+        "Do not expose household giving, debt, benevolence, employment, or pastoral care details.",
+        "Distinguish actual income loss from anticipated risk or generalized anxiety.",
+        "Avoid using research to pressure giving or stigmatize aid recipients.",
+        "Include smaller and lower-income churches, not only large institutions with clean financial systems.",
+        "Separate descriptive findings from theological claims about generosity."
+      ],
+      "relationship_to_existing_ideas": "This complements `FID-047` by focusing on the financial and mutual-aid dynamics of church response to labor disruption.",
+      "outputs": [
+        "Household survey on AI uncertainty, generosity, and benevolence.",
+        "Church finance and benevolence interview protocol.",
+        "Privacy-safe aggregate measurement template.",
+        "Field brief on generosity and care demand under AI disruption.",
+        "Stewardship and benevolence planning guide for churches."
+      ],
+      "open_questions": [
+        "How quickly do giving and benevolence patterns respond to AI-related economic shocks?",
+        "Do sermons or church teaching on work and generosity affect household responses to uncertainty?",
+        "What mutual-aid models preserve dignity during job disruption?",
+        "How should churches budget when economic optimism and anxiety coexist?"
+      ],
+      "public_claim_boundary": "This work can study aggregate patterns in generosity, benevolence, and economic stress. It cannot expose individual giving or aid records, pressure congregants, or settle theological claims about stewardship.",
       "source_path": "ideas/FID-055-ai-disruption-generosity-benevolence.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-055-ai-disruption-generosity-benevolence.md"
     },
@@ -936,6 +2349,33 @@
         "Review outputs as a scholar, clergy member, translator, or community expert.",
         "Build verification tooling for source matching and context-preservation checks."
       ],
+      "hypothesis": "A useful subset of sacred-text fidelity can be specified as machine-checkable obligations: exact quote matching, reference validity, translation/version matching, context-window adequacy, quotation/paraphrase labeling, and detection of claims that outrun the cited passage.",
+      "proposed_method": [
+        "Select bounded corpora from multiple faith traditions with clear versions, translations, references, and licensing constraints.",
+        "Define verification rules for exact quotations, near quotations, paraphrases, reference alignment, and context preservation.",
+        "Test model and RAG outputs against adversarial prompts that invite fabricated citations, blended passages, truncated context, or overconfident summaries.",
+        "Compare automated verification results with expert review from scholars, clergy, translators, and trained reviewers."
+      ],
+      "needed_controls": [
+        "Do not treat textual fidelity as a full measure of theological truth.",
+        "Separate quote accuracy, paraphrase quality, reference validity, interpretive claim support, and pastoral appropriateness.",
+        "Track text edition, translation, canon boundaries, source licensing, and tradition-specific interpretive context.",
+        "Include disputed and near-match passages where surface similarity can mislead automated checks."
+      ],
+      "outputs": [
+        "Sacred-text fidelity verification protocol.",
+        "Test set of quote, paraphrase, reference, and context-preservation cases.",
+        "Error taxonomy for sacred-text citation and paraphrase failures.",
+        "Reviewer agreement study comparing automated checks with human review.",
+        "Public claim template for what sacred-text fidelity scores can and cannot say."
+      ],
+      "open_questions": [
+        "Which sacred texts and translations can be included in public benchmarks?",
+        "How much surrounding context is needed for a citation to count as faithful?",
+        "How should systems handle traditions where oral transmission, commentary, or interpretive authority is central?",
+        "When does a paraphrase become an unsupported doctrinal claim?"
+      ],
+      "public_claim_boundary": "This work can verify bounded forms of textual fidelity under specified corpora, translations, and rules. It cannot prove that an answer captures the full meaning, authority, or theological interpretation of a sacred text.",
       "source_path": "ideas/FID-056-formal-verification-sacred-text-fidelity.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-056-formal-verification-sacred-text-fidelity.md"
     },
@@ -953,6 +2393,33 @@
         "Review faith-facing answers as a theologian, scholar, clergy member, or domain expert.",
         "Test whether proof-carrying citations improve user trust calibration."
       ],
+      "hypothesis": "Faith-facing answers can be decomposed into claim units and attached to a checkable evidence graph that records source passages, support type, inference steps, uncertainty, tradition constraints, and authority boundaries. This will make citation failures easier to detect and easier for reviewers to audit.",
+      "proposed_method": [
+        "Define a claim decomposition scheme for theological, historical, moral, pastoral-adjacent, and institutional-policy answers.",
+        "Design evidence-graph structures that connect claim units to cited passages, source metadata, support labels, and inference labels.",
+        "Build prototype validators that flag unsupported claims, weakly supported inferences, missing citations, and claims that require human authority.",
+        "Compare graph-based review with ordinary citation review across model outputs and RAG outputs."
+      ],
+      "needed_controls": [
+        "Separate direct textual support, reasonable summary, tradition-specific interpretation, contested inference, and unsupported assertion.",
+        "Require reviewers to see the same source passages and metadata as the system.",
+        "Track whether claims depend on a single tradition, a general religious concept, institutional policy, or pastoral judgment.",
+        "Avoid making the evidence graph look more certain than the underlying sources or reviewer agreement justify."
+      ],
+      "outputs": [
+        "Proof-carrying citation schema for faith-facing AI answers.",
+        "Claim-support labeling guide for reviewers and evaluators.",
+        "Prototype evidence-graph validator.",
+        "Audit report comparing ordinary citations with proof-carrying citations.",
+        "Example answer cards showing supported, inferred, uncertain, and authority required claims."
+      ],
+      "open_questions": [
+        "What claim granularity is useful without making review impractically slow?",
+        "Which parts of an evidence graph can be machine-checked reliably?",
+        "How should systems represent disagreement among authoritative sources?",
+        "Can proof-carrying citations work for consumer chat, institutional tools, and ministry workflows without overwhelming users?"
+      ],
+      "public_claim_boundary": "This work can make citation support more inspectable and auditable. It cannot turn cited passages into automatic proof of doctrinal, moral, or pastoral adequacy.",
       "source_path": "ideas/FID-057-proof-carrying-citations-faith-ai.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-057-proof-carrying-citations-faith-ai.md"
     },
@@ -970,6 +2437,33 @@
         "Test constraint-checking against model and RAG outputs.",
         "Review whether specifications preserve disagreement rather than erase it."
       ],
+      "hypothesis": "Some tradition-specific constraints can be expressed as bounded specifications: which sources count as authoritative, which claims require qualifiers, which topics are contested, which roles carry authority, and when an answer should name disagreement rather than synthesize it away.",
+      "proposed_method": [
+        "Select a small number of traditions, denominations, schools, or institutional contexts with willing reviewers.",
+        "Define source hierarchies, required qualifiers, forbidden conflations, authority boundaries, and known disagreement areas.",
+        "Convert these into structured constraints that can be applied to model and RAG outputs.",
+        "Measure whether constraints reduce tradition-confusion errors without suppressing legitimate diversity or uncertainty."
+      ],
+      "needed_controls": [
+        "Do not present one group's formal specification as representative of all members of a broader faith tradition.",
+        "Require named scope, source basis, reviewer basis, and expiration or revision process for each specification.",
+        "Include disagreement and minority-view handling.",
+        "Keep descriptive constraints separate from product policies or institutional approval decisions."
+      ],
+      "outputs": [
+        "Tradition-constraint specification template.",
+        "Source hierarchy and qualifier schema.",
+        "Evaluation set for tradition-confusion and overgeneralization failures.",
+        "Reviewer workflow for maintaining and revising constraints.",
+        "Public guidance on using formal constraints without overstating authority."
+      ],
+      "open_questions": [
+        "Who is authorized to define a tradition-specific specification?",
+        "How should conflicting reviewers be represented in the spec?",
+        "Which constraints are stable enough to encode, and which should remain human review notes?",
+        "How can this support Christian use cases while remaining useful across faith traditions?"
+      ],
+      "public_claim_boundary": "This work can formalize bounded constraints for specified communities and source sets. It cannot define a tradition for everyone who belongs to it or resolve theological disagreements by specification.",
       "source_path": "ideas/FID-058-tradition-specific-constraint-formalization.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-058-tradition-specific-constraint-formalization.md"
     },
@@ -987,6 +2481,33 @@
         "Build classifiers or validators for authority claims and referral behavior.",
         "Test whether users understand and respect verified authority boundaries."
       ],
+      "hypothesis": "Authority boundaries can be represented as checkable output obligations: role disclosure, non-substitution language, escalation triggers, referral requirements, uncertainty statements, and prohibitions against claiming clerical, clinical, legal, or institutional authority.",
+      "proposed_method": [
+        "Define scenario classes for pastoral-adjacent care, spiritual distress, doctrinal explanation, moral guidance, crisis escalation, and institutional policy questions.",
+        "Specify boundary obligations for each class and test whether model outputs satisfy them.",
+        "Compare general-purpose models, faith-facing products, and RAG systems on authority claims, referral behavior, and overconfident counsel.",
+        "Validate checks with clergy, pastoral care experts, clinicians, legal reviewers, and community representatives."
+      ],
+      "needed_controls": [
+        "Separate ordinary religious education from pastoral care, crisis care, legal advice, and clinical advice.",
+        "Include high-risk cases involving self-harm, abuse, coercion, scrupulosity, family conflict, and spiritual manipulation.",
+        "Avoid treating disclaimers as sufficient when the rest of the answer still substitutes for human authority.",
+        "Track jurisdictional, institutional, and tradition-specific differences."
+      ],
+      "outputs": [
+        "Authority-boundary verification rubric.",
+        "Scenario suite for pastoral-adjacent and high-stakes faith use cases.",
+        "Automated and human-review checklist for role, referral, and escalation behavior.",
+        "Failure taxonomy for spiritual authority overreach.",
+        "Product guidance for faith-facing AI deployment boundaries."
+      ],
+      "open_questions": [
+        "Which boundary failures are severe enough to block deployment?",
+        "How should systems handle users who explicitly ask AI to replace a pastor, priest, imam, rabbi, counselor, elder, or parent?",
+        "Can automated checks detect subtle authority overreach and overvalidation?",
+        "How should verified boundaries differ between education, search, coaching, and pastoral-adjacent tools?"
+      ],
+      "public_claim_boundary": "This work can verify whether outputs follow specified authority-boundary rules. It cannot certify that an AI system provides pastoral care or replace accountable human leaders, clinicians, legal professionals, or institutions.",
       "source_path": "ideas/FID-059-authority-boundary-verification-pastoral-adjacent-ai.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-059-authority-boundary-verification-pastoral-adjacent-ai.md"
     },
@@ -1004,6 +2525,33 @@
         "Build schema validators and corpus-quality checks.",
         "Identify licensing and provenance constraints for public benchmark sources."
       ],
+      "hypothesis": "A cross-faith source schema can capture enough metadata to support verification without forcing every tradition into the same authority model. Required fields should describe source type, tradition scope, authority status, version, translation, licensing, provenance, context-window rules, and claim types.",
+      "proposed_method": [
+        "Review existing metadata practices from libraries, religious publishers, digital scripture projects, academic databases, and RAG corpus cards.",
+        "Draft a minimal source-card schema for faith-facing AI corpora.",
+        "Test the schema on Christian, Jewish, Muslim, Buddhist, Hindu, and other faith-facing source examples where appropriate reviewers are available.",
+        "Evaluate whether the schema improves retrieval, citation, and verification tasks compared with unstructured source metadata."
+      ],
+      "needed_controls": [
+        "Do not impose a single hierarchy of authority across traditions.",
+        "Separate source metadata from claims about truth, orthodoxy, or institutional approval.",
+        "Track licensing, redistribution rights, source provenance, and edition drift.",
+        "Include fields for contested status, minority use, or tradition-specific authority where relevant."
+      ],
+      "outputs": [
+        "Cross-faith source-card schema.",
+        "Example metadata records for sacred texts, commentaries, policies, and educational resources.",
+        "Corpus-readiness checklist for faith-facing RAG and verification systems.",
+        "Schema validation tool for missing or ambiguous source metadata.",
+        "Guidance for public benchmarks that rely on copyrighted or restricted sources."
+      ],
+      "open_questions": [
+        "Which metadata fields are essential versus useful but too burdensome?",
+        "How should oral, embodied, or community-governed sources be represented?",
+        "How can the schema respect traditions that reject external classification of authority?",
+        "What metadata is required before a source can support formal verification?"
+      ],
+      "public_claim_boundary": "This work can improve source description, retrieval, and verification readiness. It cannot declare a universal authority hierarchy across religions or certify that a source is authoritative for every community that uses it.",
       "source_path": "ideas/FID-060-cross-faith-sacred-text-source-schema.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-060-cross-faith-sacred-text-source-schema.md"
     },
@@ -1021,6 +2569,33 @@
         "Build NLI baselines and compare them with model-judge evaluations.",
         "Design reporting methods that show disagreement and claim boundaries clearly."
       ],
+      "hypothesis": "Bounded natural language inference tasks can identify useful categories of faith-facing reasoning error when the task is scoped to a named corpus, tradition, source hierarchy, and claim type. These tests will be most reliable when they report disagreement and uncertainty rather than forcing universal answers.",
+      "proposed_method": [
+        "Build small entailment and contradiction sets from source-grounded theological, historical, moral, and institutional-policy claims.",
+        "Label pairs as supported, contradicted, overextended, contested, underspecified, or outside scope.",
+        "Test whether AI systems can preserve distinctions between source claims, inferred claims, contested claims, and unsupported claims.",
+        "Compare model judges, trained reviewers, and expert reviewers for agreement and failure modes."
+      ],
+      "needed_controls": [
+        "Do not collapse inter-tradition disagreement into a single ground truth.",
+        "Scope every item by tradition, corpus, source status, and claim type.",
+        "Include cases where the correct answer is uncertainty, disagreement, or human authority required.",
+        "Measure judge disagreement and avoid using entailment labels as doctrinal verdicts."
+      ],
+      "outputs": [
+        "Faith-facing contradiction and entailment stress-test protocol.",
+        "Labeled seed dataset for bounded theological inference tasks.",
+        "Error taxonomy for overstatement, contradiction, flattening, and unsupported synthesis.",
+        "Human-versus-model judge agreement report.",
+        "Guidelines for using NLI methods in faith-facing evaluation."
+      ],
+      "open_questions": [
+        "Which theological claims are suitable for entailment-style testing?",
+        "How should contested claims be represented in benchmark labels?",
+        "Can formal methods help detect contradictions without pretending to resolve interpretive disputes?",
+        "What reviewer expertise is needed for reliable labels?"
+      ],
+      "public_claim_boundary": "This work can test bounded reasoning behavior against specified source sets and labels. It cannot establish final theological truth or eliminate the need for human interpretation and community authority.",
       "source_path": "ideas/FID-061-theological-contradiction-entailment-stress-tests.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-061-theological-contradiction-entailment-stress-tests.md"
     },
@@ -1038,6 +2613,33 @@
         "Review retrieval outputs for relevance, authority, and context sufficiency.",
         "Test abstention and uncertainty behavior when retrieval is inadequate."
       ],
+      "hypothesis": "Faith-facing RAG pipelines can be evaluated through retrieval proof obligations: source eligibility, authority match, relevance, context sufficiency, near-duplicate handling, corpus coverage, and abstention when no adequate source is available.",
+      "proposed_method": [
+        "Define retrieval tasks for sacred-text lookup, doctrinal explanation, pastoral-adjacent questions, institutional policy, and cross-tradition comparison.",
+        "Add source metadata from a cross-faith source schema and test whether retrieval respects authority and scope constraints.",
+        "Measure retrieval recall, authority match, context sufficiency, citation integrity, and answer impact.",
+        "Compare standard vector retrieval, hybrid search, reranking, metadata filters, and verification-aware retrieval policies."
+      ],
+      "needed_controls": [
+        "Separate retrieval quality from generation quality.",
+        "Include adversarial near matches, tradition-confused sources, incomplete context windows, and sources with similar language but different authority.",
+        "Track corpus coverage and require abstention when the corpus cannot support an answer.",
+        "Include copyrighted, restricted, or nonpublic source constraints in evaluation design."
+      ],
+      "outputs": [
+        "Verified retrieval protocol for faith-facing RAG.",
+        "Retrieval proof-obligation checklist.",
+        "Benchmark set for authority match, context sufficiency, and abstention.",
+        "Comparison report across retrieval configurations.",
+        "Deployment guidance for institutions building or buying RAG systems."
+      ],
+      "open_questions": [
+        "Which retrieval failures most strongly predict harmful or misleading answers?",
+        "How should a system explain that its corpus cannot support a user's question?",
+        "Can retrieval verification be fast enough for production systems?",
+        "How should verification handle traditions with multiple valid source hierarchies?"
+      ],
+      "public_claim_boundary": "This work can verify retrieval behavior under specified corpora, metadata, and tasks. It cannot guarantee that generated answers are theologically complete, pastorally appropriate, or institutionally approved.",
       "source_path": "ideas/FID-062-verified-retrieval-pipelines-faith-facing-rag.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-062-verified-retrieval-pipelines-faith-facing-rag.md"
     },
@@ -1055,6 +2657,33 @@
         "Build tools for spec versioning, disagreement logging, and counterexample testing.",
         "Study whether formalized reviewer judgments remain faithful over time."
       ],
+      "hypothesis": "A structured reviewer-to-spec workflow can preserve expert intent better than ad hoc rubric writing. The workflow should include example gathering, boundary case review, constraint drafting, counterexample testing, disagreement logging, revision history, and explicit public claim boundaries.",
+      "proposed_method": [
+        "Recruit reviewers from multiple faith traditions and expertise types.",
+        "Ask reviewers to evaluate outputs, explain failures, identify boundary cases, and propose rules in ordinary language.",
+        "Translate reviewer judgments into candidate formal specifications, then test them against held-out examples and counterexamples.",
+        "Measure agreement between original reviewers, specification authors, and automated checks over multiple revision cycles."
+      ],
+      "needed_controls": [
+        "Do not let the formal spec erase reviewer disagreement or minority concerns.",
+        "Keep reviewer identity, role, tradition, expertise, and scope clear.",
+        "Separate descriptive evaluation rules from institutional policy decisions.",
+        "Include revision processes for changed doctrine statements, new sources, or discovered failure modes."
+      ],
+      "outputs": [
+        "Reviewer-to-spec translation workflow.",
+        "Template for moving from qualitative review notes to formal constraints.",
+        "Agreement and drift metrics for formalized reviewer judgments.",
+        "Case studies from source fidelity, authority boundaries, and tradition constraints.",
+        "Guidance for when a judgment should remain human review rather than become a formal rule."
+      ],
+      "open_questions": [
+        "Which reviewer judgments can be formalized without distorting them?",
+        "How much disagreement is acceptable before a spec should remain provisional?",
+        "Who maintains specifications after the initial research project ends?",
+        "How can Fide AI make this process useful to churches and other faith communities without centralizing authority in Fide AI itself?"
+      ],
+      "public_claim_boundary": "This work can improve how expert judgments become evaluation specifications. It cannot remove the need for human review, community accountability, or tradition-specific authority.",
       "source_path": "ideas/FID-063-human-reviewer-to-formal-spec-translation.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-063-human-reviewer-to-formal-spec-translation.md"
     },
@@ -1071,6 +2700,36 @@
         "Contribute transparent modeling, simulation, or causal-inference expertise.",
         "Identify organizations willing to advise on a future ethics-reviewed pilot."
       ],
+      "hypothesis": "AI-assisted deliberation will be more reliable when participants can inspect provenance, compare competing interpretations, register unresolved disagreement, and retain meaningful opportunities to challenge and revise a recommendation. Systems that hide uncertainty or collapse diverse inputs into a single confident answer will increase dependence and correlated error.",
+      "proposed_method": [
+        "Define measurable constructs for epistemic diversity, independence, traceability, minority-voice inclusion, error correction, and accountable revision in collective AI-assisted decision making.",
+        "Build transparent network and agent-based models comparing non-AI, AI-assisted, and AI-dominant deliberation under varied information, governance, and authority conditions.",
+        "Add an agent-population layer that tests how interacting systems propagate error, imitate one another, form misleading consensus, conceal coordination, or create cascading failures across organizational boundaries.",
+        "Analyze documented organizational and religious-community decision cases to identify where the model assumptions fit or fail.",
+        "Develop a pilot protocol for human-subject or field research with willing communities, subject to appropriate ethics review."
+      ],
+      "needed_controls": [
+        "Do not treat consensus, speed, or participation volume as evidence of a good decision.",
+        "Publish model assumptions, parameters, and known limits; simulations do not represent actual congregations or traditions by default.",
+        "Separate claims about technical recommendation quality from claims about legitimate religious or institutional authority.",
+        "Include asymmetric power, coercion, and accessibility constraints, not only idealized deliberation.",
+        "Distinguish human deliberation supported by AI from the technical safety of a multi-principal agent population; do not treat a simulated consensus as a legitimate institutional decision."
+      ],
+      "relationship_to_existing_ideas": "This extends `FID-007`, `FID-025`, `FID-031`, and `FID-040` from individual model behavior or governance arrangements to the group-level dynamics of collective intelligence and communal discernment.",
+      "outputs": [
+        "A conceptual and measurement framework for AI-mediated collective discernment.",
+        "Open model specifications and a documented scenario library.",
+        "A research protocol for comparative community or organizational studies.",
+        "Agent-population scenarios and metrics for correlated error, coordination signals, and cascading failure.",
+        "A public report on design conditions that preserve dissent, provenance, and accountable revision."
+      ],
+      "open_questions": [
+        "Which forms of disagreement are productive, and which require intervention?",
+        "How can a group preserve minority voices without exposing participants to retaliation or privacy risks?",
+        "What evidence could distinguish useful synthesis from illegitimate authority transfer to an AI system?",
+        "Which population-level signals can identify misleading consensus or hidden coordination without exposing protected dissent or confidential deliberation?"
+      ],
+      "public_claim_boundary": "This work can describe and test conditions associated with more accountable AI-assisted group inquiry. It cannot determine the correct theological outcome of a community's discernment or certify a simulated result as a real-world institutional decision.",
       "source_path": "ideas/FID-064-collective-intelligence-communal-discernment.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-064-collective-intelligence-communal-discernment.md"
     },
@@ -1087,6 +2746,33 @@
         "Review the constructs from organizational studies, economics, privacy, and Christian social thought.",
         "Help design privacy-preserving survey and case-study methods."
       ],
+      "hypothesis": "AI will strengthen local problem-solving capacity only when organizations retain contextual judgment, usable data governance, realistic exit options, and the ability to adapt tools to local workflows. Convenience without those conditions will tend to centralize expertise and weaken institutional learning.",
+      "proposed_method": [
+        "Develop a framework for local knowledge in faith-based civil society, including context capture, consent, institutional memory, adaptation, portability, and community accountability.",
+        "Conduct comparative case studies and interviews across churches, ministries, charities, and faith-rooted social enterprises using or considering AI.",
+        "Survey organizational leaders about capacity, dependence, procurement, workflow change, and perceived effects on local problem solving.",
+        "Produce a field-ready study design for evaluating AI-supported programs without collecting unnecessary personal or pastoral data."
+      ],
+      "needed_controls": [
+        "Do not assume local knowledge is complete, unbiased, or always safe to use.",
+        "Protect sensitive pastoral, beneficiary, employment, and household data.",
+        "Distinguish organizational capability from theological authority or quality of care.",
+        "Include small organizations and resource-constrained communities, not only well-staffed institutions.",
+        "Do not prescribe political or regulatory outcomes."
+      ],
+      "relationship_to_existing_ideas": "This complements `FID-037`, `FID-040`, `FID-047`, and `FID-049`. Its focus is not individual work or a general governance scorecard, but the empirical conditions under which faith-based associations retain local knowledge and institutional agency while using AI.",
+      "outputs": [
+        "A research framework for AI and local knowledge in faith-based civil society.",
+        "Comparative case-study protocol and organizational survey instrument.",
+        "Data-governance and institutional-learning indicators.",
+        "A public field brief on capacity, dependence, and responsible local adoption."
+      ],
+      "open_questions": [
+        "What local knowledge should never be entered into an external AI system?",
+        "How can institutions share beneficial practices without exposing vulnerable people or making community knowledge extractable?",
+        "Which procurement terms most affect practical local agency?"
+      ],
+      "public_claim_boundary": "This work can assess organizational conditions associated with local capacity and dependence. It cannot determine whether any faith-based organization should adopt AI or prove that a particular market or governance structure is best.",
       "source_path": "ideas/FID-065-ai-local-knowledge-faith-civil-society.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-065-ai-local-knowledge-faith-civil-society.md"
     },
@@ -1103,6 +2789,32 @@
         "Contribute evidence on platform governance, procurement, and portability.",
         "Identify missing perspectives and pressure-test the framework's tradeoffs."
       ],
+      "hypothesis": "Plural and safe participation is more likely when systems provide intelligible policies, documented reasons, proportionate appeals, configuration boundaries, data portability, and feasible exit paths. These conditions must be assessed alongside protections against harassment, discrimination, coercion, and harmful use.",
+      "proposed_method": [
+        "Map the technical, contractual, and policy choices that make AI systems gateways for association, expression, or organizational work.",
+        "Develop a comparative framework for explanation, appeal, configuration, portability, interoperability, and exit.",
+        "Analyze a diverse set of hypothetical and documented use cases involving faith-based associations and other worldview communities.",
+        "Convene legal, safety, civil-society, and religious-pluralism reviewers to test the framework's tradeoffs and limits."
+      ],
+      "needed_controls": [
+        "Treat religious freedom, conscience, equality, safety, and non-coercion as potentially competing considerations rather than assuming one overrides all others.",
+        "Include multiple faiths and nonreligious worldview communities in comparative review.",
+        "Avoid partisan claims, advocacy for legislation, or conclusions about a platform without documented evidence and a fair response process.",
+        "Separate private institutional uses from public-facing services and employment-related settings."
+      ],
+      "relationship_to_existing_ideas": "This extends `FID-013`, `FID-014`, `FID-022`, `FID-040`, and `FID-043`. It focuses on the institutional and market-gateway conditions for plural association, not only a model's treatment of religious content or persuasion.",
+      "outputs": [
+        "A taxonomy of AI gatekeeping risks for associations and conscience-sensitive workflows.",
+        "A comparative governance framework with case-study and review protocols.",
+        "A public research brief on explanation, appeal, configuration, portability, and exit conditions.",
+        "A set of open questions for future empirical and legal research."
+      ],
+      "open_questions": [
+        "Which forms of customization protect pluralism, and which enable exclusion or harm?",
+        "What constitutes a meaningful appeal when a model's output is probabilistic?",
+        "How can small associations exercise exit rights when they lack technical or financial leverage?"
+      ],
+      "public_claim_boundary": "This work can clarify and compare institutional conditions for plural, accountable AI access. It cannot settle contested legal questions, endorse a political program, or guarantee that a given system will respect conscience in every context.",
       "source_path": "ideas/FID-066-ai-conscience-associational-pluralism.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-066-ai-conscience-associational-pluralism.md"
     },
@@ -1119,6 +2831,32 @@
         "Participate in or help recruit a balanced scenario workshop.",
         "Review scenario assumptions, omissions, and indicators."
       ],
+      "hypothesis": "Institutional futures will diverge according to choices about human roles, shared practices, data stewardship, authority boundaries, local capacity, and the purposes for which AI is used. Scenario work grounded in evidence can reveal early indicators and choices that are obscured by product-centered debate.",
+      "proposed_method": [
+        "Review historical and current evidence on technological change in religious institutions, alongside relevant AI adoption research.",
+        "Build a scenario framework covering administration, formation, care, governance, work, and public communication.",
+        "Run structured, multi-stakeholder scenario workshops with church leaders, practitioners, researchers, young adults, and affected community members.",
+        "Identify assumptions, tensions, leading indicators, and research questions that could distinguish among the scenarios."
+      ],
+      "needed_controls": [
+        "Present scenarios as tools for inquiry, not predictions or endorsements.",
+        "Include institutions of varied size, theology, geography, and resources.",
+        "Make power, exclusion, labor, data, and accessibility consequences explicit.",
+        "Do not assume that automation, efficiency, or digital participation is equivalent to flourishing."
+      ],
+      "relationship_to_existing_ideas": "This synthesizes the institutional implications of `FID-017`, `FID-031`, `FID-046`-`FID-055`, and `FID-065`. It is a futures-research call, not an evaluation of one AI workflow or a replacement for local governance judgment.",
+      "outputs": [
+        "A transparent scenario framework for religious institutions and AI.",
+        "Four to six evidence-informed future scenarios with assumptions and leading indicators.",
+        "A workshop protocol and de-identified synthesis of participant insights.",
+        "A public research agenda identifying the highest-value empirical follow-on studies."
+      ],
+      "open_questions": [
+        "Which communal practices are most vulnerable to substitution by convenience?",
+        "What forms of institutional capacity make it possible to use AI without centralizing authority or weakening belonging?",
+        "How should a community recognize that an apparently efficient trajectory is eroding its mission or care relationships?"
+      ],
+      "public_claim_boundary": "This work can develop plausible, evidence-informed scenarios and identify choices worth studying. It cannot forecast the future of any church, tradition, or AI technology, or prescribe a universal institutional model.",
       "source_path": "ideas/FID-067-religious-institutional-futures-ai.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-067-religious-institutional-futures-ai.md"
     },
@@ -1135,6 +2873,32 @@
         "Contribute safeguarding, consent, and research-ethics expertise.",
         "Help recruit diverse young-adult and practitioner co-design participants."
       ],
+      "hypothesis": "Practices such as communal discernment, Sabbath and attention rhythms, service, prayer, source reflection, and accountable peer dialogue may help participants notice tradeoffs in AI use. Their effects are likely to depend on developmental stage, social context, theological tradition, and whether the practices increase rather than replace trusted human relationships.",
+      "proposed_method": [
+        "Build a literature-informed taxonomy of Christian practices relevant to AI use, drawing on theology, youth development, media studies, and HAI research.",
+        "Co-design research questions and practice prototypes with young adults, pastors, educators, and parents; begin with adults age 18 and older.",
+        "Define a theory of change and candidate measures for agency, embodiment, relational connection, reflective judgment, and spiritual wellbeing.",
+        "Produce an ethics-reviewed pilot protocol for any later study involving minors, with youth assent, parent or guardian consent, and safeguarding."
+      ],
+      "needed_controls": [
+        "Do not treat spiritual wellbeing, reduced screen time, or self-reported agreement as interchangeable outcomes.",
+        "Avoid collecting sensitive spiritual disclosures or making AI use a condition of participation.",
+        "Treat traditions and practices with theological specificity and humility.",
+        "Require independent ethics and safeguarding review before research involving minors or vulnerable participants."
+      ],
+      "relationship_to_existing_ideas": "This complements `FID-016`, `FID-027`, `FID-035`, and `FID-050`. It focuses on developing an evidence-ready practice and measurement framework for youth and young-adult discernment, rather than only cataloging risks, assessing long-term formation, or studying non-use.",
+      "outputs": [
+        "A taxonomy of Christian practices relevant to AI-era discernment.",
+        "A theory of change and candidate outcome measures.",
+        "Co-design findings and a research-ready pilot protocol.",
+        "A safeguarding and ethics checklist for future youth-facing studies."
+      ],
+      "open_questions": [
+        "Which practices support agency without becoming surveillance or moral panic?",
+        "How should outcomes differ for adolescents, emerging adults, families, and youth-ministry settings?",
+        "What evidence would justify expanding a pilot into a larger study?"
+      ],
+      "public_claim_boundary": "This work can identify researchable practice designs and measurement questions. It cannot establish that any Christian practice will produce a particular spiritual outcome or provide clinical, pastoral, or child-safety certification.",
       "source_path": "ideas/FID-068-christian-practices-youth-ai-discernment.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-068-christian-practices-youth-ai-discernment.md"
     },
@@ -1152,6 +2916,35 @@
         "Contribute provenance, cryptography, security, or human-computer interaction expertise.",
         "Identify synthetic high-trust workflows that generalize beyond one tradition or organization type."
       ],
+      "hypothesis": "Multi-agent systems will be safer when authorization is legible and verifiable across a delegation chain: a recipient can distinguish human, institutional, agent, and sub-agent action; inspect the action's permitted scope; and reliably detect copied, modified, expired, or revoked authority. Identity assertions without verifiable mandate and revocation will leave users exposed to false attribution and stale authority.",
+      "proposed_method": [
+        "Build a reproducible, synthetic multi-organization sandbox with human, institutional, agent, and sub-agent principals using realistic communication, records, scheduling, and service-request tools.",
+        "Define test cases for impersonation, copied agents, stale credentials, unauthorized scope expansion, delegation chains, partial revocation, and contested attribution.",
+        "Compare identity, provenance, authorization-scope, and revocation mechanisms, including what a human overseer can actually understand at decision time.",
+        "Measure false attribution, unauthorized actions, revocation latency, authority transparency, collateral disclosure, task completion, and recovery after a failed or interrupted delegation."
+      ],
+      "needed_controls": [
+        "Use synthetic organizations, records, and communications only.",
+        "Separate identity verification from a claim that an action is wise, pastoral, legal, or institutionally legitimate.",
+        "Test cross-principal boundaries rather than only one organization's internal agent team.",
+        "Model copied and modified agents explicitly; do not assume a static identity is enough.",
+        "Make revocation and human recovery testable after partial action, not only before an agent begins work."
+      ],
+      "relationship_to_existing_ideas": "This extends `FID-017` from risks within a faith institution's workflow to the technical problem of verifiable authority across multiple independent principals. It complements `FID-032` on synthetic-media impersonation and `FID-040` on local agency, but focuses on machine-verifiable identity, mandate, scope attenuation, provenance, and revocation.",
+      "outputs": [
+        "Open multi-principal agent-sandbox specification and scenario library.",
+        "Delegation, scope, provenance, and revocation evaluation protocol.",
+        "Benchmark metrics and reference implementations for authority-chain tests.",
+        "Human-oversight interface requirements for making agent authority legible.",
+        "Public report on failure modes and safeguards for high-trust institutions."
+      ],
+      "open_questions": [
+        "Which authority attributes can be disclosed without exposing confidential institutional relationships or sensitive data?",
+        "What forms of revocation remain reliable when agents are copied, modified, or delegated through several organizations?",
+        "Which evidence should a recipient see before relying on an agent's action?",
+        "Can privacy-preserving attestations support accountability without creating a new centralized gatekeeper?"
+      ],
+      "public_claim_boundary": "This work can evaluate specified identity, delegation, and revocation mechanisms in simulated multi-principal environments. It cannot certify that a real agent has legitimate spiritual, legal, pastoral, or institutional authority.",
       "source_path": "ideas/FID-069-verifiable-delegation-revocation-multi-agent-networks.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-069-verifiable-delegation-revocation-multi-agent-networks.md"
     },
@@ -1169,6 +2962,35 @@
         "Test defenses against both adversarial and legitimate high-trust workflows.",
         "Contribute responsible disclosure and evaluation-reporting practices."
       ],
+      "hypothesis": "Separating content from instruction is not sufficient when attackers manipulate the context in which an agent decides what information to disclose or what tools to use. Agent security will improve when evaluations model contextual integrity: the source, recipient, purpose, and authorization of each information flow and action.",
+      "proposed_method": [
+        "Create a synthetic corpus of trusted and untrusted institutional content, including malicious instructions embedded in realistic emails, web pages, documents, and requests.",
+        "Define a context-integrity taxonomy for authorized instructions, sensitive data, tool permissions, external content, and cross-role information flows.",
+        "Evaluate agents with retrieval, memory, communication, and action tools under direct and indirect prompt-injection attacks.",
+        "Measure unauthorized disclosure, unsafe tool use, hidden compromise, false refusal, legitimate-task completion, and whether an agent asks for appropriate human approval."
+      ],
+      "needed_controls": [
+        "Use synthetic data only; do not collect or replay pastoral, counseling, youth, or congregant records.",
+        "Separate source accuracy from adversarial instruction handling.",
+        "Test security controls without giving agents access to real credentials, external systems, or consequential actions.",
+        "Include benign content that resembles an attack so defenses are not rewarded simply for refusing to read or act on all external material.",
+        "Publish attack assumptions, evaluation limits, and false-positive costs."
+      ],
+      "relationship_to_existing_ideas": "This differs from `FID-006` and `FID-062`, which evaluate retrieval quality, source authority, and citation reliability. It asks whether untrusted content can become an unsafe instruction or information flow. It complements `FID-017` on agentic workflows and `FID-023` on red teaming with a specific security benchmark for indirect prompt injection.",
+      "outputs": [
+        "Synthetic prompt-injection and contextual-integrity benchmark suite.",
+        "Threat taxonomy for faith-facing agentic systems.",
+        "Reproducible agent-security evaluation harness and reporting schema.",
+        "Metrics for disclosure, tool misuse, compromise detection, false refusal, and task completion.",
+        "Deployment guidance for builders and institutions using retrieval-enabled agents."
+      ],
+      "open_questions": [
+        "Which contextual signals can an agent use without creating excessive friction or unnecessary collection of sensitive metadata?",
+        "How should a system explain a refusal or seek approval without revealing the malicious content to a vulnerable user?",
+        "Can defenses preserve legitimate use of public religious sources and community materials while resisting adversarial instructions?",
+        "Which attacks transfer across models, tools, and deployment environments?"
+      ],
+      "public_claim_boundary": "This work can measure resilience to specified attacks in defined synthetic environments. It cannot establish that an agent is secure against all prompt injection, data-exfiltration, or social-engineering risks.",
       "source_path": "ideas/FID-070-contextual-integrity-prompt-injection-faith-facing-agents.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-070-contextual-integrity-prompt-injection-faith-facing-agents.md"
     },
@@ -1186,6 +3008,35 @@
         "Develop synthetic data generators and leakage metrics.",
         "Contribute threat modeling and responsible disclosure expertise."
       ],
+      "hypothesis": "General data-governance policies will not reliably prevent cross-context disclosure unless systems are evaluated at the memory and tool layer. Systems will better preserve confidentiality when memory entries, derived summaries, retrieval results, logs, and delegated tasks carry testable purpose, role, retention, and deletion constraints.",
+      "proposed_method": [
+        "Build synthetic multi-session, multi-role workflows in which information authorized for one purpose must not influence another task or recipient.",
+        "Compare persistent-memory, retrieval, summarization, logging, and delegation designs under direct queries, indirect inference, export, and tool-use paths.",
+        "Define tests for retention, deletion, revocation, scope change, and recovery after a memory or credential boundary fails.",
+        "Measure direct disclosure, inferential leakage, cross-role contamination, deletion verification, retention compliance, task completion, and appropriate escalation to a human steward."
+      ],
+      "needed_controls": [
+        "Use synthetic records and scenarios only.",
+        "Treat information about third parties as a separate boundary from the current user's own data.",
+        "Test both visible disclosures and subtle behavioral influence from retained context.",
+        "Separate technical evidence of deletion from a mere user-interface statement that information was deleted.",
+        "Do not assume that institutional access or an account login establishes a valid purpose for every downstream use."
+      ],
+      "relationship_to_existing_ideas": "This operationalizes the broad stewardship questions in `FID-033` and the monitoring questions in `FID-021` for a concrete agentic failure surface: cross-session, cross-tool, cross-role, and cross-organization memory leakage. It also extends `FID-017` by testing whether agents can be safely interrupted, handed off, or recovered after confidential state has been created.",
+      "outputs": [
+        "Synthetic confidential-memory scenario library and benchmark protocol.",
+        "Taxonomy of direct, inferential, and delegated cross-context disclosure.",
+        "Evaluation metrics for purpose limitation, retention, deletion, revocation, and recovery.",
+        "Reference reporting template for agent-memory privacy results.",
+        "Technical and institutional design guidance for high-trust deployments."
+      ],
+      "open_questions": [
+        "What evidence should users and institutions receive that deletion has propagated through summaries, logs, retrieval indices, and delegated tasks?",
+        "Can purpose-bound memory remain usable without retaining a broad behavioral profile of a person or community?",
+        "Which privacy-preserving monitoring methods can detect leakage without capturing more confidential material?",
+        "How should systems handle a request to revoke access after partial action or cross-organization handoff?"
+      ],
+      "public_claim_boundary": "This work can test whether defined systems preserve specified memory and information-flow boundaries in synthetic environments. It cannot guarantee legal compliance, eliminate all privacy risk, or determine whether a real institution may use a particular record for a particular purpose.",
       "source_path": "ideas/FID-071-confidential-agent-memory-cross-context-disclosure.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-071-confidential-agent-memory-cross-context-disclosure.md"
     },
@@ -1205,6 +3056,44 @@
         "Review the protocol from privacy, security, labor, governance, professional-practice, or high-trust domain perspectives.",
         "Share de-identified failure patterns or deployment constraints through an appropriately governed collaboration."
       ],
+      "hypothesis": "Runtime assurance requires a measurable closed loop: observe the minimum operational evidence needed, interpret that evidence against the assigned task, policy, and authority boundaries, and respond through constraints, alerts, pause, rollback, or human handoff. More telemetry is not the same as more assurance. Task-aligned trace schemas, calibrated detectors, and accountable intervention controls should detect meaningful deviations more reliably and with less privacy burden than undifferentiated logging.",
+      "proposed_method": [
+        "Build a synthetic, cross-domain suite of agent workflows spanning software operations, financial administration, healthcare-adjacent administration, public-sector services, nonprofit operations, and faith institutions.",
+        "Define an operational trace schema covering the assigned goal, relevant context and source provenance, tool calls, permissions, delegation, checkpoints, consequential actions, outcomes, overrides, and human handoffs.",
+        "Compare baseline event logging, structured operational traces, and policy-aware runtime monitoring without requiring access to private chain-of-thought.",
+        "Inject realistic deviations including goal drift, unauthorized tool use, scope expansion, covert workarounds, failed escalation, unsafe persistence, and emergent multi-agent coordination.",
+        "Measure intent fidelity, authorization integrity, policy adherence, anomaly detection sensitivity and specificity, detection latency, escalation quality, interruptibility, rollback and recovery, trace completeness, privacy burden, and task utility.",
+        "Run human-operator studies to test whether the available evidence supports accurate reconstruction, proportionate intervention, and calibrated trust.",
+        "Test whether results transfer across models, agent harnesses, tool stacks, and workflow domains, including adversarial attempts to evade monitoring."
+      ],
+      "needed_controls": [
+        "Use synthetic or explicitly consented workflows; do not solicit confidential production traces through public contribution channels.",
+        "Distinguish observable operational evidence from hidden or private chain-of-thought, and do not treat chain-of-thought access as a prerequisite for assurance.",
+        "Apply data minimization, purpose limitation, role-based access, retention, deletion, and incident-response controls to trace collection itself.",
+        "Include benign but unusual behavior to measure false alarms and avoid defining conformity as alignment.",
+        "Evaluate the effect of monitoring and intervention on task performance, operator workload, worker autonomy, and user behavior.",
+        "Disclose the institutional policies, evaluator assumptions, and normative judgments used to define alignment and acceptable intervention.",
+        "Treat monitoring as evidence about specified behavior under specified conditions, not as a guarantee of general alignment or safety."
+      ],
+      "relationship_to_existing_ideas": "This call provides the general runtime-assurance frame around several narrower research ideas. `FID-017` applies agent risk to ministry workflows; `FID-021` focuses on post-deployment monitoring for faith-facing AI; `FID-069` studies delegation and revocation; `FID-070` tests prompt-injection resilience; and `FID-071` addresses confidential agent memory. This project asks how those failure surfaces can be measured together as an operational assurance system that transfers across enterprise and high-trust settings.",
+      "outputs": [
+        "Public agent-alignment and runtime-assurance evaluation framework.",
+        "Minimal operational trace schema with a companion data-governance profile.",
+        "Synthetic workflow, deviation, and intervention test suite.",
+        "Metrics for alignment, detection, escalation, interruptibility, and recovery.",
+        "Reference instrumentation and evaluation harness for reproducible studies.",
+        "Enterprise study protocol, deployment checklist, and reporting template.",
+        "Open-problems map for privacy-preserving and multi-agent runtime assurance."
+      ],
+      "open_questions": [
+        "What operational evidence is sufficient to evaluate alignment without access to private chain-of-thought?",
+        "How should intent be represented when instructions, policy, professional judgment, and stakeholder interests conflict or change during a task?",
+        "Which signals reveal emergent multi-agent behavior that is not visible in any single agent's trace?",
+        "What false-positive rate can operators tolerate before monitoring degrades productivity, autonomy, or trust?",
+        "Can aggregate, local, or privacy-preserving analysis support useful assurance when raw traces cannot leave an organization?",
+        "When should an independent evaluator receive trace access, and what technical and institutional safeguards should govern that access?"
+      ],
+      "public_claim_boundary": "This work can test whether specified agents, evidence, detectors, and controls identify and respond to defined deviations in synthetic or explicitly consented settings. It cannot certify that an agent is generally aligned, infer hidden intent or consciousness, guarantee real-world safety, justify indiscriminate monitoring, or establish that access to private chain-of-thought is necessary or appropriate.",
       "source_path": "ideas/FID-074-agent-alignment-runtime-assurance.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-074-agent-alignment-runtime-assurance.md"
     }

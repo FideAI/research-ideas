@@ -14,25 +14,10 @@ const allowedTracks = new Set([
   "broader-trustworthy-ai",
 ]);
 
-async function generatedAt(distFile) {
+function generatedAt() {
   if (process.env.RESEARCH_IDEAS_GENERATED_AT) {
     return process.env.RESEARCH_IDEAS_GENERATED_AT;
   }
-
-  try {
-    const existingFeed = JSON.parse(await readFile(distFile, "utf8"));
-    if (
-      typeof existingFeed.generated_at === "string" &&
-      existingFeed.generated_at.trim()
-    ) {
-      return existingFeed.generated_at;
-    }
-  } catch (error) {
-    if (error?.code !== "ENOENT") {
-      throw error;
-    }
-  }
-
   return new Date().toISOString();
 }
 
@@ -57,6 +42,10 @@ function firstParagraph(markdown) {
     .split(/\n\s*\n/)
     .map((part) => part.replace(/\s+/g, " ").trim())
     .find(Boolean) ?? "";
+}
+
+function prose(markdown) {
+  return markdown.replace(/\s+/g, " ").trim();
 }
 
 function parseList(markdown) {
@@ -96,6 +85,17 @@ function parseIdea(file, content) {
   const question = firstParagraph(optionalSection(content, "Question"));
   const whyItMatters = firstParagraph(optionalSection(content, "Why It Matters"));
   const waysToHelp = parseList(optionalSection(content, "Ways to Help"));
+  const hypothesis = prose(optionalSection(content, "Hypothesis"));
+  const proposedMethod = parseList(optionalSection(content, "Proposed Method"));
+  const neededControls = parseList(optionalSection(content, "Needed Controls"));
+  const relationshipToExistingIdeas = prose(
+    optionalSection(content, "Relationship to Existing Ideas"),
+  );
+  const outputs = parseList(optionalSection(content, "Outputs"));
+  const openQuestions = parseList(optionalSection(content, "Open Questions"));
+  const publicClaimBoundary = prose(
+    optionalSection(content, "Public Claim Boundary"),
+  );
 
   return {
     id,
@@ -107,6 +107,15 @@ function parseIdea(file, content) {
     summary: question,
     why_it_matters: whyItMatters,
     ways_to_help: waysToHelp,
+    ...(hypothesis ? { hypothesis } : {}),
+    ...(proposedMethod.length ? { proposed_method: proposedMethod } : {}),
+    ...(neededControls.length ? { needed_controls: neededControls } : {}),
+    ...(relationshipToExistingIdeas
+      ? { relationship_to_existing_ideas: relationshipToExistingIdeas }
+      : {}),
+    ...(outputs.length ? { outputs } : {}),
+    ...(openQuestions.length ? { open_questions: openQuestions } : {}),
+    ...(publicClaimBoundary ? { public_claim_boundary: publicClaimBoundary } : {}),
     source_path: `ideas/${file}`,
     url: `${sourceRepo}/blob/${sourceBranch}/ideas/${file}`,
   };
@@ -126,7 +135,7 @@ const distFile = path.join(distDir, "research-ideas.json");
 
 const feed = {
   schema_version: 1,
-  generated_at: await generatedAt(distFile),
+  generated_at: generatedAt(),
   source_repo: sourceRepo,
   source_branch: sourceBranch,
   idea_count: ideas.length,

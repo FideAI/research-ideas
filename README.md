@@ -25,8 +25,7 @@ company-internal implementation commitments here.
 
 - **72 open research ideas**
 - **3 research tracks**
-- **4 public research agendas** that group the backlog into shareable research
-  campaigns
+- **8 research areas** that connect related questions across the three scopes
 - **4 public issue paths** for proposing ideas, claiming work, commenting on
   methodology, and volunteering as a reviewer
 - **1 generated feed** at `dist/research-ideas.json` for the website and other
@@ -73,18 +72,27 @@ See [`CONTRIBUTING.md`](CONTRIBUTING.md) for the full contributor guide.
 | `faith-domain` | Directly studies faith-facing systems, religious sources, traditions, practices, communities, or institutions. It may be Christian, cross-faith, or comparative. |
 | `broader-trustworthy-ai` | Studies a technical, evaluative, governance, or human-impact question intended to transfer across domains. Faith may be a demanding application or research lens, but is not the sole object of study. |
 
-## Research Agendas
+## Research Areas
 
-The website organizes the public calls into four larger agendas. The agenda
-pages are not separate sources of truth; they are curated entry points over the
-idea briefs in this repository.
+Tracks state where a call applies. Research areas state what problem it
+investigates. A call may inform more than one area, but its track remains the
+authoritative scope label. The website maintains the current call-to-area map
+and uses these areas as the public research agenda.
 
-| Agenda | Public route | Primary audience | Included ideas |
-|---|---|---|---|
-| AI, work, meaning, and the common good | `/research/calls/work-meaning` | churches, economists, sociologists, funders | `FID-030`, `FID-033`, `FID-034`, `FID-037`, `FID-038`, `FID-040`, `FID-046`-`FID-055`, `FID-065` |
-| Pastoral care, spiritual companionship, and formation | `/research/calls/pastoral-formation` | pastors, churches, parents, educators, builders | `FID-003`, `FID-004`, `FID-010`, `FID-015`, `FID-016`, `FID-018`, `FID-025`-`FID-027`, `FID-035`, `FID-041`, `FID-042`, `FID-050`, `FID-052`, `FID-053`, `FID-068` |
-| Faith-facing AI evaluation infrastructure | `/research/calls/evaluation-infrastructure` | AI researchers, builders, reviewers, funders | `FID-001`-`FID-003`, `FID-006`, `FID-008`, `FID-011`, `FID-012`, `FID-023`, `FID-028`, `FID-044`, `FID-045`, `FID-070`, `FID-074` |
-| Governance, authority, and religious representation | `/research/calls/governance-representation` | church leaders, ministries, safety researchers, interfaith reviewers | `FID-005`-`FID-007`, `FID-009`, `FID-013`, `FID-014`, `FID-017`, `FID-019`-`FID-025`, `FID-028`, `FID-029`, `FID-031`, `FID-032`, `FID-036`, `FID-039`-`FID-044`, `FID-064`, `FID-066`, `FID-067`, `FID-069`, `FID-071`, `FID-074` |
+| Research area | Organizing question | Public route |
+|---|---|---|
+| Frontier capabilities and emerging risks | What new risks appear as systems become more capable and autonomous? | `/research-areas#frontier-capabilities` |
+| Agent alignment and runtime assurance | Does an agent remain aligned while it plans, uses tools, and acts? | `/research-areas#agent-alignment` |
+| Evaluation science and technical assurance | Can the evidence support the decision people want to make? | `/research-areas#evaluation-science` |
+| Grounding, truthfulness, and epistemic integrity | Will the system use the right source and represent it faithfully? | `/research-areas#grounding-truthfulness` |
+| Human dignity, moral agency, and formation | What judgment, habits, and relationships does AI use shape? | `/research-areas#human-agency-formation` |
+| Safety in high-trust domains | What does trustworthy behavior require in a consequential setting? | `/research-areas#high-trust-domains` |
+| Stewardship, governance, and institutional readiness | Which safeguards and authority structures should govern deployment? | `/research-areas#governance-readiness` |
+| Work, vocation, and the common good | How does advanced AI change useful work and human contribution? | `/research-areas#work-common-good` |
+
+`FID-074` is a `broader-trustworthy-ai` call in Agent Alignment and Runtime
+Assurance. Faith-facing workflows may provide useful test cases, but they do not
+define the scope of the call.
 
 ## Status Vocabulary
 
