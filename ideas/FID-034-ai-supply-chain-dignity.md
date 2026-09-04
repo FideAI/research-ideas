@@ -2,7 +2,7 @@
 
 Status: `seed`
 
-Track: `broader-faith-safety`
+Track: `faith-domain`
 
 Primary need: procurement ethics, labor dignity, environmental responsibility, vendor accountability
 

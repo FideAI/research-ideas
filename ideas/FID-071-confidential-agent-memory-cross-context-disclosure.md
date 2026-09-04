@@ -2,7 +2,7 @@
 
 Status: `seed`
 
-Track: `broader-faith-safety`
+Track: `broader-trustworthy-ai`
 
 Primary need: privacy-preserving AI, agent memory evaluation, data governance, high-trust systems
 

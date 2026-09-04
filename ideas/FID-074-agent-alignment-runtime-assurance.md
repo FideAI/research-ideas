@@ -2,7 +2,9 @@
 
 Status: `scoping`
 
-Track: `broader-faith-safety`
+Track: `broader-trustworthy-ai`
+
+Research area: Agent systems, runtime assurance, and operational intelligence
 
 Primary need: agent evaluation, runtime monitoring, observability, security, privacy, enterprise workflows
 

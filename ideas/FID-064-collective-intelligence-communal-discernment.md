@@ -2,7 +2,7 @@
 
 Status: `seed`
 
-Track: `broader-faith-safety`
+Track: `broader-trustworthy-ai`
 
 Primary need: computational social science, theology of discernment, network science, organizational research
 

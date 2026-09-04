@@ -2,7 +2,7 @@
 
 Status: `seed`
 
-Track: `broader-faith-safety`
+Track: `faith-domain`
 
 Primary need: RAG evaluation, retrieval verification, source authority metadata
 

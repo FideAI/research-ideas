@@ -2,7 +2,7 @@
 
 Status: `seed`
 
-Track: `broader-faith-safety`
+Track: `faith-domain`
 
 Primary need: conflict communication, peacebuilding, moderation, pastoral leadership
 

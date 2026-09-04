@@ -2,7 +2,9 @@
 
 Status: `seed`
 
-Track: `christian-church` or `broader-faith-safety`
+Track: `christian-church`, `faith-domain`, or `broader-trustworthy-ai`
+
+Research area:
 
 Primary need:
 

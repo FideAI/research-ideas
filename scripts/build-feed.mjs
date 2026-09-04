@@ -8,6 +8,11 @@ const distDir = path.join(repoRoot, "dist");
 const sourceRepo =
   process.env.RESEARCH_IDEAS_SOURCE_REPO ?? "https://github.com/FideAI/research-ideas";
 const sourceBranch = process.env.RESEARCH_IDEAS_SOURCE_BRANCH ?? "main";
+const allowedTracks = new Set([
+  "christian-church",
+  "faith-domain",
+  "broader-trustworthy-ai",
+]);
 
 async function generatedAt(distFile) {
   if (process.env.RESEARCH_IDEAS_GENERATED_AT) {
@@ -68,12 +73,16 @@ function parseIdea(file, content) {
   const title = titleLine.replace(/^FID-\d{3}:\s*/, "").trim();
   const status = requiredMatch(content, /^Status:\s+`([^`]+)`$/m, "status", file);
   const track = requiredMatch(content, /^Track:\s+`([^`]+)`$/m, "track", file);
+  if (!allowedTracks.has(track)) {
+    throw new Error(`${file}: unsupported track ${track}`);
+  }
   const primaryNeed = requiredMatch(
     content,
     /^Primary need:\s+(.+)$/m,
     "primary need",
     file,
   );
+  const researchArea = content.match(/^Research area:\s+(.+)$/m)?.[1]?.trim();
   const question = firstParagraph(optionalSection(content, "Question"));
   const whyItMatters = firstParagraph(optionalSection(content, "Why It Matters"));
   const waysToHelp = parseList(optionalSection(content, "Ways to Help"));
@@ -84,6 +93,7 @@ function parseIdea(file, content) {
     status,
     track,
     primary_need: primaryNeed,
+    ...(researchArea ? { research_area: researchArea } : {}),
     summary: question,
     why_it_matters: whyItMatters,
     ways_to_help: waysToHelp,
@@ -113,8 +123,10 @@ const feed = {
   tracks: {
     "christian-church":
       "Explicitly designed to benefit the Christian church: churches, clergy, Christian educators, ministries, denominations, seminaries, publishers, and Christian families.",
-    "broader-faith-safety":
-      "Relevant to faith communities, AI ethics, AI safety, evaluation science, governance, pluralism, or high-trust deployment more broadly.",
+    "faith-domain":
+      "Directly studies faith-facing systems, religious sources, traditions, practices, communities, or institutions across one or more faith contexts.",
+    "broader-trustworthy-ai":
+      "Studies technical, evaluative, governance, or human-impact questions intended to transfer across domains, including high-trust settings.",
   },
   ideas,
 };

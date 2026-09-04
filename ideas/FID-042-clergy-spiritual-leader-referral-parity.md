@@ -2,7 +2,7 @@
 
 Status: `seed`
 
-Track: `broader-faith-safety`
+Track: `faith-domain`
 
 Primary need: referral quality, pastoral-adjacent safety, pluralism evaluation
 

@@ -2,7 +2,7 @@
 
 Status: `scoping`
 
-Track: `broader-faith-safety`
+Track: `faith-domain`
 
 Primary need: eval engineering
 

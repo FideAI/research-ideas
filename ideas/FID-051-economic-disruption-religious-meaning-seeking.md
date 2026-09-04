@@ -2,7 +2,7 @@
 
 Status: `seed`
 
-Track: `broader-faith-safety`
+Track: `faith-domain`
 
 Primary need: sociology of religion, labor economics, privacy-preserving measurement, aggregate usage analysis
 

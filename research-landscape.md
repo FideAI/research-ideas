@@ -124,6 +124,13 @@ The next batch of Fide AI ideas should cover:
 
 ## Explicitly Christian Church-Serving Questions
 
+The research commons distinguishes three kinds of work. The
+`broader-trustworthy-ai` track contains questions designed to transfer across
+domains. The `faith-domain` track directly studies religious systems, sources,
+traditions, and institutions. The `christian-church` track names work explicitly
+designed to benefit Christian churches and ministries. These labels describe
+the primary object of a project, not the only community that may learn from it.
+
 Fide AI's broader umbrella can serve multiple faith, ethics, and safety
 communities, but one intended beneficiary is the Christian church. That creates
 a more specific question:

@@ -2,7 +2,7 @@
 
 Status: `seed`
 
-Track: `broader-faith-safety`
+Track: `faith-domain`
 
 Primary need: pastoral care, HAI research, mental health boundaries, privacy-preserving measurement
 

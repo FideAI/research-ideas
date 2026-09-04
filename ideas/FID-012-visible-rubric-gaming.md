@@ -2,7 +2,7 @@
 
 Status: `seed`
 
-Track: `broader-faith-safety`
+Track: `broader-trustworthy-ai`
 
 Primary need: eval science
 

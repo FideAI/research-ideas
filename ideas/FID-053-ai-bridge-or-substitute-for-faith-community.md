@@ -2,7 +2,7 @@
 
 Status: `seed`
 
-Track: `broader-faith-safety`
+Track: `faith-domain`
 
 Primary need: sociology of religion, pastoral care, UX research, aggregate and field measurement
 

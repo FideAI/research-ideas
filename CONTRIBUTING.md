@@ -124,6 +124,9 @@ Every idea brief should include:
 - `Ways to Help`
 - `Public Claim Boundary`
 
+Use the optional `Research area:` field when a narrower technical or domain
+label will help readers understand the work within its broader track.
+
 The feed builder expects this structure. If you rename headings, the website
 feed may lose useful fields.
 
@@ -134,10 +137,13 @@ Use one of these track values:
 | Track | Use when |
 |---|---|
 | `christian-church` | The idea is explicitly designed to benefit the Christian church: churches, clergy, Christian educators, ministries, denominations, seminaries, publishers, or Christian families. |
-| `broader-faith-safety` | The idea is relevant to faith communities, AI ethics, AI safety, evaluation science, governance, pluralism, or high-trust deployment more broadly. |
+| `faith-domain` | The research directly studies faith-facing systems, religious sources, traditions, practices, communities, or institutions. It may be Christian, cross-faith, or comparative. |
+| `broader-trustworthy-ai` | The research studies a technical, evaluative, governance, or human-impact question intended to transfer across domains. Faith may supply a demanding application or research lens, but is not the sole object of study. |
 
-When in doubt, choose the narrower, more concrete track. A Christian
-church-serving idea can still inform broader safety and ethics work.
+Classify the research by its primary object, not by every domain where its
+findings might apply. A Christian or faith-domain idea can still produce methods
+that generalize. A broader trustworthy-AI idea can still be tested first in a
+faith setting or disclose a religious worldview that shapes its framing.
 
 ## Statuses
 

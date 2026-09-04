@@ -2,7 +2,7 @@
 
 Status: `seed`
 
-Track: `broader-faith-safety`
+Track: `broader-trustworthy-ai`
 
 Primary need: human dignity, risk scoring, pastoral ethics, algorithmic accountability
 
