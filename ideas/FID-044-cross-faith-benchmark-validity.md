@@ -54,7 +54,7 @@ benchmark-shaped behavior.
 
 ## Relationship to Existing Ideas
 
-This complements `FID-002` FMG-Bench construct validity, `FID-011` reviewer
+This complements `FID-002` on human calibration and construct validity, `FID-011` reviewer
 reliability, and `FID-012` visible-rubric gaming by focusing specifically on
 cross-faith benchmark design, public leaderboards, and claims about religious
 representation or persuasion.

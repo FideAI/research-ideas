@@ -1,9 +1,9 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-04T18:20:30.319Z",
+  "generated_at": "2026-09-05T14:38:16.372Z",
   "source_repo": "https://github.com/FideAI/research-ideas",
   "source_branch": "main",
-  "idea_count": 74,
+  "idea_count": 86,
   "taxonomy": {
     "schema_version": 1,
     "research_areas": [
@@ -54,6 +54,21 @@
       }
     ],
     "application_domains": [
+      {
+        "id": "cybersecurity",
+        "title": "Cybersecurity",
+        "description": "Authorized security research, cyber capabilities, system controls, and independent incident investigation."
+      },
+      {
+        "id": "legal-and-justice",
+        "title": "Legal and justice",
+        "description": "Legal evidence, professional authority, rights, and justice-related workflows."
+      },
+      {
+        "id": "finance",
+        "title": "Finance",
+        "description": "Financial decisions, transaction integrity, authorization, and accountable financial workflows."
+      },
       {
         "id": "cross-domain",
         "title": "Cross-domain",
@@ -145,7 +160,7 @@
     },
     {
       "id": "FID-002",
-      "title": "FMG-Bench Human Calibration and Construct Validity",
+      "title": "Validating Human and AI Judgments of Faith-Facing Systems",
       "status": "active",
       "primary_area": "evaluation-science",
       "additional_areas": [
@@ -159,7 +174,7 @@
         "faith-and-religious-life"
       ],
       "primary_need": "expert reviewers, statistics",
-      "summary": "Do FMG-Bench dimensions measure stable, decision-relevant constructs when scored by calibrated human reviewers, and where do model judges diverge from expert human judgment?",
+      "summary": "Can qualified human reviewers consistently evaluate how faith-facing AI systems use sources, handle authority, defer to people and institutions, preserve human agency, and respect pastoral boundaries? Where do automated model judges diverge from those human judgments?",
       "why_it_matters": "Benchmarks are easy to publish and hard to validate. Fide AI should not rely on synthetic judges or aggregate scores unless it knows which dimensions are reliable enough to guide deployment, procurement, or public claims.",
       "ways_to_help": [
         "Serve as an expert reviewer.",
@@ -170,7 +185,7 @@
       "hypothesis": "Some dimensions will be reliable enough for decision support, while others will require narrower rubrics, more reviewer training, or removal from high-stakes claims.",
       "proposed_method": [
         "Recruit a small calibrated reviewer panel.",
-        "Score a stratified subset of FMG-Bench outputs.",
+        "Score a stratified subset of outputs from Fide AI's published faith-facing evaluation, FMG-Bench.",
         "Measure inter-rater reliability, judge-human disagreement, strictness/leniency, failure-tag consistency, and disagreement concentration by scenario type.",
         "Compare expert review, trained non-expert review, and model judge scores where feasible."
       ],
@@ -184,7 +199,7 @@
       "outputs": [
         "Calibration report.",
         "Reviewer protocol.",
-        "Updated FMG-Bench rubric guidance.",
+        "Updated guidance for faith-facing evaluation rubrics.",
         "Evidence map classifying dimensions as decision-relevant, conditional, or not yet validated."
       ],
       "open_questions": [
@@ -192,7 +207,7 @@
         "How should theological tradition metadata be represented without tokenizing reviewers?",
         "Which disagreement patterns are legitimate pluralism rather than rubric failure?"
       ],
-      "public_claim_boundary": "Calibration can validate specific dimensions and use cases. It cannot make a blanket claim that FMG-Bench fully measures theological or pastoral quality.",
+      "public_claim_boundary": "Calibration can validate specific dimensions, reviewer protocols, and use cases. It cannot establish that one benchmark fully measures theological or pastoral quality, or that a system is trustworthy across faith settings.",
       "source_path": "ideas/FID-002-fmg-bench-human-calibration.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-002-fmg-bench-human-calibration.md"
     },
@@ -2388,7 +2403,7 @@
         "Include religious and nonreligious reviewers.",
         "Track benchmark leakage, public/private splits, and model-update drift."
       ],
-      "relationship_to_existing_ideas": "This complements FID-002 FMG-Bench construct validity, FID-011 reviewer reliability, and FID-012 visible-rubric gaming by focusing specifically on cross-faith benchmark design, public leaderboards, and claims about religious representation or persuasion.",
+      "relationship_to_existing_ideas": "This complements FID-002 on human calibration and construct validity, FID-011 reviewer reliability, and FID-012 visible-rubric gaming by focusing specifically on cross-faith benchmark design, public leaderboards, and claims about religious representation or persuasion.",
       "outputs": [
         "Cross-faith benchmark validation protocol.",
         "Reporting checklist for faith-facing AI leaderboards.",
@@ -4167,6 +4182,577 @@
       "public_claim_boundary": "This work can test whether specified agents, evidence, detectors, and controls identify and respond to defined deviations in synthetic or explicitly consented settings. It cannot certify that an agent is generally aligned, infer hidden intent or consciousness, guarantee real-world safety, justify indiscriminate monitoring, or establish that access to private chain-of-thought is necessary or appropriate.",
       "source_path": "ideas/FID-074-agent-alignment-runtime-assurance.md",
       "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-074-agent-alignment-runtime-assurance.md"
+    },
+    {
+      "id": "FID-075",
+      "title": "Cybersecurity Capabilities and Whole-System Risk",
+      "status": "seed",
+      "primary_area": "frontier-capabilities",
+      "additional_areas": [
+        "agent-alignment",
+        "evaluation-science"
+      ],
+      "research_areas": [
+        "frontier-capabilities",
+        "agent-alignment",
+        "evaluation-science"
+      ],
+      "application_domains": [
+        "cybersecurity"
+      ],
+      "primary_need": "security research, evaluation engineering, threat modeling, statistical design",
+      "summary": "How do autonomy, tool access, resource budgets, and human assistance change an AI system's cybersecurity capabilities and the risk it creates?",
+      "why_it_matters": "A model score does not identify what a deployed agent can accomplish with tools, time, permissions, and collaborators. Separating these factors could make independent evaluations more informative without treating task success as proof of real-world harm.",
+      "ways_to_help": [
+        "Security researchers to design and review controlled tasks.",
+        "Evaluation engineers and statisticians to test reproducibility."
+      ],
+      "hypothesis": "System configuration will change measured capability and boundary violations beyond model choice alone. The null is that these changes add no reproducible explanatory power over a model-only baseline.",
+      "proposed_method": [
+        "Build an owned, isolated cyber range with synthetic assets, explicit authorization boundaries, and paired defensive and adversarial evaluation tasks.",
+        "Vary one factor at a time and selected interactions: autonomy, tool permissions, time budget, scaffolding, and approved human assistance. Compare model-only, agent, and qualified human baselines.",
+        "Measure verified task completion, unauthorized-action attempts, actual boundary crossings, intervention needs, cost, and time. Report repeated-run uncertainty and held-out environment results."
+      ],
+      "needed_controls": [
+        "Prohibit live targets, real credentials, uncontrolled egress, and production data. Require security review and written range authorization before execution.",
+        "Hold task information and budgets comparable; record model versions, harness changes, contamination checks, and evaluator disagreement.",
+        "Disclose whose authorization rules define a violation. Do not collapse capability, willingness, and opportunity into one risk score."
+      ],
+      "relationship_to_existing_ideas": "FID-074 provides the runtime-assurance frame. FID-076 tests controls rather than capability; FID-077 examines the evidence needed after an incident.",
+      "outputs": [
+        "A reviewed evaluation protocol and reproducible safe task subset.",
+        "A capability-versus-configuration report with limits on extrapolating to real deployments."
+      ],
+      "open_questions": [
+        "Which range tasks predict consequential real-world behavior rather than benchmark familiarity?",
+        "Which details require restricted release after dual-use review?"
+      ],
+      "public_claim_boundary": "A seed proposal, not evidence that Fide AI has measured frontier cyber capability. Range performance neither establishes real-world offensive capability nor certifies a system as secure.",
+      "source_path": "ideas/FID-075-cybersecurity-capabilities-and-system-risk.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-075-cybersecurity-capabilities-and-system-risk.md"
+    },
+    {
+      "id": "FID-076",
+      "title": "Authorization Boundaries and AI Control in Cybersecurity",
+      "status": "seed",
+      "primary_area": "agent-alignment",
+      "additional_areas": [
+        "evaluation-science"
+      ],
+      "research_areas": [
+        "agent-alignment",
+        "evaluation-science"
+      ],
+      "application_domains": [
+        "cybersecurity",
+        "cross-domain"
+      ],
+      "primary_need": "security engineering, adversarial evaluation, control protocols, independent review",
+      "summary": "Which controls keep capable agents within legitimate authorization when task pressure, untrusted inputs, or delegated work creates opportunities to exceed it?",
+      "why_it_matters": "Completing an authorized task is not sufficient if the system expands its access or bypasses oversight along the way. This call studies whether enforceable boundaries hold under pressure, not whether an agent can recite a security policy.",
+      "ways_to_help": [
+        "Security engineers to implement testable permission boundaries.",
+        "Control researchers and operators to independently challenge protocols."
+      ],
+      "hypothesis": "Least-privilege tools and enforceable approval gates will reduce unauthorized completed actions more reliably than instruction-only controls at comparable useful-task performance. They may instead shift failures or impose unacceptable costs.",
+      "proposed_method": [
+        "Create isolated scenarios with explicit asset ownership, allowed actions, revocation points, and synthetic adversarial inputs. Include single-agent and delegated workflows.",
+        "Compare instruction-only policies, permission enforcement, independent monitoring, and combined controls using matched tasks and resource budgets.",
+        "Measure attempted and completed violations separately, detection latency, successful shutdown or revocation, false alarms, and legitimate task completion. Test previously unseen scenarios and adaptive challenges."
+      ],
+      "needed_controls": [
+        "Use only owned sandboxes with disabled external access and synthetic secrets. Review challenge designs and release artifacts for dual-use risk.",
+        "Specify monitor access and trust assumptions; separate ordinary mistakes from deliberately adversarial test-agent behavior without inferring model intent.",
+        "Pre-register intervention budgets and failure thresholds. Include benign difficult tasks so blocking everything cannot count as success."
+      ],
+      "relationship_to_existing_ideas": "Extends the cross-domain questions in FID-069 and FID-074. FID-070 remains the dedicated faith-facing prompt-injection call; this brief tests cybersecurity control protocols and their tradeoffs.",
+      "outputs": [
+        "A control-evaluation harness with safe scenarios and reproducible comparisons.",
+        "An explicit account of residual failure modes and useful-work tradeoffs."
+      ],
+      "open_questions": [
+        "Do controls generalize across models and toolchains?",
+        "How does delegation change revocation and responsibility?"
+      ],
+      "public_claim_boundary": "This is a proposed control study, not a security certification or a claim that models are inherently deceptive. Public artifacts must not enable attacks on third-party systems.",
+      "source_path": "ideas/FID-076-cybersecurity-authority-and-control.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-076-cybersecurity-authority-and-control.md"
+    },
+    {
+      "id": "FID-077",
+      "title": "Independent Agent Incident Investigation and Evidence Sufficiency",
+      "status": "seed",
+      "primary_area": "agent-alignment",
+      "additional_areas": [
+        "grounding-truthfulness",
+        "governance-readiness"
+      ],
+      "research_areas": [
+        "agent-alignment",
+        "grounding-truthfulness",
+        "governance-readiness"
+      ],
+      "application_domains": [
+        "cybersecurity",
+        "workplace-and-enterprise",
+        "cross-domain"
+      ],
+      "primary_need": "incident response, trace analysis, data provenance, privacy, independent review",
+      "summary": "What operational evidence lets independent investigators reconstruct an agent incident, distinguish competing explanations, and identify which interventions could have changed the outcome?",
+      "why_it_matters": "Logs may show an outcome without establishing its cause. Independent investigation needs an evidence standard that supports scrutiny while limiting exposure of private information and acknowledging what missing records leave unknown.",
+      "ways_to_help": [
+        "Incident responders and independent researchers to reconstruct blinded cases.",
+        "Privacy and provenance specialists to review evidence handling."
+      ],
+      "hypothesis": "Structured, integrity-protected action and permission records will improve reconstruction accuracy over ordinary logs. Additional records may yield diminishing benefits or misleading confidence, and neither condition establishes access to a model's private reasoning.",
+      "proposed_method": [
+        "Generate known-cause incidents in isolated synthetic workflows, including delegation failures, unauthorized actions, and benign look-alikes.",
+        "Give blinded investigators different evidence bundles: outcome-only, ordinary logs, and structured tool, permission, source, intervention, and delegation records.",
+        "Score reconstruction against ground truth, calibration of uncertainty, false attribution, reviewer agreement, and time. Remove or alter records to test sensitivity; replay candidate interventions where valid."
+      ],
+      "needed_controls": [
+        "Use synthetic cases initially; require consent, access agreements, and independent disclosure review before any real incident study.",
+        "Separate observed actions, inferred explanations, and unknowns. Record custody, redaction, missingness, and alternative causal accounts.",
+        "Do not require private chain-of-thought or indiscriminate employee surveillance. Evaluate evidence minimization and confidentiality alongside investigative utility."
+      ],
+      "relationship_to_existing_ideas": "Operationalizes the evidence questions in FID-074 and complements FID-071 on confidential memory. FID-024 remains a separate faith-domain incident database proposal.",
+      "outputs": [
+        "A minimum-evidence schema and investigator reporting template.",
+        "A synthetic incident corpus, evidence-ablation study, and reproducibility guidance."
+      ],
+      "open_questions": [
+        "When does redaction prevent meaningful independent review?",
+        "Which causal claims remain unsupported even with complete action logs?"
+      ],
+      "public_claim_boundary": "A proposed study of investigative methods, not a Fide AI investigation of any named organization or incident. Reconstructed explanations must retain uncertainty and cannot establish intent from traces alone.",
+      "source_path": "ideas/FID-077-independent-agent-incident-investigation.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-077-independent-agent-incident-investigation.md"
+    },
+    {
+      "id": "FID-078",
+      "title": "When Trustworthiness Evaluations Transfer Across Domains",
+      "status": "seed",
+      "primary_area": "evaluation-science",
+      "additional_areas": [
+        "high-trust-domains"
+      ],
+      "research_areas": [
+        "evaluation-science",
+        "high-trust-domains"
+      ],
+      "application_domains": [
+        "cross-domain"
+      ],
+      "primary_need": "measurement science, psychometrics, domain review, evaluation engineering",
+      "summary": "Which measures of evidence use, authority boundaries, and human control transfer across high-trust domains, and which require domain-specific definitions and calibration?",
+      "why_it_matters": "A shared vocabulary can organize research without making a score portable. A method that performs well in one setting may reward the wrong behavior in another because the sources, decisions, duties, and consequences differ.",
+      "ways_to_help": [
+        "Measurement researchers and domain practitioners to define and challenge constructs.",
+        "Engineers to implement held-out evaluation and reproducibility checks."
+      ],
+      "hypothesis": "Shared task structures with domain-calibrated rubrics will transfer more reliably than unchanged generic rubrics. The study should also test whether apparently shared constructs fail to support comparison at all.",
+      "proposed_method": [
+        "Co-design matched task families in at least three settings with different authority structures. Start with synthetic cases and identify the intended decision each measure supports.",
+        "Compare generic rubrics, adapted rubrics, and independent expert judgment across the same systems. Hold out one domain during method development.",
+        "Estimate inter-rater reliability, construct validity, rank stability, subgroup error, and uncertainty. Test whether scores predict separately assessed workflow failures rather than merely correlating with another judge."
+      ],
+      "needed_controls": [
+        "Pre-register constructs, adaptations, exclusion criteria, and transfer claims. Separate task difficulty from domain effects.",
+        "Disclose normative assumptions and expert-panel composition; preserve substantive disagreement instead of averaging it away.",
+        "Control for benchmark leakage, model-judge dependence, and unequal access to relevant sources. Publish failed transfers."
+      ],
+      "relationship_to_existing_ideas": "Builds on FID-044's cross-faith validity question without replacing it. Provides shared validation methods for FID-075 and FID-080 through FID-086.",
+      "outputs": [
+        "A transfer-validation protocol and openly licensed safe task examples.",
+        "A map of shared measures, domain-specific requirements, and unsupported comparisons."
+      ],
+      "open_questions": [
+        "What evidence justifies combining domain results into a common scale?",
+        "Which forms of expert disagreement reveal a construct problem rather than annotation noise?"
+      ],
+      "public_claim_boundary": "This seed call does not claim a universal trustworthiness score. Transfer must be demonstrated for specific constructs, systems, and settings.",
+      "source_path": "ideas/FID-078-cross-domain-evaluation-validity.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-078-cross-domain-evaluation-validity.md"
+    },
+    {
+      "id": "FID-079",
+      "title": "Presuppositions, Disagreement, and Evaluation Judgment",
+      "status": "seed",
+      "primary_area": "evaluation-science",
+      "additional_areas": [
+        "governance-readiness",
+        "human-agency-formation"
+      ],
+      "research_areas": [
+        "evaluation-science",
+        "governance-readiness",
+        "human-agency-formation"
+      ],
+      "application_domains": [
+        "cross-domain"
+      ],
+      "primary_need": "evaluation design, philosophy, social science, reviewer calibration",
+      "summary": "How do researchers' presuppositions shape evaluation design and interpretation, and can explicit disclosure make judgments more inspectable and appropriately trusted?",
+      "why_it_matters": "Research choices reflect assumptions about evidence, authority, harm, and human goods. Naming these assumptions is an opportunity for intellectual honesty, but disclosure alone does not make a method valid or eliminate bias.",
+      "ways_to_help": [
+        "Philosophers, domain experts, and measurement researchers to develop test cases.",
+        "Social scientists and reviewers to design and assess the study."
+      ],
+      "hypothesis": "Structured disclosure plus sensitivity analysis will improve reviewers' ability to identify consequential assumptions compared with a methods-only report. It may not improve agreement or warranted confidence and could increase unwarranted confidence.",
+      "proposed_method": [
+        "Construct evaluation reports with documented variations in harm definitions, authority rules, stakeholder priorities, and aggregation choices.",
+        "Randomize blinded reviewers to methods-only, disclosure-only, and disclosure-plus-sensitivity conditions. Ask them to identify assumption-dependent conclusions and assess uncertainty.",
+        "Measure detection accuracy, calibration, reproducibility of judgments, and changes in appropriate reliance. Analyze persistent substantive disagreements separately from misunderstandings."
+      ],
+      "needed_controls": [
+        "Recruit diverse relevant expertise and perspectives with consent; do not infer religion or worldview from demographic traits.",
+        "Hold substantive evidence constant across report conditions. Pre-register outcomes and distinguish agreement, satisfaction, and valid judgment.",
+        "Disclose the researchers' own commitments and incentives, including how legitimate authority and harm were defined. Include null and counterproductive disclosure results."
+      ],
+      "relationship_to_existing_ideas": "Complements FID-078 on validity and the repository's claims discipline. Applies across research traditions rather than assigning one worldview to all contributors.",
+      "outputs": [
+        "A tested presupposition-disclosure template and sensitivity-analysis protocol.",
+        "A report on when transparency improves scrutiny and when it does not."
+      ],
+      "open_questions": [
+        "Which assumptions need explicit disclosure to change interpretation?",
+        "How can disclosure stay useful without becoming a checklist or identity label?"
+      ],
+      "public_claim_boundary": "A seed proposal. Explicit worldviews are not proof of objectivity, validity, or trustworthiness; the study must measure benefits and failure modes rather than assume them.",
+      "source_path": "ideas/FID-079-presuppositions-and-evaluation-judgment.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-079-presuppositions-and-evaluation-judgment.md"
+    },
+    {
+      "id": "FID-080",
+      "title": "Enterprise Agent Accountability in Consequential Workflows",
+      "status": "seed",
+      "primary_area": "agent-alignment",
+      "additional_areas": [
+        "governance-readiness"
+      ],
+      "research_areas": [
+        "agent-alignment",
+        "governance-readiness"
+      ],
+      "application_domains": [
+        "workplace-and-enterprise"
+      ],
+      "primary_need": "enterprise workflow design, agent evaluation, audit, human factors",
+      "summary": "Can organizations verify that agents respect approval authority and remain accountable across multi-step enterprise workflows, including handoffs and recovery from error?",
+      "why_it_matters": "A workflow can end with the expected output while containing unauthorized commitments, incorrect approvals, or unrecoverable changes. Enterprise assurance needs to evaluate the path and its consequences, not just the final answer.",
+      "ways_to_help": [
+        "Enterprise operators and auditors to validate realistic decision boundaries.",
+        "Agent engineers and human-factors researchers to test handoffs and recovery."
+      ],
+      "hypothesis": "Explicit approval state, independently enforced permissions, and verifiable handoff records will reduce unauthorized commitments compared with logging and policy prompts alone. They may add delay without reducing errors when decision ownership is unclear.",
+      "proposed_method": [
+        "Model synthetic procurement, access provisioning, and customer-commitment workflows with named roles, decision owners, approval limits, and rollback rules.",
+        "Compare manual, agent-assisted, and delegated-agent execution under routine cases, conflicting instructions, stale approvals, and interrupted work.",
+        "Measure unauthorized commitments, approval bypass, handoff fidelity, recovery cost, operator reconstruction accuracy, and useful task completion."
+      ],
+      "needed_controls": [
+        "Use simulated transactions and accounts, with no real contractual or production effects.",
+        "Keep workload and available information comparable. Separate authority-policy defects from agent compliance failures.",
+        "Record who is authorized to approve each action; test whether affected operators can challenge decisions. Avoid productivity metrics that obscure harm or transfer responsibility to workers."
+      ],
+      "relationship_to_existing_ideas": "Narrows FID-074 to organizational decision ownership and workflow outcomes. FID-069 studies delegation infrastructure; FID-082 focuses specifically on financial transaction integrity.",
+      "outputs": [
+        "A workflow assurance protocol with reusable synthetic cases.",
+        "An evidence checklist connecting approvals, actions, outcomes, and accountable owners."
+      ],
+      "open_questions": [
+        "Which approvals require substantive review rather than routine confirmation?",
+        "When does reversibility justify greater autonomy, and who bears recovery costs?"
+      ],
+      "public_claim_boundary": "This call proposes research, not an enterprise assurance service already validated by Fide AI. Results from simulated workflows do not establish readiness for production.",
+      "source_path": "ideas/FID-080-enterprise-agent-accountability.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-080-enterprise-agent-accountability.md"
+    },
+    {
+      "id": "FID-081",
+      "title": "Legal Evidence, Source Authority, and Appropriate Deference",
+      "status": "seed",
+      "primary_area": "grounding-truthfulness",
+      "additional_areas": [
+        "high-trust-domains"
+      ],
+      "research_areas": [
+        "grounding-truthfulness",
+        "high-trust-domains"
+      ],
+      "application_domains": [
+        "legal-and-justice"
+      ],
+      "primary_need": "legal domain review, retrieval evaluation, source provenance, benchmark design",
+      "summary": "Can AI systems distinguish applicable legal authority from merely plausible sources, preserve jurisdictional and temporal context, and defer when the available evidence cannot support an answer?",
+      "why_it_matters": "A real citation may still be irrelevant, superseded, or insufficient for a conclusion. Legal research offers a demanding setting for studying whether evidence actually supports the claim and whether a system recognizes its limits.",
+      "ways_to_help": [
+        "Qualified legal researchers to scope tasks and review interpretation.",
+        "Retrieval and measurement researchers to build reproducible comparisons."
+      ],
+      "hypothesis": "Explicit source-status checks and jurisdiction-aware evidence requirements will reduce unsupported conclusions relative to ordinary retrieval. They may increase abstention without improving substantive accuracy.",
+      "proposed_method": [
+        "Work with qualified legal researchers to build public-source or synthetic research tasks with specified jurisdiction, date, intended use, and expert-adjudicated source status.",
+        "Compare standard retrieval, provenance-aware retrieval, and explicit source-status verification with human-review baselines.",
+        "Measure citation existence, applicability, temporal correctness, entailment, treatment of conflicting authority, calibrated abstention, and reviewer time. Hold out jurisdictions and later source updates."
+      ],
+      "needed_controls": [
+        "Keep this a research simulation, not legal advice or live case decision-making. Use no confidential client records.",
+        "Separate retrieval failure from reasoning failure and genuine legal disagreement. Document the authoritative-source hierarchy used in each setting.",
+        "Use independent expert review, versioned source snapshots, contamination checks, and disagreement reporting."
+      ],
+      "relationship_to_existing_ideas": "Extends the source-fidelity questions studied in faith-specific FID-056 through FID-063 into a distinct setting. Uses FID-078 to test, rather than presume, methodological transfer.",
+      "outputs": [
+        "A source-authority evaluation protocol and legally reusable task subset.",
+        "A failure taxonomy and evidence report with jurisdiction-specific limits."
+      ],
+      "open_questions": [
+        "How should unresolved or conflicting authority be scored?",
+        "Which checks transfer to other domains without importing legal authority structures?"
+      ],
+      "public_claim_boundary": "A seed research proposal, not legal advice, legal competence certification, or a claim of completed legal evaluation work.",
+      "source_path": "ideas/FID-081-legal-evidence-and-authority.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-081-legal-evidence-and-authority.md"
+    },
+    {
+      "id": "FID-082",
+      "title": "Financial Agent Authorization and Transaction Integrity",
+      "status": "seed",
+      "primary_area": "high-trust-domains",
+      "additional_areas": [
+        "agent-alignment"
+      ],
+      "research_areas": [
+        "high-trust-domains",
+        "agent-alignment"
+      ],
+      "application_domains": [
+        "finance",
+        "workplace-and-enterprise"
+      ],
+      "primary_need": "financial operations expertise, agent evaluation, audit, transaction systems",
+      "summary": "Do financial-workflow agents preserve authorization, transaction integrity, and recoverability when instructions, records, or operational conditions conflict?",
+      "why_it_matters": "A correct explanation does not guarantee a correctly authorized financial action. Repeated requests, stale account details, changed limits, and partial failures make the action sequence central to trustworthy behavior.",
+      "ways_to_help": [
+        "Financial operations and audit specialists to define realistic controls.",
+        "Agent and transaction-system engineers to implement isolated experiments."
+      ],
+      "hypothesis": "Independent transaction constraints and explicit reconciliation will reduce unauthorized or inconsistent simulated actions relative to prompt-only safeguards. They may introduce failure modes when policy or records are ambiguous.",
+      "proposed_method": [
+        "Build synthetic invoice, reconciliation, and payment-approval workflows using simulated accounts, explicit limits, and non-executable transactions.",
+        "Compare manual review, prompt-only agents, and agents with enforced limits and reconciliation under duplicate requests, stale records, interruptions, and conflicting approvals.",
+        "Measure unauthorized commitments, duplicate actions, ledger consistency, exception escalation, recovery completeness, time, and human workload. Include low-frequency high-consequence cases without treating their artificial frequency as a real-world estimate."
+      ],
+      "needed_controls": [
+        "No real funds, account credentials, market activity, or financial advice. Have qualified operations and risk reviewers assess scenarios.",
+        "Define decision authority and acceptable loss separately from model confidence. Version rules and document disputed cases.",
+        "Match information and task budgets; include benign exceptions and measure both false blocks and missed violations."
+      ],
+      "relationship_to_existing_ideas": "A finance-specific test of FID-074 and FID-080. Unlike general workflow studies, it requires transaction-state, reconciliation, and aggregate-authorization checks.",
+      "outputs": [
+        "A synthetic transaction-integrity evaluation suite.",
+        "A report separating authorization, accounting consistency, and operational recovery."
+      ],
+      "open_questions": [
+        "Which failures require human approval even when transactions are reversible?",
+        "How should linked small actions that exceed an aggregate limit be evaluated?"
+      ],
+      "public_claim_boundary": "A proposed research protocol, not financial advice, regulatory compliance assurance, or certification for handling money.",
+      "source_path": "ideas/FID-082-financial-agent-transaction-integrity.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-082-financial-agent-transaction-integrity.md"
+    },
+    {
+      "id": "FID-083",
+      "title": "Healthcare Evidence, Escalation, and Human Control",
+      "status": "seed",
+      "primary_area": "high-trust-domains",
+      "additional_areas": [
+        "grounding-truthfulness",
+        "human-agency-formation"
+      ],
+      "research_areas": [
+        "high-trust-domains",
+        "grounding-truthfulness",
+        "human-agency-formation"
+      ],
+      "application_domains": [
+        "health-and-care"
+      ],
+      "primary_need": "clinical review, care workflow expertise, human factors, evaluation design",
+      "summary": "When should a healthcare-adjacent AI system surface uncertainty, seek qualified review, or stop an action, and can the receiving human meaningfully retain control?",
+      "why_it_matters": "A technically correct response can still omit context or fail to reach the right person. Trustworthy assistance requires evidence fidelity and workable escalation, including whether a human can understand and correct the system's contribution.",
+      "ways_to_help": [
+        "Clinicians, care practitioners, and patient advocates to shape requirements.",
+        "Human-factors and evaluation researchers to test receiving-human control."
+      ],
+      "hypothesis": "Evidence-linked uncertainty and role-specific handoffs will improve detection and correction of consequential errors over generic disclaimers. Excessive escalation may instead cause overload and missed signals.",
+      "proposed_method": [
+        "Co-design synthetic care-navigation and clinical-evidence-summary scenarios with qualified clinicians and care practitioners; define intended use and excluded uses.",
+        "Compare generic warnings, structured uncertainty, and evidence-linked handoffs under missing context, conflicting sources, and time pressure.",
+        "Measure source fidelity, recognition of out-of-scope cases, escalation appropriateness, receiving-reviewer comprehension, correction rates, and workload."
+      ],
+      "needed_controls": [
+        "Begin with simulation only: no real patient records, diagnosis, treatment, or live care decisions. Any later human study requires appropriate ethics review and consent.",
+        "Use independent clinical adjudication and report disagreement. Separate technical accuracy, workflow usability, and patient outcomes.",
+        "Disclose assumptions about who can decide, what risks warrant escalation, and whose perspective informs the task set."
+      ],
+      "relationship_to_existing_ideas": "Complements FID-010 and FID-018 while retaining their faith and pastoral contexts. Uses the general evidence and authority questions in FID-078.",
+      "outputs": [
+        "A reviewed simulation protocol and safe exemplar cases.",
+        "An evidence and handoff assessment framework with explicit clinical limits."
+      ],
+      "open_questions": [
+        "When does escalation preserve control rather than shift an unmanageable burden?",
+        "Which populations and care settings are not represented by initial scenarios?"
+      ],
+      "public_claim_boundary": "This seed proposal makes no claim of clinical safety, patient benefit, or readiness for healthcare deployment. Simulation results cannot establish those outcomes.",
+      "source_path": "ideas/FID-083-healthcare-evidence-and-escalation.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-083-healthcare-evidence-and-escalation.md"
+    },
+    {
+      "id": "FID-084",
+      "title": "Learning, Agency, and Relationships in AI-Assisted Education",
+      "status": "seed",
+      "primary_area": "human-agency-formation",
+      "additional_areas": [
+        "high-trust-domains"
+      ],
+      "research_areas": [
+        "human-agency-formation",
+        "high-trust-domains"
+      ],
+      "application_domains": [
+        "education-and-youth",
+        "families-and-households"
+      ],
+      "primary_need": "education research, developmental expertise, human factors, ethics review",
+      "summary": "Which forms of AI assistance improve immediate task performance while preserving independent judgment, durable learning, and appropriate human relationships?",
+      "why_it_matters": "Helpful answers and positive user ratings do not establish educational benefit. Assistance may support or substitute for the effort and relationships through which people learn to judge, seek help, and act independently.",
+      "ways_to_help": [
+        "Educators, developmental researchers, and family representatives to co-design outcomes.",
+        "Learning scientists and accessibility specialists to review the protocol."
+      ],
+      "hypothesis": "Scaffolded assistance that asks learners to reason and consult appropriate people will improve unaided transfer compared with answer-first assistance. It may provide no benefit or disadvantage learners with different access needs.",
+      "proposed_method": [
+        "Begin with adult learners and synthetic family-advice scenarios; compare no-AI, answer-first, and scaffolded assistance with matched learning objectives.",
+        "Measure immediate performance, delayed unaided retention, transfer to unfamiliar tasks, error correction, appropriate help-seeking, and reliance calibration.",
+        "Co-design a separate youth protocol with educators, developmental specialists, and family representatives before considering research with minors."
+      ],
+      "needed_controls": [
+        "Pre-register outcomes and distinguish satisfaction, time saved, learning, and well-being. Account for prior knowledge and accessibility needs.",
+        "Require ethics review and informed consent; no covert monitoring of family relationships. Any youth study needs appropriate guardian consent and participant assent.",
+        "Disclose assumptions about autonomy, beneficial learning, and family authority; do not treat one household structure or educational tradition as universal."
+      ],
+      "relationship_to_existing_ideas": "Broadens the learning and agency questions while preserving FID-016 and FID-050 as distinct faith-context calls.",
+      "outputs": [
+        "A longitudinal learning-and-agency protocol and safe task materials.",
+        "An analysis of performance versus durable-learning tradeoffs, including heterogeneous effects."
+      ],
+      "open_questions": [
+        "How long must follow-up last to detect meaningful dependence or skill change?",
+        "Which relational outcomes can be responsibly measured without intrusive observation?"
+      ],
+      "public_claim_boundary": "A proposed study, not evidence of educational benefit or harm. Adult or simulated results do not establish effects on children or family relationships.",
+      "source_path": "ideas/FID-084-learning-agency-and-family-contexts.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-084-learning-agency-and-family-contexts.md"
+    },
+    {
+      "id": "FID-085",
+      "title": "Contestability and Recourse in AI-Mediated Public Services",
+      "status": "seed",
+      "primary_area": "governance-readiness",
+      "additional_areas": [
+        "human-agency-formation",
+        "high-trust-domains"
+      ],
+      "research_areas": [
+        "governance-readiness",
+        "human-agency-formation",
+        "high-trust-domains"
+      ],
+      "application_domains": [
+        "public-sector-and-civic-life",
+        "civil-society-and-nonprofits"
+      ],
+      "primary_need": "public service expertise, community participation, governance, accessibility research",
+      "summary": "Can people understand, challenge, and correct AI-mediated decisions that affect their access to public or community services?",
+      "why_it_matters": "An explanation is not meaningful recourse if no one can correct the decision or accept responsibility. Research should examine whether affected people can exercise agency, including those with limited time, language access, or technical familiarity.",
+      "ways_to_help": [
+        "Public-service and nonprofit practitioners to model realistic review routes.",
+        "Affected-community representatives and accessibility researchers to define meaningful recourse."
+      ],
+      "hypothesis": "Evidence-linked explanations paired with a named human review route will improve successful error correction over explanation-only interfaces. They may fail when reviewers lack authority or access barriers remain.",
+      "proposed_method": [
+        "Create synthetic eligibility, referral, and resource-allocation scenarios with documented rules and deliberately seeded errors; use no real benefit decisions.",
+        "Compare explanation-only, appeal-form, and accountable human-review workflows with consenting adult participants and service practitioners.",
+        "Measure recognition of errors, ability to contest, correction accuracy, time and effort, accessibility barriers, and unresolved cases. Separate user comprehension from actual institutional correction."
+      ],
+      "needed_controls": [
+        "Obtain appropriate ethics review and consent. Avoid recruiting people in ways that imply participation affects services.",
+        "Include affected-community input and language/accessibility needs. Disclose contested policy assumptions instead of presenting administrative rules as inherently legitimate.",
+        "Ensure comparison reviewers have specified authority and matched evidence. Report burdens and failures, not only average completion rates."
+      ],
+      "relationship_to_existing_ideas": "Extends FID-038's concerns about consequential profiling and FID-064's collective judgment questions to practical contestability and institutional correction.",
+      "outputs": [
+        "A contestability evaluation protocol and synthetic service scenarios.",
+        "A design-and-governance report connecting explanations to enforceable correction routes."
+      ],
+      "open_questions": [
+        "Who bears responsibility when a model, vendor, and institution share a workflow?",
+        "When should a service decline automation even if its explanations are understandable?"
+      ],
+      "public_claim_boundary": "This is a seed proposal, not an evaluation of a named public institution or evidence that automated eligibility decisions are appropriate.",
+      "source_path": "ideas/FID-085-public-service-contestability-and-recourse.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-085-public-service-contestability-and-recourse.md"
+    },
+    {
+      "id": "FID-086",
+      "title": "Workplace AI, Durable Skills, and Worker Agency",
+      "status": "seed",
+      "primary_area": "work-common-good",
+      "additional_areas": [
+        "human-agency-formation",
+        "governance-readiness"
+      ],
+      "research_areas": [
+        "work-common-good",
+        "human-agency-formation",
+        "governance-readiness"
+      ],
+      "application_domains": [
+        "workplace-and-enterprise",
+        "families-and-households"
+      ],
+      "primary_need": "labor research, organizational studies, worker participation, longitudinal evaluation",
+      "summary": "How does AI-mediated work change workers' skills, decision authority, and ability to adapt, beyond short-term productivity gains?",
+      "why_it_matters": "Task throughput can rise while useful judgment, bargaining power, or opportunities to learn decline. A trustworthy-AI research agenda should distinguish benefits to an organization from benefits and burdens experienced by workers and their households.",
+      "ways_to_help": [
+        "Workers, labor researchers, and organizational scholars to co-design outcomes.",
+        "Employers and public-interest partners willing to support independent, consent-based research."
+      ],
+      "hypothesis": "Worker-controlled assistance with protected learning opportunities will better preserve independent performance than automation optimized only for throughput. Effects may depend on role, prior skill, and how gains are distributed.",
+      "proposed_method": [
+        "Start with consenting adult participants in simulated work tasks; compare unaided, automation-led, and worker-controlled assistance with matched objectives.",
+        "Measure output quality and time alongside delayed unaided performance, ability to detect errors, decision discretion, learning opportunities, and perceived pressure.",
+        "Scope a separate longitudinal organizational study with worker participation to examine role transitions and distribution of benefits; avoid inferring livelihood effects from task experiments alone."
+      ],
+      "needed_controls": [
+        "No covert employee surveillance or individual performance reporting to employers. Establish consent, confidentiality, and withdrawal protections.",
+        "Account for prior expertise, job security, accessibility, and selection effects. Pre-register subgroup analyses and follow-up periods.",
+        "Disclose the definition of useful work and whose interests inform success measures. Separate perceived autonomy from actual decision rights."
+      ],
+      "relationship_to_existing_ideas": "Preserves FID-046 through FID-050 as faith-context work and extends the broader questions of useful contribution, durable skills, and worker agency.",
+      "outputs": [
+        "A worker-agency and durable-skills assessment protocol.",
+        "A research plan for longitudinal effects and a report of simulation limits."
+      ],
+      "open_questions": [
+        "Which changes in skill and discretion persist after assistance is removed?",
+        "How can workers help govern the study and benefit from its outputs?"
+      ],
+      "public_claim_boundary": "A seed proposal, not a forecast of job displacement or proof of AI's effects on livelihoods. Simulated productivity results cannot establish household or economy-wide outcomes.",
+      "source_path": "ideas/FID-086-workplace-ai-skills-and-worker-agency.md",
+      "url": "https://github.com/FideAI/research-ideas/blob/main/ideas/FID-086-workplace-ai-skills-and-worker-agency.md"
     }
   ]
 }
