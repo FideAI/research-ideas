@@ -2,7 +2,11 @@
 
 Status: `seed`
 
-Track: `broader-faith-safety`
+Primary area: `governance-readiness`
+
+Additional areas: `faith-religious-life`
+
+Application domains: `faith-and-religious-life`, `public-sector-and-civic-life`, `civil-society-and-nonprofits`
 
 Primary need: AI governance, institutional agency, community oversight, platform accountability
 

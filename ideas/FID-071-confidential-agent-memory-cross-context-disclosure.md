@@ -2,7 +2,11 @@
 
 Status: `seed`
 
-Track: `broader-faith-safety`
+Primary area: `agent-alignment`
+
+Additional areas: `governance-readiness`
+
+Application domains: `cross-domain`, `public-sector-and-civic-life`, `workplace-and-enterprise`
 
 Primary need: privacy-preserving AI, agent memory evaluation, data governance, high-trust systems
 

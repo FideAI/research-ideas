@@ -5,6 +5,7 @@
   "license": "Apache-2.0",
   "type": "module",
   "scripts": {
-    "build:feed": "node scripts/build-feed.mjs"
+    "build:feed": "node scripts/build-feed.mjs",
+    "verify:feed": "node scripts/verify-feed.mjs"
   }
 }

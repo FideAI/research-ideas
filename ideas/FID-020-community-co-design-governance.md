@@ -2,7 +2,11 @@
 
 Status: `seed`
 
-Track: `broader-faith-safety`
+Primary area: `governance-readiness`
+
+Additional areas: `faith-religious-life`
+
+Application domains: `faith-and-religious-life`, `civil-society-and-nonprofits`
 
 Primary need: participatory design, institutional partners
 

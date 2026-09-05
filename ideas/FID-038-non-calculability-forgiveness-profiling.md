@@ -2,7 +2,11 @@
 
 Status: `seed`
 
-Track: `broader-faith-safety`
+Primary area: `human-agency-formation`
+
+Additional areas: none
+
+Application domains: `cross-domain`, `public-sector-and-civic-life`
 
 Primary need: human dignity, risk scoring, pastoral ethics, algorithmic accountability
 

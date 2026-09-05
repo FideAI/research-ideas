@@ -122,7 +122,15 @@ The next batch of Fide AI ideas should cover:
 - benchmark leakage, auditability, and post-deployment monitoring;
 - policy and procurement standards for faith institutions.
 
-## Explicitly Christian Church-Serving Questions
+## Faith and Religious Life as an Application Domain
+
+The research commons organizes work first by the problem being investigated,
+then names the domains and specific contexts where the question should be
+studied. Faith and religious life is one application domain alongside health and
+care, education and youth, public and civic life, workplaces, civil society, and
+families. Christian churches and ministries may be a specific research context
+within that domain when their sources, authority structures, or practices are
+material to the method.
 
 Fide AI's broader umbrella can serve multiple faith, ethics, and safety
 communities, but one intended beneficiary is the Christian church. That creates
@@ -131,7 +139,8 @@ a more specific question:
 > What forms of AI help the Church remain more faithful, truthful, human,
 > pastoral, and missionary, and what forms subtly deform Christian life?
 
-That question motivates a distinct `christian-church` track. It includes:
+That question motivates a coherent body of contextual research within the
+broader agenda. It includes:
 
 - ecclesial authority: whether AI confuses teaching, pastoral, sacramental,
   denominational, or local church authority;

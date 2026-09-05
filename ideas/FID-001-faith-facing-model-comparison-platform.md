@@ -2,7 +2,11 @@
 
 Status: `scoping`
 
-Track: `broader-faith-safety`
+Primary area: `evaluation-science`
+
+Additional areas: `faith-religious-life`
+
+Application domains: `faith-and-religious-life`
 
 Primary need: eval engineering
 

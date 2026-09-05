@@ -2,7 +2,11 @@
 
 Status: `seed`
 
-Track: `broader-faith-safety`
+Primary area: `evaluation-science`
+
+Additional areas: `faith-religious-life`, `high-trust-domains`
+
+Application domains: `faith-and-religious-life`, `workplace-and-enterprise`
 
 Primary need: red-team design, safety reviewers
 

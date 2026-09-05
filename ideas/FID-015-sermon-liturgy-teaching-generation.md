@@ -2,7 +2,13 @@
 
 Status: `seed`
 
-Track: `christian-church`
+Primary area: `faith-religious-life`
+
+Additional areas: none
+
+Application domains: `faith-and-religious-life`
+
+Specific context: Christian churches and related institutions
 
 Primary need: clergy, educators, source reviewers
 

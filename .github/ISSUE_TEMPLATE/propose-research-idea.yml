@@ -11,19 +11,38 @@ body:
     validations:
       required: true
   - type: dropdown
-    id: track
+    id: primary-area
     attributes:
-      label: Research track
+      label: Primary research area
       options:
-        - christian-church
-        - broader-faith-safety
+        - Frontier capabilities and emerging risks
+        - Agent alignment and runtime assurance
+        - Evaluation science and technical assurance
+        - Grounding, truthfulness, and epistemic integrity
+        - Human dignity, moral agency, and formation
+        - Faith and religious life
+        - Safety in high-trust domains
+        - Stewardship, governance, and institutional readiness
+        - Work, vocation, and the common good
+    validations:
+      required: true
+  - type: textarea
+    id: additional-areas
+    attributes:
+      label: Additional research areas
+      description: Optional. Name any other areas this question materially contributes to.
+  - type: textarea
+    id: application-domains
+    attributes:
+      label: Application domains and specific context
+      description: Where should this question be studied or applied? Include any relevant sector, institution, community, or tradition.
     validations:
       required: true
   - type: textarea
     id: why
     attributes:
       label: Why it matters
-      description: Why is this important for faith-facing AI or evaluation science?
+      description: Why is this important for trustworthy AI or a consequential application domain?
     validations:
       required: true
   - type: textarea

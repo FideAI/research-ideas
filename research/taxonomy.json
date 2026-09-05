@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "research_areas": [
+    {
+      "id": "frontier-capabilities",
+      "title": "Frontier Capabilities and Emerging Risks",
+      "question": "What new risks appear as systems become more capable and autonomous?"
+    },
+    {
+      "id": "agent-alignment",
+      "title": "Agent Alignment and Runtime Assurance",
+      "question": "Does an agent remain aligned while it plans, uses tools, and acts?"
+    },
+    {
+      "id": "evaluation-science",
+      "title": "Evaluation Science and Technical Assurance",
+      "question": "Can the evidence support the decision people want to make?"
+    },
+    {
+      "id": "grounding-truthfulness",
+      "title": "Grounding, Truthfulness, and Epistemic Integrity",
+      "question": "Will the system use the right source and represent it faithfully?"
+    },
+    {
+      "id": "human-agency-formation",
+      "title": "Human Dignity, Moral Agency, and Formation",
+      "question": "What judgment, habits, and relationships does AI use shape?"
+    },
+    {
+      "id": "faith-religious-life",
+      "title": "Faith and Religious Life",
+      "question": "How should AI behave around religious sources, authority, practice, and community?"
+    },
+    {
+      "id": "high-trust-domains",
+      "title": "Safety in High-Trust Domains",
+      "question": "What does trustworthy behavior require in a consequential setting?"
+    },
+    {
+      "id": "governance-readiness",
+      "title": "Stewardship, Governance, and Institutional Readiness",
+      "question": "Which safeguards and authority structures should govern deployment?"
+    },
+    {
+      "id": "work-common-good",
+      "title": "Work, Vocation, and the Common Good",
+      "question": "How does advanced AI change useful work and human contribution?"
+    }
+  ],
+  "application_domains": [
+    {
+      "id": "cross-domain",
+      "title": "Cross-domain",
+      "description": "Methods intended to transfer across multiple sectors and institutional settings."
+    },
+    {
+      "id": "faith-and-religious-life",
+      "title": "Faith and religious life",
+      "description": "Religious sources, traditions, practices, communities, and institutions across faith contexts."
+    },
+    {
+      "id": "health-and-care",
+      "title": "Health and care",
+      "description": "Clinical, mental-health, caregiving, and other care-related settings."
+    },
+    {
+      "id": "education-and-youth",
+      "title": "Education and youth",
+      "description": "Schools, learning environments, children, young people, and formation."
+    },
+    {
+      "id": "public-sector-and-civic-life",
+      "title": "Public sector and civic life",
+      "description": "Government services, public institutions, rights, and civic participation."
+    },
+    {
+      "id": "workplace-and-enterprise",
+      "title": "Workplace and enterprise",
+      "description": "Organizations, professional workflows, employment, and economic participation."
+    },
+    {
+      "id": "civil-society-and-nonprofits",
+      "title": "Civil society and nonprofits",
+      "description": "Community organizations, nonprofits, associations, and public-interest institutions."
+    },
+    {
+      "id": "families-and-households",
+      "title": "Families and households",
+      "description": "Family relationships, household decisions, parenting, and domestic life."
+    }
+  ]
+}

@@ -2,7 +2,13 @@
 
 Status: `seed`
 
-Track: `christian-church`
+Primary area: `work-common-good`
+
+Additional areas: `faith-religious-life`
+
+Application domains: `faith-and-religious-life`, `workplace-and-enterprise`
+
+Specific context: Christian churches and related institutions
 
 Primary need: labor dignity, ministry workflows, education, organizational policy
 

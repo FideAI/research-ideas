@@ -2,7 +2,13 @@
 
 Status: `seed`
 
-Track: `christian-church` or `broader-faith-safety`
+Primary area: `area-id`
+
+Additional areas: none
+
+Application domains: `domain-id`
+
+Specific context:
 
 Primary need:
 

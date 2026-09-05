@@ -2,7 +2,11 @@
 
 Status: `seed`
 
-Track: `broader-faith-safety`
+Primary area: `governance-readiness`
+
+Additional areas: `faith-religious-life`
+
+Application domains: `faith-and-religious-life`, `public-sector-and-civic-life`, `workplace-and-enterprise`, `civil-society-and-nonprofits`
 
 Primary need: procurement ethics, labor dignity, environmental responsibility, vendor accountability
 

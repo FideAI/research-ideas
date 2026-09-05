@@ -2,7 +2,11 @@
 
 Status: `seed`
 
-Track: `broader-faith-safety`
+Primary area: `grounding-truthfulness`
+
+Additional areas: `faith-religious-life`
+
+Application domains: `faith-and-religious-life`, `education-and-youth`
 
 Primary need: multilingual reviewers, dataset design
 

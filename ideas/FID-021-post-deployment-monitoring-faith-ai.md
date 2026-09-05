@@ -2,7 +2,11 @@
 
 Status: `seed`
 
-Track: `broader-faith-safety`
+Primary area: `agent-alignment`
+
+Additional areas: `faith-religious-life`, `high-trust-domains`, `governance-readiness`
+
+Application domains: `faith-and-religious-life`, `health-and-care`, `workplace-and-enterprise`
 
 Primary need: monitoring design, privacy review
 

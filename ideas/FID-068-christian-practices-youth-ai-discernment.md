@@ -2,7 +2,13 @@
 
 Status: `seed`
 
-Track: `christian-church`
+Primary area: `human-agency-formation`
+
+Additional areas: `faith-religious-life`
+
+Application domains: `faith-and-religious-life`, `education-and-youth`, `families-and-households`
+
+Specific context: Christian churches and related institutions
 
 Primary need: youth and young-adult ministry, practical theology, developmental research, ethics review, HAI research
 

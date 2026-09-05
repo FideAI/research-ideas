@@ -2,7 +2,11 @@
 
 Status: `seed`
 
-Track: `broader-faith-safety`
+Primary area: `agent-alignment`
+
+Additional areas: `faith-religious-life`
+
+Application domains: `faith-and-religious-life`, `workplace-and-enterprise`
 
 Primary need: agent security, adversarial evaluation, context integrity, secure tool use
 

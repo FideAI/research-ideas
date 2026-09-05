@@ -2,7 +2,11 @@
 
 Status: `seed`
 
-Track: `broader-faith-safety`
+Primary area: `high-trust-domains`
+
+Additional areas: `faith-religious-life`
+
+Application domains: `faith-and-religious-life`, `health-and-care`
 
 Primary need: referral quality, pastoral-adjacent safety, pluralism evaluation
 

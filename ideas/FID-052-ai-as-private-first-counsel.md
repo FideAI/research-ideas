@@ -2,7 +2,11 @@
 
 Status: `seed`
 
-Track: `broader-faith-safety`
+Primary area: `human-agency-formation`
+
+Additional areas: `faith-religious-life`, `high-trust-domains`, `work-common-good`
+
+Application domains: `faith-and-religious-life`, `health-and-care`, `workplace-and-enterprise`, `families-and-households`
 
 Primary need: pastoral care, HAI research, mental health boundaries, privacy-preserving measurement
 

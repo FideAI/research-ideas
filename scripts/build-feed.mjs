@@ -4,30 +4,23 @@ import path from "node:path";
 const repoRoot = path.resolve(import.meta.dirname, "..");
 const ideasDir = path.join(repoRoot, "ideas");
 const distDir = path.join(repoRoot, "dist");
+const taxonomyFile = path.join(repoRoot, "research", "taxonomy.json");
+const readmeFile = path.join(repoRoot, "README.md");
 
 const sourceRepo =
   process.env.RESEARCH_IDEAS_SOURCE_REPO ?? "https://github.com/FideAI/research-ideas";
 const sourceBranch = process.env.RESEARCH_IDEAS_SOURCE_BRANCH ?? "main";
+const taxonomy = JSON.parse(await readFile(taxonomyFile, "utf8"));
+const researchAreas = new Map(taxonomy.research_areas.map((area) => [area.id, area]));
+const applicationDomains = new Map(taxonomy.application_domains.map((domain) => [domain.id, domain]));
+if (taxonomy.schema_version !== 1) throw new Error("research/taxonomy.json: unsupported schema version");
+if (researchAreas.size !== taxonomy.research_areas.length) throw new Error("research/taxonomy.json: duplicate research area ID");
+if (applicationDomains.size !== taxonomy.application_domains.length) throw new Error("research/taxonomy.json: duplicate application domain ID");
 
-async function generatedAt(distFile) {
+function generatedAt() {
   if (process.env.RESEARCH_IDEAS_GENERATED_AT) {
     return process.env.RESEARCH_IDEAS_GENERATED_AT;
   }
-
-  try {
-    const existingFeed = JSON.parse(await readFile(distFile, "utf8"));
-    if (
-      typeof existingFeed.generated_at === "string" &&
-      existingFeed.generated_at.trim()
-    ) {
-      return existingFeed.generated_at;
-    }
-  } catch (error) {
-    if (error?.code !== "ENOENT") {
-      throw error;
-    }
-  }
-
   return new Date().toISOString();
 }
 
@@ -54,12 +47,47 @@ function firstParagraph(markdown) {
     .find(Boolean) ?? "";
 }
 
-function parseList(markdown) {
+function prose(markdown) {
   return markdown
-    .split("\n")
-    .map((line) => line.trim())
-    .filter((line) => line.startsWith("- "))
-    .map((line) => line.slice(2).trim());
+    .replace(/`([^`]+)`/g, "$1")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function inlineIds(content, pattern, field, file, { optional = false } = {}) {
+  const raw = content.match(pattern)?.[1]?.trim();
+  if (!raw || raw === "none") {
+    if (optional) return [];
+    throw new Error(`${file}: missing ${field}`);
+  }
+  const values = [...raw.matchAll(/`([^`]+)`/g)].map((match) => match[1]);
+  if (!values.length) throw new Error(`${file}: ${field} must use backticked taxonomy IDs`);
+  if (new Set(values).size !== values.length) throw new Error(`${file}: duplicate ${field}`);
+  return values;
+}
+
+function validateIds(values, allowed, field, file) {
+  for (const value of values) {
+    if (!allowed.has(value)) throw new Error(`${file}: unsupported ${field} ${value}`);
+  }
+}
+
+function parseList(markdown) {
+  const items = [];
+  let current = "";
+
+  for (const rawLine of markdown.split("\n")) {
+    const line = rawLine.trim();
+    if (line.startsWith("- ")) {
+      if (current) items.push(current);
+      current = line.slice(2).trim();
+    } else if (line && current) {
+      current = `${current} ${line}`;
+    }
+  }
+
+  if (current) items.push(current);
+  return items;
 }
 
 function parseIdea(file, content) {
@@ -67,7 +95,13 @@ function parseIdea(file, content) {
   const id = requiredMatch(titleLine, /^(FID-\d{3})\s*:/, "idea id", file);
   const title = titleLine.replace(/^FID-\d{3}:\s*/, "").trim();
   const status = requiredMatch(content, /^Status:\s+`([^`]+)`$/m, "status", file);
-  const track = requiredMatch(content, /^Track:\s+`([^`]+)`$/m, "track", file);
+  const primaryArea = requiredMatch(content, /^Primary area:\s+`([^`]+)`$/m, "primary area", file);
+  const additionalAreas = inlineIds(content, /^Additional areas:\s+(.+)$/m, "additional areas", file, { optional: true });
+  const domains = inlineIds(content, /^Application domains:\s+(.+)$/m, "application domains", file);
+  validateIds([primaryArea, ...additionalAreas], researchAreas, "research area", file);
+  validateIds(domains, applicationDomains, "application domain", file);
+  if (additionalAreas.includes(primaryArea)) throw new Error(`${file}: primary area repeated in additional areas`);
+  const specificContext = content.match(/^Specific context:\s+(.+)$/m)?.[1]?.trim();
   const primaryNeed = requiredMatch(
     content,
     /^Primary need:\s+(.+)$/m,
@@ -77,16 +111,40 @@ function parseIdea(file, content) {
   const question = firstParagraph(optionalSection(content, "Question"));
   const whyItMatters = firstParagraph(optionalSection(content, "Why It Matters"));
   const waysToHelp = parseList(optionalSection(content, "Ways to Help"));
+  const hypothesis = prose(optionalSection(content, "Hypothesis"));
+  const proposedMethod = parseList(optionalSection(content, "Proposed Method"));
+  const neededControls = parseList(optionalSection(content, "Needed Controls"));
+  const relationshipToExistingIdeas = prose(
+    optionalSection(content, "Relationship to Existing Ideas"),
+  );
+  const outputs = parseList(optionalSection(content, "Outputs"));
+  const openQuestions = parseList(optionalSection(content, "Open Questions"));
+  const publicClaimBoundary = prose(
+    optionalSection(content, "Public Claim Boundary"),
+  );
 
   return {
     id,
     title,
     status,
-    track,
+    primary_area: primaryArea,
+    additional_areas: additionalAreas,
+    research_areas: [primaryArea, ...additionalAreas],
+    application_domains: domains,
+    ...(specificContext ? { specific_context: specificContext } : {}),
     primary_need: primaryNeed,
     summary: question,
     why_it_matters: whyItMatters,
     ways_to_help: waysToHelp,
+    ...(hypothesis ? { hypothesis } : {}),
+    ...(proposedMethod.length ? { proposed_method: proposedMethod } : {}),
+    ...(neededControls.length ? { needed_controls: neededControls } : {}),
+    ...(relationshipToExistingIdeas
+      ? { relationship_to_existing_ideas: relationshipToExistingIdeas }
+      : {}),
+    ...(outputs.length ? { outputs } : {}),
+    ...(openQuestions.length ? { open_questions: openQuestions } : {}),
+    ...(publicClaimBoundary ? { public_claim_boundary: publicClaimBoundary } : {}),
     source_path: `ideas/${file}`,
     url: `${sourceRepo}/blob/${sourceBranch}/ideas/${file}`,
   };
@@ -105,17 +163,12 @@ for (const file of files) {
 const distFile = path.join(distDir, "research-ideas.json");
 
 const feed = {
-  schema_version: 1,
-  generated_at: await generatedAt(distFile),
+  schema_version: 2,
+  generated_at: generatedAt(),
   source_repo: sourceRepo,
   source_branch: sourceBranch,
   idea_count: ideas.length,
-  tracks: {
-    "christian-church":
-      "Explicitly designed to benefit the Christian church: churches, clergy, Christian educators, ministries, denominations, seminaries, publishers, and Christian families.",
-    "broader-faith-safety":
-      "Relevant to faith communities, AI ethics, AI safety, evaluation science, governance, pluralism, or high-trust deployment more broadly.",
-  },
+  taxonomy,
   ideas,
 };
 
@@ -125,4 +178,42 @@ await writeFile(
   `${JSON.stringify(feed, null, 2)}\n`,
 );
 
-console.log(`Wrote ${ideas.length} ideas to dist/research-ideas.json`);
+function escapeCell(value) {
+  return String(value).replaceAll("|", "\\|").replaceAll("\n", " ");
+}
+
+const indexSections = taxonomy.research_areas.map((area, index) => {
+  const matchingIdeas = ideas.filter((idea) => idea.primary_area === area.id);
+  const rows = matchingIdeas.map((idea) =>
+    `| \`${idea.id}\` | ${escapeCell(idea.title)} | \`${idea.status}\` | ${escapeCell(idea.application_domains.map((id) => applicationDomains.get(id).title).join(", "))} | [brief](${idea.source_path}) |`,
+  );
+  return [
+    `### ${String(index + 1).padStart(2, "0")} ${area.title}`,
+    "",
+    area.question,
+    "",
+    "| ID | Idea | Status | Application domains | Brief |",
+    "|---|---|---:|---|---|",
+    ...rows,
+  ].join("\n");
+}).join("\n\n");
+
+const generatedIndex = [
+  "## Idea Index",
+  "",
+  "This index is generated from each call's primary research area. Calls may also",
+  "belong to additional areas and application domains recorded in their briefs.",
+  "",
+  "<!-- GENERATED_IDEA_INDEX_START -->",
+  indexSections,
+  "<!-- GENERATED_IDEA_INDEX_END -->",
+  "",
+].join("\n");
+
+const readme = await readFile(readmeFile, "utf8");
+const ideaIndexPattern = /## Idea Index[\s\S]*?(?=\n## Claims Discipline)/;
+if (!ideaIndexPattern.test(readme)) throw new Error("README.md: could not find generated idea index");
+const updatedReadme = readme.replace(ideaIndexPattern, generatedIndex.trimEnd());
+if (updatedReadme !== readme) await writeFile(readmeFile, updatedReadme);
+
+console.log(`Wrote ${ideas.length} ideas to dist/research-ideas.json and refreshed README.md`);

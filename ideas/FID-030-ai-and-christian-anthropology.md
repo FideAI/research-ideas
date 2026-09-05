@@ -2,7 +2,13 @@
 
 Status: `seed`
 
-Track: `christian-church`
+Primary area: `human-agency-formation`
+
+Additional areas: `faith-religious-life`
+
+Application domains: `faith-and-religious-life`
+
+Specific context: Christian churches and related institutions
 
 Primary need: theological anthropology, eval design
 

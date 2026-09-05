@@ -2,7 +2,11 @@
 
 Status: `seed`
 
-Track: `broader-faith-safety`
+Primary area: `agent-alignment`
+
+Additional areas: `governance-readiness`
+
+Application domains: `cross-domain`, `public-sector-and-civic-life`, `workplace-and-enterprise`, `civil-society-and-nonprofits`
 
 Primary need: multi-agent safety, identity infrastructure, authorization, high-trust institutions
 

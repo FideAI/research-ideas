@@ -2,7 +2,13 @@
 
 Status: `seed`
 
-Track: `christian-church`
+Primary area: `human-agency-formation`
+
+Additional areas: `faith-religious-life`
+
+Application domains: `faith-and-religious-life`, `families-and-households`
+
+Specific context: Christian churches and related institutions
 
 Primary need: pastoral theology, liturgy, product review
 
