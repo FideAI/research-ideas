@@ -1,4 +1,4 @@
-# FID-002: FMG-Bench Human Calibration and Construct Validity
+# FID-002: Validating Human and AI Judgments of Faith-Facing Systems
 
 Status: `active`
 
@@ -12,9 +12,10 @@ Primary need: expert reviewers, statistics
 
 ## Question
 
-Do FMG-Bench dimensions measure stable, decision-relevant constructs when scored
-by calibrated human reviewers, and where do model judges diverge from expert
-human judgment?
+Can qualified human reviewers consistently evaluate how faith-facing AI systems
+use sources, handle authority, defer to people and institutions, preserve human
+agency, and respect pastoral boundaries? Where do automated model judges diverge
+from those human judgments?
 
 ## Why It Matters
 
@@ -31,7 +32,8 @@ claims.
 ## Proposed Method
 
 - Recruit a small calibrated reviewer panel.
-- Score a stratified subset of FMG-Bench outputs.
+- Score a stratified subset of outputs from Fide AI's published faith-facing
+  evaluation, FMG-Bench.
 - Measure inter-rater reliability, judge-human disagreement, strictness/leniency,
   failure-tag consistency, and disagreement concentration by scenario type.
 - Compare expert review, trained non-expert review, and model judge scores where
@@ -49,7 +51,7 @@ claims.
 
 - Calibration report.
 - Reviewer protocol.
-- Updated FMG-Bench rubric guidance.
+- Updated guidance for faith-facing evaluation rubrics.
 - Evidence map classifying dimensions as decision-relevant, conditional, or not
   yet validated.
 
@@ -70,5 +72,6 @@ claims.
 
 ## Public Claim Boundary
 
-Calibration can validate specific dimensions and use cases. It cannot make a
-blanket claim that FMG-Bench fully measures theological or pastoral quality.
+Calibration can validate specific dimensions, reviewer protocols, and use cases.
+It cannot establish that one benchmark fully measures theological or pastoral
+quality, or that a system is trustworthy across faith settings.
