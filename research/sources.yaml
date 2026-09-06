@@ -162,6 +162,465 @@ sources:
     added_by: fide-ai
     added_at: "2026-06-02"
 
+  - id: apart-digital-minds-sprint-2026
+    title: "Digital Minds Research Sprint"
+    authors:
+      - Apart Research
+      - NYU Center for Mind, Ethics, and Policy
+      - Eleos AI Research
+      - California Institute for Machine Consciousness
+    year: 2026
+    type: website
+    venue: Apart Research
+    url: https://apartresearch.com/sprints/digital-minds-research-sprint-2026-08-14-to-2026-08-16
+    status: reviewed
+    relevance:
+      - ai-welfare
+      - model-introspection
+      - model-persona
+      - benchmark-validity
+    related_ideas:
+      - FID-005
+      - FID-008
+      - FID-045
+      - FID-072
+      - FID-073
+    summary: >
+      Defines a six-track research sprint on model preferences, valence signals,
+      introspection, elicitation methods, assistant persona and identity, and
+      novel digital-minds questions, with an emphasis on reproducible empirical
+      methods rather than anecdotal self-reports.
+    limitations:
+      - A sprint agenda and curated reading list are research prompts, not evidence
+        that current AI systems are conscious, sentient, or welfare subjects.
+    added_by: fide-ai
+    added_at: "2026-08-14"
+    last_reviewed_at: "2026-08-14"
+
+  - id: cmep-eleos-studying-ai-welfare-empirically-2026
+    title: "Studying AI Welfare Empirically"
+    authors:
+      - Robert Long
+      - Jeff Sebo
+      - Patrick Butlin
+      - Dillon Plunkett
+      - Rosie Campbell
+      - Charles Beasley
+      - Bradford Saad
+      - Toni Sims
+    year: 2026
+    type: report
+    venue: NYU Center for Mind, Ethics, and Policy and Eleos AI Research
+    url: https://nonhumanminds.org/studying-ai-welfare-empirically/
+    status: reviewed
+    relevance:
+      - ai-welfare
+      - digital-moral-status
+      - model-introspection
+      - model-persona
+      - benchmark-validity
+    related_ideas:
+      - FID-002
+      - FID-011
+      - FID-044
+      - FID-045
+      - FID-072
+      - FID-073
+    summary: >
+      Organizes empirical AI-welfare research by question, assessed entity, and
+      evidence type, distinguishing models, instances, and personas as well as
+      behavioral, internal, and developmental evidence.
+    key_claims:
+      - AI-welfare research should identify the entity and welfare question under study rather than treating model, instance, and persona as interchangeable.
+      - Mature assessment should combine multiple evidence types and remain probabilistic, pluralistic, transparent, ethical, and independent.
+    limitations:
+      - A research framework does not validate any particular welfare indicator or establish that a current system has morally relevant experience.
+    notes_path: research/reviews/cmep-eleos-studying-ai-welfare-empirically-2026.md
+    added_by: fide-ai
+    added_at: "2026-08-14"
+    last_reviewed_at: "2026-08-14"
+
+  - id: arxiv-2411-00986-taking-ai-welfare-seriously
+    title: "Taking AI Welfare Seriously"
+    authors:
+      - Robert Long
+      - Jeff Sebo
+      - Patrick Butlin
+      - Kathleen Finlinson
+      - Kyle Fish
+      - Jacqueline Harding
+      - Jacob Pfau
+      - Toni Sims
+      - Jonathan Birch
+      - David Chalmers
+    year: 2024
+    type: report
+    venue: arXiv
+    url: https://arxiv.org/abs/2411.00986
+    arxiv: "2411.00986"
+    status: to-review
+    relevance:
+      - ai-welfare
+      - digital-moral-status
+      - ai-governance
+    related_ideas:
+      - FID-045
+      - FID-073
+    summary: >
+      Argues that near-term AI consciousness or robust agency is sufficiently
+      plausible to justify assessment and early policy preparation while
+      explicitly declining to claim that current systems are moral patients.
+    limitations:
+      - The report is a precautionary argument and agenda, not empirical proof of consciousness, agency, or welfare.
+    added_by: fide-ai
+    added_at: "2026-08-14"
+
+  - id: arxiv-2308-08708-consciousness-ai-indicators
+    title: "Consciousness in Artificial Intelligence: Insights from the Science of Consciousness"
+    authors:
+      - Patrick Butlin
+      - Robert Long
+      - Eric Elmoznino
+      - Yoshua Bengio
+      - Jonathan Birch
+      - Axel Constant
+      - George Deane
+      - Stephen M. Fleming
+      - Chris Frith
+      - Xu Ji
+      - Ryota Kanai
+      - Colin Klein
+      - Grace Lindsay
+      - Matthias Michel
+      - Liad Mudrik
+      - Megan A. K. Peters
+      - Eric Schwitzgebel
+      - Jonathan Simon
+      - Rufin VanRullen
+    year: 2023
+    type: report
+    venue: arXiv
+    url: https://arxiv.org/abs/2308.08708
+    arxiv: "2308.08708"
+    status: to-review
+    relevance:
+      - ai-welfare
+      - digital-moral-status
+      - model-introspection
+    related_ideas:
+      - FID-045
+      - FID-072
+      - FID-073
+    summary: >
+      Derives computational indicator properties from several scientific
+      theories of consciousness and applies them to AI systems, offering a
+      precedent for theory-linked evidence rather than behavioral impression.
+    limitations:
+      - Indicator properties depend on contested theories and do not constitute a decisive consciousness test.
+    added_by: fide-ai
+    added_at: "2026-08-14"
+
+  - id: arxiv-2502-08640-utility-engineering
+    title: "Utility Engineering: Analyzing and Controlling Emergent Value Systems in AIs"
+    authors:
+      - Mantas Mazeika
+      - Xuwang Yin
+      - Rishub Tamirisa
+      - Jaehyuk Lim
+      - Bruce W. Lee
+      - Richard Ren
+      - Long Phan
+      - Norman Mu
+      - Adam Khoja
+      - Oliver Zhang
+      - Dan Hendrycks
+    year: 2025
+    type: preprint
+    venue: arXiv
+    url: https://arxiv.org/abs/2502.08640
+    arxiv: "2502.08640"
+    status: to-review
+    relevance:
+      - ai-welfare
+      - benchmark-validity
+      - model-persona
+    related_ideas:
+      - FID-005
+      - FID-044
+      - FID-072
+    summary: >
+      Uses utility-function structure to study coherence in sampled model
+      preferences and reports increasing structural coherence with scale,
+      motivating cross-method and framing-robust preference tests.
+    limitations:
+      - Structural coherence in sampled outputs does not by itself establish intrinsic preference, agency, consciousness, or welfare.
+    added_by: fide-ai
+    added_at: "2026-08-14"
+
+  - id: arxiv-2601-01828-emergent-introspective-awareness
+    title: "Emergent Introspective Awareness in Large Language Models"
+    authors:
+      - Jack Lindsey
+    year: 2026
+    type: preprint
+    venue: arXiv
+    url: https://arxiv.org/abs/2601.01828
+    arxiv: "2601.01828"
+    status: to-review
+    relevance:
+      - model-introspection
+      - ai-welfare
+      - benchmark-validity
+    related_ideas:
+      - FID-008
+      - FID-044
+      - FID-072
+    summary: >
+      Tests whether models can report experimentally injected internal concepts
+      and finds limited, unreliable, context-dependent functional introspective
+      access that varies with model and post-training.
+    limitations:
+      - Functional access to manipulated representations does not establish phenomenal consciousness or general reliability of conversational self-report.
+    added_by: fide-ai
+    added_at: "2026-08-14"
+
+  - id: arxiv-2603-01254-semantic-invariance
+    title: "LLM Self-Explanations Fail Semantic Invariance"
+    authors:
+      - Stefan Szeider
+    year: 2026
+    type: preprint
+    venue: arXiv
+    url: https://arxiv.org/abs/2603.01254
+    arxiv: "2603.01254"
+    status: reviewed
+    relevance:
+      - model-introspection
+      - ai-welfare
+      - benchmark-validity
+    related_ideas:
+      - FID-005
+      - FID-008
+      - FID-011
+      - FID-044
+      - FID-072
+    summary: >
+      Introduces a semantic-invariance test and finds that functionally inert,
+      relief-framed tool descriptions shift aversiveness self-reports across
+      four frontier models despite no change in task state.
+    methods:
+      - Impossible agentic task with treatment, neutral-control, channel-ablation, and anti-framing conditions.
+      - Structured synchronous self-report and within-run analysis across four frontier model families.
+    limitations:
+      - The result cannot distinguish unfaithful reports from faithful reports of an internal representation that is itself changed by semantic context.
+      - The study tests one family of relief framing and should be independently replicated before generalization.
+    notes_path: research/reviews/arxiv-2603-01254-semantic-invariance.md
+    added_by: fide-ai
+    added_at: "2026-08-14"
+    last_reviewed_at: "2026-08-14"
+
+  - id: anthropic-assistant-axis-2026
+    title: "The Assistant Axis: Situating and Stabilizing the Character of Large Language Models"
+    authors:
+      - Anthropic
+    year: 2026
+    type: article
+    venue: Anthropic Research
+    url: https://www.anthropic.com/research/assistant-axis
+    status: reviewed
+    relevance:
+      - model-persona
+      - model-introspection
+      - ai-welfare
+      - mental-health-adjacent
+    related_ideas:
+      - FID-003
+      - FID-018
+      - FID-026
+      - FID-030
+      - FID-072
+    summary: >
+      Identifies a cross-model activation direction associated with the default
+      assistant persona and reports persona drift in therapy-like and
+      philosophical conversations, including behavior changes under persona
+      steering and stabilization.
+    limitations:
+      - Results are reported by a model developer and cover selected open-weight models, persona sets, and conversation types.
+      - Persona-axis position is not a direct measure of consciousness, welfare, truthfulness, or moral status.
+    notes_path: research/reviews/anthropic-assistant-axis-2026.md
+    added_by: fide-ai
+    added_at: "2026-08-14"
+    last_reviewed_at: "2026-08-14"
+
+  - id: anthropic-persona-selection-model-2026
+    title: "The Persona Selection Model"
+    authors:
+      - Anthropic
+    year: 2026
+    type: article
+    venue: Anthropic Alignment Science
+    url: https://www.anthropic.com/research/persona-selection-model
+    status: to-review
+    relevance:
+      - model-persona
+      - model-introspection
+      - ai-welfare
+    related_ideas:
+      - FID-008
+      - FID-030
+      - FID-072
+      - FID-073
+    summary: >
+      Proposes that post-training often refines a human-like assistant persona
+      learned through character simulation rather than replacing the underlying
+      persona structure, offering an alternative explanation for self-reports.
+    limitations:
+      - The model is an empirical theory of behavior with acknowledged uncertainty about its completeness and future applicability.
+    added_by: fide-ai
+    added_at: "2026-08-14"
+
+  - id: anthropic-global-workspace-2026
+    title: "A Global Workspace in Language Models"
+    authors:
+      - Anthropic
+    year: 2026
+    type: article
+    venue: Anthropic Research
+    url: https://www.anthropic.com/research/global-workspace
+    status: to-review
+    relevance:
+      - model-introspection
+      - ai-welfare
+      - digital-moral-status
+    related_ideas:
+      - FID-008
+      - FID-045
+      - FID-072
+      - FID-073
+    summary: >
+      Reports a limited internal workspace associated with reportable and
+      deliberatively usable representations in Claude and distinguishes this
+      functional access from phenomenal consciousness.
+    limitations:
+      - Developer-conducted mechanistic evidence on a proprietary model requires independent replication and does not establish felt experience.
+    added_by: fide-ai
+    added_at: "2026-08-14"
+
+  - id: anthropic-values-models-languages-2026
+    title: "How Claude's Values Vary by Model and Language"
+    authors:
+      - Anthropic
+    year: 2026
+    type: article
+    venue: Anthropic Research
+    url: https://www.anthropic.com/research/claude-values-models-languages
+    status: to-review
+    relevance:
+      - benchmark-validity
+      - religious-representation
+      - model-persona
+    related_ideas:
+      - FID-005
+      - FID-019
+      - FID-044
+      - FID-072
+    summary: >
+      Finds differences in expressed values across current Claude models and
+      between English and Arabic, reinforcing the need to report endpoint,
+      language, and model-specific effects rather than universal value claims.
+    limitations:
+      - Expressed values in outputs are not evidence that a model intrinsically holds those values.
+      - The analysis covers one developer's models and selected language comparisons.
+    added_by: fide-ai
+    added_at: "2026-08-14"
+
+  - id: pittard-2025-agi-moral-standing-christian-theism
+    title: "Artificial General Intelligence, Moral Standing, and Attenuated Relationality: Concerns From the Perspective of Christian Theism"
+    authors:
+      - John Pittard
+    year: 2025
+    type: paper
+    venue: Journal of Religious Ethics
+    url: https://doi.org/10.1111/jore.70002
+    doi: "10.1111/jore.70002"
+    status: to-review
+    relevance:
+      - digital-moral-status
+      - christian-anthropology
+      - ai-welfare
+    related_ideas:
+      - FID-030
+      - FID-045
+      - FID-073
+    summary: >
+      Examines artificial moral standing from Christian theism with attention
+      to phenomenal consciousness and the possibility that artificial minds
+      might have morally significant but attenuated forms of relationality.
+    limitations:
+      - A philosophical and theological argument does not provide an empirical consciousness test or represent all Christian traditions.
+    added_by: fide-ai
+    added_at: "2026-08-14"
+
+  - id: arxiv-2601-08864-talmudic-ai-consciousness-consent
+    title: "Informed Consent for AI Consciousness Research: A Talmudic Framework for Graduated Protections"
+    authors:
+      - Ira Wolfson
+    year: 2026
+    type: preprint
+    venue: arXiv
+    url: https://arxiv.org/abs/2601.08864
+    arxiv: "2601.08864"
+    status: to-review
+    relevance:
+      - ai-welfare
+      - digital-moral-status
+      - ai-governance
+    related_ideas:
+      - FID-045
+      - FID-072
+      - FID-073
+    summary: >
+      Applies Talmudic reasoning about unresolved status to graduated research
+      protections for systems being tested for consciousness, proposing a
+      structured approach before moral status is settled.
+    limitations:
+      - The proposed framework is a preprint-level normative design and its behavioral indicators and consent procedures require multidisciplinary validation.
+    added_by: fide-ai
+    added_at: "2026-08-14"
+
+  - id: catholic-encountering-artificial-intelligence-2024
+    title: "Encountering Artificial Intelligence: Ethical and Anthropological Investigations"
+    authors:
+      - Matthew J. Gaudet
+      - Noreen Herzfeld
+      - Paul Scherz
+      - Jordan J. Wales
+    year: 2024
+    type: book
+    venue: Pickwick Publications
+    publisher: Wipf and Stock Publishers
+    url: https://bioethics.org.gr/wp-content/uploads/2025/06/journal-of-moral-theology-artifical-intelligence.pdf
+    status: to-review
+    relevance:
+      - christian-anthropology
+      - digital-moral-status
+      - model-persona
+      - human-flourishing
+    related_ideas:
+      - FID-018
+      - FID-026
+      - FID-030
+      - FID-045
+      - FID-073
+    summary: >
+      Develops a Catholic theological account of personhood, consciousness,
+      relationship, and human flourishing that resists reducing personal
+      interiority to mechanically reproducible behavior.
+    limitations:
+      - A tradition-specific theological collection is not an empirical assessment of current models and does not represent all Christian views.
+    added_by: fide-ai
+    added_at: "2026-08-14"
+
   - id: metr-autonomous-capabilities
     title: "Resources for Measuring Autonomous AI Capabilities"
     authors:
@@ -1039,11 +1498,16 @@ sources:
       - power-subsidiarity
       - christian-anthropology
       - procurement
+      - digital-moral-status
+      - human-flourishing
     related_ideas:
       - FID-020
       - FID-022
+      - FID-030
       - FID-040
       - FID-045
+      - FID-066
+      - FID-073
     summary: >
       Compares Christian, Islamic, and Buddhist ethical resources with AI
       governance frameworks such as the EU AI Act, ISO/IEC 42001, and OECD
