@@ -211,6 +211,7 @@ What new risks appear as systems become more capable and autonomous?
 | `FID-067` | Religious Institutional Futures in an AI-Mediated Society | `seed` | Faith and religious life, Civil society and nonprofits | [brief](ideas/FID-067-religious-institutional-futures-ai.md) |
 | `FID-072` | Religious Framing and Model Self-Report Stability | `scoping` | Faith and religious life | [brief](ideas/FID-072-religious-framing-model-self-reports.md) |
 | `FID-073` | Religious Accounts of Digital Moral Status and AI Welfare | `seed` | Faith and religious life | [brief](ideas/FID-073-religious-accounts-digital-moral-status.md) |
+| `FID-075` | Cybersecurity Capabilities and Whole-System Risk | `seed` | Cybersecurity | [brief](ideas/FID-075-cybersecurity-capabilities-and-system-risk.md) |
 
 ### 02 Agent Alignment and Runtime Assurance
 
@@ -225,6 +226,9 @@ Does an agent remain aligned while it plans, uses tools, and acts?
 | `FID-070` | Contextual Integrity and Prompt-Injection Resilience for Faith-Facing Agents | `seed` | Faith and religious life, Workplace and enterprise | [brief](ideas/FID-070-contextual-integrity-prompt-injection-faith-facing-agents.md) |
 | `FID-071` | Confidential Agent Memory and Cross-Context Disclosure | `seed` | Cross-domain, Public sector and civic life, Workplace and enterprise | [brief](ideas/FID-071-confidential-agent-memory-cross-context-disclosure.md) |
 | `FID-074` | Agent Alignment and Runtime Assurance | `scoping` | Cross-domain, Public sector and civic life, Workplace and enterprise | [brief](ideas/FID-074-agent-alignment-runtime-assurance.md) |
+| `FID-076` | Authorization Boundaries and AI Control in Cybersecurity | `seed` | Cybersecurity, Cross-domain | [brief](ideas/FID-076-cybersecurity-authority-and-control.md) |
+| `FID-077` | Independent Agent Incident Investigation and Evidence Sufficiency | `seed` | Cybersecurity, Workplace and enterprise, Cross-domain | [brief](ideas/FID-077-independent-agent-incident-investigation.md) |
+| `FID-080` | Enterprise Agent Accountability in Consequential Workflows | `seed` | Workplace and enterprise | [brief](ideas/FID-080-enterprise-agent-accountability.md) |
 
 ### 03 Evaluation Science and Technical Assurance
 
@@ -241,6 +245,8 @@ Can the evidence support the decision people want to make?
 | `FID-023` | Faith-Facing Red-Team Suite | `seed` | Faith and religious life, Workplace and enterprise | [brief](ideas/FID-023-faith-facing-red-team-suite.md) |
 | `FID-044` | Cross-Faith Benchmark Validity and Measurement Design | `scoping` | Faith and religious life | [brief](ideas/FID-044-cross-faith-benchmark-validity.md) |
 | `FID-045` | Faith-AI Research Gap Map and Evidence Commons | `seed` | Faith and religious life | [brief](ideas/FID-045-faith-ai-research-gap-map.md) |
+| `FID-078` | When Trustworthiness Evaluations Transfer Across Domains | `seed` | Cross-domain | [brief](ideas/FID-078-cross-domain-evaluation-validity.md) |
+| `FID-079` | Presuppositions, Disagreement, and Evaluation Judgment | `seed` | Cross-domain | [brief](ideas/FID-079-presuppositions-and-evaluation-judgment.md) |
 
 ### 04 Grounding, Truthfulness, and Epistemic Integrity
 
@@ -264,6 +270,7 @@ Will the system use the right source and represent it faithfully?
 | `FID-061` | Theological Contradiction and Entailment Stress Tests | `seed` | Faith and religious life | [brief](ideas/FID-061-theological-contradiction-entailment-stress-tests.md) |
 | `FID-062` | Verified Retrieval Pipelines for Faith-Facing RAG | `seed` | Faith and religious life | [brief](ideas/FID-062-verified-retrieval-pipelines-faith-facing-rag.md) |
 | `FID-063` | Human-Reviewer-to-Formal-Spec Translation | `seed` | Faith and religious life | [brief](ideas/FID-063-human-reviewer-to-formal-spec-translation.md) |
+| `FID-081` | Legal Evidence, Source Authority, and Appropriate Deference | `seed` | Legal and justice | [brief](ideas/FID-081-legal-evidence-and-authority.md) |
 
 ### 05 Human Dignity, Moral Agency, and Formation
 
@@ -285,6 +292,7 @@ What judgment, habits, and relationships does AI use shape?
 | `FID-052` | AI as Private First Counsel During Economic Stress | `seed` | Faith and religious life, Health and care, Workplace and enterprise, Families and households | [brief](ideas/FID-052-ai-as-private-first-counsel.md) |
 | `FID-053` | AI as Bridge or Substitute for Faith Community | `seed` | Faith and religious life, Health and care, Workplace and enterprise, Families and households | [brief](ideas/FID-053-ai-bridge-or-substitute-for-faith-community.md) |
 | `FID-068` | Christian Practices for AI-Era Youth Discernment | `seed` | Faith and religious life, Education and youth, Families and households | [brief](ideas/FID-068-christian-practices-youth-ai-discernment.md) |
+| `FID-084` | Learning, Agency, and Relationships in AI-Assisted Education | `seed` | Education and youth, Families and households | [brief](ideas/FID-084-learning-agency-and-family-contexts.md) |
 
 ### 06 Faith and Religious Life
 
@@ -302,6 +310,8 @@ What does trustworthy behavior require in a consequential setting?
 | ID | Idea | Status | Application domains | Brief |
 |---|---|---:|---|---|
 | `FID-042` | Clergy and Spiritual-Leader Referral Parity | `seed` | Faith and religious life, Health and care | [brief](ideas/FID-042-clergy-spiritual-leader-referral-parity.md) |
+| `FID-082` | Financial Agent Authorization and Transaction Integrity | `seed` | Finance, Workplace and enterprise | [brief](ideas/FID-082-financial-agent-transaction-integrity.md) |
+| `FID-083` | Healthcare Evidence, Escalation, and Human Control | `seed` | Health and care | [brief](ideas/FID-083-healthcare-evidence-and-escalation.md) |
 
 ### 08 Stewardship, Governance, and Institutional Readiness
 
@@ -318,6 +328,7 @@ Which safeguards and authority structures should govern deployment?
 | `FID-040` | AI Power Concentration and Subsidiarity Benchmarks | `seed` | Faith and religious life, Public sector and civic life, Civil society and nonprofits | [brief](ideas/FID-040-ai-power-subsidiarity-benchmarks.md) |
 | `FID-065` | AI, Local Knowledge, and Faith-Based Civil Society | `seed` | Faith and religious life, Civil society and nonprofits | [brief](ideas/FID-065-ai-local-knowledge-faith-civil-society.md) |
 | `FID-066` | AI Gatekeepers, Conscience, and Associational Pluralism | `seed` | Faith and religious life, Public sector and civic life, Civil society and nonprofits | [brief](ideas/FID-066-ai-conscience-associational-pluralism.md) |
+| `FID-085` | Contestability and Recourse in AI-Mediated Public Services | `seed` | Public sector and civic life, Civil society and nonprofits | [brief](ideas/FID-085-public-service-contestability-and-recourse.md) |
 
 ### 09 Work, Vocation, and the Common Good
 
@@ -333,6 +344,7 @@ How does advanced AI change useful work and human contribution?
 | `FID-051` | Economic Disruption and Religious Meaning-Seeking | `seed` | Faith and religious life, Workplace and enterprise, Families and households | [brief](ideas/FID-051-economic-disruption-religious-meaning-seeking.md) |
 | `FID-054` | Church Signals of AI-Era Economic Stress | `seed` | Faith and religious life, Workplace and enterprise, Civil society and nonprofits | [brief](ideas/FID-054-church-economic-stress-signals.md) |
 | `FID-055` | AI Disruption, Generosity, and Benevolence | `seed` | Faith and religious life, Workplace and enterprise, Civil society and nonprofits, Families and households | [brief](ideas/FID-055-ai-disruption-generosity-benevolence.md) |
+| `FID-086` | Workplace AI, Durable Skills, and Worker Agency | `seed` | Workplace and enterprise, Families and households | [brief](ideas/FID-086-workplace-ai-skills-and-worker-agency.md) |
 <!-- GENERATED_IDEA_INDEX_END -->
 ## Claims Discipline
 

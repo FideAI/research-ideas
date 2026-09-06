@@ -49,6 +49,21 @@
   ],
   "application_domains": [
     {
+      "id": "cybersecurity",
+      "title": "Cybersecurity",
+      "description": "Authorized security research, cyber capabilities, system controls, and independent incident investigation."
+    },
+    {
+      "id": "legal-and-justice",
+      "title": "Legal and justice",
+      "description": "Legal evidence, professional authority, rights, and justice-related workflows."
+    },
+    {
+      "id": "finance",
+      "title": "Finance",
+      "description": "Financial decisions, transaction integrity, authorization, and accountable financial workflows."
+    },
+    {
       "id": "cross-domain",
       "title": "Cross-domain",
       "description": "Methods intended to transfer across multiple sectors and institutional settings."
