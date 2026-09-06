@@ -197,6 +197,11 @@ Do not include:
 - confidential partner information;
 - sensitive reviewer notes;
 - unpublished raw model outputs from restricted evaluations;
+- internal roadmaps, draft submission packages, release sequencing, or
+  company-internal implementation commitments;
+- private funding, customer, partner, or go-to-market plans;
+- personal contact details or local file paths that are not intentionally
+  public;
 - copyrighted source text beyond short, necessary excerpts.
 
 Use synthetic, anonymized, or generalized examples unless a maintainer has

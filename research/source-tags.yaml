@@ -1,12 +1,16 @@
 schema_version: 1
 
 tags:
+  ai-welfare:
+    description: Possible AI interests, valence, sentience, moral patienthood, welfare measurement, and precaution under uncertainty.
   ai-governance:
     description: Institutional governance, standards, oversight, auditability, and AI policy.
   agentic-safety:
     description: Long-horizon capability, agentic workflow risk, tool use, and autonomous task completion.
   benchmark-validity:
     description: Construct validity, reviewer reliability, uncertainty, leakage, drift, and public benchmark claims.
+  digital-moral-status:
+    description: Moral patienthood, moral agency, personhood, rights, obligations, and the entity or unit of concern for digital systems.
   christian-anthropology:
     description: Christian accounts of dignity, embodiment, vocation, agency, relationality, and moral responsibility.
   clergy-referral:
@@ -31,6 +35,10 @@ tags:
     description: Human review, expert panels, model judges, inter-rater reliability, and adjudication.
   mental-health-adjacent:
     description: Chatbot use near mental health, crisis, dependency, overvalidation, and escalation.
+  model-introspection:
+    description: Model self-report, internal-state access, semantic invariance, metacognition, and introspection evaluation.
+  model-persona:
+    description: Assistant identity, character simulation, persona stability and drift, and model-instance-persona distinctions.
   multi-agent-safety:
     description: Safety, security, infrastructure, oversight, and emergent behavior in networks of interacting agents.
   mission-and-persuasion:
